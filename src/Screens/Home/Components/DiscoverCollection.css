@@ -23,7 +23,7 @@
   background-color: #ee2a2e;
   color: white;
   font-weight: 600;
-  font-size: 18px;
+  /* font-size: 18px; */
   padding: 15px 40px;
   border-radius: 30px;
   margin-top: 20px;
@@ -101,7 +101,7 @@
   }
   .home-discovercollection-button {
     margin-top: 15px;
-    font-size: 15px;
+    /* font-size: 15px; */
   }
 }
 

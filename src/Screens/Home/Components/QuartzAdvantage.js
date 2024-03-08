@@ -3,13 +3,14 @@ import "./QuartzAdvantage.css";
 import QuartzCover from "../../../assets/images/homeImage/quartz_advantages.png";
 import { Link } from "react-router-dom";
 import MTHelenImage from "../../../assets/images/mt_helen.jpg";
+import MaxWidthWrapper from "../../MaxWidthWrapper";
 
 function QuartzAdvantage() {
   const advantages = [
     {
       name: `MT HELEN`,
       url: "url(images/HELEN.png)",
-      
+
     },
     {
       name: "PREMIUM QUALITY",
@@ -37,44 +38,61 @@ function QuartzAdvantage() {
     },
   ];
   return (
-    <div className="home-advantagecontainer">
-      <div className="home-advantageinnercontainer">
-        <div className="home-advamtageheading">QUARTZ ADVANTAGES</div>
-        <div className="home-advamtagedesc">
-          Quartz surfaces are created through a blend of various components,
-          with the use of advanced technology to guarantee both durability and
-          sustainability, while also boasting an appealing aesthetic. This
-          cutting-edge solution caters to a wide range of surface requirements
-          for different interior settings.
-        </div>
-        <div
-          className="home-advantagebg"
-          style={{ backgroundImage: "url(images/quartz_advantages.png)" }}
-        >
-          <div className="homebrand-images">
-            {advantages.map((v, i) => (
-              <div className="homebrand-container">
-                <div
-                  className="homebrand-image"
-                  style={{
-                    backgroundImage: v.url,
-                  }}
-                />
-                <div className="homebrand-text">{v.name}</div>
-              </div>
-            ))}
+    <MaxWidthWrapper>
+      <div className="home-advantagecontainer">
+        <div className="home-advantageinnercontainer">
+          {/* <div className="home-advamtageheading">QUARTZ ADVANTAGES</div>
+          <div className="home-advamtagedesc">
+            Quartz surfaces are created through a blend of various components,
+            with the use of advanced technology to guarantee both durability and
+            sustainability, while also boasting an appealing aesthetic. This
+            cutting-edge solution caters to a wide range of surface requirements
+            for different interior settings.
+          </div> */}
+          <div className="">
+            <h1 className="lg:text-[50px] font-medium sm:text-4xl text-xl whitespace-nowrap py-2  text-center  font-gelasio text-[rgb(34,31,31)]">
+              Quartz  Advantages
+            </h1>
+
           </div>
+          <div className="sm:w-[80%]  w-[95%] md:mt-4 sm:text-base text-sm text-center">
+            Quartz  Advantages
+            Quartz surfaces are created through a blend of various components, with the use of advanced technology to guarantee both durability and sustainability, while also boasting an appealing aesthetic. This cutting-edge solution caters to a wide range of surface requirements for different interior settings.
+          </div>
+          <div
+            className="home-advantagebg "
+            style={{ backgroundImage: "url(images/quartz_advantages.png)" }}
+          >
+            {/* homebrand-images */}
+            <div className="flex items-end justify-end  xl:w-full w-screen ">
+              <div className=" w-full  px-4  items-center grid xl:grid-cols-7 grid-cols-3 lg:gap-y-4 gap-y-6 ">
+                {advantages.map((v, i) => (
+                  <div className="homebrand-container text-center flex justify-center items-center flex-col">
+                    {/* homebrand-image */}
+                    <div
+                      className="xl:w-12 xl:h-12 w-8 h-8 "
+                      style={{
+                        backgroundImage: v.url,
+                      }}
+                    />
+                    {/* homebrand-text */}
+                    <div className="">{v.name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <Link
+            to="/files/slab.pdf"
+            target="_blank"
+            download
+            className="homebrand-button"
+          >
+            Download Slab Technical Chart
+          </Link>
         </div>
-        <Link
-          to="/files/slab.pdf"
-          target="_blank"
-          download
-          className="homebrand-button"
-        >
-          Download Slab Technical Chart
-        </Link>
       </div>
-    </div>
+    </MaxWidthWrapper>
   );
 }
 

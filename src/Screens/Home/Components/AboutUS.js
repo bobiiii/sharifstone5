@@ -145,16 +145,24 @@ function AboutUS({ data }) {
 
           </div>
           {/* home-aboutcard */}
-          <div className="d  home-aboutcard ">
+          <div className=" w-full max-w-screen-lg my-10 grid md:grid-cols-3 grid-cols-2 justify-center  items-center mx-auto gap-6 ">
             {aboutIdeas.map((v, i) => (
-              <Link
-                to={v.href}
-                className="home-aboutcards"
-                style={{ textDecoration: "none" }}
-              >
-                <img src={v.image} />
-                <div>{v.name}</div>
-              </Link>
+              <div className="  flex   justify-center items-center  ">
+                <Link
+                  to={v.href}
+                  className="home-aboutcards  w-80 py-6 px-2  "
+                  style={{ textDecoration: "none" }}
+                >
+                  <img src={v.image} className="sm:w-20 w-12" />
+                  <div className="mt-4 text-center">
+                    <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black mt-4">
+                      {v.name}
+                    </h5>
+
+
+                  </div>
+                </Link>
+              </div>
             ))}
           </div>
         </div>

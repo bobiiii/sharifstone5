@@ -64,9 +64,9 @@
 .home-aboutcards {
   border: 1px solid #ee2a2e;
   border-radius: 15px;
-  width: 325px;
-  height: 200px;
-  margin: 20px;
+  /* width: 325px; */
+  /* height: 200px; */
+  /* margin: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,12 +74,12 @@
   background-color: white;
   box-shadow: 10px 15px 15px #80808024;
 }
-.home-aboutcards div {
+/* .home-aboutcards div {
   margin-top: 25px;
   font-weight: 600;
   color: black;
   text-decoration: none;
-}
+} */
 .about-us-video{
  width: 90%;
  height: auto;
@@ -126,9 +126,9 @@
 }
 @media screen and (max-width: 425px) and (min-width: 320px) {
   .home-aboutcards {
-    width: 155px;
-    height: 160px;
-    margin: 5px;
+    /* width: 155px; */
+    /* height: 160px; */
+    /* margin: 5px; */
     align-items: center;
     background-color: white;
     box-shadow: 10px 15px 15px #80808024;
@@ -138,9 +138,9 @@
     justify-content: center;
     align-items: center;
   }
-  .home-aboutcards div {
+  /* .home-aboutcards div {
     font-size: 13px;
-  }
+  } */
   .home-aboutconatiner {
     /* margin-top: 80px; */
     justify-content: center;

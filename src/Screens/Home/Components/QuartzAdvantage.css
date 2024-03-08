@@ -130,14 +130,14 @@
     margin-bottom: 40px;
   }
 
-  .homebrand-container {
+  /* .homebrand-container {
     flex: 0 0 30%; 
-  }
+  } */
 
-  .homebrand-container:nth-child(1) {
+  /* .homebrand-container:nth-child(1) {
     flex: 0 1 100%;
     
-  }
+  } */
   .home-advantageinnercontainer {
     width: 100%;
   }
@@ -162,9 +162,9 @@
     font-size: 13px;
     width: 90px;
   }
-  .homebrand-container {
+  /* .homebrand-container {
     margin: 5px;
-  }
+  } */
   .homebrand-images {
     align-items: flex-end;
     justify-content: space-evenly;

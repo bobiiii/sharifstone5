@@ -64,14 +64,14 @@ function HomeScreen() {
       <div className="w-full min-h-screen ">
       <div className="w-full flex flex-col h-[70vh] ">
         <div className=" h-full   flex justify-center items-center overflow-hidden z-10 ">
-          <video className="w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
-            {/* <source src={home_video} type="video/mp4" /> */}
+          {/* <video className="w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
+            <source src={home_video} type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
         </div>
-      </div> */}
+      </div> 
 
-      <div style={{ backgroundImage: `url(${bg})` }} className="h-[30vh] bg-cover  bg-center bg-no-repeat ">
+      <div style={{ backgroundImage: `url(${bg})` }} className=" bg-cover  bg-center bg-no-repeat ">
         <MaxWidthWrapper className=''>
           <div className="w-full py-8 lg:py-6  flex gap-4 justify-center items-center   " >
             <div className="w-full flex text-white items-center gap-4 justify-center ">
