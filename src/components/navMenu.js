@@ -76,7 +76,7 @@ function NavMenu({ navState }) {
         <RiMenu3Fill size={30} color={"white"} />
       </div>
       {openMenu && (
-        <div className="mobile-menu-container">
+        <div className="mobile-menu-container px-2">
           <div className="mobile-remove-menu">
             <RxCross2
               onClick={() => setOpenMenu(false)}

@@ -63,7 +63,7 @@ function HomeScreen() {
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
       <div className="w-full min-h-screen ">
       <div className="w-full flex flex-col h-[70vh] ">
-        <div className=" h-full   flex justify-center items-center overflow-hidden z-10 ">
+        <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
           {/* <video className="w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
             <source src={home_video} type="video/mp4" />
             Your browser does not support the video tag.
