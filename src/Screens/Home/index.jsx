@@ -61,14 +61,14 @@ function HomeScreen() {
   return (
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
-      <div className="w-full flex flex-col   sm:h-screen h-[50vh] ">
+      {/* <div className="w-full flex flex-col   sm:h-screen h-[50vh] ">
         <div className=" sm:h-screen h-[50vh]  flex justify-center items-center overflow-hidden z-10 ">
           <video className="w-full h-screen sm:object-cover object-fill" autoPlay loop muted>
             <source src={home_video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-      </div>
+      </div> */}
 
       <div style={{ backgroundImage: `url(${bg})` }} className="bg-cover  bg-center bg-no-repeat ">
         <MaxWidthWrapper className=''>
