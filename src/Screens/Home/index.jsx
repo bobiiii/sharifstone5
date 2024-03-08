@@ -61,18 +61,19 @@ function HomeScreen() {
   return (
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
-      <div className="w-full flex flex-col   sm:h-screen h-[50vh] ">
-        <div className=" sm:h-screen h-[50vh]  flex justify-center items-center overflow-hidden z-10 ">
-          <video className="w-full h-screen sm:object-cover object-fill" autoPlay loop muted>
-            <source src={home_video} type="video/mp4" />
+      <div className="w-full min-h-screen ">
+      <div className="w-full flex flex-col h-[70vh] ">
+        <div className=" h-full   flex justify-center items-center overflow-hidden z-10 ">
+          <video className="w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
+            {/* <source src={home_video} type="video/mp4" /> */}
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
 
-      <div style={{ backgroundImage: `url(${bg})` }} className="bg-cover  bg-center bg-no-repeat ">
+      <div style={{ backgroundImage: `url(${bg})` }} className="h-[30vh] bg-cover  bg-center bg-no-repeat ">
         <MaxWidthWrapper className=''>
-          <div className="w-full py-16  flex gap-4 justify-center items-center   " >
+          <div className="w-full py-8 lg:py-6  flex gap-4 justify-center items-center   " >
             <div className="w-full flex text-white items-center gap-4 justify-center ">
               <div className=" w-1/2 h-auto ">
                 <h3 className="lg:text-5xl sm:text-3xl text-xl whitespace-nowrap  font-medium font-gelasio 	">BUILDING </h3>
@@ -85,7 +86,7 @@ function HomeScreen() {
                   <p className="max-w-md lg:text-xl sm:text-base text-sm font-normal">
                     Beauty and quality beyond imagination. Service beyond what's expected.
                   </p>
-                  <Button >
+                  <Button className={""} >
                     View Collection
                   </Button>
                 </div>
@@ -163,6 +164,7 @@ function HomeScreen() {
             </div>
           </div>
         </MaxWidthWrapper>
+      </div>
       </div>
       <MaxWidthWrapper>
         <DiscoverCollection />
