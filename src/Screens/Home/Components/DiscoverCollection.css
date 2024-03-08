@@ -36,8 +36,8 @@
   transition: 0.3s;
 }
 .discovercollection-carouse-image {
-  width: 60%;
-  height: 610px;
+  width: 80%;
+  /* height: 610px; */
   /* background-color: red; */
   background-position: fill !important;
   background-repeat: no-repeat !important;
@@ -47,7 +47,7 @@
 .discovercollection-carouse-sideimage {
   width: 12%;
   margin: 35px;
-  height: 400px;
+  /* height: 400px; */
   background-position: fill;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,8 +60,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  margin: 70px 0px;
+  width: 100%;
+  /* margin: 70px 0px; */
   position: relative;
 }
 .discovercollection-arrow {
@@ -109,11 +109,11 @@
   .discovercollection-carouse-sideimage {
     width: 8%;
     margin: 7px;
-    height: 150px;
+    /* height: 150px; */
   }
   .discovercollection-carouse-image {
     width: 80%;
-    height: 250px;
+    /* height: 250px; */
     background-size: inherit;
     background-position: center;
   }

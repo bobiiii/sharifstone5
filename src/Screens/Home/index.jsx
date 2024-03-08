@@ -13,6 +13,9 @@ import InsideStore from "./Components/InsideStore";
 import CustomerReview from "../../components/CustomerReviews";
 import { Link } from "react-router-dom";
 import GetAQuote from "./Components/GetAQuote";
+import bg from "../Home/images/dis-bg.png";
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import Button from "../resuable/Button";
 
 function HomeScreen() {
   const [activeColor, setActiveColor] = useState(0);
@@ -56,23 +59,41 @@ function HomeScreen() {
   };
 
   return (
-    <div>
+    <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
-      <div className="w-full flex flex-col border  h-[100vh] bg-blue-400">
-        <div className="h-full flex justify-center items-center overflow-hidden z-10 ">
-        <video className="w-full h-full object-cover" autoPlay loop muted>
+      <div className="w-full flex flex-col   sm:h-screen h-[50vh] ">
+        <div className=" sm:h-screen h-[50vh]  flex justify-center items-center overflow-hidden z-10 ">
+          <video className="w-full h-screen sm:object-cover object-fill" autoPlay loop muted>
             <source src={home_video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="w-full h-[35vh] relative flex justify-center items-center bg-gradient-hero  " >
-          <div className="w-full flex text-white ">
-            <div className=" w-1/2 h-auto px-4">
-              <h3 className="text-xl font-semibold">BUILDING MEMORIES, ONE STONE AT A TIME</h3>
-            </div>
+      </div>
 
-            <div className=" w-1/2 h-auto bg-bg-img-hero">
-              {/* <div className="homecard-color-carousel">
+      <div style={{ backgroundImage: `url(${bg})` }} className="bg-cover  bg-center bg-no-repeat ">
+        <MaxWidthWrapper className=''>
+          <div className="w-full py-16  flex gap-4 justify-center items-center   " >
+            <div className="w-full flex text-white items-center gap-4 justify-center ">
+              <div className=" w-1/2 h-auto ">
+                <h3 className="lg:text-5xl sm:text-3xl text-xl whitespace-nowrap  font-medium font-gelasio 	">BUILDING </h3>
+                <h3 className="lg:text-5xl sm:text-3xl text-xl  whitespace-nowrap font-medium font-gelasio 	py-2">MEMORIES, ONE </h3>
+                <h3 className="lg:text-5xl sm:text-3xl text-xl font-medium font-gelasio 	">  STONE AT A TIME</h3>
+              </div>
+
+              <div className="w-1/2 ">
+                <div className="flex justify-between lg:flex-row flex-col  gap-4 w-full lg:items-center items-start">
+                  <p className="max-w-md lg:text-xl sm:text-base text-sm font-normal">
+                    Beauty and quality beyond imagination. Service beyond what's expected.
+                  </p>
+                  <Button >
+                    View Collection
+                  </Button>
+                </div>
+
+              </div>
+
+              {/* <div className=" w-1/2 h-auto bg-bg-img-hero">
+                 <div className="homecard-color-carousel">
                 <HiArrowLongLeft
                   onClick={() => changeFunction(false)}
                   size={30}
@@ -106,7 +127,7 @@ function HomeScreen() {
                     // border: activeColor === i ? "3px solid black" : "",
                   }}
                 ></div>
-                {/* {colorCarousel.map((v, i) => (
+                 {colorCarousel.map((v, i) => (
                   <div
                     onClick={() => setActiveColor(i)}
                     className="homecard-color-card"
@@ -122,28 +143,30 @@ function HomeScreen() {
                   size={30}
                   color={"#fff"}
                 />
-              </div> */}
+              </div> 
 
-              
+
                 <p className="text-sm">
                   Beauty and quality beyond imagination. Service beyond what's expected.
                 </p>
                 <div className=" my-3">
-                <Link
-                  to={"/quartz-collection"}
-                  className="bg-white text-red-500 p-2  "
-                >
-                  View Collection
-                </Link>
+                  <Link
+                    to={"/quartz-collection"}
+                    className="bg-white text-red-500 p-2  "
+                  >
+                    View Collection
+                  </Link>
                 </div>
-                
-              
+
+
+              </div> */}
             </div>
           </div>
-        </div>
+        </MaxWidthWrapper>
       </div>
-
-      <DiscoverCollection />
+      <MaxWidthWrapper>
+        <DiscoverCollection />
+      </MaxWidthWrapper>
       <AboutUS data={{ openQuote, setOpenQuote }} />
       <QuartzAdvantage />
       {/* <Gallery /> */}
