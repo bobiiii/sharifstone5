@@ -146,12 +146,12 @@ function AboutUS({ data }) {
 
           </div>
           {/* home-aboutcard */}
-          <div className=" w-full max-w-screen-lg my-10 grid md:grid-cols-3 grid-cols-2 justify-center  items-center  mx-auto  gap-6 ">
+          <div className=" w-full flex flex-wrap py-4  ">
             {aboutIdeas.map((v, i) => (
-              <div className="  flex   justify-center items-center    ">
+              <div className="  flex w-[45%]  justify-center items-center   mx-auto  ">
                 <Link
                   to={v.href}
-                  className="home-aboutcards  w-80 py-6 px-2  "
+                  className="home-aboutcards w-full mt-4  py-6 px-2  "
                   style={{ textDecoration: "none" }}
                 >
                   <img src={v.image} className="sm:w-20 w-12" />
