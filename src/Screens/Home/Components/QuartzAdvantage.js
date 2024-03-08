@@ -4,10 +4,15 @@ import QuartzCover from "../../../assets/images/homeImage/quartz_advantages.png"
 import { Link } from "react-router-dom";
 import MTHelenImage from "../../../assets/images/mt_helen.jpg";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
-
+import mt from '../images/mt.png'
 function QuartzAdvantage() {
   const advantages = [
-    
+
+    {
+      name: `MT HELEN`,
+      url: "url(images/HELEN.png)",
+
+    },
     {
       name: "PREMIUM QUALITY",
       url: "url(images/premium_quantity.png)",
@@ -30,13 +35,9 @@ function QuartzAdvantage() {
     },
     {
       name: "WIDE RANGE OF COLORS",
-      url: "url(images/wide_range.png)",
+      url: "url(images/mt.png)",
     },
-    {
-      name: `MT HELEN`,
-      url: "url(images/HELEN.png)",
 
-    },
   ];
   return (
     <MaxWidthWrapper>

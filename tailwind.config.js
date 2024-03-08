@@ -11,10 +11,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'gelasio': ["Gelasio", 'serif'], 
+        'gelasio': ["Gelasio", 'serif'],
       },
       backgroundImage: {
         'bg-img-hero': "url('/public/images/bg_S_white.png')",
+      },
+      screens: {
+        'xs': '480px', // Small screens and up
       },
     },
   },
