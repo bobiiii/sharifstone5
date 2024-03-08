@@ -1,0 +1,131 @@
+.home-discovercollection {
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-discovercollection-heading {
+  font-size: 55px;
+  font-family: "Gelasio", serif;
+  color: #221f1f;
+}
+.home-desciption {
+  font-size: 20px;
+  width: 60%;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 30px;
+}
+.home-discovercollection-button {
+  background-color: #ee2a2e;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 15px 40px;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.home-discovercollection-button:hover {
+  background-color: #ce2326;
+  transition: 0.3s;
+}
+.discovercollection-carouse-image {
+  width: 60%;
+  height: 610px;
+  /* background-color: red; */
+  background-position: fill !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  box-shadow: 5px 21px 34px #8888886f;
+}
+.discovercollection-carouse-sideimage {
+  width: 12%;
+  margin: 35px;
+  height: 400px;
+  background-position: fill;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discovercollection-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 70px 0px;
+  position: relative;
+}
+.discovercollection-arrow {
+  padding: 15px;
+  background-color: #d5262a;
+  border-radius: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.discovercollection-arrow:hover {
+  transition: 0.3s;
+  background-color: #8b1517;
+}
+.home-discovercollection-container {
+  width: 200px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home-desciption {
+    width: 75%;
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .home-discovercollection-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .home-desciption {
+    font-size: 16px;
+    width: 75%;
+    /* margin-top: 50px; */
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: -50px;
+  }
+  .home-discovercollection-button {
+    margin-top: 15px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 430px) and (min-width: 320px) {
+  .discovercollection-carouse-sideimage {
+    width: 8%;
+    margin: 7px;
+    height: 150px;
+  }
+  .discovercollection-carouse-image {
+    width: 80%;
+    height: 250px;
+    background-size: inherit;
+    background-position: center;
+  }
+  .discovercollection-arrow {
+    padding: 7px;
+    position: absolute;
+  }
+  .home-discovercollection {
+    /* padding: 80px 0px; */
+    margin-top: -60px;
+  }
+  .home-discovercollection-container {
+    width: auto;
+  }
+}

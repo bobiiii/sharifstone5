@@ -1,0 +1,233 @@
+.home-container {
+  width: 100%;
+  /* height: 100vh; */
+}
+.home-coverimage {
+  width: 100%;
+}
+.bg-gradient-hero {
+  
+  background: linear-gradient(90deg, rgba(126,22,25,1) 0%, rgba(238,42,46,1) 100%);
+}
+.home-banner-card {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.covercard-headertext {
+  font-size: 54px;
+  color: white;
+  width: auto;
+  font-family: "Gelasio", serif;
+}
+.covercard-subcontainer {
+  width: 100%;
+  /* height: 500px; */
+}
+.homecard-color-carousel {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homecard-color-card {
+  width: 200px;
+  margin: 5px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  z-index: 1;
+}
+.covercard-bottomcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 40px;
+    text-align: right;
+}
+.covercard-bottomtext {
+    font-size: 19px;
+    color: white;
+    line-height: 40px;
+    width: 40%;
+    text-align: right;
+    margin-right: 30px;
+}
+.covercard-collectionbtn {
+    margin-bottom: 13px;
+    width: 200px;
+    background-color: white;
+    color: #EE2A2E;
+    font-size: 20px;
+    height: 55px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.covercar-image {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: -1;
+}
+.home-covervideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+     }
+  
+
+
+
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .homecard-color-card {
+        height: 120px;
+    }
+    .covercard-headertext {
+        font-size: 46px;
+    }
+    .covercard-bottomtext {
+        font-size: 18px;
+    }
+    .covercard-collectionbtn {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1500px) and (min-width: 1024px) {
+    .covercard-bottomtext {
+        font-size: 18px;
+        color: white;
+        line-height: 40px;
+        width: 50%;
+        text-align: right;
+        margin-right: 30px;
+    }
+
+ }
+
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    .covercard-headertext {
+        font-size: 35px !important;
+        /* margin-bottom: 99px !important; */
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .home-covercard {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        height: 28vh;
+    }
+    .covercard-bottomtext {
+        width: 150px;
+        font-size: 14px; 
+        line-height: 22px;
+        margin-right: 30px;
+       }
+    .covercard-subcontainer {
+        width: 100%;
+        margin-top: -125px;
+    }
+    .homecard-color-carousel {
+        margin-left: -190px;
+        margin-top: 90px;
+    }
+    .covercard-headertext {
+        font-size: 30px !important;
+        width: 45%;
+        padding: 20px;
+        margin-left: 10px;
+    }
+    .covercard-bottomcontainer {
+        width: 60%;
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        top: 50px;
+        margin-top: 0px;
+    }
+    .covercar-image{
+        top: -47px
+    }
+    .home-coverimage {
+        width: 100%;
+        height: auto;
+        
+    }
+    .home-screen-container {
+        display: flex;
+        height: auto;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        z-index: -100;
+
+    }
+    .covercard-collectionbtn {
+        margin-top: 13px;
+        margin-right: 30px;
+        width: 150px;
+        background-color: white;
+        color: #EE2A2E;
+        font-size: 16px;
+        height: 45px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+    }
+}
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .homecard-color-card {
+        height: 75px;
+        width: 95px;
+        margin: 2px;
+    }
+    .home-coverimage {
+        width: 100%;
+        height: auto;
+        
+    }
+    .home-screen-container {
+        display: flex;
+        height: auto;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        z-index: -100;
+
+    }
+    .homecard-color-carousel {
+        margin-top: 130px;
+        margin-left: -127px;
+    }
+    .covercard-bottomtext {
+        width: 150px;
+        font-size: 14px; 
+        line-height: 22px;
+        margin-right: 30px;
+       }
+       .covercard-bottomcontainer {
+        width: 60%;
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        top: 50px;
+        margin-top: 0px;
+    }
+    .covercard-headertext {
+        margin-bottom: 65px;
+        font-size: 27px !important;
+        margin-top: 60px;
+    }
+}

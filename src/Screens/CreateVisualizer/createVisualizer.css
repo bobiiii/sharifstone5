@@ -1,0 +1,13 @@
+.form-select {
+  width: 107%;
+  padding: 15px;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+}
+.select-form-icon {
+  position: absolute;
+  right: -10px;
+  top: 20px;
+}

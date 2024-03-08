@@ -1,0 +1,108 @@
+.ourmission-container {
+  width: 90%;
+}
+.ourmission-heading {
+  font-size: 50px;
+  font-family: "Gelasio", serif;
+  font-weight: 600;
+}
+.ourmission-subcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+  font-size: 18px;
+}
+.ourmission-innercontainer {
+  width: 30%;
+  line-height: 32px;
+  font-size: 20px;
+}
+
+.ourmission-innercontainer-warranty {
+  width: 33%;
+  line-height: 23px;
+  font-size: 18px;
+  margin-right: -59px;
+}
+
+.ourmission-innercontainer-update {
+width: 55%;
+line-height: 32px;
+font-size: 20px;
+}
+.ourmission-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 768px) {
+.ourmission-heading {
+  font-size: 45px;
+}
+.ourmission-innercontainer {
+  font-size: 16px;
+}
+.ourmission-innercontainer-warranty {
+  width: 30%;
+  line-height: 22px;
+  font-size: 18px;
+  margin-right: -8px;
+}
+.ourmission-details {
+width: 95%;
+text-align: justify;
+line-height: 19px;
+}
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .ourmission-heading {
+    font-size: 35px !important;
+    text-align: center;
+  }
+  .ourmission-subcontainer {
+    flex-direction: column-reverse !important;
+  }
+  .ourmission-innercontainer {
+    width: 95% !important;
+    line-height: 35px;
+    font-size: 17px !important;
+    margin-bottom: 50px;
+  }
+  .ourmission-innercontainer-warranty {
+    width: 95% !important;
+    line-height: 35px;
+    font-size: 17px !important;
+    margin-bottom: 50px;
+  }
+  .ourmission-container .ourmission-cover{
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .ourmission-heading {
+    font-size: 35px !important;
+    text-align: center;
+  }
+  .ourmission-subcontainer {
+    flex-direction: column-reverse !important;
+    margin: 0px;
+  }
+  .ourmission-innercontainer {
+    width: 100% !important;
+    line-height: 35px;
+    font-size: 17px !important;
+    margin-bottom: 0px;
+  }
+  .ourmission-image {
+    width: 100%;
+}
+.ourmission-innercontainer-warranty {
+  width: 100% !important;
+  line-height: 35px;
+  font-size: 17px !important;
+  margin-bottom: 0px;
+}
+}

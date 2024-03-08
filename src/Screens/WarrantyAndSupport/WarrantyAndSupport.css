@@ -1,0 +1,16 @@
+.warranty-n-support-image {
+    width: 100%;
+    text-align: center;
+}
+.warranty-n-support-image img {
+    width: 90%;
+    border-radius: 30px; 
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .warranty-n-support-image img{
+        width: 90%;
+        margin-top: 55px;
+    }
+}

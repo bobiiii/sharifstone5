@@ -1,0 +1,15 @@
+.location-name {
+    font-size: 42px;
+    margin-top: 25px;
+    font-weight: 600;
+    font-family: "Gelasio", serif;
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .location-name {
+        font-size: 30px;
+    }
+    .location-desc {
+        margin-bottom: 10px;
+    }
+}

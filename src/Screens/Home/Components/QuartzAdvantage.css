@@ -1,0 +1,206 @@
+.home-advantagecontainer {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-advantagecontainer-center {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.home-back-s {
+  z-index: 0;
+}
+.home-advantageinnercontainer {
+  width: 90%;
+  height: 95%;
+  background-color: #f3f5f5;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 0px;
+}
+.home-advamtageheading {
+  font-size: 50px;
+  font-family: "Gelasio", serif;
+}
+.home-advamtagedesc {
+  width: 85%;
+  margin: 20px 0px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.home-advantagebg {
+  width: 90%;
+  margin-bottom: 40px;
+  height: 550px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  /* background-position: center; */
+  overflow: hidden; 
+}
+
+.homebrand-images {
+  width: 90%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+.homebrand-text {
+  color: white;
+  margin-top: 15px;
+  width: 100px;
+}
+.homebrand-image {
+  width: 50px;
+  height: 50px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+.homebrand-dowmloadcontainer {
+  /* width: 100%; */
+  margin-top: 30px;
+}
+.homebrand-button {
+  padding: 15px 30px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ee2a2e;
+  transition: 0.3s;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.homebrand-button:hover {
+  transition: 0.3s;
+  background-color: #b62427;
+}
+.homebrand-container {
+  margin: 0px 20px;
+}
+.image-label {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%; 
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: bold; 
+  background: rgba(0, 0, 0, 0.383);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .homebrand-button {
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 756px) {
+  .homebrand-button {
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .homebrand-images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .homebrand-container {
+    flex: 0 0 30%; 
+  }
+
+  .homebrand-container:nth-child(1) {
+    flex: 0 1 100%;
+    
+  }
+  .home-advantageinnercontainer {
+    width: 100%;
+  }
+  .homebrand-button {
+    display: none;
+    font-size: 15px;
+  }
+  .home-advamtageheading {
+    font-size: 35px;
+    text-align: center;
+  }
+  .home-advantagebg {
+    width: 90%;
+    border-radius: 15px;
+    align-items: flex-end;
+  }
+  .homebrand-image {
+    width: 30px;
+    height: 30px;
+  }
+  .homebrand-text {
+    font-size: 13px;
+    width: 90px;
+  }
+  .homebrand-container {
+    margin: 5px;
+  }
+  .homebrand-images {
+    align-items: flex-end;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+  .home-advamtagedesc {
+    width: 80%;
+    font-size: 16px;
+  }
+  .homebrand-dowmloadcontainer {
+    display: none;
+  }
+  .image-label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%; 
+    bottom: 40%;
+    transform: translate(-50%, 50%);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold; 
+    background: rgba(0, 0, 0, 0.383);
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .home-advamtagedesc {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  .home-advantagecontainer {
+    margin-top: 60px;
+  }
+}

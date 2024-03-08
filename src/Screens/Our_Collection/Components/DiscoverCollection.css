@@ -1,0 +1,147 @@
+.discover-collection-component {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.discover-collection-heading {
+  font-size: 55px;
+  text-align: center;
+  margin: 30px 0px;
+  font-family: "Gelasio", serif;
+}
+.discover-collection-desc {
+  width: 60%;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.discover-collection-collections {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.discover-collectionimage {
+  width: 100%;
+  height: 280px;
+  /* border-radius: 15px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.discover-collectiontext {
+  font-size: 25px;
+  width: 203px;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Gelasio", serif;
+  margin-top: 20px;
+}
+.discover-collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 25px;
+  width: 23%;
+}
+.discover-collectionexpand {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  color: white;
+  background-color: #00000095;
+}
+.discover-collectionlabel {
+  width: 100%;
+  margin-top: 15px;
+}
+.discover-collectionlabel1 {
+  font-size: 25px;
+  font-weight: 600;
+  height: 60px;
+}
+.discover-collectionlabel2 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .discover-collectionimage {
+    height: 235px;
+  }
+  .discover-collectiontext {
+    font-size: 22px;
+    height: 50px;
+  }
+  .discover-collectionlabel1 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 786px) {
+  .discover-collectionimage {
+    height: 185px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  .discover-collectionimage {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .discover-collectionimage {
+    width: 145px;
+    height: 145px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .discover-collection-heading {
+    font-size: 30px;
+    text-align: center;
+    margin: 30px 0px;
+    font-family: "Gelasio", serif;
+  }
+  .discover-collection-desc {
+    width: 80%;
+  }
+  .discover-collectiontext {
+    font-size: 18px;
+    width: 145px;
+  }
+  .discover-collection {
+    margin-bottom: 10px;
+    width: 43%;
+  }
+  .discover-collectionexpand {
+    width: 60px;
+    height: 60px;
+  }
+  .discover-collectionlabel1 {
+    font-size: 17px;
+  }
+  .discover-collectionlabel2 {
+    font-size: 14px;
+    width: 150px;
+    text-align: center;
+  }
+  .discover-collectionlabel {
+    text-align: center;
+  }
+}

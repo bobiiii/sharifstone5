@@ -1,0 +1,129 @@
+.footer-container {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.footer-container img {
+  margin: 25px 0px;
+}
+.footer-container-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-innersection {
+    width: 320px;
+}
+.footer-innersection div:nth-child(1){
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.footer-contacticon-container {
+    display: flex;
+}
+.footer-contacticon-container div{
+    font-size: 15px;
+    margin-left: 20px;
+    width: 70%;
+    height: 60px;
+    font-weight:100;
+}
+.footer-contacticon-container a{
+    justify-content: center;
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight:100;
+    padding-right: 20px;
+}
+.footer-contacticon-container img{
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight:100;
+}
+.footer-contacticon-container p{
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight:100;
+    justify-content: center;
+    text-align:middle;
+    color: red;
+}
+.footer-column {
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+}
+.footer-link {
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    margin: 13px 0px;
+}
+.footer-innercontainer {
+    width: 90%;
+    padding-top: 40px;
+    z-index: 1000;
+}
+.foolter-endsection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px;
+}
+.footer-copyright {
+    color: 15px;
+}
+.footer-socialmedia {
+    width: 350px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-bgimage {
+    position: absolute;
+    right: -10px;
+    bottom: -22px;
+    
+}
+
+@media screen and (max-width: 768px){
+    .footer-container-links {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 20px; 
+    }
+
+    .footer-innersection {
+        grid-area: auto;
+    }
+
+    /* Specific placement for mobile */
+     .footer-innersection:nth-child(1) { grid-column: 1 / span 1; } /* Orlando */
+    .footer-innersection:nth-child(2) { grid-column: 2 / span 1; } /* Tampa */
+    .footer-innersection:nth-child(3) { grid-area: 2 / 1 / 3 / 2; } /* Products */
+    .footer-innersection:nth-child(4) { grid-area: 2 / 2 / 3 / 3; } /* Company */
+    .footer-innersection:nth-child(5) { grid-area: 3 / 1 / 4 / 3; } /* Personal */
+
+    .footer-endsection {
+        flex-direction: column-reverse;
+    }
+    .footer-socialmedia {
+        width: 100%; 
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    .footer-contacticon-container a{
+        justify-content: center;
+        font-size: 12.5px;
+        margin-left: 0px;
+        font-weight:100;
+        padding-right: 20px;
+        margin-top: 5px;
+    }
+}
