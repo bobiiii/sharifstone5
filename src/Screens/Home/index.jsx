@@ -172,7 +172,9 @@ function HomeScreen() {
       <AboutUS data={{ openQuote, setOpenQuote }} />
       <QuartzAdvantage />
       {/* <Gallery /> */}
+      <MaxWidthWrapper>
       <LoveUS />
+      </MaxWidthWrapper>
       <InsideStore data={{ openQuote, setOpenQuote }} />
       {/* <iframe
         src="https://491744c8fa6a4bdda6b6d67be74ff1b7.elf.site"

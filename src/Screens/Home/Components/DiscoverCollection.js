@@ -54,7 +54,7 @@ function DiscoverCollection() {
         </div>
         <div className="sm:w-full w-screen flex justify-center items-center relative  mt-6 lg:mt-16">
           <div
-            className=" w-2/12 bg-center bg-no-repeat bg-cover h-52 rounded-lg flex items-center justify-center"
+            className=" w-2/12 bg-center bg-no-repeat bg-cover h-52  rounded-lg flex items-center justify-center"
             style={{
               backgroundImage: `url(images/scroller_images/scroller_${index}.jpg)`,
             }}
@@ -65,7 +65,7 @@ function DiscoverCollection() {
             </button>
           </div>
           <div
-            className="w-8/12 shadow-2xl mx-3 bg-center bg-no-repeat bg-cover h-52  rounded-lg "
+            className="w-8/12 shadow-2xl mx-3 bg-center bg-no-repeat bg-cover h-52 lg:h-80 rounded-lg "
             style={{
               backgroundImage: `url(images/scroller_images/scroller_${index + 1}.jpg)`,
             }}
