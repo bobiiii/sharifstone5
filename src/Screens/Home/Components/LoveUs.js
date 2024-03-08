@@ -4,12 +4,12 @@ import "./loveus.css";
 
 const LoveUS = () => {
   return (
-    <div className="home-loveus-container">
+    <div className="home-loveus-container w-full flex justify-center items-center ">
       <div className="home-loveus-innercontainer">
         <img src={LoveUSCover} className="loveus-image"/>
       </div>
       <div className="home-loveus-innercontainer2  ">
-        <div className="home-loveus-heading text-xl font-extrabold whitespace-nowrap tracking-tighter	 ">WHY DESIGNERS LOVE US</div>
+        <div className=" w-full home-loveus-heading text-lg font-extrabold  tracking-tighter line-clamp-6	 ">WHY DESIGNERS LOVE US</div>
         <div className="home-loveus-desc">
           Our diverse range of designs and products allows us to cater to a wide
           spectrum of design preferences, ensuring that our offerings seamlessly
