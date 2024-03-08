@@ -40,46 +40,46 @@ function DiscoverCollection() {
   };
 
   return (
-    <div className="home-discovercollection">
-      <div className="lg:text-[55px] sm:text-4xl text-2xl whitespace-nowrap py-2  text-center  font-gelasio text-[#221f1f]">
+    <div className="w-full  flex justify-center items-center flex-col py-16 ">
+      <div className="lg:text-[55px] whitespace-pre-line sm:text-4xl text-2xl  py-2  text-center  font-gelasio text-[#221f1f]">
         DISCOVER OUR NEW ARRIVALS!
       </div>
-      <div className="home-desciption">
+      <div className="text-xl leading-relaxed   text-center py-4 px-4 ">
         Check out our latest arrivals,  showcasing a vibrant mix of colors from different stone  selections. Each piece is a blend of style and quality,  giving you a range of options to spice up your space.
       </div>
-      <div className="discovercollection-carousel my-16">
+      <div className="w-screen flex justify-center items-center relative  mt-6 lg:mt-16">
         <div
-          className="discovercollection-carouse-sideimage sm:h-[400px]    h-[150px]"
+          className=" w-2/12 bg-center bg-no-repeat bg-cover h-52 rounded-lg flex items-center justify-center"
           style={{
             backgroundImage: `url(images/scroller_images/scroller_${index}.jpg)`,
           }}
         >
 
-          <button className="bg-[#d5262a] rounded-[100%] p-2">
+          <button className="bg-[#d5262a] rounded-full p-2">
             <IoIosArrowBack className="text-white" onClick={() => changeFunction(false)} />
-          </button>
+          </button> 
         </div>
         <div
-          className="discovercollection-carouse-image sm:h-[500px]    h-[350px]"
+          className="w-8/12 shadow-2xl mx-3 bg-center bg-no-repeat bg-cover h-52  rounded-lg "
           style={{
             backgroundImage: `url(images/scroller_images/scroller_${index + 1}.jpg)`,
           }}
         />
 
         <div
-          className="discovercollection-carouse-sideimage sm:h-[400px]    h-[150px]"
+          className="w-2/12 bg-center bg-no-repeat bg-cover h-52 rounded-lg flex items-center justify-center"
           style={{
             backgroundImage: `url(images/scroller_images/scroller_${index + 2}.jpg)`,
           }}
         >
-          <button className="bg-[#d5262a] rounded-[100%] p-2">
+          <button className="bg-[#d5262a] rounded-full p-2">
             <IoIosArrowForward className="text-white" onClick={() => changeFunction(true)} />
           </button>
 
 
         </div>
       </div>
-      <div className="home-discovercollection-container">
+      <div className="home-discovercollection-container hidden">
         <Link
           to={"/quartz-collection"}
           className="home-discovercollection-button"
