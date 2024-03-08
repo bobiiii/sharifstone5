@@ -62,7 +62,7 @@ function HomeScreen() {
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
       <div className="w-full min-h-screen ">
-      <div className="w-full flex flex-col h-[70vh] ">
+      <div className="w-full flex flex-col h-[60vh] lg:h-[100vh]">
         <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
           {/* <video className="w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
             <source src={home_video} type="video/mp4" />
@@ -71,17 +71,17 @@ function HomeScreen() {
         </div>
       </div> 
 
-      <div style={{ backgroundImage: `url(${bg})` }} className=" bg-cover  bg-center bg-no-repeat ">
+      <div  className=" bg-gradient-hero h-[40vh]  flex items-center bg-cover  bg-center bg-no-repeat ">
         <MaxWidthWrapper className=''>
-          <div className="w-full py-8 lg:py-6  flex gap-4 justify-center items-center   " >
-            <div className="w-full flex text-white items-center gap-4 justify-center ">
+          <div className="w-full py-8 lg:py-6  flex gap-4 justify-center   " >
+            <div className="w-full flex text-white  gap-4 justify-center ">
               <div className=" w-1/2 h-auto ">
                 <h3 className="lg:text-5xl sm:text-3xl text-xl whitespace-nowrap  font-medium font-gelasio 	">BUILDING </h3>
                 <h3 className="lg:text-5xl sm:text-3xl text-xl  whitespace-nowrap font-medium font-gelasio 	py-2">MEMORIES, ONE </h3>
                 <h3 className="lg:text-5xl sm:text-3xl text-xl font-medium font-gelasio 	">  STONE AT A TIME</h3>
               </div>
 
-              <div className="w-1/2 ">
+              <div className="w-1/2  bg-bg-img-hero ">
                 <div className="flex justify-between lg:flex-row flex-col  gap-4 w-full lg:items-center items-start">
                   <p className="max-w-md lg:text-xl sm:text-base text-sm font-normal">
                     Beauty and quality beyond imagination. Service beyond what's expected.
@@ -162,6 +162,7 @@ function HomeScreen() {
 
               </div> */}
             </div>
+            
           </div>
         </MaxWidthWrapper>
       </div>

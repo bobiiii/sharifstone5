@@ -17,7 +17,7 @@ function Layout({ children }) {
       <div className="layout-container">
         <Link to='/'>
           {
-            location.pathname === '/where-to-buy' ? <img src={LogoFooter} alt="LogoFooter" /> : <img src={Logo} alt="Logo" />
+            location.pathname === '/where-to-buy' ? <img src={LogoFooter} alt="LogoFooter" /> : <img src={Logo} alt="Logo" className="h-12" />
           }
         </Link>
         <NavMenu navState={{showDropdown, setShowDropdown}} />

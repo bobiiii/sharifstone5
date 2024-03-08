@@ -50,11 +50,13 @@
     position: fixed;
 }
 .mobile-remove-menu {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
+
     text-decoration: none;
-    margin: 40px;
+    margin: 40px 0px;
+    
 }
 .mobile-remove-menucontainer {
     width: 100%;

@@ -41,6 +41,11 @@ function NavMenu({ navState }) {
       name: "Blog",
       route: "/about",
     },
+    
+    {
+      name: "Live Inventory",
+      route: "/live-inventory",
+    },
   ];
 
   const dashboard = [
@@ -72,11 +77,11 @@ function NavMenu({ navState }) {
 
   return (
     <>
-      <div onClick={() => setOpenMenu(true)} className="mobile-menu-btn">
+      <div onClick={() => setOpenMenu(true)} className="bg-black w-12 h-12 rounded-full flex justify-center items-center lg:hidden">
         <RiMenu3Fill size={30} color={"white"} />
       </div>
       {openMenu && (
-        <div className="mobile-menu-container px-2">
+        <div className="mobile-menu-container h-dvh px-2">
           <div className="mobile-remove-menu">
             <RxCross2
               onClick={() => setOpenMenu(false)}
@@ -84,18 +89,18 @@ function NavMenu({ navState }) {
               size={30}
             />
           </div>
-          <div className="mobile-remove-menucontainer">
+          <div className="flex flex-col items-center justify-evenly h-[80%]  text-white  ">
             <Link
               to={"/"}
               onClick={() => setOpenMenu(false)}
-              className="mobile-menu-item"
+              className=""
             >
               Home
             </Link>
             <Link
               to={"/quartz-collection"}
               onClick={() => setOpenMenu(false)}
-              className="mobile-menu-item"
+              className=""
             >
               Quartz Collection
               {/* <MdArrowDropDown color={"#fff"} /> */}
@@ -104,7 +109,7 @@ function NavMenu({ navState }) {
             <Link
             to={"/kitchen-visualizer"}
             onClick={() => setOpenMenu(false)}
-            className="mobile-menu-item"
+            className=""
             >
             {showNewTextKitchenVisualizer && <span className="new-text">NEW </span>}
             Kitchen Visualizer
@@ -113,40 +118,42 @@ function NavMenu({ navState }) {
             <Link
               to={"/about"}
               onClick={() => setOpenMenu(false)}
-              className="mobile-menu-item"
+              className=""
             >
               About the company
             </Link>
             <Link
               to={"/warranty-n-support"}
               onClick={() => setOpenMenu(false)}
-              className="mobile-menu-item"
+              className=""
             >
               Warranty and Support
             </Link>
+            
+            
             <Link
               to={"/contact"}
               onClick={() => setOpenMenu(false)}
-              className="mobile-menu-item"
+              className=""
             >
               Contact Us
             </Link>
             <Link
               to={"/about"}
               onClick={() => setOpenMenu(false)}
-              className="mobile-menu-item"
+              className=""
             >
               Blog
             </Link>
-            
             <Link
               to={"https://4power.stoneprofitsweb.com/"}
               onClick={() => setOpenMenu(false)}
-              className="mobile-menu-item"
+              className=""
               >
               {showNewText && <span className="new-text">NEW </span>}
               Live Inventory
               </Link>
+            
 
 
           </div>

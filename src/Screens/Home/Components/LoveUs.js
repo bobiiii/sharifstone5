@@ -76,21 +76,21 @@ const LoveUS = () => {
             rtl={false}
             shouldResetAutoplay
             showDots={false}
-            sliderClass="bg-blue-700 flex gap-10 w-full "
+            sliderClass=" flex gap-10 w-full "
             slidesToSlide={1}
             swipeable
           >
-            <div className="bg-blue-200 w-[200px]  ">
+            <div className="bg-cover w-[200px]  ">
               <img src={LoveUSCover1} className="h-full" />
 
 
             </div>
-            <div className="bg-blue-400 w-[200px] ">
+            <div className="bg-cover w-[200px] ">
 
               <img src={LoveUSCover2} className="h-full"/>
             </div>
-            <div className="bg-blue-500 w-[200px] "><img src={LoveUSCover3} className="h-full" /></div>
-            <div className="bg-blue-200 w-[200px] "><img src={LoveUSCover2} className="h-full" /></div>
+            <div className="bg-cover w-[200px] "><img src={LoveUSCover3} className="h-full" /></div>
+            <div className="bg-cover w-[200px] "><img src={LoveUSCover2} className="h-full" /></div>
 
           </Carousel>
         </div>
