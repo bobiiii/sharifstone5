@@ -1,5 +1,5 @@
 .home-subscription-container {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,11 +20,11 @@
     font-weight: 600;
     font-family: "Gelasio", serif;
     font-size: 40px;
-    width: 80%;
+    width: 100%;
     margin: 35px 0px;
 }
 .home-subscript-input {
-    width: 550px;
+    /* width: 550px; */
     border: none;
     padding: 20px 50px;
     border-radius: 30px;
@@ -60,7 +60,7 @@
         line-height: 40px;
     }
     .home-subscript-input {
-        width: 200px;
+        /* width: 200px; */
     }
     .home-subscription-btn {
         width: 55px;

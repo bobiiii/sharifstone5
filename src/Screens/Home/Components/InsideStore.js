@@ -6,47 +6,56 @@ import InsideStoreImage3 from '../../../assets/images/homeImage/insidestore3.jpg
 import InsideStoreImage4 from '../../../assets/images/homeImage/insidestore4.jpg'
 import BackS from '../../../assets/images/back_s.png'
 import { Link } from "react-router-dom";
+import MaxWidthWrapper from "../../MaxWidthWrapper";
 
-function InsideStore({data}) {
-  const {openQuote, setOpenQuote} = data
+function InsideStore({ data }) {
+  const { openQuote, setOpenQuote } = data
   const imageArray = [InsideStoreImage1, InsideStoreImage2, InsideStoreImage3, InsideStoreImage4]
   const catalog = [
     {
       name: 'Color Catalog',
       image: 'url(images/inside_icon1.png)',
-      href:"/quartz-collection"
+      href: "/quartz-collection"
     },
     {
       name: 'Digital Brochure',
       image: 'url(images/inside_icon2.png)',
-      href:"/"
+      href: "/"
     },
     {
       name: 'Where To Buy',
       image: 'url(images/inside_icon3.png)',
-      href:"/where-to-buy"
+      href: "/where-to-buy"
     },
   ]
   return (
-    <div className="home-advantagecontainer home-advantagecontainer-center">
-      <div className="home-advantageinnercontainer">
-      <img className="home-back-s" src={BackS} alt="" />
-        <div className="home-section">
-          <div className="home-insidestore-container">
-            <div className="home-insidestore-heading">STEP INSIDE OUR STORE</div>
-            {/* <div className="homebrand-button">View Full Catalogue</div> */}
-            <div className="homebrand-button"  onClick={() => setOpenQuote(true)}>Get Directions</div>
-          </div>
-          <div className="home-insidestore-imagecontainer">
-            {
-              imageArray.map((v, i) => <img src={v} />)
-            }
-          </div>
-          {/* <div className="home-insidestore-container">
+    <MaxWidthWrapper>
+      <div className="home-advantagecontainer home-advantagecontainer-center">
+        <div className="home-advantageinnercontainer">
+          <img className="home-back-s" src={BackS} alt="" />
+          {/* home-section */}
+          <div className="w-full md:px-6 px-2">
+            <div className="home-insidestore-container">
+              {/* home-insidestore-heading */}
+              <div className="font-gelasio xl:text-5xl lg:text-4xl  sm:text-3xl md:text-start text-center items-center justify-center text-2xl w-full">STEP INSIDE OUR STORE</div>
+              {/* <div className="homebrand-button">View Full Catalogue</div> */}
+              <div className="bg-[#ee2a2e] text-center items-center px-6 py-2.5 rounded-3xl whitespace-nowrap text-white font-semibold font-gelasio md:flex hidden" onClick={() => setOpenQuote(true)}>Get Directions</div>
+            </div>
+            {/* home-insidestore-imagecontainer */}
+            <div className="grid md:grid-cols-4 grid-cols-2 justify-between gap-4  mt-8 full">
+              {
+                imageArray.map((v, i) => <img src={v} className="rounded-[20px]  w-full h-full flex flex-grow" />)
+              }
+            </div>
+            <div className="flex justify-center items-center mt-6">
+              <div className="bg-[#ee2a2e]  text-center items-center px-6 py-2.5 rounded-3xl whitespace-nowrap text-white font-semibold font-gelasio md:hidden flex " onClick={() => setOpenQuote(true)}>Get Directions</div>
+            </div>
+
+            {/* <div className="home-insidestore-container">
             <div className="home-insidestore-subheading">DISCOVER OUR TOP-QUALITY STONE OPTIONS TO PERFECTLY MATCH YOUR DESIRED SPACE!</div>
             
           </div> */}
-          {/* <div className="home-insidestore-imagecontainer">
+            {/* <div className="home-insidestore-imagecontainer">
             {
               catalog.map((v, i) => (
                 <Link to={v.href} className="homeinsider-offercard">
@@ -56,10 +65,11 @@ function InsideStore({data}) {
                 ))
             }
           </div> */}
-          
+
+          </div>
         </div>
       </div>
-    </div>
+    </MaxWidthWrapper>
   );
 }
 

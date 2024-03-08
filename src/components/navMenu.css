@@ -36,14 +36,16 @@
 }
 .desktop-navbar {
     display: flex;
+    align-items: center;
+    margin-left: 5px;
 }
 .mobile-menu-container {
-    width: 100%;
+    width: 100vw;
     background-color: #221F1F;
     left: 0px;
     top: 0px;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
     z-index: 2;
     position: fixed;
 }

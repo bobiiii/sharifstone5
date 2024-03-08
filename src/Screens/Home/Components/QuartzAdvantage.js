@@ -7,11 +7,7 @@ import MaxWidthWrapper from "../../MaxWidthWrapper";
 
 function QuartzAdvantage() {
   const advantages = [
-    {
-      name: `MT HELEN`,
-      url: "url(images/HELEN.png)",
-
-    },
+    
     {
       name: "PREMIUM QUALITY",
       url: "url(images/premium_quantity.png)",
@@ -35,6 +31,11 @@ function QuartzAdvantage() {
     {
       name: "WIDE RANGE OF COLORS",
       url: "url(images/wide_range.png)",
+    },
+    {
+      name: `MT HELEN`,
+      url: "url(images/HELEN.png)",
+
     },
   ];
   return (
@@ -64,23 +65,28 @@ function QuartzAdvantage() {
             style={{ backgroundImage: "url(images/quartz_advantages.png)" }}
           >
             {/* homebrand-images */}
-            <div className="flex items-end justify-end  xl:w-full w-screen ">
-              <div className=" w-full  px-4  items-center grid xl:grid-cols-7 grid-cols-3 lg:gap-y-4 gap-y-6 ">
-                {advantages.map((v, i) => (
-                  <div className="homebrand-container text-center flex justify-center items-center flex-col">
-                    {/* homebrand-image */}
-                    <div
-                      className="xl:w-12 xl:h-12 w-8 h-8 "
-                      style={{
-                        backgroundImage: v.url,
-                      }}
-                    />
-                    {/* homebrand-text */}
-                    <div className="">{v.name}</div>
-                  </div>
-                ))}
+            <div className="flex w-full justify-center">
+              <div className="flex items-end justify-center  xl:w-full w-screen mb-4 ">
+                <div className=" w-full    items-center grid xl:grid-cols-7 grid-cols-3 lg:gap-y-4 gap-y-6 ">
+                  {advantages.map((v, i) => (
+                    // homebrand-text
+
+                    <div className=" text-center flex justify-center items-center flex-col gap-2.5">
+                      {/* homebrand-image */}
+                      <div
+                        className="xl:w-12 xl:h-12 w-8 h-8 items-start text-white"
+                        style={{
+                          backgroundImage: v.url,
+                        }}
+                      />
+                      {/* homebrand-text */}
+                      <div className="text-white font-medium md:text-base text-[13px] w-[90px]">{v.name}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+
           </div>
           <Link
             to="/files/slab.pdf"
