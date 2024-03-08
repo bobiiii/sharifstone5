@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import about_us_video from "../../../assets/videos/about_us.mp4"
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 
+
 function AboutUS({ data }) {
   const opts = {
     height: "500",
@@ -94,7 +95,7 @@ function AboutUS({ data }) {
     <MaxWidthWrapper>
       <div className="home-aboutconatiner w-full">
         <div className="home-aboutinnercontainer">
-          <div className="font-gelasio md:text-5xl sm:text-3xl text-2xl ">ABOUT US</div>
+          <div className="font-gelasio md:text-5xl sm:text-3xl text-2xl ">GET TO KNOW US</div>
 
           <hr
             style={{
@@ -112,7 +113,7 @@ function AboutUS({ data }) {
               </video>
             </div>
             {/* home-about-sections */}
-            <div className=" w1/2 flex flex-col gap-4" >
+            <div className=" w1/2 flex flex-col gap-3" >
               <span className=" sm:text-base text-sm">
                 Welcome to Sharifstone, a distinguished company in the United
                 States specializing in premium stones, including marble, granite,
@@ -133,7 +134,7 @@ function AboutUS({ data }) {
                 Explore the perfect stones for your project and elevate your space
                 with Sharifstone!
               </span>
-              <span className="home-discover-container-button-container">
+              <span className="home-discover-container-button-container mt-2">
                 <div
                   onClick={() => setOpenQuote(true)}
                   className="home-discovercollection-button"
@@ -145,9 +146,9 @@ function AboutUS({ data }) {
 
           </div>
           {/* home-aboutcard */}
-          <div className=" w-full max-w-screen-lg my-10 grid md:grid-cols-3 grid-cols-2 justify-center  items-center mx-auto gap-6 ">
+          <div className=" w-full max-w-screen-lg my-10 grid md:grid-cols-3 grid-cols-2 justify-center  items-center  mx-auto  gap-6 ">
             {aboutIdeas.map((v, i) => (
-              <div className="  flex   justify-center items-center  ">
+              <div className="  flex   justify-center items-center    ">
                 <Link
                   to={v.href}
                   className="home-aboutcards  w-80 py-6 px-2  "
@@ -161,10 +162,13 @@ function AboutUS({ data }) {
 
 
                   </div>
+
                 </Link>
               </div>
             ))}
           </div>
+
+
         </div>
 
       </div>
