@@ -88,9 +88,9 @@ BUILDING MEMORIES, ONE STONE AT A TIME</h3>
                   <p className="max-w-md lg:text-2xl sm:text-base text-sm font-normal">
                     Beauty and quality beyond imagination. Service beyond what's expected.
                   </p>
-                  <Button className={""} >
+                  <button className={"bg-white sm:px-6 px-4 py-2  sm:text-base text-sm rounded-3xl font-medium text-red-500 whitespace-nowrap"} >
                     View Collection
-                  </Button>
+                  </button>
                 </div>
   </div>
   </div>
