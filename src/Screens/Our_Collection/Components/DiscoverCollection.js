@@ -7,6 +7,7 @@ import APIContext from "../../../Store/apiContext";
 import { getCollectionByParam } from "../../../apiCall/apiCall";
 import { HistoryRouterProps } from "react-router-dom";
 import { Audio } from "react-loader-spinner";
+import MaxWidthWrapper from "../../MaxWidthWrapper";
 
 const DiscoverCollection = () => {
   const [collection, setCollection] = useState("none");
@@ -21,10 +22,10 @@ const DiscoverCollection = () => {
   const collections =
     apiStore?.collections !== undefined
       ? collectionKeys?.map((v, i) => ({
-          color_name: v,
-          collection_url: apiStore?.collections[v][0]?.collection_url,
-          color_image: apiStore?.collections[v][0]?.color_image,
-        }))
+        color_name: v,
+        collection_url: apiStore?.collections[v][0]?.collection_url,
+        color_image: apiStore?.collections[v][0]?.color_image,
+      }))
       : [];
   const params = useParams();
 
@@ -501,8 +502,7 @@ const DiscoverCollection = () => {
       navigate(`/collection/${value?.collection_url}`, { replace: false });
     } else {
       navigate(
-        `/product-description/${value?.collection_url?.toLowerCase()}/${
-          value?.color_url
+        `/product-description/${value?.collection_url?.toLowerCase()}/${value?.color_url
         }`,
         { replace: false }
       );
@@ -512,12 +512,13 @@ const DiscoverCollection = () => {
   const collectionJSX = (v, i, islable = false, inner = false) => {
     return (
       <div
-        className="discover-collection"
+        className="discover-collection "
         style={{ margin: inner ? "20px 10px" : "" }}
       >
         <div
           onMouseOver={() => setOnMouseOver(i)}
-          className="discover-collectionimage"
+          
+          className="discover-collectionimage "
           style={{
             backgroundImage: `url(${v?.color_image})`,
           }}
@@ -525,7 +526,7 @@ const DiscoverCollection = () => {
           {i === onMouseOver && (
             <div
               onClick={() => gotoNextScreen(v)}
-              className="discover-collectionexpand"
+              className="discover-collectionexpand "
             >
               <GoArrowUpRight size={35} color="white" />
             </div>
@@ -577,21 +578,28 @@ const DiscoverCollection = () => {
     }
   }, []);
   return (
-    <div className="discover-collection-component">
-      <div className="discover-collection-heading">
-        {flag ? content[collection][0] : innerCollection[0]?.collection_name}
-      </div>
-      <div className="discover-collection-desc">{content[collection][1]}</div>
-      <div className="discover-collection-collections">
-        {flag
-          ? collections.length > 0
-            ? collections.map((v, i) => collectionJSX(v, i))
-            : loader()
-          : innerCollection.length > 0
-          ? innerCollection?.map((v, i) => collectionJSX(v, i, true, true))
-          : loader()}
-      </div>
-    </div>
+    <MaxWidthWrapper>
+      <div className="discover-collection-component">
+        <div className="discover-collection-heading">
+          {flag ? content[collection][0] : innerCollection[0]?.collection_name}
+        </div>
+        <div className="discover-collection-desc">{content[collection][1]}</div>
+        {/* discover-collection-collections */}
+        {/* w-full flex justify-center items-center flex-wrap */}
+        {/* <div className="w-full flex justify-center items-center mx-auto"> */}
+          {/* flex-grow gap-10  grid  justify-center items-center  sm:grid-cols-3 grid-cols-2 */}
+          <div className="w-full flex justify-center items-center flex-wrap mx-auto ">
+            {flag
+              ? collections.length > 0
+                ? collections.map((v, i) => collectionJSX(v, i))
+                : loader()
+              : innerCollection.length > 0
+                ? innerCollection?.map((v, i) => collectionJSX(v, i, true, true))
+                : loader()}
+          </div>
+        </div>
+      {/* </div> */}
+    </MaxWidthWrapper>
   );
 };
 

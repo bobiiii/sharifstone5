@@ -420,42 +420,47 @@ const KitchenVisualizer = () => {
   return (
     <>
       {currentScreen === "start" && (
+
         <div
-          className="kitchen-visualizer-container"
+          className="kitchen-visualizer-container flex md:justify-between justify-around"
           style={{ backgroundImage: "url(images/cover/Visualizer_img.png)" }}
         >
-          <div className="kitchen-visualizer-logo">
+          <div className="kitchen-visualizer-logo  flex sm:justify-start sm:items-start justify-center items-center w-full mt-[50px] mx-14 flex-col">
             <Link to="/">
               <img src={Logo} />
             </Link>
 
-            <div className="release-wrapper">
+            <div className="release-wrapper px-4 py-3">
               <p className="release-text">2024 RELEASE</p>
             </div>
           </div>
-          <div className="kitchen-visualizer-startform">
-            <div className="kitchen-visualizer-section">
-              <span>SHARIFSTONE ONLINE VISUALIZER</span>
-              <div>
-                Our Kitchen and Bathroom Visualizer allows you to explore
-                different colors, materials, and design options, helping you
-                envision the perfect look for your space. With just a few
-                clicks, you can select from a wide range of cabinets,
-                countertops, and backsplashes. Experiment with various color
-                schemes, textures, and finishes to create a personalized kitchen
-                that reflects your style and taste.
+          <main className="max-w-screen-2xl mx-auto md:px-6 flex justify-center items-center px-2 mt-2">
+            <div className="kitchen-visualizer-startform  flex justify-between md:gap-16 gap-4 lg:w-[70%] w-[85%]   md:text-start text-center px-2 py-2.5 " >
+              <div className="kitchen-visualizer-section md:py-10 py-4 flex justify-center md:items-start items-center w-full flex-col text-white gap-1 md:text-start text-center ">
+                <span className="lg:text-4xl text-2xl">SHARIFSTONE ONLINE VISUALIZER</span>
+                <div>
+                  Our Kitchen and Bathroom Visualizer allows you to explore
+                  different colors, materials, and design options, helping you
+                  envision the perfect look for your space. With just a few
+                  clicks, you can select from a wide range of cabinets,
+                  countertops, and backsplashes. Experiment with various color
+                  schemes, textures, and finishes to create a personalized kitchen
+                  that reflects your style and taste.
+                </div>
+              </div>
+              {/* kitchen-visualizer-section */}
+              <div className="md:w-[30%] w-[80%] flex justify-center items-center text-white md:mt-0 mt-2">
+                <div
+                  onClick={() => setCurrentScreen("Visualizer Form")}
+                  className="kitchen-visualizer-startbtn sm:w-[250px] w-full "
+                >
+                  Start
+                </div>
               </div>
             </div>
-            <div className="kitchen-visualizer-section">
-              <div
-                onClick={() => setCurrentScreen("Visualizer Form")}
-                className="kitchen-visualizer-startbtn"
-              >
-                Start
-              </div>
-            </div>
-          </div>
+          </main>
         </div>
+
       )}
 
       {currentScreen === "Visualizer Form" && (

@@ -9,4 +9,4 @@ function MaxWidthWrapper({ className, children }) {
     )
 }
 
-export default MaxWidthWrapper
+export default MaxWidthWrapper;

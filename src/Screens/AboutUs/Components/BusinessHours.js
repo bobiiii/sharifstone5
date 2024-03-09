@@ -35,28 +35,39 @@ function BusinessHours() {
     },
   ];
   return (
-    <div className="reorganize_container">
-      <div className="ourmission-container">
-        <div className="ourmission-heading">BUSINESS HOURS</div>
-        <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9}} />
-        <div className="flex justify-around ">
-          <div className="ourmission-innercontainer">
-            {hours.map((v, i) => (
-              <div className="businesshour-row">
-                <div className="business-time">
-                  <TbClockHour5 size={30} color={"#EE2A2E"} />
-                  <div>{v.day}</div>
+    <main className="max-w-screen-2xl flex justify-center items-center w-full mx-auto  md:px-6 px-4">
+      <div className="reorganize_container">
+        <div className="ourmission-container">
+          <div className="ourmission-heading">BUSINESS HOURS</div>
+          <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
+          <div className="flex justify-between xl:gap-16 gap-9 lg:flex-row flex-col-reverse items-center ">
+            {/* ourmission-innercontainer */}
+            <div className="lg:w-1/2 w-full">
+              {hours.map((v, i) => (
+                <div className="businesshour-row">
+                  <div className="business-time">
+                    <TbClockHour5 size={30}  className="sm:text-[#EE2A2E] text-[#000000]" />
+                    <div>{v.day}</div>
+                  </div>
+                  {/* businesshour-row */}
+                  <div className="business-timing  ">
+                    <h6 className="sm:w-80 w-full">
+                      {v.time}
+                    </h6>
+
+                  </div>
                 </div>
-                <div className="business-timing">{v.time}</div>
-              </div>
-            ))}
-          </div>
-       
-            <img className="businesshours-img" src={Reception} />
+              ))}
+            </div>
+            <div className="lg:w-1/2 w-full">
+              {/* businesshours-img */}
+              <img className="w-full rounded-[24px]" src={Reception} />
+            </div>
+
           </div>
         </div>
       </div>
-    
+    </main>
   );
 }
 

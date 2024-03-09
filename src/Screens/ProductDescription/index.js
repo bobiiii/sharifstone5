@@ -32,6 +32,7 @@ function ProductDescription() {
         setRelatedColors(relatedColor.slice(0,3));
       });
     }
+    
   }, [params?.color]);
   return (
     <div>
