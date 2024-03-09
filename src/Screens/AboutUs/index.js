@@ -14,7 +14,7 @@ function AboutUs() {
       <OurMission />
       <OurLocation />
       <BusinessHours />
-      <CustomerReview label={"WHAT OUR CLIENT SAY"}/>
+      <CustomerReview label={"WHAT OUR CLIENT SAY"}/> 
     </div>
   )
 }

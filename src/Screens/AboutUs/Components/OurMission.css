@@ -1,6 +1,6 @@
 .ourmission-container {
-  width: 90%;
-  margin-bottom: 25px;
+  width: 100%;
+  /* margin-bottom: 10px; */
 }
 .ourmission-heading {
   font-size: 50px;
@@ -19,7 +19,7 @@
   margin-top: 50px !important;
 }
 .ourmission-innercontainer {
-  width: 49%;
+  /* width: 49%; */
   line-height: 32px;
   font-size: 20px;
  
@@ -42,8 +42,8 @@
   height: fit-content;
 }
 .ourmission-details {
-  width: 100%;
-  text-align: justify;
+  /* width: 100%;  */
+  text-align: start;
   line-height: 22px;
   
 }
@@ -54,14 +54,14 @@
     text-align: center;
   }
   .ourmission-details {
-    width: 100%;
+    /* width: 100%;  */
     margin-top: 20px;
   }
   .ourmission-subcontainer {
     flex-direction: column !important;
   }
   .ourmission-innercontainer{
-    width: 95% !important;
+    /* width: 95% !important;  */
     line-height: 35px;
     font-size: 17px !important;
     margin-bottom: 50px;

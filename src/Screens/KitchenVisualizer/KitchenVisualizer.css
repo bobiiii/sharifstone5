@@ -3,7 +3,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between;  */
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,41 +12,44 @@
 .kitchen-visualizer-logo {
   width: 80%;
   margin-top: 50px;
-  flex-direction: column;
-  align-items: center;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
 .kitchen-visualizer-startform {
-  width: 70%;
-  height: 400px;
+  /* width: 60%;  */
+  height: auto;
   margin-bottom: 40px;
-  padding: 0px 30px;
-  display: flex;
+  padding: 15px 30px;
+  /* display: flex;
+  gap: 50px; */
   border-radius: 20px;
   background-color: #00000080;
 }
 .kitchen-visualizer-section {
-  width: 50%;
-  margin: 0px 20px;
-  color: white;
+  /* width: 100%;
+  margin: 0px 20px; */
+  /* gap: 6px; */
+  /* color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 .kitchen-visualizer-section span {
   font-weight: 600;
-  font-size: 37px;
+  /* font-size: 37px;  */
 }
 .kitchen-visualizer-section div {
-  font-size: 17px;
-  margin-top: 25px;
+  font-size: 17px; 
+  margin-top: 15px;
   line-height: 25px;
 }
 .kitchen-visualizer-startbtn {
   background-color: #ee2a2e;
   cursor: pointer;
   border-radius: 30px;
-  width: 80%;
+  /* width: 40%;  */
   height: 40px;
   display: flex;
   justify-content: center;
@@ -55,9 +58,10 @@
 .release-wrapper {
   margin-top: 25px;
   background-color: #ee2a2e;
-  padding: 0.01mm;
-  padding-inline: 2%;
-  border-radius: 10px;
+  /* padding: 0.01mm; */
+  /* padding-inline: 2%;  */
+  border-radius: 
+  8.29px;
   width: fit-content;
 }
 
@@ -72,8 +76,8 @@
 
 @media screen and (max-width: 1440px) and (min-width: 1024px) {
   .kitchen-visualizer-section div {
-    font-size: 16px;
-    margin-top: 25px;
+    font-size: 16px;  
+    margin-top: 10px;
     line-height: 25px;
   }
 }
@@ -81,7 +85,8 @@
   .kitchen-visualizer-startform {
     width: 85%;
     height: auto;
-    padding: 100px 30px;
+    padding: 25px 30px;
+    margin-top: 12px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 320px) {
@@ -92,13 +97,13 @@
   .kitchen-visualizer-startform {
     width: 90%;
     height: auto;
-    padding: 100px 0px;
+    padding: 20px 0px; 
   }
   .kitchen-visualizer-section {
     width: 80%;
   }
   .kitchen-visualizer-section span {
-    font-size: 25px;
+    /* font-size: 25px;  */
   }
   .release-text {
     font-size: 14px;
@@ -112,7 +117,7 @@
     height: 110vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -121,10 +126,11 @@
 }
 @media screen and (max-width: 375px) and (min-width: 320px) {
   .kitchen-visualizer-startform {
-    padding: 50px 0px;
+    padding: 25px 0px; 
+    margin-top: 25px;
   }
   .kitchen-visualizer-section span {
-    font-size: 18px;
+    /* font-size: 18px;  */
   }
   .kitchen-visualizer-section div {
     font-size: 14px;

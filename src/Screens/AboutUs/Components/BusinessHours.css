@@ -18,7 +18,9 @@
     margin: 0px 10px;
 }
 .business-timing {
-    width: 300px;
+    /* width: 300px; */
+    margin-left: 5px;
+    text-align: end;
 }
 .businesshours-img {
     border-radius: 30px;
