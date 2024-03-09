@@ -71,101 +71,37 @@ function HomeScreen() {
         </div>
       </div> 
 
-      <div  className=" bg-gradient-hero h-[40vh]  flex items-center bg-cover  bg-center bg-no-repeat ">
-        <MaxWidthWrapper className=''>
-          <div className="w-full py-8 lg:py-6  flex gap-4 justify-center items-center   " >
-            <div className="w-full flex text-white  gap-4 justify-center items-center ">
-              <div className=" w-1/2 h-auto ">
-                <h3 className="lg:text-5xl sm:text-3xl text-xl whitespace-nowrap  font-medium font-gelasio  	">BUILDING </h3>
-                <h3 className="lg:text-5xl sm:text-3xl text-xl  whitespace-nowrap font-medium font-gelasio 	py-2">MEMORIES, ONE </h3>
-                <h3 className="lg:text-5xl sm:text-3xl text-xl font-medium font-gelasio 	">  STONE AT A TIME</h3>
-              </div>
 
-              <div className="w-1/2  bg-bg-img-hero  bg-no-repeat ">
-                <div className="flex justify-between lg:flex-row flex-col  gap-4 w-full lg:items-center items-start">
-                  <p className="max-w-md lg:text-xl sm:text-base text-sm font-normal">
+
+<div className=" bg-gradient-hero  h-[40vh] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
+  <div className="h-full bg-bg-img-hero  bg-auto bg-no-repeat bg-right justify-center flex items-center">
+  <div className="w-1/2 lg:w-3/5 h-full ">
+<div className="h-full flex justify-center  items-center
+ ">
+<h3 className="lg:text-5xl sm:text-3xl text-xl   font-medium font-gelasio      px-2 md:px-8 "> 
+BUILDING MEMORIES, ONE STONE AT A TIME</h3>
+</div>
+  </div>
+  <div className="w-1/2 lg:w-2/5 h-full flex  gap-4 justify-center  ">
+
+  <div className="flex justify-center  flex-col  gap-4 w-full  items-start">
+                  <p className="max-w-md lg:text-2xl sm:text-base text-sm font-normal">
                     Beauty and quality beyond imagination. Service beyond what's expected.
                   </p>
                   <Button className={""} >
                     View Collection
                   </Button>
                 </div>
+  </div>
+  </div>
 
-              </div>
-
-              {/* <div className=" w-1/2 h-auto bg-bg-img-hero">
-                 <div className="homecard-color-carousel">
-                <HiArrowLongLeft
-                  onClick={() => changeFunction(false)}
-                  size={30}
-                  color={"#fff"}
-                />
-                <div
-                  // onClick={() => setActiveColor(i)}
-                  className="homecard-color-card"
-                  style={{
-                    backgroundImage: `url(images/scroller_images/scroller_${index}.jpg)`,
-                    // border: activeColor === i ? "3px solid black" : "",
-                  }}
-                ></div>
-                <div
-                  // onClick={() => setActiveColor(i)}
-                  className="homecard-color-card"
-                  style={{
-                    backgroundImage: `url(images/scroller_images/scroller_${
-                      index + 1
-                    }.jpg)`,
-                    border: "3px solid black",
-                  }}
-                ></div>
-                <div
-                  // onClick={() => setActiveColor(i)}
-                  className="homecard-color-card"
-                  style={{
-                    backgroundImage: `url(images/scroller_images/scroller_${
-                      index + 2
-                    }.jpg)`,
-                    // border: activeColor === i ? "3px solid black" : "",
-                  }}
-                ></div>
-                 {colorCarousel.map((v, i) => (
-                  <div
-                    onClick={() => setActiveColor(i)}
-                    className="homecard-color-card"
-                    style={{
-                      backgroundImage: v,
-                      border: activeColor === i ? "3px solid black" : "",
-                    }}
-                  ></div>
-                ))} 
-                <HiArrowLongRight
-                  style={{ zIndex: 1 }}
-                  onClick={() => changeFunction(true)}
-                  size={30}
-                  color={"#fff"}
-                />
-              </div> 
+</div>
 
 
-                <p className="text-sm">
-                  Beauty and quality beyond imagination. Service beyond what's expected.
-                </p>
-                <div className=" my-3">
-                  <Link
-                    to={"/quartz-collection"}
-                    className="bg-white text-red-500 p-2  "
-                  >
-                    View Collection
-                  </Link>
-                </div>
 
 
-              </div> */}
-            </div>
-            
-          </div>
-        </MaxWidthWrapper>
-      </div>
+
+      
       </div>
       <MaxWidthWrapper>
         <DiscoverCollection />

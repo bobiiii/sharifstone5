@@ -4,19 +4,25 @@ import "./loveus.css";
 
 const LoveUS = () => {
   return (
-    <main className='max-w-screen-2xl w-full mx-auto px-4 md:py-16 py-10'>
-      <div className="home-loveus-container w-full   flex justify-center items-center ">
-        <div className="home-loveus-innercontainer lg:mt-0 mt-8">
-          <img src={LoveUSCover} className="loveus-image" />
+    <main className='max-w-screen-2xl w-full mx-auto px-4 md:py-16 py-10  '>
+      <div className="w-full  lg:overflow-hidden   flex flex-col-reverse lg:flex-row justify-center items-center ">
+        <div className="lg:w-1/2   lg:mt-0  mt-8 overflow-hidden  ">
+          <div className="lg:w-[120%]  lg:block hidden ">
+          <img src={LoveUSCover} className="lg:h-full  lg:ml-[-18%] " />
+          </div>
+          <div className="w-[100vw] overflow-hidden  lg:hidden  ">
+         <div className="w-[500px] ml-[-15%]">
+          <img src={LoveUSCover} className="h-full bg-[#f3f5f5]  " />
+          </div>          </div>
         </div>
         {/* home-loveus-innercontainer2 */}
-        <div className=" xl:w-1/2 md:w-[65%] w-full flex justify-center items-center flex-col ">
-          <div className=" w-full h-full mb-6 ">
-            <h1 className=" w-full font-gelasio leading-5 lg:text-5xl  font-semibold sm:text-4xl xs:text-2xl text-xl  text-[rgb(34,31,31)] lg:text-start text-center " >
+        <div className=" xl:w-1/2 md:w-[60%] w-full flex justify-center items-center flex-col ">
+          <div className=" w-full  h-full mb-6 ">
+            <h1 className=" w-full  font-gelasio leading-5 lg:text-5xl  font-semibold sm:text-4xl xs:text-2xl text-xl  text-[rgb(34,31,31)] lg:text-start text-center " >
               WHY DESIGNERS  LOVE US
             </h1>
           </div>
-          <div className="home-loveus-desc  lg:text-start text-center flex flex-col md:gap-6 gap-4">
+          <div className="lg:px-2 lg:me-10 home-loveus-desc   lg:text-start text-center flex flex-col md:gap-6 gap-4">
             <p>
               Our diverse range of designs and products allows us to cater to a wide
               spectrum of design preferences, ensuring that our offerings seamlessly
