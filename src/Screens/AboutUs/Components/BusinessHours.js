@@ -39,7 +39,7 @@ function BusinessHours() {
       <div className="ourmission-container">
         <div className="ourmission-heading">BUSINESS HOURS</div>
         <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9}} />
-        <div className="ourmission-subcontainer">
+        <div className="flex justify-around ">
           <div className="ourmission-innercontainer">
             {hours.map((v, i) => (
               <div className="businesshour-row">

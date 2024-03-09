@@ -11,7 +11,7 @@ function QuartzAdvantage() {
     // {
     //   name: `MT HELEN`,
     //   // url: "url(images/HELEN.png)",
-    //   url: "url(images/helen1.png)",
+    //   url: 'url(images/quartz_advantages.png)',
     // },
     {
       name: "PREMIUM QUALITY",
@@ -43,7 +43,7 @@ function QuartzAdvantage() {
   return (
     <MaxWidthWrapper>
       <div className="home-advantagecontainer my-8">
-        <div className="home-advantageinnercontainer">
+        <div className="home-advantageinnercontainer ">
           {/* <div className="home-advamtageheading">QUARTZ ADVANTAGES</div>
           <div className="home-advamtagedesc">
             Quartz surfaces are created through a blend of various components,
@@ -52,13 +52,13 @@ function QuartzAdvantage() {
             cutting-edge solution caters to a wide range of surface requirements
             for different interior settings.
           </div> */}
-          <div className="">
-            <h1 className="lg:text-[50px] font-medium sm:text-4xl text-xl whitespace-nowrap py-2  text-center  font-gelasio text-[rgb(34,31,31)]">
+          <div className=" mt-6">
+            <h1 className="font-gelasio lg:text-5xl font-semibold sm:text-4xl xs:text-2xl text-xl  text-[rgb(34,31,31)] text-center">
               Quartz  Advantages
             </h1>
 
           </div>
-          <div className="sm:w-[80%]  w-[95%] md:mt-4 sm:text-base text-sm text-center">
+          <div className="sm:w-[80%]  w-[95%] md:mt-4 mt-2 sm:text-base text-sm text-center">
             Quartz  Advantages
             Quartz surfaces are created through a blend of various components, with the use of advanced technology to guarantee both durability and sustainability, while also boasting an appealing aesthetic. This cutting-edge solution caters to a wide range of surface requirements for different interior settings.
           </div>
@@ -67,28 +67,41 @@ function QuartzAdvantage() {
             style={{ backgroundImage: "url(images/quartz_advantages.png)" }}
           >
             {/* homebrand-images */}
-            <div className="flex w-full justify-center">
-              <div className=" lex flex-col lg:flex-row items-end justify-center  xl:w-full w-screen mb-4 ">
-              <div className={` px-8  my-4  flex justify-center items-start    flex-col gap-2.5  `}>
-                      {/* homebrand-image */}
-                      <div
-                        className="xl:w-12 xl:h-12 w-12 h-10 items-start text-white  "
-                        style={{
-                          backgroundImage:"url(images/helen1.png)",
-                        }}
-                      />
-                      {/* homebrand-text */}
-                      <div className="text-white font-medium md:text-base text-[13px] w-[90px]">MT HELEN</div>
-                    </div>
+            <div className="flex w-full justify-center items-end">
+              <div className=" lex flex-col lg:flex-row items-center justify-center  xl:w-full w-screen mb-4 ">
+                <div className=" xl:hidden flex justify-center items-center   w-[35%] mb-2.5 ms-2 ">
+                  <div className={` px-8  my-4  flex justify-center items-start     flex-col gap-2.5  `}>
+                    {/* homebrand-image */}
+                    <div
+                      className="xl:w-12 xl:h-12 w-12 h-10 items-start text-white  "
+                      style={{
+                        backgroundImage: "url(images/helen1.png)",
+                      }}
+                    />
+                    {/* homebrand-text */}
+                    <div className="text-white ps-2 font-medium md:text-base text-[13px] w-[90px]">MT <br/> HELEN</div>
+                  </div>
+                </div>
+
                 <div className=" w-full    items-center grid xl:grid-cols-7 grid-cols-3 lg:gap-y-4 gap-y-6 ">
 
+                  <div className={` px-8  my-4  xl:flex hidden justify-center items-center    flex-col gap-2.5 text-center `}>
+                    {/* homebrand-image */}
+                    <div
+                      className="xl:w-12 xl:h-12 w-12 h-10 items-start text-white  "
+                      style={{
+                        backgroundImage: "url(images/helen1.png)",
+                      }}
+                    />
+                    {/* homebrand-text */}
+                    <div className="text-white font-medium md:text-base text-[13px] w-[90px]">MT <br/> HELEN</div>
+                  </div>
 
 
-                  
                   {advantages.map((v, i) => (
                     // homebrand-text
 
-                    <div className={`   text-center flex justify-center items-center flex-col gap-2.5  `}>
+                    <div className={`   text-center flex  justify-center items-center flex-col gap-2.5  `}>
                       {/* homebrand-image */}
                       <div
                         className="xl:w-12 xl:h-12 w-12 h-10 items-start text-white "
@@ -109,7 +122,7 @@ function QuartzAdvantage() {
             to="/files/slab.pdf"
             target="_blank"
             download
-            className="homebrand-button"
+            className="homebrand-button mb-6"
           >
             Download Slab Technical Chart
           </Link>

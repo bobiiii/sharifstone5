@@ -37,7 +37,7 @@ function InsideStore({ data }) {
           <div className="w-full md:px-6 px-2">
             <div className="home-insidestore-container">
               {/* home-insidestore-heading */}
-              <div className="font-gelasio xl:text-5xl lg:text-4xl  sm:text-3xl md:text-start text-center items-center justify-center text-2xl w-full">STEP INSIDE OUR STORE</div>
+              <div className="font-gelasio xl:text-5xl lg:text-4xl  font-semibold sm:text-4xl xs:text-2xl text-xl  text-[rgb(34,31,31)] md:text-start text-center w-full">STEP INSIDE OUR STORE</div>
               {/* <div className="homebrand-button">View Full Catalogue</div> */}
               <div className="bg-[#ee2a2e] text-center items-center px-6 py-2.5 rounded-3xl whitespace-nowrap text-white font-semibold font-gelasio md:flex hidden" onClick={() => setOpenQuote(true)}>Get Directions</div>
             </div>

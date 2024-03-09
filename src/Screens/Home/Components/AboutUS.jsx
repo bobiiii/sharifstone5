@@ -9,7 +9,7 @@ import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
 import about_us_video from "../../../assets/videos/about_us.mp4"
 import MaxWidthWrapper from "../../MaxWidthWrapper";
-
+import 'animate.css';
 
 function AboutUS({ data }) {
   const opts = {
@@ -95,7 +95,7 @@ function AboutUS({ data }) {
     <MaxWidthWrapper>
       <div className="home-aboutconatiner w-full">
         <div className="home-aboutinnercontainer">
-          <div className="font-gelasio md:text-5xl sm:text-3xl text-2xl ">GET TO KNOW US</div>
+          <div className="font-gelasio lg:text-5xl  font-semibold sm:text-4xl xs:text-2xl text-xl  text-[rgb(34,31,31)] animate__heartBeat">GET TO KNOW US</div>
 
           <hr
             style={{
@@ -146,9 +146,28 @@ function AboutUS({ data }) {
 
           </div>
           {/* home-aboutcard */}
-          <div className=" w-full flex flex-wrap py-4  ">
+          <div className=" w-full  md:hidden flex flex-wrap py-4   items-center justify-center">
             {aboutIdeas.map((v, i) => (
-              <div className="  flex w-[45%]  justify-center items-center   mx-auto  ">
+              <div className="  flex w-[45%]  justify-center items-center text-center   mx-auto  ">
+                <Link
+                  to={v.href}
+                  className="home-aboutcards w-full mt-4  py-6 px-2  "
+                  style={{ textDecoration: "none" }}
+                >
+                  <img src={v.image} className="sm:w-20 w-12" />
+                  <div className="mt-4 text-center">
+                    <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black  mt-4">
+                      {v.name}
+                    </h5>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className=" w-full px-10 hidden md:flex gap-10 py-4 my-6  ">
+            {aboutIdeas.map((v, i) => (
+              <div className="  flex lg:w-[25%] w-[32%]  justify-center items-center   mx-auto  ">
                 <Link
                   to={v.href}
                   className="home-aboutcards w-full mt-4  py-6 px-2  "
@@ -159,18 +178,12 @@ function AboutUS({ data }) {
                     <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black mt-4">
                       {v.name}
                     </h5>
-
-
                   </div>
-
                 </Link>
               </div>
             ))}
           </div>
-
-
         </div>
-
       </div>
     </MaxWidthWrapper>
   );
