@@ -422,7 +422,7 @@ const KitchenVisualizer = () => {
       {currentScreen === "start" && (
 
         <div
-          className="kitchen-visualizer-container flex md:justify-between justify-around"
+          className="kitchen-visualizer-container min-h-screen bg-blue-500 flex md:justify-between justify-start"
           style={{ backgroundImage: "url(images/cover/Visualizer_img.png)" }}
         >
           <div className="kitchen-visualizer-logo  flex sm:justify-start sm:items-start justify-center items-center w-full mt-[50px] mx-14 flex-col">
@@ -434,9 +434,9 @@ const KitchenVisualizer = () => {
               <p className="release-text">2024 RELEASE</p>
             </div>
           </div>
-          <main className="max-w-screen-2xl mx-auto md:px-6 flex justify-center items-center px-2 mt-2">
-            <div className="kitchen-visualizer-startform  flex justify-between md:gap-16 gap-4 lg:w-[70%] w-[85%]   md:text-start text-center px-2 py-2.5 " >
-              <div className="kitchen-visualizer-section md:py-10 py-4 flex justify-center md:items-start items-center w-full flex-col text-white gap-1 md:text-start text-center ">
+          <main className="overflow-y-scroll max-w-screen-2xl  mx-auto md:px-6 flex lg:flex-grow justify-center items-center px-2 lg:mt-2">
+            <div className=" kitchen-visualizer-startform  w-full  flex justify-between md:gap-16 lg:gap-4 lg:w-[70vw] xl:w-[70vw] lg:h-max    md:text-start text-center px-2 lg:px-8 mt-8  pt-6 " >
+              <div className="overflow-hidden kitchen-visualizer-section px-2  md:py-6 py-4  flex justify-center md:items-start items-center w-full flex-col text-white gap-1 md:text-start text-center ">
                 <span className="lg:text-4xl text-2xl">SHARIFSTONE ONLINE VISUALIZER</span>
                 <div>
                   Our Kitchen and Bathroom Visualizer allows you to explore
@@ -449,7 +449,7 @@ const KitchenVisualizer = () => {
                 </div>
               </div>
               {/* kitchen-visualizer-section */}
-              <div className="md:w-[30%] w-[80%] flex justify-center items-center text-white md:mt-0 mt-2">
+              <div className="md:w-[30%] w-[80%] mt-3 flex justify-center items-center text-white md:mt-0 ">
                 <div
                   onClick={() => setCurrentScreen("Visualizer Form")}
                   className="kitchen-visualizer-startbtn sm:w-[250px] w-full "
