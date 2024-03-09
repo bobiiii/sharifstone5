@@ -44,7 +44,7 @@ function NavMenu({ navState }) {
     
     {
       name: "Live Inventory",
-      route: "/live-inventory",
+      route: "https://4power.stoneprofitsweb.com/",
     },
   ];
 
@@ -204,7 +204,7 @@ function NavMenu({ navState }) {
               </Link>
             ))}
  
-            <Link
+            {/* <Link
               to={"https://4power.stoneprofitsweb.com/"}
               target="_blank"
               className="nav-item"
@@ -218,7 +218,7 @@ function NavMenu({ navState }) {
               />
               {showNewText && <span className="new-text">NEW </span>}
               {"Live Inventory"}
-            </Link>
+            </Link> */}
           </div>
         )}
       </div>

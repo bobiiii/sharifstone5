@@ -27,12 +27,14 @@ function ProductDescription() {
         let relatedColor = await getCollectionByParam(
           result?.collection_url
         );
+
         console.log('444444',colorDetails?.color_url,relatedColors);
         relatedColor = relatedColor.filter(value => value?.color_url !== colorDetails?.color_url)
         console.log('44444',relatedColor);
         setRelatedColors(relatedColor.slice(0,3));
       });
     }
+    
   }, [params?.color]);
   return (
     <div>
