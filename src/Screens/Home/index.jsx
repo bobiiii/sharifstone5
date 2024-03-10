@@ -71,9 +71,6 @@ function HomeScreen() {
             </video> */}
           </div>
         </div>
-
-
-
         <div className=" bg-gradient-hero  h-[40vh] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
           <div className="h-full bg-bg-img-hero  bg-auto bg-no-repeat bg-right justify-center flex items-center">
             <div className="w-1/2 lg:w-3/5 h-full ">
@@ -84,7 +81,6 @@ function HomeScreen() {
               </div>
             </div>
             <div className="w-1/2 lg:w-2/5 h-full flex  gap-4 justify-center  ">
-
               <div className="flex justify-center  flex-col  gap-4 w-full  items-start">
                 <p className="max-w-md lg:text-2xl sm:text-base text-sm font-normal">
                   Beauty and quality beyond imagination. Service beyond what's expected.
@@ -95,9 +91,7 @@ function HomeScreen() {
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
       <MaxWidthWrapper >
         <DiscoverCollection />
@@ -105,9 +99,7 @@ function HomeScreen() {
       <AboutUS data={{ openQuote, setOpenQuote }} />
       <QuartzAdvantage />
       {/* <Gallery /> */}
-
       <LoveUS />
-
       <InsideStore data={{ openQuote, setOpenQuote }} />
       {/* <iframe
         src="https://491744c8fa6a4bdda6b6d67be74ff1b7.elf.site"
@@ -116,7 +108,6 @@ function HomeScreen() {
         frameborder="0"
       ></iframe> */}
     </div>
-
   );
 }
 

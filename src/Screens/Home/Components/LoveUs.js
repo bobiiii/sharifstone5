@@ -1,11 +1,12 @@
 import LoveUSCover from "../../../assets/images/designer_love.png";
+import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
 import "./loveus.css";
 // import
 
 const LoveUS = () => {
   return (
-    <main className='max-w-screen-2xl w-full mx-auto px-4 md:py-16 py-10  '>
+    <MaxWidthWrapper >
       <div className="w-full  lg:overflow-hidden   flex flex-col-reverse lg:flex-row justify-center items-center ">
         <div className="lg:w-1/2   lg:mt-0  mt-8 overflow-hidden  ">
           <div className="lg:w-[120%]  lg:block hidden ">
@@ -44,7 +45,7 @@ const LoveUS = () => {
 
         </div>
       </div>
-    </main>
+    </MaxWidthWrapper>
   );
 };
 

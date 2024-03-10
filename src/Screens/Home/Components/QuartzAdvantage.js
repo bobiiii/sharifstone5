@@ -43,7 +43,7 @@ function QuartzAdvantage() {
   ];
   return (
     <MaxWidthWrapper>
-      <div className="home-advantagecontainer my-8">
+      <div className="home-advantagecontainer ">
         <div className="home-advantageinnercontainer ">
           {/* <div className="home-advamtageheading">QUARTZ ADVANTAGES</div>
           <div className="home-advamtagedesc">

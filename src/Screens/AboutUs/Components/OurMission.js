@@ -6,7 +6,8 @@ import Heading from "../../resuable/Heading";
 function OurMission() {
   return (
     <MaxWidthWrapper className=''>
-      <div className="reorganize_container ">
+      {/* reorganize_container  */}
+      <div className=" w-full flex justify-center items-center">
         <div className="ourmission-container">
           <Heading className='md:text-start text-center'>
             OUR COMPANY'S COMMITMENT

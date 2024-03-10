@@ -3,35 +3,44 @@
   height: 100%;
   position: fixed;
   left: 0;
-  top: 0;
+  top: 0px;
+  padding-top: 10px;
   background-color: rgba(0, 0, 0, 0.767);
   z-index: 100000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .quote-form-contactus {
   width: 80%;
+  height: 80vh;
+  /* margin-top: 20px; */
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #ffffffd2;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 50px 0px;
+  /* padding: 50px 0px;  */
   position: relative;
 }
+
 .quote-cross-icon {
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: -10px;
-    top: -10px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
+
 .quote-label {
   font-size: 50px;
   font-weight: 600;
@@ -39,18 +48,22 @@
   font-family: "Gelasio", serif;
   margin: 40px 0px;
 }
+
 .quote-field-row {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .quote-field-row input {
-  width: 400px;
+  /* width: 400px;  */
+  width: 100%;
   padding: 15px;
   margin: 5px;
   border-radius: 10px;
   border: none;
 }
+
 .quote-field-row label {
   width: 400px;
   padding: 15px;
@@ -58,27 +71,31 @@
   border-radius: 10px;
   border: none;
 }
+
 .quote-select {
   width: 870px;
   padding: 15px;
   margin: 5px;
   border-radius: 10px;
   border: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 1em;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
 }
+
 .select-container {
   position: relative;
   margin: 5px 0px;
 }
+
 .select-container-icon {
   position: absolute;
   right: 20px;
   top: 20px;
 }
+
 .quote-message {
   width: 840px;
   padding: 15px;
@@ -86,6 +103,7 @@
   border-radius: 10px;
   border: none;
 }
+
 .quote-submit {
   width: 400px;
   height: 40px;
@@ -98,6 +116,7 @@
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .quote-form-contactus {
     padding: 20px;
@@ -108,6 +127,7 @@
   .quote-form-contactus {
     padding: 20px;
   }
+
   .quote-field-row input {
     width: 280px;
     padding: 15px;
@@ -115,6 +135,7 @@
     border-radius: 10px;
     border: none;
   }
+
   .quote-field-row label {
     width: 400px;
     padding: 15px;
@@ -122,6 +143,7 @@
     border-radius: 10px;
     border: none;
   }
+
   .quote-select {
     width: 630px;
     padding: 15px;
@@ -129,6 +151,7 @@
     border-radius: 10px;
     border: none;
   }
+
   .quote-message {
     width: 600px;
     padding: 15px;
@@ -139,45 +162,52 @@
 }
 
 @media screen and (max-width: 425px) and (min-width: 320px) {
-    .quote-form-contactus {
-      padding: 20px;
-    }
-    .quote-field-row {
-        flex-direction: column;
-      }
-    .quote-field-row input {
-      width: 270px;
-      padding: 15px;
-      margin: 5px;
-      border-radius: 10px;
-      border: none;
-    }
-    .quote-field-row label {
-      width: 400px;
-      padding: 15px;
-      margin: 5px;
-      border-radius: 10px;
-      border: none;
-    }
-    .quote-select {
-      width: 300px;
-      padding: 15px;
-      margin: 5px;
-      border-radius: 10px;
-      border: none;
-    }
-    .quote-message {
-      width: 270px;
-      padding: 15px;
-      margin: 5px;
-      border-radius: 10px;
-      border: none;
-    }
-    .quote-submit {
-        width: 90%;
-        font-size: 15px;
-    }
-    .quote-label {
-        font-size: 35px;
-      }
+  .quote-form-contactus {
+    padding: 20px;
   }
+
+  .quote-field-row {
+    flex-direction: column;
+  }
+
+  .quote-field-row input {
+    width: 270px;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .quote-field-row label {
+    width: 400px;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .quote-select {
+    width: 300px;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .quote-message {
+    width: 270px;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .quote-submit {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .quote-label {
+    font-size: 35px;
+  }
+}

@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'gelasio': ["Gelasio", 'serif'],
+        'albert':["Albert Sans", 'sans-serif']
       },
       backgroundImage: {
         'bg-img-hero': "url('/public/images/bg_S_white.png')",

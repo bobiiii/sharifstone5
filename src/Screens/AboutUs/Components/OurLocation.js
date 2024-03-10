@@ -8,7 +8,8 @@ import MaxWidthWrapper from "../../MaxWidthWrapper";
 function OurLocation() {
   return (
     <MaxWidthWrapper>
-      <div className="reorganize_container">
+      {/* reorganize_container  */}
+      <div className="w-full flex justify-center items-center">
         <div className="ourmission-container">
           <div className="ourmission-heading">OUR LOCATIONS</div>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />

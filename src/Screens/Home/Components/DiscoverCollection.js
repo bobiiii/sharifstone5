@@ -46,7 +46,7 @@ function DiscoverCollection() {
 
   return (
 
-    <div className="w-full  flex justify-center items-center flex-col py-16 ">
+    <div className="w-full  flex justify-center items-center flex-col  ">
       <div className="">
         <ScrollAnimation animateIn='animate__backInLeft'
           animateOut='animate__backInRight'>

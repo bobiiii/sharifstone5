@@ -13,7 +13,7 @@ const SubscriptionNewsLetter = () => {
     e.preventDefault();
   }
   return (
-    <MaxWidthWrapper>
+    <MaxWidthWrapper className='px-0'>
       <div className="home-subscribe">
         {/* home-subscription-container */}
         <div className="bg-[#F3F5F5] flex justify-center items-center flex-col sm:gap-16 gap-8 py-16 relative">
