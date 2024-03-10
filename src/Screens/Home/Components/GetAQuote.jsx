@@ -20,14 +20,14 @@ function GetAQuote({ data }) {
   // })
   return (
     <>
-      <section className="fixed h-screen w-screen bg-black bg-opacity-55  flex justify-center items-center pb-16 pt-16 z-50 ">
+      <section className="fixed cs-height2 h-screen w-screen bg-black bg-opacity-55  flex justify-center items-center pb-16 pt-16 z-50 ">
         <main className=' max-w-screen-lg w-full  mx-auto   md:px-16 px-6 '>
           <button onClick={()=>setOpenQuote(false)} className="   text-xl  place-self-end w-full flex justify-end ms-4 -mb-2">
             <div className="bg-white rounded-full p-2 z-50 ">
               <ImCross  className="text-black" size={10}  />
             </div>
           </button>
-          <div className="bg-[#c9c8c8] h-[80vh] cs-height backdrop-blur-sm  py-6 px-6 flex flex-col gap-8">
+          <div className="bg-[#c9c8c8] h-[80vh] lg:h-min cs-height backdrop-blur-sm  py-6 px-6 flex flex-col gap-8">
             <div className="text-center mb-6  input-box2">
               <Heading>
                 Get A Qoute
