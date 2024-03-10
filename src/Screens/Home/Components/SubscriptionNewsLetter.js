@@ -3,6 +3,7 @@ import BG from "../../../assets/images/homeImage/subscript_bg.png";
 import { IoIosSend } from "react-icons/io";
 import { useState } from "react";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
+import Heading from "../../resuable/Heading";
 
 const SubscriptionNewsLetter = () => {
   const [mailto, setMailto] = useState("");
@@ -17,10 +18,10 @@ const SubscriptionNewsLetter = () => {
         {/* home-subscription-container */}
         <div className="bg-[#F3F5F5] flex justify-center items-center flex-col sm:gap-16 gap-8 py-16 relative">
           {/* home-subscription-header */}
-          <div className="xl:w-[80%] w-screen px-2  font-gelasio lg:text-5xl   font-semibold sm:text-4xl  xs:text-2xl text-xl  text-[rgb(34,31,31)] text-center" >
+          <Heading className='text-center px-1'>
             SUBSCRIBE TO OUR NEWSLETTER TO GET UPDATES ON NEW PROMOTIONS AND
             PRODUCTS
-          </div>
+          </Heading>
           <div className="flex justify-center items-center  w-full">
             <form style={{ zIndex: 100, marginBottom: 30 }} className="lg:w-[70%] md:w-[80%]
              w-full sm:px-2 px-4 flex" onSubmit={submitForm}>

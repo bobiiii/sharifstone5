@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import MTHelenImage from "../../../assets/images/mt_helen.jpg";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import mt from '../images/mt.png'
+import Heading from "../../resuable/Heading";
 function QuartzAdvantage() {
   const advantages = [
 
@@ -53,9 +54,9 @@ function QuartzAdvantage() {
             for different interior settings.
           </div> */}
           <div className=" mt-6">
-            <h1 className="font-gelasio lg:text-5xl font-semibold sm:text-4xl xs:text-2xl text-xl  text-[rgb(34,31,31)] text-center">
+            <Heading className='text-center'>
               Quartz  Advantages
-            </h1>
+            </Heading>
 
           </div>
           <div className="sm:w-[80%]  w-[95%] md:mt-4 mt-2 sm:text-base text-sm text-center">
@@ -79,7 +80,7 @@ function QuartzAdvantage() {
                       }}
                     />
                     {/* homebrand-text */}
-                    <div className="text-white ps-2 font-medium md:text-base text-[13px] w-[90px]">MT <br/> HELEN</div>
+                    <div className="text-white ps-2 font-medium md:text-base text-[13px] w-[90px]">MT <br /> HELEN</div>
                   </div>
                 </div>
 
@@ -94,7 +95,7 @@ function QuartzAdvantage() {
                       }}
                     />
                     {/* homebrand-text */}
-                    <div className="text-white font-medium md:text-base text-[13px] w-[90px]">MT <br/> HELEN</div>
+                    <div className="text-white font-medium md:text-base text-[13px] w-[90px]">MT <br /> HELEN</div>
                   </div>
 
 
