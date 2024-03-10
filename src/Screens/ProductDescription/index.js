@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import CoverImage from "../../assets/images/product_description.png";
 import Switch from "react-switch";
 import MaxWidthWrapper from "../../Screens/MaxWidthWrapper";
+import Heading from "../resuable/Heading";
 
 
 
@@ -45,48 +46,49 @@ function ProductDescription() {
         label={["PRODUCT", "DESCRIPTION"]}
       />
       <MaxWidthWrapper>
-      <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-10 ">
+        <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-10 ">
 
-        <div className="lg:w-1/2 ">
-          <div className="lg:w-full  bg-cover bg-no-repeat  rounded-3xl">
-            {showColor ? <img src={colorDetails?.display_image} alt={"product-im"} className="lg:w-full lg:h-[650px] bg-cover bg-no-repeat h-full" /> : <img src={colorDetails?.color_image} className="lg:w-full lg:h-[650px] bg-cover bg-no-repeat h-full" alt={"product-im"} />}
+          <div className="lg:w-1/2 w-full">
+            <div className="lg:w-full  bg-cover bg-no-repeat  rounded-3xl">
+              {showColor ? <img src={colorDetails?.display_image} alt={"product-im"} className="lg:w-full lg:h-[650px] bg-cover bg-no-repeat h-full" /> : <img src={colorDetails?.color_image} className="lg:w-full lg:h-[650px] bg-cover bg-no-repeat h-full" alt={"product-im"} />}
 
-          </div>
-          
-          <div className="ms-6 flex py-4 items-center ">
-            <span className="font-bold" >Space</span>
-            <Switch className="px-2" onHandleColor={"#fff"} offColor={"#D6D6D6"} onColor={"#EE2A2E"} checkedIcon={false} uncheckedIcon={true} onChange={() => setShowColor(!showColor)} checked={!showColor} />
-            <span style={{ fontWeight: !showColor ? 600 : 400 }}>Color</span>
-          </div>
-        </div>
-        <div className="lg:w-1/2 ">
-          <h3 className="text-nowrap font-gelasio font-medium lg:py-2 text-[54px]">{colorDetails?.color_name}</h3>
-          
-          <div className="font-bold  text-2xl  ">Description</div>
-          <p className="text-lg lg:py-4">
-            {colorDetails?.description}
-          </p>
-          <div className="font-bold text-2xl">Finishes Available</div>
-          <div className="lg:py-4 flex ">
-            <div className="basis-2/5 flex-shrink" >
-              <div className="font-bold text-lg">Grip +</div>
-              <span className=" text-lg lg:py-2">
-                {colorDetails?.grip}
-              </span>
             </div>
-            <div className="basis-2/5 flex-shrink">
-              <div className="font-bold text-lg">Matte</div>
-              <span className=" text-lg lg:py-2">{colorDetails?.matte}</span>
+
+            <div className=" flex py-4 items-center ">
+              <span className="font-bold text-sm" >Space</span>
+              <Switch className="px-2" onHandleColor={"#fff"} offColor={"#D6D6D6"} onColor={"#EE2A2E"} checkedIcon={false} uncheckedIcon={true} onChange={() => setShowColor(!showColor)} checked={!showColor} />
+              <span style={{ fontWeight: !showColor ? 600 : 400 }} className="
+              text-sm">Color</span>
             </div>
           </div>
-          <div className="font-bold text-lg">Thicknesses</div>
-          <span className="text-lg lg:py-4">
-            {colorDetails?.thicknesses}
-          </span>
+          <div className="lg:w-1/2 ">
+            <Heading >{colorDetails?.color_name}</Heading>
+
+            <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2   ">Description</div>
+            <p className="sm:text-lg text-sm lg:py-4 py-2">
+              {colorDetails?.description}
+            </p>
+            <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2  ">Finishes Available</div>
+            <div className="lg:py-4 flex sm:flex-row  flex-col gap-2">
+              <div className="basis-2/5 flex-shrink" >
+                <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2  ">Grip +</div>
+                <span className=" text-lg lg:py-2">
+                  {colorDetails?.grip}
+                </span>
+              </div>
+              <div className="basis-2/5 flex-shrink">
+                <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2  ">Matte</div>
+                <span className=" text-lg lg:py-2">{colorDetails?.matte}</span>
+              </div>
+            </div>
+            <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2">Thicknesses</div>
+            <span className="text-lg lg:py-4">
+              {colorDetails?.thicknesses}
+            </span>
+          </div>
         </div>
-      </div>
       </MaxWidthWrapper>
-      <RelatedProduct relatedImages={relatedColors} />
+      <RelatedProduct relatedImages={relatedColors} /> 
     </div>
   );
 }
