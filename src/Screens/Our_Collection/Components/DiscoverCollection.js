@@ -509,10 +509,10 @@ const DiscoverCollection = () => {
     }
   };
 
-  const collectionJSX = (v, i, islable = false, inner = false) => {
+  const collectionJSX = (v, i,inner, islable = false  ) => {
     return (
       <div
-        className="  flex-grow flex-shrink basis-2/5      text-center  "
+        className={`  flex-grow flex-shrink    ${inner ? "basis-2/5 lg:basis-[20%]": "basis-2/5 lg:basis-[30%]"}   text-center ` }
         
       >
         <div className="flex flex-col   ">
@@ -523,11 +523,11 @@ const DiscoverCollection = () => {
           
         >
           <div className="relative">
-          <img src={`${v?.color_image}`} className="h-40 w-40 rounded-lg  "/>
+          <img src={`${v?.color_image}`} className="h-40 w-40 lg:w-80 lg:h-64 rounded-lg  " alt="tile-images"/>
           {i === onMouseOver && (
             <div
               onClick={() => gotoNextScreen(v)}
-              className=" bg-black text-white w-min  px-4 py-4 rounded-full absolute  top-[35%] left-[50%]  translate-x-[-50%] "
+              className=" bg-black text-white w-min  px-4 lg:px-8 py-4 lg:py-8 rounded-full absolute  top-[35%] left-[50%]  translate-x-[-50%] "
             >
               <GoArrowUpRight size={35} color="white" />
             </div>
@@ -541,7 +541,7 @@ const DiscoverCollection = () => {
             <div className="text-center">{v.color_name}</div>
           </div>
         ) : (
-          <div className="text-center text-wrap w-3/5  mx-auto pt-1   ">{v.color_name}</div>
+          <div className="text-center text-wrap w-3/5 lg:w-4/5  mx-auto pt-1   ">{v.color_name}</div>
         )}
         
 </div>
@@ -585,18 +585,21 @@ const DiscoverCollection = () => {
     }
   }, []);
   return (
-    <MaxWidthWrapper>
-      <div className="py-10">
-        <div className="font-extrabold text-3xl text-center font-gelasio">
+    <MaxWidthWrapper  className={""}>
+      
+        <div className="font-extrabold text-3xl text-center font-gelasio lg:w-1/2 lg:mx-auto">
           {flag ? content[collection][0] : innerCollection[0]?.collection_name}
         </div>
-        <div className="text-center py-4">{content[collection][1]}</div>
+        <div className="text-center py-4 lg:w-1/2 lg:mx-auto">{content[collection][1]}</div>
         
 {/* FOR Dynamic Data */}
-{/* <div className=" flex gap-4 justify-center  flex-wrap    ">
+{/* <div className=" lg:w-2/3 lg:mx-auto flex gap-4 lg:gap-8 justify-center  flex-wrap    ">
             {flag
               ? collections.length > 0
-                ? <><div className=" border border-green-600 flex-grow flex-shrink basis-2/5      text-center  ">a</div> {collections.map((v, i) => collectionJSX(v, i))}</>
+                ? <><div className=" flex-grow flex-shrink basis-2/5 lg:basis-[30%]      text-center   "><div className=" bg-pink-300 ">a</div>
+                
+                <div>b</div>
+                </div> {collections.map((v, i) => collectionJSX(v, i))}</>
                 : loader()
               : innerCollection.length > 0
                 ? innerCollection?.map((v, i) => collectionJSX(v, i, true, true))
@@ -604,17 +607,37 @@ const DiscoverCollection = () => {
           </div> */}
 
 
-          <div className=" flex gap-4 justify-center  flex-wrap    ">
+          {/* Dynamic cards  */}
+          {/* <div className={`  ${flag ? "lg:w-2/3":""}  lg:w-5/6 lg:mx-auto flex gap-4 lg:gap-8 justify-center  flex-wrap     `}>
             {flag
               ? collections.length > 0
                 ? collections.map((v, i) => collectionJSX(v, i))
                 : loader()
               : innerCollection.length > 0
-                ? innerCollection?.map((v, i) => collectionJSX(v, i, true, true))
+                ?<>
+                 {innerCollection?.map((v, i) => collectionJSX(v, i, true, true))}
+                 {innerCollection?.map((v, i) => 
+                 collectionJSX(v, i, true,  true)
+                 
+                 )}
+                </>
+                : loader()}
+          </div> */}
+
+          <div className={`  ${flag ? "lg:w-2/3":""}  lg:w-5/6 lg:mx-auto flex gap-4 lg:gap-8 justify-center  flex-wrap     `}>
+            {flag
+              ? collections.length > 0
+                ? collections.map((v, i) => collectionJSX(v, i))
+                : loader()
+              : innerCollection.length > 0
+                ?<>
+                 {innerCollection?.map((v, i) => collectionJSX(v, i, true, true))}
+                 
+                </>
                 : loader()}
           </div>
-        </div>
-      {/* </div> */}
+       
+     
     </MaxWidthWrapper>
   );
 };
