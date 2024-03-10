@@ -21,16 +21,14 @@ function ProductDescription() {
     if (params?.color !== undefined) {
       new Promise(async (resolve, reject) => {
         const data = await getColorByParam(params?.color);
+        console.log("data", data)
         resolve(data[0]);
       }).then(async (result) => {
         setColorDetails(result);
         let relatedColor = await getCollectionByParam(
           result?.collection_url
         );
-
-        console.log('444444',colorDetails?.color_url,relatedColors);
         relatedColor = relatedColor.filter(value => value?.color_url !== colorDetails?.color_url)
-        console.log('44444',relatedColor);
         setRelatedColors(relatedColor.slice(0,3));
       });
     }

@@ -62,14 +62,14 @@ function HomeScreen() {
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
       <div className="w-full min-h-screen ">
-        <div className="w-full flex flex-col h-[60vh] lg:h-[100vh]">
-          <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
-            {/* <video className="w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
+      <div className="w-full flex flex-col h-[60vh] lg:h-[100vh]">
+        <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
+          <video className="w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
             <source src={home_video} type="video/mp4" />
             Your browser does not support the video tag.
-          </video> */}
-          </div>
+          </video>
         </div>
+      </div> 
 
 
 
@@ -84,16 +84,16 @@ function HomeScreen() {
             </div>
             <div className="w-1/2 lg:w-2/5 h-full flex  gap-4 justify-center  ">
 
-              <div className="flex justify-center  flex-col  gap-4 w-full  items-start">
-                <p className="max-w-md lg:text-2xl sm:text-base text-sm font-normal">
-                  Beauty and quality beyond imagination. Service beyond what's expected.
-                </p>
-                <Button className={""} >
-                  View Collection
-                </Button>
-              </div>
-            </div>
-          </div>
+  <div className="flex justify-center  flex-col  gap-4 w-full  items-start">
+                  <p className="max-w-md lg:text-2xl sm:text-base text-sm font-normal">
+                    Beauty and quality beyond imagination. Service beyond what's expected.
+                  </p>
+                  <button className={"bg-white sm:px-6 px-4 py-2  sm:text-base text-sm rounded-3xl font-medium text-red-500 whitespace-nowrap"} >
+                    View Collection
+                  </button>
+                </div>
+  </div>
+  </div>
 
         </div>
       </div>
