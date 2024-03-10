@@ -77,7 +77,16 @@ function HomeScreen() {
           <div className="h-full bg-bg-img-hero  bg-auto bg-no-repeat bg-right justify-center flex items-center">
             <div className="w-1/2 lg:w-3/5 h-full ">
               <div className="h-full flex justify-center  items-center
+        <div className=" bg-gradient-hero  h-[40vh] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
+          <div className="h-full bg-bg-img-hero  bg-auto bg-no-repeat bg-right justify-center flex items-center">
+            <div className="w-1/2 lg:w-3/5 h-full ">
+              <div className="h-full flex justify-center  items-center
  ">
+                <h3 className="lg:text-5xl sm:text-3xl text-xl   font-medium font-gelasio      px-2 md:px-8 ">
+                  BUILDING MEMORIES, ONE STONE AT A TIME</h3>
+              </div>
+            </div>
+            <div className="w-1/2 lg:w-2/5 h-full flex  gap-4 justify-center  ">
                 <h3 className="lg:text-5xl sm:text-3xl text-xl   font-medium font-gelasio      px-2 md:px-8 ">
                   BUILDING MEMORIES, ONE STONE AT A TIME</h3>
               </div>
