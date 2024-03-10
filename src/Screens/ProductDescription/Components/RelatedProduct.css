@@ -57,7 +57,7 @@
   border-radius: 50px;
   text-decoration: none;
   color: white;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 600;
 }
 .productexpand-productcatalog {
@@ -124,12 +124,12 @@
   }
   .productexpand-wheretobuy {
     padding: 15px 50px;
-    font-size: 17px;
+    font-size: 14px;
   }
   .productexpand-productcatalog {
     padding: 15px 50px;
     border-radius: 30px;
-    font-size: 17px;
+    font-size: 16px;
   }
   .productexpand-btncontainer {
     margin: 20px 0px;
