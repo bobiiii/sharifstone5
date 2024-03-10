@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./home.css";
 import CoverImage from "../../assets/images/homeImage/landingcover.png";
 import home_video from "../../assets/videos/home_video.mp4"
@@ -26,6 +26,14 @@ function HomeScreen() {
     "url(images/color_2.png)",
     "url(images/color_3.png)",
   ];
+
+  useEffect(() => {
+    
+    openQuote ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'
+    
+ }, [openQuote ]);
+
+
   const changeFunction = (isNext) => {
     if (isNext) {
       if (index === 8) {
