@@ -8,6 +8,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import ScrollAnimation from '@nathanyoung/react-animate-on-scroll';
 import 'animate.css';
+import Heading from "../../resuable/Heading";
 function DiscoverCollection() {
 
   const [imageArr, setImagesArr] = useState([
@@ -49,9 +50,9 @@ function DiscoverCollection() {
       <div className="">
         <ScrollAnimation animateIn='animate__backInLeft'
           animateOut='animate__backInRight'>
-          <h1 className="lg:text-5xl  font-semibold sm:text-4xl xs:text-2xl text-xl whitespace-nowrap py-2  text-center  font-gelasio text-[rgb(34,31,31)]">
+          <Heading className=" whitespace-nowrap py-2 text-center">
             DISCOVER OUR NEW ARRIVALS!
-          </h1>
+          </Heading>
         </ScrollAnimation>
       </div>
       <div className="sm:w-[60%]  w-[95%] md:mt-4 sm:text-base text-sm text-center">

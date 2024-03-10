@@ -8,16 +8,19 @@ import WarrantyImage from '../../assets/images/warranty.jpg'
 import WarrantyCover from './Components/NoWarrantyCover copy'
 
 import './WarrantyAndSupport.css'
+import MaxWidthWrapper from '../MaxWidthWrapper.jsx'
 function WarrantyAndSupport() {
   return (
     <div>
-      <CoverComponent image={'url(images/cover/warranty.png)'} label={['WARRANTY', 'AND SUPPORT']}/>
+      <CoverComponent image={'url(images/cover/warranty.png)'} label={['WARRANTY', 'AND SUPPORT']} />
       <ReorganizeIndustry />
       <OurMission />
       <NoWarrantyCover />
-      <div className='warranty-n-support-image'>
-        <img src={WarrantyImage} />
-      </div>
+      <MaxWidthWrapper>
+        <div className='warranty-n-support-image'>
+          <img src={WarrantyImage} />
+        </div>
+      </MaxWidthWrapper>
       <MaintainanceCare />
     </div>
   )

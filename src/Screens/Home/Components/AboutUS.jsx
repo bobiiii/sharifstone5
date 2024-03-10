@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import about_us_video from "../../../assets/videos/about_us.mp4"
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import 'animate.css';
+import Heading from "../../resuable/Heading";
 
 function AboutUS({ data }) {
   const opts = {
@@ -95,7 +96,9 @@ function AboutUS({ data }) {
     <MaxWidthWrapper>
       <div className="home-aboutconatiner w-full">
         <div className="home-aboutinnercontainer">
-          <div className="font-gelasio lg:text-5xl  font-semibold sm:text-4xl xs:text-2xl text-xl  text-[rgb(34,31,31)] animate__heartBeat">GET TO KNOW US</div>
+          <Heading>
+            GET TO KNOW US
+          </Heading>
 
           <hr
             style={{

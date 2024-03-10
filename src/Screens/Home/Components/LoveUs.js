@@ -1,4 +1,5 @@
 import LoveUSCover from "../../../assets/images/designer_love.png";
+import Heading from "../../resuable/Heading";
 import "./loveus.css";
 // import
 
@@ -8,19 +9,19 @@ const LoveUS = () => {
       <div className="w-full  lg:overflow-hidden   flex flex-col-reverse lg:flex-row justify-center items-center ">
         <div className="lg:w-1/2   lg:mt-0  mt-8 overflow-hidden  ">
           <div className="lg:w-[120%]  lg:block hidden ">
-          <img src={LoveUSCover} className="lg:h-full  lg:ml-[-18%] " />
+            <img src={LoveUSCover} className="lg:h-full  lg:ml-[-18%] " />
           </div>
           <div className="w-[100vw] overflow-hidden  lg:hidden  ">
-         <div className="w-[500px] ml-[-15%]">
-          <img src={LoveUSCover} className="h-full bg-[#f3f5f5]  " />
-          </div>          </div>
+            <div className="w-[500px] ml-[-15%]">
+              <img src={LoveUSCover} className="h-full bg-[#f3f5f5]  " />
+            </div>          </div>
         </div>
         {/* home-loveus-innercontainer2 */}
         <div className=" xl:w-1/2 md:w-[60%] w-full flex justify-center items-center flex-col ">
           <div className=" w-full  h-full mb-6 ">
-            <h1 className=" w-full  font-gelasio leading-5 lg:text-5xl  font-semibold sm:text-4xl xs:text-2xl text-xl  text-[rgb(34,31,31)] lg:text-start text-center " >
+            <Heading className='text-center'>
               WHY DESIGNERS  LOVE US
-            </h1>
+            </Heading>
           </div>
           <div className="lg:px-2 lg:me-10 home-loveus-desc   lg:text-start text-center flex flex-col md:gap-6 gap-4">
             <p>

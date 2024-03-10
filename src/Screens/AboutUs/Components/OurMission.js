@@ -1,18 +1,22 @@
 import React from "react";
 import "./OurMission.css";
 import OurMissionImage from "../../../assets/images/ourmission.jpg";
+import MaxWidthWrapper from '../../MaxWidthWrapper'
+import Heading from "../../resuable/Heading";
 function OurMission() {
   return (
-    <main className="max-w-screen-2xl flex justify-center items-center w-full mx-auto  md:px-6 px-4">
-      <div className="reorganize_container">
+    <MaxWidthWrapper className=''>
+      <div className="reorganize_container ">
         <div className="ourmission-container">
-          <div className="ourmission-heading">OUR COMPANY'S COMMITMENT</div>
+          <Heading className='md:text-start text-center'>
+            OUR COMPANY'S COMMITMENT
+          </Heading>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
           {/* ourmission-cover ourmission-subcontainer */}
-          <div className="flex justify-between xl:gap-16 gap-9 lg:flex-row flex-col w-full">
+          <div className="flex justify-between mt-4 xl:gap-16 gap-9 lg:flex-row flex-col w-full">
             {/* ourmission-innercontainer-update  */}
             <div className="lg:w-1/2 w-full">
-              <img className=" xl-full lg:h-[40vh] rounded-[24px] h-full" src={OurMissionImage} />
+              <img className=" xl:h-full   rounded-[24px] h-full" src={OurMissionImage} />
             </div>
             <div className="ourmission-innercontainer lg:w-1/2 w-full">
               <div className="ourmission-details">
@@ -36,7 +40,7 @@ function OurMission() {
           </div>
         </div>
       </div>
-    </main>
+    </MaxWidthWrapper>
   );
 }
 

@@ -59,15 +59,16 @@ function HomeScreen() {
   };
 
   return (
+
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
       <div className="w-full min-h-screen ">
         <div className="w-full flex flex-col h-[60vh] lg:h-[100vh]">
           <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
             {/* <video className="w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
-            <source src={home_video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> */}
+              <source src={home_video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> */}
           </div>
         </div>
 
@@ -77,16 +78,7 @@ function HomeScreen() {
           <div className="h-full bg-bg-img-hero  bg-auto bg-no-repeat bg-right justify-center flex items-center">
             <div className="w-1/2 lg:w-3/5 h-full ">
               <div className="h-full flex justify-center  items-center
-        <div className=" bg-gradient-hero  h-[40vh] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
-          <div className="h-full bg-bg-img-hero  bg-auto bg-no-repeat bg-right justify-center flex items-center">
-            <div className="w-1/2 lg:w-3/5 h-full ">
-              <div className="h-full flex justify-center  items-center
  ">
-                <h3 className="lg:text-5xl sm:text-3xl text-xl   font-medium font-gelasio      px-2 md:px-8 ">
-                  BUILDING MEMORIES, ONE STONE AT A TIME</h3>
-              </div>
-            </div>
-            <div className="w-1/2 lg:w-2/5 h-full flex  gap-4 justify-center  ">
                 <h3 className="lg:text-5xl sm:text-3xl text-xl   font-medium font-gelasio      px-2 md:px-8 ">
                   BUILDING MEMORIES, ONE STONE AT A TIME</h3>
               </div>
@@ -106,13 +98,8 @@ function HomeScreen() {
 
         </div>
 
-
-
-
-
-
       </div>
-      <MaxWidthWrapper>
+      <MaxWidthWrapper >
         <DiscoverCollection />
       </MaxWidthWrapper>
       <AboutUS data={{ openQuote, setOpenQuote }} />
@@ -129,6 +116,7 @@ function HomeScreen() {
         frameborder="0"
       ></iframe> */}
     </div>
+
   );
 }
 

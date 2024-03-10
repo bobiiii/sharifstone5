@@ -5,6 +5,8 @@ import Customer3 from "../assets/images/homeImage/customer_sharon.png";
 import OrganizationLogo from "../assets/images/homeImage/org_logo.png";
 import Carousel from "react-multi-carousel";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import MaxWidthWrapper from "../Screens/MaxWidthWrapper";
+import Heading from "../Screens/resuable/Heading";
 
 const CustomLeftArrow = ({ onClick, ...rest }) => {
   const {
@@ -71,61 +73,42 @@ const CustomerReview = ({ label }) => {
     },
   };
   return (
-    <div className="home-customerreview-container">
-      <div className="home-customerreview-header">{label}</div>
-
-      {window.outerWidth <= 425 && (
-        <div className="mobile-testimonials-container">
-          {customerArray.map((v, i) => (
-            <div className="home-customerreview-card">
-              <div className="testimonials-desc">
-                <div className="container-center">{v.desc}</div>
-              </div>
-              <div className="home-customerreview-talentcontainer">
-                <div style={{ display: "flex", margin: "0px 10px" }}>
-                  <img className="profile-image" src={v.image} />
-                  <div style={{ margin: "0px 10px" }}>
-                    <div className="home-customerreview-customername">
-                      {v.name}
-                    </div>
-                    <div className="home-customerreview-customer">
-                      {v.designation}
+    <MaxWidthWrapper>
+      <div className="home-customerreview-container">
+        {/* <div className="home-customerreview-header"></div> */}
+        <Heading className='text-center'>
+          {label}
+        </Heading>
+        {/* home-customerreview-cardcontainer */}
+        <div className=" overflow-scroll cards-scroll w-full">
+          <div className="flex justify-between gap-3 w-full min-w-[1024px]  ">
+            {customerArray.map((v, i) => (
+              <div className="home-customerreview-card">
+                <div className="testimonials-desc">
+                  <div className="container-center sm::text-base text-center">{v.desc}</div>
+                </div>
+                <div className="home-customerreview-talentcontainer">
+                  <div style={{ display: "flex", margin: "0px 10px" }}>
+                    <img className="profile-image" src={v.image} />
+                    <div style={{ margin: "0px 10px" }}>
+                      <div className="home-customerreview-customername">
+                        {v.name}
+                      </div>
+                      <div className="home-customerreview-customer">
+                        {v.designation}
+                      </div>
                     </div>
                   </div>
+                  <img style={{ marginRight: 10 }} src={OrganizationLogo} />
                 </div>
-                <img style={{ marginRight: 10 }} src={OrganizationLogo} />
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      )}
 
-      {window.outerWidth > 425 && (
-        <div className="home-customerreview-cardcontainer">
-          {customerArray.map((v, i) => (
-            <div className="home-customerreview-card">
-              <div className="testimonials-desc">
-                <div className="container-center">{v.desc}</div>
-              </div>
-              <div className="home-customerreview-talentcontainer">
-                <div style={{ display: "flex", margin: "0px 10px" }}>
-                  <img className="profile-image" src={v.image} />
-                  <div style={{ margin: "0px 10px" }}>
-                    <div className="home-customerreview-customername">
-                      {v.name}
-                    </div>
-                    <div className="home-customerreview-customer">
-                      {v.designation}
-                    </div>
-                  </div>
-                </div>
-                <img style={{ marginRight: 10 }} src={OrganizationLogo} />
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
+
+      </div>
+    </MaxWidthWrapper>
   );
 };
 

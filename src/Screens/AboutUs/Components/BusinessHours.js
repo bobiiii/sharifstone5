@@ -2,7 +2,8 @@ import React from "react";
 import "./BusinessHours.css";
 import Reception from "../../../assets/images/reception.png";
 import { TbClockHour5 } from "react-icons/tb";
-
+import MaxWidthWrapper from '../../MaxWidthWrapper'
+import Heading from "../../resuable/Heading";
 function BusinessHours() {
   const hours = [
     {
@@ -35,10 +36,12 @@ function BusinessHours() {
     },
   ];
   return (
-    <main className="max-w-screen-2xl flex justify-center items-center w-full mx-auto  md:px-6 px-4">
+    <MaxWidthWrapper >
       <div className="reorganize_container">
         <div className="ourmission-container">
-          <div className="ourmission-heading">BUSINESS HOURS</div>
+          <Heading>
+            BUSINESS HOURS
+          </Heading>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
           <div className="flex justify-between xl:gap-16 gap-9 lg:flex-row flex-col-reverse items-center ">
             {/* ourmission-innercontainer */}
@@ -46,7 +49,7 @@ function BusinessHours() {
               {hours.map((v, i) => (
                 <div className="businesshour-row">
                   <div className="business-time">
-                    <TbClockHour5 size={30}  className="sm:text-[#EE2A2E] text-[#000000]" />
+                    <TbClockHour5 size={30} className="sm:text-[#EE2A2E] text-[#000000]" />
                     <div>{v.day}</div>
                   </div>
                   {/* businesshour-row */}
@@ -67,7 +70,7 @@ function BusinessHours() {
           </div>
         </div>
       </div>
-    </main>
+    </MaxWidthWrapper>
   );
 }
 
