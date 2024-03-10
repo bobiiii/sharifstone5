@@ -1,42 +1,44 @@
 .discover-collection-component {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 80px;
-  display: flex;
+  /* width: 100%; */
+  /* margin-top: 40px;
+  margin-bottom: 80px; */
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 .discover-collection-heading {
   font-size: 55px;
   text-align: center;
-  margin: 30px 0px;
+  /* margin: 30px 0px; */
   font-family: "Gelasio", serif;
 }
 .discover-collection-desc {
-  width: 60%;
+  /* width: 60%; */
   font-size: 17px;
-  line-height: 30px;
+  line-height: 25px;
   text-align: center;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 .discover-collection-collections {
-  width: 80%;
+   border: 2px solid yellow;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 .discover-collectionimage {
-  width: 100%;
-  height: 280px;
+  /* width: 100%;
+  height: 280px; */
   /* border-radius: 15px; */
-  background-size: cover;
+  /* background-size: cover;
   background-repeat: no-repeat;
   background-position: contain;
   display: flex;
+  
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: pointer; */
 }
 .discover-collectiontext {
   font-size: 25px;
@@ -47,11 +49,11 @@
   margin-top: 20px;
 }
 .discover-collection {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 20px 25px;
+  align-items: center; */
+  
   width: 23%;
 }
 .discover-collectionexpand {
@@ -66,8 +68,8 @@
   background-color: #00000095;
 }
 .discover-collectionlabel {
-  width: 100%;
-  margin-top: 15px;
+  /* width: 100%;
+  margin-top: 15px; */
 }
 .discover-collectionlabel1 {
   font-size: 25px;
@@ -81,7 +83,7 @@
 
 @media screen and (max-width: 1440px) and (min-width: 1024px) {
   .discover-collectionimage {
-    height: 235px;
+    /* height: 235px; */
   }
   .discover-collectiontext {
     font-size: 22px;
@@ -94,20 +96,20 @@
 
 @media screen and (max-width: 1024px) and (min-width: 786px) {
   .discover-collectionimage {
-    height: 185px;
+    /* height: 185px; */
   }
 }
 
 @media screen and (max-width: 768px) and (min-width: 425px) {
   .discover-collectionimage {
-    width: 200px;
-    height: 200px;
+    /* width: 200px;
+    height: 200px; */
   }
 }
 @media screen and (max-width: 425px) and (min-width: 320px) {
   .discover-collectionimage {
-    width: 145px;
-    height: 145px;
+    /* width: 145px;
+    height: 145px; */
   }
 }
 
@@ -115,7 +117,7 @@
   .discover-collection-heading {
     font-size: 30px;
     text-align: center;
-    margin: 30px 0px;
+    /* margin: 30px 0px; */
     font-family: "Gelasio", serif;
   }
   .discover-collection-desc {
@@ -126,8 +128,8 @@
     width: 145px;
   }
   .discover-collection {
-    margin-bottom: 10px;
-    width: 43%;
+    /* margin-bottom: 10px;
+    width: 43%; */
   }
   .discover-collectionexpand {
     width: 60px;
