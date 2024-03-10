@@ -11,6 +11,7 @@ import about_us_video from "../../../assets/videos/about_us.mp4"
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import 'animate.css';
 import Heading from "../../resuable/Heading";
+import GetAQuote from "./GetAQuote";
 
 function AboutUS({ data }) {
   const opts = {
@@ -146,7 +147,6 @@ function AboutUS({ data }) {
                 </div>
               </span>
             </div>
-
           </div>
           {/* home-aboutcard */}
           <div className=" w-full  md:hidden flex flex-wrap py-4   items-center justify-center">

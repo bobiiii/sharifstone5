@@ -11,7 +11,7 @@ function NavMenu({ navState }) {
   const [isMobile, setIsMobile] = useState(false);
   const [showNewText, setShowNewText] = useState(true);
   const [showNewTextKitchenVisualizer, setShowNewTextKitchenVisualizer] = useState(true);
-  
+
   const nav = [
     {
       name: "Home",
@@ -41,7 +41,7 @@ function NavMenu({ navState }) {
       name: "Blog",
       route: "/about",
     },
-    
+
     {
       name: "Live Inventory",
       route: "https://4power.stoneprofitsweb.com/",
@@ -105,14 +105,14 @@ function NavMenu({ navState }) {
               Quartz Collection
               {/* <MdArrowDropDown color={"#fff"} /> */}
             </Link>
-            
+
             <Link
-            to={"/kitchen-visualizer"}
-            onClick={() => setOpenMenu(false)}
-            className=""
+              to={"/kitchen-visualizer"}
+              onClick={() => setOpenMenu(false)}
+              className=""
             >
-            {showNewTextKitchenVisualizer && <span className="new-text">NEW </span>}
-            Kitchen Visualizer
+              {showNewTextKitchenVisualizer && <span className="new-text">NEW </span>}
+              Kitchen Visualizer
             </Link>
 
             <Link
@@ -129,8 +129,8 @@ function NavMenu({ navState }) {
             >
               Warranty and Support
             </Link>
-            
-            
+
+
             <Link
               to={"/contact"}
               onClick={() => setOpenMenu(false)}
@@ -149,11 +149,11 @@ function NavMenu({ navState }) {
               to={"https://4power.stoneprofitsweb.com/"}
               onClick={() => setOpenMenu(false)}
               className=""
-              >
+            >
               {showNewText && <span className="new-text">NEW </span>}
               Live Inventory
-              </Link>
-            
+            </Link>
+
 
 
           </div>
@@ -177,7 +177,7 @@ function NavMenu({ navState }) {
             ))}
           </div>
         ) : (
-<div className="nav-container">
+          <div className="nav-container">
             {nav.map((v, i) => (
               <Link
                 to={v.route}
@@ -203,7 +203,7 @@ function NavMenu({ navState }) {
                 {v.name}
               </Link>
             ))}
- 
+
             {/* <Link
               to={"https://4power.stoneprofitsweb.com/"}
               target="_blank"
