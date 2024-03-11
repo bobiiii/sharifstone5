@@ -7,6 +7,8 @@ import APIContext from "../../../Store/apiContext";
 import FloorColor from "../../../assets/images/lime_delight.jpg";
 import { IoMdArrowBack } from "react-icons/io";
 import { Audio } from "react-loader-spinner";
+import Button from "../../resuable/Button";
+
 const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
   const [selectedColor, setSelectedColor] = useState(colorArray[0]);
   const [oldImage, setOldImage] = useState(null);
@@ -143,14 +145,17 @@ const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
       {loader && <div className="choosecolor-loader">{loaderJSX()}</div>}
       <div className="choosecolor-innercontainer">
         <span className="choosecolor-cover ">
-          <Link to="/kitchen-visualizer">
+          <div className="mb-2 flex justify-start w-full ">
+            <Button className='w-12 rounded-lg  text-center flex justify-center items-center'>
+              <Link to={"/kitchen-visualizer"} onClick={() => setCurrentScreen('Visualizer Form')}  >
+                <IoMdArrowBack size={25} />
+              </Link>
+            </Button>
+          </div>
+          <Link to="/kitchen-visualizer" >
             <img src={Logo} />
           </Link>
-          <div className="mt-4">
-            <Link  to={"/kitchen-visualizer"} onClick={() => setCurrentScreen('Visualizer Form')}  >
-              <IoMdArrowBack size={25}/>
-            </Link>
-          </div>
+
           {/* <button onClick={() => setCurrentScreen('Visualizer Form')}>
             back
           </button> */}
