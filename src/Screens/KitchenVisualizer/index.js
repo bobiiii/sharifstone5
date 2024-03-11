@@ -465,6 +465,7 @@ const KitchenVisualizer = () => {
 
       {currentScreen === "Visualizer Form" && (
         <VisualizerForm
+          setCurrentScreen={setCurrentScreen}
           kitchenLayout={kitchenLayout}
           bathroomLayout={bathroomLayout}
           data={{
@@ -477,6 +478,7 @@ const KitchenVisualizer = () => {
       )}
       {currentScreen === "Pick Kitchen" && (
         <ChooseColor
+          setCurrentScreen={setCurrentScreen}
           layoutData={kitchenChangeLayout}
           currentScreen={"Kitchen"}
           ambient={{ currentAmbient, setCurrentAmbient }}
@@ -487,6 +489,7 @@ const KitchenVisualizer = () => {
       )}
       {currentScreen === "Pick Bathroom" && (
         <ChooseColor
+          setCurrentScreen={setCurrentScreen}
           layoutData={bathroomChangeLayout}
           currentScreen={"Bathroom"}
           ambient={{ currentAmbient, setCurrentAmbient }}

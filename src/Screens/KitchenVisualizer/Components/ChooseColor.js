@@ -5,9 +5,9 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaCheck } from "react-icons/fa6";
 import APIContext from "../../../Store/apiContext";
 import FloorColor from "../../../assets/images/lime_delight.jpg";
-
+import { IoMdArrowBack } from "react-icons/io";
 import { Audio } from "react-loader-spinner";
-const ChooseColor = ({ colorArray, layoutData, ambient }) => {
+const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
   const [selectedColor, setSelectedColor] = useState(colorArray[0]);
   const [oldImage, setOldImage] = useState(null);
   const [inputText, setInputText] = useState("");
@@ -23,6 +23,7 @@ const ChooseColor = ({ colorArray, layoutData, ambient }) => {
   const navigate = useNavigate();
   const params = useParams();
   const { currentAmbient, setCurrentAmbient } = ambient;
+  // const { currentScreen, setCurrentScreen } = currentScreen;
   var src = document.getElementById("test")?.style?.backgroundImage;
   var url = src?.match(/\((.*?)\)/)[1]?.replace(/('|")/g, "");
 
@@ -39,28 +40,28 @@ const ChooseColor = ({ colorArray, layoutData, ambient }) => {
     setLoader(true);
     const newImage = new Image();
     newImage.src = value.ambient_image_url;
-  
+
     newImage.onload = () => {
 
       if (selectedPicker === "Floor") {
         setActiveFloor(value.ambient_image_url);
-        setActiveFloor(value); 
+        setActiveFloor(value);
       } else {
         setActiveCounterTop(value.color_image);
         setActiveCounterTop(value);
       }
-  
+
       setSelectedColor(value);
       setOldImage(`url(${value.ambient_image_url})`);
 
       navigate(`/kitchen-visualizer/${params?.color}?color=${value.color_name.replace(" ", "-")}`, { replace: false });
- 
+
       setTimeout(() => setLoader(false), 1000);
     };
   };
-  
 
-  const selectAmbient = ({ value, url }) => {
+
+  const selectAmbient = ({ value, url, }) => {
     const currentVisualizer =
       apiStore?.visualizers[value?.replaceAll(" ", "-")];
     console.log("New...", currentVisualizer[0]?.ambient_image_url);
@@ -99,7 +100,7 @@ const ChooseColor = ({ colorArray, layoutData, ambient }) => {
       setSelectedAPIStore(newArray);
     }
   }, [inputText]);
-  
+
 
   useEffect(() => {
     if (apiStore?.visualizers) {
@@ -127,8 +128,7 @@ const ChooseColor = ({ colorArray, layoutData, ambient }) => {
     if (apiStore?.visualizers) {
       if (params?.color === "kitchen-visualizer") {
         navigate(
-          `/kitchen-visualizer/${
-            apiStore?.visualizers[params?.color][0]?.ambient_url
+          `/kitchen-visualizer/${apiStore?.visualizers[params?.color][0]?.ambient_url
           }`,
           {
             replace: true,
@@ -142,11 +142,20 @@ const ChooseColor = ({ colorArray, layoutData, ambient }) => {
     <div className="choosecolor-container">
       {loader && <div className="choosecolor-loader">{loaderJSX()}</div>}
       <div className="choosecolor-innercontainer">
-        <span className="choosecolor-cover">
-          <Link to="/">
+        <span className="choosecolor-cover ">
+          <Link to="/kitchen-visualizer">
             <img src={Logo} />
           </Link>
+          <div className="mt-4">
+            <Link  to={"/kitchen-visualizer"} onClick={() => setCurrentScreen('Visualizer Form')}  >
+              <IoMdArrowBack size={25}/>
+            </Link>
+          </div>
+          {/* <button onClick={() => setCurrentScreen('Visualizer Form')}>
+            back
+          </button> */}
           <div className="choosecolor-bgncontainer">
+
             <div
               onClick={() => setCurrentSide(false)}
               className={

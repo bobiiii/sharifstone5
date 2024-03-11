@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import CoverImage from "../../assets/images/homeImage/landingcover.png";
 import home_video from "../../assets/videos/home_video.mp4"
@@ -28,10 +28,10 @@ function HomeScreen() {
   ];
 
   useEffect(() => {
-    
+
     openQuote ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'
-    
- }, [openQuote ]);
+
+  }, [openQuote]);
 
 
   const changeFunction = (isNext) => {
@@ -93,9 +93,9 @@ function HomeScreen() {
                 <p className="max-w-md lg:text-2xl sm:text-base text-sm font-normal">
                   Beauty and quality beyond imagination. Service beyond what's expected.
                 </p>
-                <button className={"bg-white sm:px-6 px-4 py-2  sm:text-base text-sm rounded-3xl font-medium text-red-500 whitespace-nowrap"} >
+                <Button className={"bg-white sm:px-6 px-4 py-2  sm:text-base text-sm rounded-3xl font-medium text-red-500  whitespace-nowrap"} >
                   View Collection
-                </button>
+                </Button>
               </div>
             </div>
           </div>
