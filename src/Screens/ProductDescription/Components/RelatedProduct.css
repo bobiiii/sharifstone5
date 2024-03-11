@@ -13,13 +13,13 @@
   margin-bottom: 50px;
 }
 .productrelated-container {
-  width: 90%;
+  width: 100%;
   background-color: #fef6f7;
   border-radius: 25px;
 }
 .productrelated-innercontainer {
   border-radius: 25px;
-  margin: 40px 40px;
+  /* margin: 40px 40px;  */
   border: 3px solid #d6d6d6;
   /* height: 550px; */
   display: flex;
@@ -85,7 +85,7 @@
     /* height: 250px; */
   }
   .productrelated-container {
-    width: 90%;
+    width: 100%;
     height: auto;
   }
 }
