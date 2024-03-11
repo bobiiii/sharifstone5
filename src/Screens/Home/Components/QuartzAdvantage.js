@@ -6,6 +6,7 @@ import MTHelenImage from "../../../assets/images/mt_helen.jpg";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import mt from '../images/mt.png'
 import Heading from "../../resuable/Heading";
+import Button from "../../resuable/Button";
 function QuartzAdvantage() {
   const advantages = [
 
@@ -53,7 +54,7 @@ function QuartzAdvantage() {
             cutting-edge solution caters to a wide range of surface requirements
             for different interior settings.
           </div> */}
-          <div className=" mt-6">
+          <div className="mt-2 lg:mt-6 ">
             <Heading className='text-center'>
               Quartz  Advantages
             </Heading>
@@ -64,7 +65,7 @@ function QuartzAdvantage() {
             Quartz surfaces are created through a blend of various components, with the use of advanced technology to guarantee both durability and sustainability, while also boasting an appealing aesthetic. This cutting-edge solution caters to a wide range of surface requirements for different interior settings.
           </div>
           <div
-            className="home-advantagebg "
+            className="home-advantagebg h-[500px] my-4"
             style={{ backgroundImage: "url(images/quartz_advantages.png)" }}
           >
             {/* homebrand-images */}
@@ -119,14 +120,18 @@ function QuartzAdvantage() {
             </div>
 
           </div>
+
+          <Button >
           <Link
             to="/files/slab.pdf"
             target="_blank"
             download
-            className="homebrand-button mb-6"
+            
           >
             Download Slab Technical Chart
           </Link>
+                </Button>
+          
         </div>
       </div>
     </MaxWidthWrapper>

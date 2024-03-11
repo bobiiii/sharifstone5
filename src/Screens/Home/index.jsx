@@ -84,7 +84,7 @@ function HomeScreen() {
             <div className="w-1/2 lg:w-3/5 h-full ">
               <div className="h-full flex justify-center  items-center
  ">
-                <h3 className="lg:text-5xl sm:text-3xl text-xl   font-medium font-gelasio      px-2 md:px-8 ">
+                <h3 className="lg:text-5xl sm:text-3xl text-3xl   font-medium font-gelasio      px-2 md:px-8 ">
                   BUILDING MEMORIES, ONE STONE AT A TIME</h3>
               </div>
             </div>
@@ -93,9 +93,10 @@ function HomeScreen() {
                 <p className="max-w-md lg:text-2xl sm:text-base text-sm font-normal">
                   Beauty and quality beyond imagination. Service beyond what's expected.
                 </p>
-                <button className={"bg-white sm:px-6 px-4 py-2  sm:text-base text-sm rounded-3xl font-medium text-red-500 whitespace-nowrap"} >
-                  View Collection
-                </button>
+                
+                <Button className={"bg-white text-red-500"}>
+                View Collection
+                </Button>
               </div>
             </div>
           </div>

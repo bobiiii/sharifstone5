@@ -36,11 +36,11 @@
   text-align: center;
 }
 .home-advantagebg {
-  width: 90%;
+  /* width: 90%;
   margin-bottom: 40px;
   height: 550px;
-  margin-top: 25px;
-  display: flex;
+  margin-top: 25px;*/
+  display: flex; 
   justify-content: center;
   background-size: cover;
   /* background-position: center; */
