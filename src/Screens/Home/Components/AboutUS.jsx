@@ -12,6 +12,7 @@ import MaxWidthWrapper from "../../MaxWidthWrapper";
 import 'animate.css';
 import Heading from "../../resuable/Heading";
 import GetAQuote from "./GetAQuote";
+import Button from "../../resuable/Button";
 
 function AboutUS({ data }) {
   const opts = {
@@ -138,15 +139,10 @@ function AboutUS({ data }) {
                 Explore the perfect stones for your project and elevate your space
                 with Sharifstone!
               </span>
-              <span className="home-discover-container-button-container mt-2">
-                <div
-                  onClick={() => setOpenQuote(true)}
-                  className="home-discovercollection-button"
-                >
-                  Stone Inquiry
-                </div>
-              </span>
+               <Button clickFunc={() => setOpenQuote(true)}>Stone Inquiry</Button>
+              
             </div>
+            
           </div>
           {/* home-aboutcard */}
           <div className=" w-full  md:hidden flex flex-wrap py-4   items-center justify-center">

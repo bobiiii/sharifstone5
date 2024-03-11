@@ -1,6 +1,7 @@
 import LoveUSCover from "../../../assets/images/designer_love.png";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
+import Button from "../../resuable/Button";
 import "./loveus.css";
 // import
 
@@ -19,7 +20,7 @@ const LoveUS = () => {
         </div>
         {/* home-loveus-innercontainer2 */}
         <div className=" xl:w-1/2 md:w-[60%] w-full flex justify-center items-center flex-col ">
-          <div className=" w-full  h-full mb-6 ">
+          <div className=" w-full  h-full lg:mb-6 mb-3 ">
             <Heading className='text-center'>
               WHY DESIGNERS  LOVE US
             </Heading>
@@ -37,9 +38,11 @@ const LoveUS = () => {
               for designers seeking both style and substance.
             </p>
             <div className=" mt-3 w-full flex lg:justify-start lg:items-start justify-center items-center">
-              <div className="homebrand-button px-4  whitespace-nowrap lg:w-[80%] sm:w-[70%] w-[90%] " onClick={() => { }}>
-                Download the 2024 Digital Catalog
-              </div>
+              
+
+<Button >
+Download the 2024 Digital Catalog
+  </Button>              
             </div>
           </div>
 

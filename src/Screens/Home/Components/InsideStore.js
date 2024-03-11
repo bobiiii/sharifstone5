@@ -8,6 +8,7 @@ import BackS from '../../../assets/images/back_s.png'
 import { Link } from "react-router-dom";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
+import Button from "../../resuable/Button";
 
 function InsideStore({ data }) {
   const { openQuote, setOpenQuote } = data
@@ -51,8 +52,13 @@ function InsideStore({ data }) {
               }
             </div>
             <div className="flex justify-center items-center mt-6">
-              <div className="bg-[#ee2a2e]  text-center items-center px-6 py-2.5 rounded-3xl whitespace-nowrap text-white font-semibold font-gelasio md:hidden flex " onClick={() => setOpenQuote(true)}>Get Directions</div>
+            <Button clickFunc={() => setOpenQuote(true)}>
+            Get Directions
+
+            </Button>
             </div>
+
+            
 
             {/* <div className="home-insidestore-container">
             <div className="home-insidestore-subheading">DISCOVER OUR TOP-QUALITY STONE OPTIONS TO PERFECTLY MATCH YOUR DESIRED SPACE!</div>
