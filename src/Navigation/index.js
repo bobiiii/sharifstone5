@@ -12,6 +12,7 @@ import AboutUs from "../Screens/AboutUs";
 import WarrantyAndSupport from "../Screens/WarrantyAndSupport";
 import ContactScreen from "../Screens/Contact";
 import KitchenVisualizer from "../Screens/KitchenVisualizer";
+import VisualizerInner from "../Screens/VisualizerInner";
 import Login from "../Screens/Login/Login";
 import Dashboard from "../Screens/Dashboard/Dashboard";
 import CreateCollection from "../Screens/CreateCollection/CreateCollection";
@@ -19,6 +20,7 @@ import ViewCollection from "../Screens/ViewCollection/ViewCollection";
 import CreateVisualizer from "../Screens/CreateVisualizer/createVisualizer";
 import ViewVisualizer from "../Screens/ViewVisualizer/viewVisualizer";
 import WhereToBuy from "../Screens/WhereToBuy";
+import InnerVisualizer from "../Screens/VisualizerInner";
 
 createBrowserRouter([
   {
@@ -50,6 +52,14 @@ const router = createBrowserRouter(
       element: (
         // <Layout>
           <KitchenVisualizer />
+        // </Layout>
+      ),
+    },
+    {
+      path: "/kitchen-visualizer/select-category",
+      element: (
+        // <Layout>
+          <InnerVisualizer />
         // </Layout>
       ),
     },

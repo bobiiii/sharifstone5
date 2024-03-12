@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./VisualizerForm.css";
 import Logo from "../../../assets/images/logo_footer.png";
 import { GoArrowUpRight } from "react-icons/go";
@@ -38,6 +38,8 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
   const [changeImageLayout, setChangeImageLayout] = useState("Kitchen");
   const { currentScreen, setCurrentScreen, currentAmbient, setCurrentAmbient } =
     data;
+
+    console.log(currentScreen, "from visualizer form")
   const navigate = useNavigate();
 
   const responsive = {
@@ -71,13 +73,17 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
     }
   };
   const LayoutJSX = (imageLayout = "Kitchen", layoutArray = kitchenLayout) =>
-    layout === imageLayout &&
+    {
+      
+      return(layout === imageLayout &&
     layoutArray.map((v, i) => (
       <div
         className="visualizerform-image"
         onMouseOver={() => setHoverContainer(i)}
         style={{ backgroundImage: v.image }}
       >
+{/* <img src={"/images/layout/kitchen_1.png"}/> */}
+
         {v?.value === "" ? (
           <h3 style={{ color: "#fff" }}>Coming Soon</h3>
         ) : (
@@ -93,7 +99,9 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
           </>
         )}
       </div>
-    ));
+    )))}
+
+
   const LayoutMobileJSX = (
     imageLayout = "Kitchen",
     layoutArray = kitchenLayout
@@ -129,6 +137,8 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
         ))}
       </Carousel>
     );
+
+
   return (
     <div
       className="visualizerform-container"
@@ -138,6 +148,7 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
         <img src={Logo} />
       </Link>
       <div className="visualizerform-heading">SELECT BATHROOM LAYOUT</div>
+      <img src=""/>
       <div className="visualizerform-form">
         <div className="visualizerform-itembtn">
           <div

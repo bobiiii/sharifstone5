@@ -29,6 +29,24 @@ const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
   var src = document.getElementById("test")?.style?.backgroundImage;
   var url = src?.match(/\((.*?)\)/)[1]?.replace(/('|")/g, "");
 
+  
+  
+  
+  useEffect(() => {
+    const handleBackButton = () => {
+      console.log("back btn clkd")
+      // Handle state change when the back button is clicked
+      setCurrentScreen("start"); // Change the state as needed
+      navigate("/kitchen-visualizer")
+    };
+
+    window.addEventListener("popstate", handleBackButton);
+
+    return () => {
+      window.removeEventListener("popstate", handleBackButton);
+    };
+  }, []);
+  
   var img = new Image();
   img.onload = function () {
     console.log("image loaded");
@@ -139,6 +157,10 @@ const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
       }
     }
   }, []);
+
+  
+  
+  console.log("choose color")
 
   return (
     <div className="choosecolor-container">
