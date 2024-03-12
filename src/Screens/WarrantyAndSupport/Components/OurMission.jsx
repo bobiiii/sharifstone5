@@ -15,7 +15,7 @@ function OurMission() {
           </Heading>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
           {/* ourmission-subcontaine */}
-          <div className="flex justify-between gap-8 w-full lg:flex-row flex-col ">
+          <div className="flex justify-between gap-8 w-full lg:flex-row flex-col items-center ">
             {/* ourmission-innercontainer */}
             <div className="lg:w-1/2 w-full">
               <img className="w-full rounded-[24px] xl:h-full  lg:h-[50vh] h-full" src={WarrantyImage} />
@@ -41,7 +41,7 @@ function OurMission() {
 
           {/* Oppsite */}
 
-          <div className="flex justify-between gap-8 w-full lg:flex-row flex-col-reverse  mt-16">
+          <div className="flex justify-between gap-8 w-full lg:flex-row flex-col-reverse items-center  mt-16">
 
             {/* ourmission-innercontainer-warranty */}
             <div className="lg:w-1/2 w-full">
