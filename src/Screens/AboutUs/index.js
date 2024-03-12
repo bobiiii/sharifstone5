@@ -8,6 +8,7 @@ import CustomerReview from "../../components/CustomerReviews";
 
 function AboutUs() {
   return (
+    
     <div>
       <CoverComponent image={'url(images/cover/about_us.png)'} label={['ABOUT', 'SHARIFSTONE']}/>
       {/* <ReorganizeIndustry />  */}
