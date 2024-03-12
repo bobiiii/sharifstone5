@@ -31,7 +31,7 @@ function InsideStore({ data }) {
     },
   ]
   return (
-    <MaxWidthWrapper>
+    <MaxWidthWrapper className='px-0'>
       <div className="home-advantagecontainer home-advantagecontainer-center">
         <div className="home-advantageinnercontainer">
           <img className="home-back-s" src={BackS} alt="" />
@@ -46,7 +46,7 @@ function InsideStore({ data }) {
               <div className="bg-[#ee2a2e] text-center items-center px-6 py-2.5 rounded-3xl whitespace-nowrap text-white font-semibold font-gelasio md:flex hidden" onClick={() => setOpenQuote(true)}>Get Directions</div>
             </div>
             {/* home-insidestore-imagecontainer */}
-            <div className="grid md:grid-cols-4 grid-cols-2 justify-between gap-4  mt-8 full">
+            <div className="grid md:grid-cols-4 grid-cols-2 justify-between gap-4  px-2 mt-8 full">
               {
                 imageArray.map((v, i) => <img src={v} className="rounded-[20px]  w-full h-full flex flex-grow" />)
               }

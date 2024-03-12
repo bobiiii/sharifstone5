@@ -16,9 +16,10 @@ function WarrantyAndSupport() {
       <ReorganizeIndustry />
       <OurMission />
       <NoWarrantyCover />
-      <MaxWidthWrapper>
-        <div className='warranty-n-support-image'>
-          <img src={WarrantyImage} />
+      <MaxWidthWrapper >
+        {/* warranty-n-support-image */}
+        <div className=''>
+          <img src={WarrantyImage} className='rounded-[30px]' />
         </div>
       </MaxWidthWrapper>
       <MaintainanceCare />

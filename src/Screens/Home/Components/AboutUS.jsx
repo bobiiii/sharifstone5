@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import VideoImage from "../../../assets/images/homeImage/video_image.png";
 import "./AboutUS.css";
 import InspireIdeas from "../../../assets/images/homeImage/inspire_ideas.gif";
@@ -15,6 +15,10 @@ import GetAQuote from "./GetAQuote";
 import Button from "../../resuable/Button";
 
 function AboutUS({ data }) {
+
+
+
+
   const opts = {
     height: "500",
     width: "750",
@@ -95,10 +99,10 @@ function AboutUS({ data }) {
   ];
   const { openQuote, setOpenQuote } = data;
   return (
-    <MaxWidthWrapper>
+    <MaxWidthWrapper className='md:mt-20 mt-16' >
       <div className="home-aboutconatiner w-full">
         <div className="home-aboutinnercontainer">
-          <Heading>
+          <Heading className='text-center'>
             GET TO KNOW US
           </Heading>
 
@@ -112,7 +116,7 @@ function AboutUS({ data }) {
           {/* home-aboutsubcontainer */}
           <div className=" w-full grid lg:grid-cols-2 grid-cols-1 gap-6 justify-start items-start  ">
             <div className="w-full ">
-              <video className="w-full rounded-2xl h-auto " loop controls >
+              <video id="about_us_video" className="w-full rounded-2xl h-auto" >
                 <source src={about_us_video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -139,10 +143,12 @@ function AboutUS({ data }) {
                 Explore the perfect stones for your project and elevate your space
                 with Sharifstone!
               </span>
-               <Button clickFunc={() => setOpenQuote(true)}>Stone Inquiry</Button>
-              
+              <span className="flex justify-center">
+                <Button clickFunc={() => setOpenQuote(true)}>Stone Inquiry</Button>
+
+              </span>
             </div>
-            
+
           </div>
           {/* home-aboutcard */}
           <div className=" w-full  md:hidden flex flex-wrap py-4   items-center justify-center">

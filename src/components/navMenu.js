@@ -72,8 +72,13 @@ function NavMenu({ navState }) {
       console.log("TRUE IS WOR<ING");
       setIsMobile(true);
     }
+
   }, []);
 
+
+  useEffect(() => {
+    openMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'
+  }, [openMenu])
 
   return (
     <>
@@ -81,7 +86,7 @@ function NavMenu({ navState }) {
         <RiMenu3Fill size={30} color={"white"} />
       </div>
       {openMenu && (
-        <div className="mobile-menu-container h-dvh px-2">
+        <div className="mobile-menu-container h-dvh px-2 z-50">
           <div className="mobile-remove-menu">
             <RxCross2
               onClick={() => setOpenMenu(false)}
@@ -159,8 +164,8 @@ function NavMenu({ navState }) {
           </div>
         </div>
       )}
-
-      <div className="desktop-navbar">
+{/* desktop-navbar */}
+      <div className=" lg:flex items-center ml-auto hidden ">
         {window.location.pathname.includes("/admin-dashboard") ? (
           <div className="nav-container">
             {dashboard.map((v, i) => (

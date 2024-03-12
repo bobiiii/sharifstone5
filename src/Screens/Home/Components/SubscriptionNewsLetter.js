@@ -16,18 +16,18 @@ const SubscriptionNewsLetter = () => {
     <MaxWidthWrapper className='px-0'>
       <div className="home-subscribe">
         {/* home-subscription-container */}
-        <div className="bg-[#F3F5F5] flex justify-center items-center flex-col sm:gap-16 gap-8 py-16 relative">
+        <div className="bg-[#F3F5F5] flex justify-center items-center flex-col sm:gap-16 gap-8 lg:py-16 sm:py-10 py-6 relative px-2 ">
           {/* home-subscription-header */}
-          <Heading className='text-center px-1 text-base'>
+          <Heading className=' lg:w-2/3 md:w-[70%] w-full text-center px-1 lg:text-3xl sm:text-3xl text-base'>
             SUBSCRIBE TO OUR NEWSLETTER TO GET UPDATES ON NEW PROMOTIONS AND
             PRODUCTS
           </Heading>
-          <div className="flex justify-center items-center  w-full">
+          <div className=" lg:w-2/3 md:w-[70%] sm:w-[90%] w-full flex justify-center items-center ">
             <form style={{ zIndex: 100, marginBottom: 30 }} className="lg:w-[70%] md:w-[80%]
              w-full sm:px-2 px-4 flex" onSubmit={submitForm}>
               {/* home-subscript-input */}
               <input
-                className=" rounded-l-[30px] w-full bg-white sm:py-4 py-2 px-4 text-base"
+                className=" rounded-l-[30px] sm:w-[90%] w-full bg-white sm:py-4 py-2 px-4 text-base"
                 placeholder="Enter Your Email"
                 value={mailto}
                 onChange={(e) => setMailto(e.target.value)}

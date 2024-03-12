@@ -129,7 +129,7 @@
     .mobile-menu-btn {
         display: flex !important;
     }
-    .desktop-navbar {
+    /* .desktop-navbar {
         display: none;
-    }
+    } */
 }

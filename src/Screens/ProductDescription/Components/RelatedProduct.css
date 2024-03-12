@@ -43,7 +43,7 @@
   cursor: pointer;
 }
 .productexpand-container {
-  margin-top: 80px;
+  /* margin-top: 80px;  */
 }
 .productexpand-btncontainer {
   width: 100%;
@@ -117,7 +117,7 @@
     font-size: 18px;
   }
   .productexpand-container {
-    margin: 50px 0px;
+    /* margin: 50px 0px;  */
   }
   .related-container {
     margin: 50px 0px;

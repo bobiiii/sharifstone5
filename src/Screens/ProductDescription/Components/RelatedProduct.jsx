@@ -7,6 +7,8 @@ import ExpandImage from '../../../assets/images/product/gk07cepp0-expand.png';
 import { Link, useNavigate } from "react-router-dom";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 function RelatedProduct({ relatedImages }) {
@@ -31,33 +33,27 @@ function RelatedProduct({ relatedImages }) {
   }
 
   const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
+    ' mobile': {
+      breakpoint: { max: 480, min: 0 },
       items: 1
     }
   };
+  const carouselRef = useRef(null);
+
+  const handlePrevious = () => {
+    carouselRef.current.previous();
+  };
+
+  const handleNext = () => {
+    carouselRef.current.next();
+  };
+
 
   return (
     <MaxWidthWrapper>
       {/* related-container */}
       <div className=" related-container">
         {/* <div className="productrelated-heading"></div> */}
-        <Heading>
-          RELATED PRODUCTS
-        </Heading>
         {/* <div className="productrelated-container ">
           <div className="productrelated-innercontainer">
             {relatedImages?.map((v, i) => (
@@ -68,30 +64,55 @@ function RelatedProduct({ relatedImages }) {
             ))}
           </div>
         </div> */}
+        <Heading className='xs:flex hidden'>
+          RELATED PRODUCTS
+        </Heading>
 
-        <div className="w-full sm:block hidden  bg-[#FEF6F7] md:px-10 px-6 md:py-10 py-6 mt-10 rounded-md">
-          <div className="w-full grid md:grid-cols-3 grid-cols-2   gap-8 border-[3px] border-[#D6D6D6] rounded-lg py-10 px-4">
-            {relatedProductObj?.map((v, i) => (
-              <div key={i} onClick={() => showProducts(v)} className="flex flex-grow w-full flex-col gap-4">
-                <img src={v.image} alt="" />
-                <h3 className="xl:text-3xl md:text-2xl text-xl font-semibold font-albert">{v.name}</h3>
-              </div>
-            ))}
+
+        <div className="w-full xs:grid hidden md:grid-cols-3 grid-cols-2 gap-8 sm:pt-10 pt-4 px-4">
+          {relatedProductObj?.map((v, i) => (
+            <div key={i} onClick={() => showProducts(v)} className="flex flex-grow w-full flex-col gap-4">
+              <img src={v.image} alt="" />
+              <h3 className="xl:text-3xl md:text-2xl text-xl font-semibold font-albert">{v.name}</h3>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex xs:hidden justify-between w-full items-center">
+          <div>
+            <Heading className=' text-base'>
+              RELATED PRODUCTS
+            </Heading>
+          </div>
+          <div className="flex gap-2 text-white">
+            <button className="bg-[#D5262A] rounded-full p-2" onClick={handlePrevious}>
+              < IoIosArrowBack className="text-center" />
+            </button>
+            <button className="bg-[#D5262A] rounded-full p-2" onClick={handleNext}> 
+              < IoIosArrowForward className="text-center"  />
+            </button>
           </div>
         </div>
 
-        <div className="w-full sm:hidden block ">
-          <Carousel responsive={responsive}>
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-            <div>Item 4</div>
+        <div className="w-full xs:hidden block mt-6 ">
+          <Carousel
+            responsive={responsive}
+            infinite
+            arrows={false}
+            itemClass="px-2 "
+            ref={carouselRef}
+          >
+            {relatedProductObj?.map((v, i) => (
+              <div key={i} onClick={() => showProducts(v)} >
+                <img src={v.image} alt="" className=" w-full h-[227px]" />
+              </div>
+            ))}
           </Carousel>;
         </div>
 
 
 
-        <div className="productexpand-container">
+        <div className="productexpand-container sm:mt-12 xs:mt-6 mt-4 ">
           <img src={ExpandImage} />
           {/* productexpand-btncontainer */}
           <div className="flex justify-center items-center">

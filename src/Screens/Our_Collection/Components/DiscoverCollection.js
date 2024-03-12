@@ -523,13 +523,13 @@ const DiscoverCollection = () => {
           
         >
           <div className="relative">
-          <img src={`${v?.color_image}`} className="h-40 w-40 lg:w-80 lg:h-64 rounded-lg  " alt="tile-images"/>
+          <img src={`${v?.color_image}`} className="h-40 cursor-pointer w-40 lg:w-80 lg:h-64 rounded-lg  " alt="tile-images"/>
           {i === onMouseOver && (
             <div
               onClick={() => gotoNextScreen(v)}
-              className=" bg-black text-white w-min  px-4 lg:px-8 py-4 lg:py-8 rounded-full absolute  top-[35%] left-[50%]  translate-x-[-50%] "
+              className=" bg-black text-white w-min  px-4 lg:px-8 py-4 lg:py-8 rounded-full absolute  top-[35%] left-[50%]  cursor-pointer translate-x-[-50%] "
             >
-              <GoArrowUpRight size={35} color="white" />
+              <GoArrowUpRight size={35} color="white" className="cursor-pointer" />
             </div>
           )}
           </div>
