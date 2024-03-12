@@ -18,7 +18,7 @@ const SubscriptionNewsLetter = () => {
         {/* home-subscription-container */}
         <div className="bg-[#F3F5F5] flex justify-center items-center flex-col sm:gap-16 gap-8 py-16 relative">
           {/* home-subscription-header */}
-          <Heading className='text-center px-1'>
+          <Heading className='text-center px-1 text-base'>
             SUBSCRIBE TO OUR NEWSLETTER TO GET UPDATES ON NEW PROMOTIONS AND
             PRODUCTS
           </Heading>
