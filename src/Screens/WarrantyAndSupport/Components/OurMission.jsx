@@ -18,7 +18,7 @@ function OurMission() {
           <div className="flex justify-between gap-8 w-full lg:flex-row flex-col items-center ">
             {/* ourmission-innercontainer */}
             <div className="lg:w-1/2 w-full">
-              <img className="w-full rounded-[24px] xl:h-full  lg:h-[50vh] h-full" src={WarrantyImage} />
+              <img className="w-full rounded-[24px]  xl:h-full  lg:h-[50vh] h-full" src={WarrantyImage} />
             </div>
             {/* ourmission-innercontainer-warranty */}
             <div className="lg:w-1/2 w-full">
@@ -41,7 +41,7 @@ function OurMission() {
 
           {/* Oppsite */}
 
-          <div className="flex justify-between gap-8 w-full lg:flex-row flex-col-reverse items-center  mt-16">
+          <div className="flex justify-between gap-8 w-full lg:flex-row flex-col-reverse items-center  lg:mt-0 mt-10">
 
             {/* ourmission-innercontainer-warranty */}
             <div className="lg:w-1/2 w-full">
@@ -61,7 +61,7 @@ function OurMission() {
 
             </div>
             {/* ourmission-innercontainer */}
-            <div className="lg:w-1/2 w-full ">
+            <div className="lg:w-1/2 w-full  ">
               <img className="w-full rounded-[24px] xl:h-[80%]   lg:h-[50vh] h-full" src={ws} />
             </div>
 

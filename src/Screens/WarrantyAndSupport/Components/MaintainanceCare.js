@@ -1,8 +1,9 @@
 import React from "react";
 import './MaintainanceCare.css'
 import MaxWidthWrapper from "../../MaxWidthWrapper";
-function MaintainanceCare() {
+import Heading from "../../resuable/Heading";
 
+function MaintainanceCare() {
   const handleDownloadPDF = () => {
 
     const pdfUrl = 'https://drive.google.com/uc?id=1v9X6gvXkwauWqfow7NbEkr_T5nT0ghMs';
@@ -23,7 +24,9 @@ function MaintainanceCare() {
     <MaxWidthWrapper>
       <div className="reorganize_container">
         <div className="ourmission-container">
-          <div className="ourmission-heading">MAINTENANCE AND CARE.</div>
+          <Heading>
+            MAINTENANCE AND CARE.
+          </Heading>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
           <div className="maintaincecare-cuntainer ">
             <div className="nowarranty-cover">
@@ -84,9 +87,8 @@ function MaintainanceCare() {
       </div>
 
 
-      <div className="maintaincecare-button" onClick={handleDownloadPDF}>
+      <div className="maintaincecare-button " onClick={handleDownloadPDF}>
         Download PDF
-
       </div>
     </MaxWidthWrapper>
   );

@@ -8,11 +8,11 @@
   text-align: justify;
 }
 .nowarranty-cover div {
-  margin-right: 25px;
+  margin-right: 25px; 
 }
 .nowarranty-button {
   padding: 15px 30px;
-  font-weight: 600;
+  font-weight: 500;
   display: inline-block;
   margin-top: 50px;
   
