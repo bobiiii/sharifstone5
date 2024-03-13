@@ -450,19 +450,17 @@ const KitchenVisualizer = () => {
                 </div>
               </div>
               {/* kitchen-visualizer-section */}
-             
+{/*              
               <Button clickFunc={()=>{setCurrentScreen("Visualizer Form")}}>
                 start old 
-               </Button>
+               </Button> */}
               <div className="md:w-[30%] mb-8 w-[80%] mt-3 flex justify-center items-center text-white md:mt-0 ">
                
                
-              <Link to={"/kitchen-visualizer/select-category"}>
+              <Link to={"/kitchen-visualizer/select-category"} clickFunc={()=>{setCurrentScreen("Visualizer Form")}}>
                 <div className="kitchen-visualizer-startbtn px-14 "
                 >
-                  
-                  Start
-                  
+                  Start 
                 </div>
                   </Link>
               </div>
