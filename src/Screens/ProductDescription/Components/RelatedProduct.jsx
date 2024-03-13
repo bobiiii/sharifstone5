@@ -15,6 +15,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 function RelatedProduct({ relatedImages }) {
+  console.log(relatedImages);
 
   const navigate = useNavigate()
   const relatedProductObj = [
@@ -31,8 +32,9 @@ function RelatedProduct({ relatedImages }) {
       image: Product3,
     },
   ];
-  const showProducts = (v) => {
-    navigate(`/product-description/${v?.color_url}`, { replace: false });
+  const showProducts = (item) => {
+    console.log(item);
+    // navigate(`/product-description/${item?.color_url}`, { replace: false });
   }
 
   const responsive = {
@@ -116,10 +118,10 @@ function RelatedProduct({ relatedImages }) {
               ref={carouselRef2}
 
             >
-              {relatedProductObj?.map((v, i) => (
-                <div key={i} onClick={() => showProducts(v)} >
-                  <img src={v.image} alt="" className=" w-full cursor-pointer " />
-                </div>
+              {relatedImages?.map((item, i) => (
+                <Link key={i} to={`/product-description/${item?.color_url}`}>
+                  <img src={item.color_image} alt="" className=" h-full rounded-lg w-full cursor-pointer " />
+                </Link>
               ))}
             </Carousel>;
             <span className=" absolute top-0 bottom-0 items-center  flex justify-center">
@@ -161,21 +163,25 @@ function RelatedProduct({ relatedImages }) {
             itemClass="px-2 "
             ref={carouselRef}
           >
-            {relatedProductObj?.map((v, i) => (
-              <div key={i} onClick={() => showProducts(v)} >
-                <img src={v.image} alt="" className=" w-full h-[300px] cursor-pointer" />
-              </div>
-            ))}
+            {
+              relatedProductObj?.map((item, i) => {
+                return (
+                  <div key={i} onClick={() => showProducts(item)}>
+                    <img src={item.image} alt="" className="w-full h-[300px] cursor-pointer" />
+                  </div>
+                );
+              })
+            }
           </Carousel>
         </div>
 
 
-
-        <div className="productexpand-container sm:mt-12 xs:mt-6 mt-4 ">
-          <img src={ExpandImage} />
+        {/* productexpand-container */}
+        <div className="  lg:mt-12 sm:mt-6 mt-4">
+          <img src={ExpandImage} className=" mt-4" />
           {/* productexpand-btncontainer */}
           <div className="flex justify-center items-center">
-            <div className="w-full max-w-screen-md mx-auto gap-4 grid md:grid-cols-3 grid-cols-2 gap-y-6 justify-center items-center  mt-10">
+            <div className="w-full max-w-screen-md mx-auto gap-4 grid md:grid-cols-3 grid-cols-2 gap-y-6 justify-center items-center  ms:mt-10 mt-6">
               <Link to={"/where-to-buy"} className="bg-[#221F1F] px-4 py-3 rounded-3xl text-white text-center sm:text-base text-[13px]" >Where To Buy</Link>
               {/* productexpand-wheretobuy */}
               <Link to={"/kitchen-visualizer"} className=" bg-[#EE2A2E] px-2 py-3 rounded-3xl text-white text-center sm:text-base text-[13px]" >Visualize Space</Link>
