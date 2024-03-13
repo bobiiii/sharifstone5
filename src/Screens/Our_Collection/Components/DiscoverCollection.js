@@ -531,7 +531,7 @@ const DiscoverCollection = () => {
           <img src={`${v?.color_image}`} className="h-40 cursor-pointer w-full lg:w-full lg:h-64 rounded-lg  " alt="tile-images"/>
           
           <div className="absolute bottom-0 left-[50%] translate-x-[-50%] font-medium  lg:font-semibold text-xs lg:text-xl font-gelasio text-[#221F1F]  lg:text-nowrap w-full">
-<div className="w-full lg:w-min mx-auto bg-white/50 rounded-lg py-1 lg:py-1 ">
+<div className="w-full lg:w-min mx-auto bg-white/50 rounded-lg py-1 lg:py-1 lg:px-3 ">
 
 
           {v.color_name}
