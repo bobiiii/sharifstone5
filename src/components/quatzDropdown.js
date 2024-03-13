@@ -61,7 +61,7 @@ const QuartzDropdown = ({ navState }) => {
             >
               {v.title}
             </div>
-            <div className="items-center flex justify-center">
+            <div className="items-center flex justify-center ">
               <Link to={v.url} >
                 {hover === v.title ? (
                   <img className="dropdown-img " src={DropdownIcon} alt="" />

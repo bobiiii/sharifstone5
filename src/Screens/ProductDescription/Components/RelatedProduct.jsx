@@ -123,7 +123,7 @@ function RelatedProduct({ relatedImages }) {
                   <img src={item.color_image} alt="" className=" h-full rounded-lg w-full cursor-pointer " />
                 </Link>
               ))}
-            </Carousel>;
+            </Carousel>
             <span className=" absolute top-0 bottom-0 items-center  flex justify-center">
 
               <button className="bg-[#D4262A]  rounded-full  p-4 lg:-ml-5 -ml-3" onClick={handlePrevious2}>
