@@ -75,7 +75,7 @@ function QuartzAdvantage() {
                   <div className={` px-8  my-4  flex justify-center items-start     flex-col gap-2.5  `}>
                     {/* homebrand-image */}
                     <div
-                      className="xl:w-12 xl:h-12 w-12 h-10 items-start text-white  "
+                      className="xl:w-12 xl:h-12 w-12 h-10 bg-no-repeat items-start text-white  "
                       style={{
                         backgroundImage: "url(images/helen1.png)",
                       }}
@@ -90,7 +90,7 @@ function QuartzAdvantage() {
                   <div className={` px-8  my-4  xl:flex hidden justify-center items-center    flex-col gap-2.5 text-center `}>
                     {/* homebrand-image */}
                     <div
-                      className="xl:w-12 xl:h-12 w-12 h-10 items-start text-white  "
+                      className="xl:w-12 xl:h-12 w-12 h-10 bg-no-repeat items-start text-white  "
                       style={{
                         backgroundImage: "url(images/helen1.png)",
                       }}
@@ -106,13 +106,13 @@ function QuartzAdvantage() {
                     <div className={`   text-center flex  justify-center items-center flex-col gap-2.5  `}>
                       {/* homebrand-image */}
                       <div
-                        className="xl:w-12 xl:h-12 w-12 h-10 items-start text-white "
+                        className="w-14  h-14 bg-no-repeat items-start text-white "
                         style={{
                           backgroundImage: v.url,
                         }}
                       />
                       {/* homebrand-text */}
-                      <div className="text-white font-medium md:text-base text-[13px] w-[90px]">{v.name}</div>
+                      <div className="text-white font-medium md:text-base text-[13px] w-[100px]">{v.name}</div>
                     </div>
                   ))}
                 </div>
