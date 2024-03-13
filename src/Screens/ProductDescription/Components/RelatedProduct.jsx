@@ -173,15 +173,15 @@ function RelatedProduct({ relatedImages }) {
 
 
         {/* productexpand-container */}
-        <div className="  lg:mt-12 sm:mt-6 mt-4">
+        {/* <div className="  lg:mt-12 sm:mt-6 mt-4">
           <img src={ExpandImage} className=" mt-4" />
-          {/* productexpand-btncontainer */}
+          productexpand-btncontainer
           <div className="flex justify-center items-center">
             <div className="w-full max-w-screen-md mx-auto gap-4 grid md:grid-cols-3 grid-cols-2 gap-y-6 justify-center items-center  ms:mt-10 mt-6">
               <Link to={"/where-to-buy"} className="bg-[#221F1F] px-4 py-3 rounded-3xl text-white text-center sm:text-base text-[13px]" >Where To Buy</Link>
-              {/* productexpand-wheretobuy */}
+              productexpand-wheretobuy
               <Link to={"/kitchen-visualizer"} className=" bg-[#EE2A2E] px-2 py-3 rounded-3xl text-white text-center sm:text-base text-[13px]" >Visualize Space</Link>
-              {/* productexpand-productcatalog */}
+              productexpand-productcatalog
               <Link to={"/quartz-collection"} className="md:block hidden bg-white px-2 py-3 rounded-3xl text-[#EE2A2E] border border-[#EE2A2E] text-center text-base font-bold   ">Product Catalogue</Link>
             </div>
           </div>
@@ -189,7 +189,7 @@ function RelatedProduct({ relatedImages }) {
             <Link to={"/quartz-collection"} className=" xs:w-1/2 w-[170px] mt-5 md:hidden bg-white px-2 py-3 rounded-3xl text-[#EE2A2E] border border-[#EE2A2E] text-center sm:text-base text-[13px] font-bold    ">Product Catalogue</Link>
           </div>
 
-        </div>
+        </div> */}
       </div>
     </MaxWidthWrapper >
   );
