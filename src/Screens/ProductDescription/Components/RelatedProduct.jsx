@@ -166,7 +166,7 @@ function RelatedProduct({ relatedImages }) {
                 <img src={v.image} alt="" className=" w-full h-[300px] cursor-pointer" />
               </div>
             ))}
-          </Carousel>;
+          </Carousel>
         </div>
 
 
