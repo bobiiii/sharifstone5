@@ -26,10 +26,10 @@ function ProductDescription() {
     if (params?.color !== undefined) {
       new Promise(async (resolve, reject) => {
         const data = await getColorByParam(params?.color);
-        // console.log("data", data) 
-        // resolve(data[0]); 
+        console.log("data", data)
+        resolve(data[0]);
       }).then(async (result) => {
-        // setColorDetails(result); 
+        setColorDetails(result);
         let relatedColor = await getCollectionByParam(
           result?.collection_url
         );
@@ -48,31 +48,31 @@ function ProductDescription() {
         label={["PRODUCT", "DESCRIPTION"]}
       />
       <MaxWidthWrapper>
-        <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-10 ">
+        <div className="flex flex-col justify-center gap-10 ">
 
-          <div className="lg:w-1/2 w-full">
+          <div className="w-full ">
             <div className="w-full  bg-cover bg-no-repeat  rounded-3xl">
-              {showColor ? <img src={colorDetails?.display_image} alt={"product-im"} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[70vh]" /> : <img src={colorDetails?.color_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[70vh]" alt={"product-im"} />}
+              {showColor ? <img src={colorDetails?.display_image} alt={"product-im"} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" /> : <img src={colorDetails?.color_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />}
 
             </div>
 
-            <div className=" flex py-4 items-center gap-4 ">
+            <div className=" flex pt-6 items-center  justify-center gap-4 ">
               {/* <span className="font-bold text-sm" >Space</span>
               <Switch className="px-2" onHandleColor={"#fff"} offColor={"#D6D6D6"} onColor={"#EE2A2E"} checkedIcon={false} uncheckedIcon={true} onChange={() => setShowColor(!showColor)} checked={!showColor} />
               <span style={{ fontWeight: !showColor ? 600 : 400 }} className="
               text-sm">Color</span> */}
-              <Button className='sm:text-sm text-sm py-2' clickFunc={() => setShowColor(true)}  >
-                button 1
+              <Button className='bg-[#221F1F] sm:text-base text-[12px]   whitespace-nowrap  ' clickFunc={() => setShowColor(true)}  >
+                Full Slab
               </Button>
-              <Button className='sm:text-sm text-sm py-2' clickFunc={() => setShowColor(false)}>
-                button 2
+              <Button className='sm:text-base text-[12px]    whitespace-nowrap' clickFunc={() => setShowColor(false)}>
+                Close Look Up
               </Button>
-              {/* <Button className='sm:text-sm text-sm py-2'>
-                button 3
-              </Button> */}
+              <Button className='sm:text-base text-[12px]    whitespace-nowrap'>
+                Installed Look
+              </Button>
             </div>
           </div>
-          <div className="lg:w-1/2 ">
+          <div className="w-full ">
             <Heading >{colorDetails?.color_name}</Heading>
 
             <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2   ">Description</div>
