@@ -116,13 +116,13 @@ function AboutUS({ data }) {
           {/* home-aboutsubcontainer */}
           <div className=" w-full grid lg:grid-cols-2 grid-cols-1 gap-6 justify-start items-start  ">
             <div className="w-full ">
-              <video id="about_us_video" className="w-full rounded-2xl h-auto" >
+              <video id="about_us_video" className="w-full rounded-2xl h-auto" controls>
                 <source src={about_us_video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
             {/* home-about-sections */}
-            <div className=" w1/2 flex flex-col gap-3" >
+            <div className=" w1/2 flex flex-col xl:gap-6 gap-3" >
               <span className=" sm:text-base text-sm">
                 Welcome to Sharifstone, a distinguished company in the United
                 States specializing in premium stones, including marble, granite,
@@ -143,7 +143,7 @@ function AboutUS({ data }) {
                 Explore the perfect stones for your project and elevate your space
                 with Sharifstone!
               </span>
-              <span className="flex justify-center">
+              <span className="flex lg:justify-start  justify-center ">
                 <Button clickFunc={() => setOpenQuote(true)}>Stone Inquiry</Button>
 
               </span>

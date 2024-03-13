@@ -155,12 +155,12 @@ function Footer() {
     //     </div>
     //   </div>
     // </div>
-    <footer className="">
-      <MaxWidthWrapper className='relative bg-white w-full xs:h-full  h-screen lg:py-16 md:py-6  py-4    flex flex-col sm:justify-between justify-evenly sm:gap-16 gap-10 md:mt-0 mt-0'>
-        <img className="absolute right-0 bottom-0" src={BgImage} alt={"alt"} />
+    <footer className="lg:py-16 md:py-6 py-4 ">
+      <MaxWidthWrapper className='relative bg-white w-full xs:h-full  h-screen  flex flex-col sm:justify-between justify-evenly sm:gap-16 gap-10 md:mt-0 mt-0'>
+        <img className="absolute right-0 bottom-0 " src={BgImage} alt={"alt"} />
 
         <div className="w-full">
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="" className=""/>
         </div>
         <div className="w-full grid lg:grid-cols-4 grid-cols-2 gap-16 lg:justify-between justify-center ">
           <ul className="flex flex-col gap-6  ">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./quatzDropdown.css";
 import EssentialCollectionImage from "../assets/images/essential_dropdown_image.png";
 import IndulgeCollectionImage from "../assets/images/indulge_dropdown_image.png";
@@ -42,9 +42,10 @@ const QuartzDropdown = ({ navState }) => {
     },
   ];
 
+
   return (
-    <div>
-      <div className="end-dropdown" onMouseOver={() => navState.setShowDropdown(false)}></div>
+    <div className="lg:block hidden">
+      <div id="drop-down" className="end-dropdown" onMouseOver={() => navState.setShowDropdown(false)}></div>
       <div className="dropdown-container">
         {dropdown.map((v, i) => (
           <div
@@ -55,18 +56,20 @@ const QuartzDropdown = ({ navState }) => {
             style={{ backgroundImage: hover === v.title ? v.backURL : "" }}
           >
             <div
-              className="dropdown-item-text"
+              className="dropdown-item-text "
               style={{ color: hover === v.title ? "#fff" : "" }}
             >
               {v.title}
             </div>
-            <Link to={v.url}>
-              {hover === v.title ? (
-                <img className="dropdown-img" src={DropdownIcon} alt="" />
-              ) : (
-                <img className="dropdown-img" src={v.image} alt="" />
-              )}
-            </Link>
+            <div className="items-center flex justify-center">
+              <Link to={v.url} >
+                {hover === v.title ? (
+                  <img className="dropdown-img " src={DropdownIcon} alt="" />
+                ) : (
+                  <img className="dropdown-img rounded-xl" src={v.image} alt="" />
+                )}
+              </Link>
+            </div>
           </div>
         ))}
       </div>

@@ -9,9 +9,13 @@ import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
 function RelatedProduct({ relatedImages }) {
+  console.log(relatedImages);
 
   const navigate = useNavigate()
   const relatedProductObj = [
@@ -28,8 +32,9 @@ function RelatedProduct({ relatedImages }) {
       image: Product3,
     },
   ];
-  const showProducts = (v) => {
-    navigate(`/product-description/${v?.color_url}`, { replace: false });
+  const showProducts = (item) => {
+    console.log(item);
+    // navigate(`/product-description/${item?.color_url}`, { replace: false });
   }
 
   const responsive = {
@@ -38,7 +43,24 @@ function RelatedProduct({ relatedImages }) {
       items: 1
     }
   };
+
+  const responsive2 = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 480 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 480, min: 0 },
+      items: 1
+    }
+  };
+
   const carouselRef = useRef(null);
+  const carouselRef2 = useRef(null);
 
   const handlePrevious = () => {
     carouselRef.current.previous();
@@ -46,6 +68,13 @@ function RelatedProduct({ relatedImages }) {
 
   const handleNext = () => {
     carouselRef.current.next();
+  };
+  const handlePrevious2 = () => {
+    carouselRef2.current.previous();
+  };
+
+  const handleNext2 = () => {
+    carouselRef2.current.next();
   };
 
 
@@ -64,21 +93,53 @@ function RelatedProduct({ relatedImages }) {
             ))}
           </div>
         </div> */}
-        <Heading className='xs:flex hidden'>
+        <Heading className='sm:flex hidden'>
           RELATED PRODUCTS
         </Heading>
 
 
-        <div className="w-full xs:grid hidden md:grid-cols-3 grid-cols-2 gap-8 sm:pt-10 pt-4 px-4">
+        {/* <div className="w-full xs:grid hidden md:grid-cols-3 grid-cols-2 gap-8 sm:pt-10 pt-4 px-4">
           {relatedProductObj?.map((v, i) => (
             <div key={i} onClick={() => showProducts(v)} className="flex flex-grow w-full flex-col gap-4">
               <img src={v.image} alt="" />
               <h3 className="xl:text-3xl md:text-2xl text-xl font-semibold font-albert">{v.name}</h3>
             </div>
           ))}
+        </div> */}
+
+        {/* Desktop Carousel */}
+        <div className="w-full sm:block hidden sm:pt-10 pt-4  px-2">
+          <div className="relative">
+            <Carousel
+              responsive={responsive2}
+              infinite
+              arrows={false}
+              itemClass="px-2 "
+              ref={carouselRef2}
+
+            >
+              {relatedImages?.map((item, i) => (
+                <Link key={i} to={`/product-description/${item?.color_url}`}>
+                  <img src={item.color_image} alt="" className=" h-full rounded-lg w-full cursor-pointer " />
+                </Link>
+              ))}
+            </Carousel>;
+            <span className=" absolute top-0 bottom-0 items-center  flex justify-center">
+
+              <button className="bg-[#D4262A]  rounded-full  p-4 lg:-ml-5 -ml-3" onClick={handlePrevious2}>
+                <FaArrowLeft size={20} className="text-white" />
+              </button>
+            </span>
+            <span className="absolute top-0 bottom-0  right-0 items-center flex justify-center">
+              <button className="bg-[#D4262A] rounded-full  p-4 lg:-mr-5 -mr-3" onClick={handleNext2}>
+                <FaArrowRight size={20} className="text-white" />
+              </button>
+            </span>
+          </div>
         </div>
 
-        <div className="flex xs:hidden justify-between w-full items-center">
+        {/* Mobile Carousel */}
+        <div className="flex sm:hidden justify-between w-full items-center">
           <div>
             <Heading className=' text-base'>
               RELATED PRODUCTS
@@ -88,13 +149,13 @@ function RelatedProduct({ relatedImages }) {
             <button className="bg-[#D5262A] rounded-full p-2" onClick={handlePrevious}>
               < IoIosArrowBack className="text-center" />
             </button>
-            <button className="bg-[#D5262A] rounded-full p-2" onClick={handleNext}> 
-              < IoIosArrowForward className="text-center"  />
+            <button className="bg-[#D5262A] rounded-full p-2" onClick={handleNext}>
+              < IoIosArrowForward className="text-center" />
             </button>
           </div>
         </div>
 
-        <div className="w-full xs:hidden block mt-6 ">
+        <div className="w-full sm:hidden block mt-6 ">
           <Carousel
             responsive={responsive}
             infinite
@@ -102,21 +163,21 @@ function RelatedProduct({ relatedImages }) {
             itemClass="px-2 "
             ref={carouselRef}
           >
-            {relatedProductObj?.map((v, i) => (
-              <div key={i} onClick={() => showProducts(v)} >
-                <img src={v.image} alt="" className=" w-full h-[227px]" />
-              </div>
+            {relatedImages?.map((item, i) => (
+              <Link key={i} to={`/product-description/${item?.color_url}`}>
+                <img src={item.color_image} alt="" className=" h-[300px]  rounded-lg w-full cursor-pointer " />
+              </Link>
             ))}
-          </Carousel>;
+          </Carousel>
         </div>
 
 
-
-        <div className="productexpand-container sm:mt-12 xs:mt-6 mt-4 ">
-          <img src={ExpandImage} />
+        {/* productexpand-container */}
+        <div className="  lg:mt-12 sm:mt-6 mt-4">
+          <img src={ExpandImage} className=" mt-4" />
           {/* productexpand-btncontainer */}
           <div className="flex justify-center items-center">
-            <div className="w-full max-w-screen-md mx-auto gap-4 grid md:grid-cols-3 grid-cols-2 gap-y-6 justify-center items-center  mt-10">
+            <div className="w-full max-w-screen-md mx-auto gap-4 grid md:grid-cols-3 grid-cols-2 gap-y-6 justify-center items-center  ms:mt-10 mt-6">
               <Link to={"/where-to-buy"} className="bg-[#221F1F] px-4 py-3 rounded-3xl text-white text-center sm:text-base text-[13px]" >Where To Buy</Link>
               {/* productexpand-wheretobuy */}
               <Link to={"/kitchen-visualizer"} className=" bg-[#EE2A2E] px-2 py-3 rounded-3xl text-white text-center sm:text-base text-[13px]" >Visualize Space</Link>
