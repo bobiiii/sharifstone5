@@ -512,18 +512,18 @@ const DiscoverCollection = () => {
   const collectionJSX = (v, i,inner, islable = false  ) => {
     return (
       <div
-        className={`  flex-grow flex-shrink    ${inner ? "basis-2/5 lg:basis-[20%]": "basis-2/5 lg:basis-[30%]"}   text-center ` }
+        className={`w-[32%] ${inner ? " ": ""}   text-center  ` }
         
       >
         <div className="flex flex-col   ">
         <div
           onMouseOver={() => setOnMouseOver(i)}
           
-          className=" place-self-center  "
+          className="   "
           
         >
-          <div className="relative">
-          <img src={`${v?.color_image}`} className="h-40 cursor-pointer w-40 lg:w-80 lg:h-64 rounded-lg  " alt="tile-images"/>
+          <div className="relative ">
+          <img src={`${v?.color_image}`} className="h-40 cursor-pointer w-40 lg:w-full lg:h-64 rounded-lg  " alt="tile-images"/>
           {i === onMouseOver && (
             <div
               onClick={() => gotoNextScreen(v)}
@@ -585,7 +585,7 @@ const DiscoverCollection = () => {
     }
   }, []);
   return (
-    <MaxWidthWrapper  className={""}>
+    <MaxWidthWrapper  className={" max-w-screen-2xl md:px-0 px-0"}>
       
         <div className="font-extrabold text-3xl text-center font-gelasio lg:w-1/2 lg:mx-auto">
           {flag ? content[collection][0] : innerCollection[0]?.collection_name}
@@ -624,7 +624,7 @@ const DiscoverCollection = () => {
                 : loader()}
           </div> */}
 
-          <div className={`  ${flag ? "lg:w-2/3":""}  lg:w-5/6 lg:mx-auto flex gap-4 lg:gap-8 justify-center  flex-wrap     `}>
+          <div className={`border   ${flag ? "lg:w-full":""}   lg:mx-auto flex  justify-center lg:gap-4  flex-wrap     `}>
             {flag
               ? collections.length > 0
                 ? collections.map((v, i) => collectionJSX(v, i))
