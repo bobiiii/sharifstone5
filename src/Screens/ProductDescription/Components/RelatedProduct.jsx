@@ -163,15 +163,11 @@ function RelatedProduct({ relatedImages }) {
             itemClass="px-2 "
             ref={carouselRef}
           >
-            {
-              relatedProductObj?.map((item, i) => {
-                return (
-                  <div key={i} onClick={() => showProducts(item)}>
-                    <img src={item.image} alt="" className="w-full h-[300px] cursor-pointer" />
-                  </div>
-                );
-              })
-            }
+            {relatedImages?.map((item, i) => (
+              <Link key={i} to={`/product-description/${item?.color_url}`}>
+                <img src={item.color_image} alt="" className=" h-[300px]  rounded-lg w-full cursor-pointer " />
+              </Link>
+            ))}
           </Carousel>
         </div>
 

@@ -26,7 +26,7 @@ function ProductDescription() {
     if (params?.color !== undefined) {
       new Promise(async (resolve, reject) => {
         const data = await getColorByParam(params?.color);
-        console.log("data", data)
+        // console.log("data", data)
         resolve(data[0]);
       }).then(async (result) => {
         setColorDetails(result);
