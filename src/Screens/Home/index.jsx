@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./home.css";
 import CoverImage from "../../assets/images/homeImage/landingcover.png";
 import home_video from "../../assets/videos/home_video.mp4"
+import home_video2 from "../../assets/videos/home_video2.mp4"
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import "animate.css/animate.min.css";
 import DiscoverCollection from "./Components/DiscoverCollection";
@@ -73,10 +74,15 @@ function HomeScreen() {
       <div className="w-full min-h-screen ">
         <div className="w-full flex flex-col h-[60vh] lg:h-[100vh]">
           <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
-            {/* <video className="w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
+            <video className="lg:hidden w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
+              <source src={home_video2} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <video className="hidden lg:block w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
               <source src={home_video} type="video/mp4" />
               Your browser does not support the video tag.
-            </video> */}
+            </video>
           </div>
         </div>
         <div className=" bg-gradient-hero  h-[40vh] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
@@ -84,18 +90,18 @@ function HomeScreen() {
             <div className="w-1/2 lg:w-3/5 h-full ">
               <div className="h-full flex justify-center  items-center
  ">
-                <h3 className="lg:text-5xl md:text-3xl text-2xl   font-medium font-gelasio      px-2 md:px-8 ">
+                <h3 className="lg:text-5xl md:text-3xl text-3xl   font-medium font-gelasio    leading-relaxed   ps-6 md:px-8 ">
                   BUILDING MEMORIES, ONE STONE AT A TIME</h3>
               </div>
             </div>
             <div className="w-1/2 lg:w-2/5 h-full flex  gap-4 justify-center  ">
-              <div className="flex justify-center  flex-col  gap-4 w-full  items-start">
-                <p className="max-w-md lg:text-2xl sm:text-base text-sm font-normal ">
+              <div className="flex justify-center  flex-col  gap-4 w-full  items-end px-4">
+                <p className=" lg:text-2xl sm:text-base  text-right  font-normal ">
                   Beauty and quality beyond imagination. Service beyond what's expected.
                 </p>
 
                 <Link to='/quartz-collection'>
-                  <Button className={"bg-white text-red-500 font-medium text-sm py-2 "}>
+                  <Button className={"bg-white text-red-500 font-medium text-sm  py-2 "}>
                     View Collection
                   </Button>
                 </Link>
