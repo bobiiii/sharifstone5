@@ -48,7 +48,8 @@ const QuartzDropdown = ({ navState }) => {
       <div id="drop-down" className="end-dropdown" onMouseOver={() => navState.setShowDropdown(false)}></div>
       <div className="dropdown-container">
         {dropdown.map((v, i) => (
-          <div
+          <Link
+            to={v.url}
             onMouseEnter={() => setHover(v.title)}
             onMouseLeave={() => setHover("")}
             onClick={() => navState.setShowDropdown(false)}
@@ -62,15 +63,13 @@ const QuartzDropdown = ({ navState }) => {
               {v.title}
             </div>
             <div className="items-center flex justify-center ">
-              <Link to={v.url} >
-                {hover === v.title ? (
-                  <img className="dropdown-img " src={DropdownIcon} alt="" />
-                ) : (
-                  <img className="dropdown-img rounded-xl" src={v.image} alt="" />
-                )}
-              </Link>
+              {hover === v.title ? (
+                <img className="dropdown-img " src={DropdownIcon} alt="" />
+              ) : (
+                <img className="dropdown-img rounded-xl" src={v.image} alt="" />
+              )}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
