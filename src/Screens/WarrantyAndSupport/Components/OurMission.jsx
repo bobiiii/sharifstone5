@@ -24,18 +24,22 @@ function OurMission() {
             <div className="lg:w-1/2 w-full">
               <b>I. WARRANTY COVERS</b>
               <br />
-              This category pertains to Sharifstone® Surfaces that  have been purchased from an Authorized Sharifstone®  Installer/Dealer and installed in your residence  location by an Authorized Installer.
+              <p className="mt-1 sm:text-base  text-sm font-light font-albert">
+                This category pertains to Sharifstone® Surfaces that  have been purchased from an Authorized Sharifstone®  Installer/Dealer and installed in your residence  location by an Authorized Installer.
+              </p>
               <br />
-              <br />
+
               <b>II. WHAT IT COVERS IN DETAIL</b>
               <br />
-              The warranty specifically addresses defects arising  from the manufacturing process. When making a claim  during the warranty coverage period, an inspection  will be conducted on the installed Surfaces. If the  defects are confirmed as originating from the  manufacturing process, the warranty will cover the  replacement of the Surface with either the same  material or a comparable alternative available at the  time of the claim.
-              <br />
+              <p className="mt-1 sm:text-base text-sm font-light font-albert">
+                The warranty specifically addresses defects arising  from the manufacturing process. When making a claim  during the warranty coverage period, an inspection  will be conducted on the installed Surfaces. If the  defects are confirmed as originating from the  manufacturing process, the warranty will cover the  replacement of the Surface with either the same  material or a comparable alternative available at the  time of the claim.
+              </p>
               <br />
               <b>III. MAINTENANCE REQUIREMENTS</b>
               <br />
-              Maintenance coverage is contingent on adhering to  the Sharifstone® Surfaces Care and Maintenance  guidelines, as well as maintaining the Surfaces in  accordance with accepted standards for engineered  Quartz surfaces.
-
+              <p className="mt-1 sm:text-base text-sm font-light font-albert">
+                Maintenance coverage is contingent on adhering to  the Sharifstone® Surfaces Care and Maintenance  guidelines, as well as maintaining the Surfaces in  accordance with accepted standards for engineered  Quartz surfaces.
+              </p>
             </div>
           </div>
 
@@ -47,18 +51,21 @@ function OurMission() {
             <div className="lg:w-1/2 w-full">
               <b>IV. AUTHORIZED SOURCES</b>
               <br />
-              To ensure warranty eligibility, it is essential to make purchases exclusively through Authorized Sharifstone® Installers/Dealers. Additionally, installations must be carried out by Authorized Installers to validate the warranty.
-              <br />
+              <p className="mt-1 sm:text-base text-sm font-light font-albert">
+                To ensure warranty eligibility, it is essential to make purchases exclusively through Authorized Sharifstone® Installers/Dealers. Additionally, installations must be carried out by Authorized Installers to validate the warranty.
+              </p>
               <br />
               <b>V. CLAIM PROCESS</b>
               <br />
-              In the absence of warranty documentation, the process for making claims can be initiated by following the general industry standards for warranty claims. This may involve contacting the point of purchase or the Authorized Installer and providing necessary information about the claim.
-              <br />
+              <p className="mt-1 sm:text-base text-sm font-light font-albert">
+                In the absence of warranty documentation, the process for making claims can be initiated by following the general industry standards for warranty claims. This may involve contacting the point of purchase or the Authorized Installer and providing necessary information about the claim.
+              </p>
               <br />
               <b>VI. CONTACT INFORMATION</b>
               <br />
-              For any inquiries or to initiate a warranty claim, reach out to the point of purchase or the Authorized Installer. They should be able to guide you through the process and provide any necessary assistance.
-
+              <p className="mt-1 sm:text-base text-sm font-light font-albert">
+                For any inquiries or to initiate a warranty claim, reach out to the point of purchase or the Authorized Installer. They should be able to guide you through the process and provide any necessary assistance.
+              </p>
             </div>
             {/* ourmission-innercontainer */}
             <div className="lg:w-1/2 w-full  ">

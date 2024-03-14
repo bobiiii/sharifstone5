@@ -3,6 +3,7 @@ import "./ContactForm.css";
 import ContactFormBG from "../../../assets/images/contactform_bg.png";
 import Upload from "../../../assets/images/upload.png";
 import Heading from "../../resuable/Heading";
+import Button from "../../resuable/Button";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 
 import Dropzone from "react-dropzone";
@@ -16,7 +17,7 @@ function ContactForm() {
           <Heading className='py-4 xs:block hidden'>
             CONTACT US
           </Heading>
-          <div className=" text-start  w-full ps-[12px]">
+          <div className=" text-center  w-full ">
             <Heading className='py-4 xs:hidden  '>
               Find A Fabricator
             </Heading>
@@ -65,7 +66,7 @@ function ContactForm() {
           </div>
           <div className="contactform-inputcheck  md:w-[80%] w-full flex md:gap-4 gap-2 md:px-6 px-4">
             <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" className="mt-2 px-4" />
-            <p className="xs:text-lg text-sm font-light font-albert ">
+            <p className="xs:text-base text-sm font-light font-albert ">
               Yes, sign me up to receive email communications from Sharifstone about products, news, and events. I understand I can
               unsubscribe at any time
 
@@ -75,7 +76,13 @@ function ContactForm() {
               </p>
             </p>
           </div>
-          <div className="submit-btn">Submit</div>
+          {/* <div className="submit-btn"></div> */}
+          <div className="w-full flex justify-center items-center text-center">
+            <Button className='z-50 bg-[#EE2A2E] sm:px-10 px-6 sm:text-base text-sm'>
+              Submit
+            </Button>
+          </div>
+
           <img className="contactform-bg" src={ContactFormBG} />
         </div>
       </div>
