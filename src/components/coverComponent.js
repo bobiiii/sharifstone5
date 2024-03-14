@@ -1,18 +1,40 @@
-import './coverComponent.css'
+import React, { useEffect } from 'react';
+import './coverComponent.css';
 
-const CoverComponent = ({image, label}) => {
+const CoverComponent = ({ image, label }) => {
+  
+  useEffect(() => {
+    const zoomImages = document.querySelectorAll('.zoomedImage');
     
-    return(
-        <div className='coverComponent overflow-hidden' >
-        
-        <div className=' w-full h-full hover:scale-110 transition-all duration-700 grid place-items-center bg-no-repeat bg-cover'  style={{ backgroundImage: image}}>
-        {label[0]}
-        <br />{label[1]}
+  
+    // Remove zoom effect first
+    zoomImages.forEach(image => {
+      image.classList.remove('zoomed');
+    });
+  
+    // Apply zoom effect
+    setTimeout(() => {
+      console.log("class added")
+      zoomImages.forEach(image => {
+        image.classList.add('zoomed');
+      });
+    }, 1000); 
+    // Clean-up function to remove zoom effect when component unmounts
+    return () => {
+      zoomImages.forEach(image => {
+        image.classList.remove('zoomed');
+      });
+    };
+  }, []);
+  
 
-        </div>
-        
-        
-        </div>
-    )
-}
-export default CoverComponent
+  return (
+    <div className='coverComponent overflow-hidden'>
+      <div className='w-full h-full grid place-items-center bg-no-repeat bg-cover zoomedImage' style={{ backgroundImage: image }}>
+        {label[0]}<br />{label[1]}
+      </div>
+    </div>
+  );
+};
+
+export default CoverComponent;

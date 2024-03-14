@@ -7,6 +7,7 @@ const OurCollection = () => {
     return(
         <div>
             <CoverComponent image={`url(${CollectionCover})`} label={['OUR', 'COLLECTION']}/>
+       
             <DiscoverCollection />
         </div>
     )

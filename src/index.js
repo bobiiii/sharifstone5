@@ -17,6 +17,8 @@ import Context from "./Store/contextStore";
 import APIContext from "./Store/apiContext";
 import { getCollection, getVisualizer } from "./apiCall/apiCall";
 
+
+
 const RunFuncion = () => {
   const [store, setStore] = useState({});
   const [apiStore, setAPIStore] = useState({});
@@ -35,7 +37,10 @@ const RunFuncion = () => {
     <APIContext.Provider value={{ apiStore, setAPIStore }}>
       <Context.Provider value={{ store, setStore }}>
         <React.StrictMode>
+          
+
           <RouterProvider router={router} />
+
         </React.StrictMode>
       </Context.Provider>
     </APIContext.Provider>
