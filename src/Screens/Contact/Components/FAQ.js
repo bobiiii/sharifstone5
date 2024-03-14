@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./FAQ.css";
 import { FiMinus, FiPlus } from "react-icons/fi";
+import Heading from "../../resuable/Heading";
+import MaxWidthWrapper from "../../MaxWidthWrapper";
 
 function FAQ() {
   const [faq, setFaq] = useState(-1);
@@ -47,34 +49,45 @@ function FAQ() {
     },
   ];
   return (
-    <div className="faq-container">
-      <div className="faq-innercontainer">
-        <div className="faq-heading">FIND ANSWERS QUICKLY</div>
-        <hr className="faq-sepeartor" />
-        <div className="faq-formcontainer">
-          {faqArray.map((v, i) => {
-            return (
-              <div
-                className={
-                  faq === i
-                    ? "faq-questioncontaier-active"
-                    : "faq-questioncontaier"
-                }
-                onClick={() => i === faq ?  setFaq(-1):setFaq(i)}
-              >
-                <div className="faq-questionrow">
-                  {v.question}
-                  <div>
-                    {faq === i ? <FiMinus size={25} /> : <FiPlus size={25} />}
+    <MaxWidthWrapper>
+      <div className="faq-container">
+        <div className="faq-innercontainer w-full ">
+          <div className="w-full text-center">
+            <Heading>
+              FIND ANSWERS QUICKLY
+            </Heading>
+          </div>
+          <hr className="faq-sepeartor" />
+          <div className="faq-formcontainer">
+            {faqArray.map((v, i) => {
+              return (
+                <div
+                  className={
+                    faq === i
+                      ? "faq-questioncontaier-active duration-300 "
+                      : "faq-questioncontaier sm:py-8 py-4 md:w-[95%] w-full duration-300"
+                  }
+                  onClick={() => i === faq ? setFaq(-1) : setFaq(i)}
+                >
+                  <div className="faq-questionrow w-full flex justify-between md:gap-16 gap-8">
+                    <div >
+                      <h3 className="sm:text-[22px] text-base font-semibold font-albert text-[#221F1F] ">
+                        {v.question}
+                      </h3>
+                    </div>
+                    <div>
+                      {faq === i ? <FiMinus size={25} /> : <FiPlus size={25} />}
+                    </div>
                   </div>
+                  {/* faq-answer */}
+                  {faq === i && <div className=" sm:text-lg text-sm mt-4 text-[#221F1F] font-light font-albert">{v.message}dd</div>}
                 </div>
-                {faq === i && <div className="faq-answer">{v.message}dd</div>}
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </MaxWidthWrapper>
   );
 }
 
