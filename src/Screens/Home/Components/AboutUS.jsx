@@ -13,6 +13,10 @@ import 'animate.css';
 import Heading from "../../resuable/Heading";
 import GetAQuote from "./GetAQuote";
 import Button from "../../resuable/Button";
+import eye from "../../eye.json";
+import location from "../../location.json";
+
+import Lottie from "lottie-react";
 
 function AboutUS({ data }) {
 
@@ -97,6 +101,25 @@ function AboutUS({ data }) {
       href: "/where-to-buy",
     },
   ];
+
+  const aboutIdeas2 = [
+    {
+      name: "VISUALIZE YOUR SPACE",
+      image: eye,
+      href: "/kitchen-visualizer",
+    },
+    {
+      name: "VIEW COLORS CATALOG",
+      image: location,
+      href: "/quartz-collection",
+    },
+    {
+      name: "WHERE TO BUY",
+      image: location,
+      href: "/where-to-buy",
+    },
+  ];
+
   const { openQuote, setOpenQuote } = data;
   return (
     <MaxWidthWrapper className='md:mt-20 mt-16' >
@@ -151,17 +174,17 @@ function AboutUS({ data }) {
 
           </div>
           {/* home-aboutcard */}
-          <div className=" w-full  md:hidden flex flex-wrap py-4   items-center justify-center">
+          <div className=" w-full  md:hidden flex flex-wrap py-4    items-center justify-center">
             {aboutIdeas.map((v, i) => (
               <div className="  flex w-[45%]  justify-center items-center text-center   mx-auto  ">
                 <Link
                   to={v.href}
-                  className="home-aboutcards w-full mt-4  py-6 px-2  "
+                  className="home-aboutcards w-full mt-4   py-6 px-2  "
                   style={{ textDecoration: "none" }}
                 >
-                  <img src={v.image} className="sm:w-20 w-12" />
+                  <img src={v.image} className="sm:w-20 w-12 " />
                   <div className="mt-4 text-center">
-                    <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black  mt-4">
+                    <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black   mt-4">
                       {v.name}
                     </h5>
                   </div>
@@ -170,24 +193,97 @@ function AboutUS({ data }) {
             ))}
           </div>
 
-          <div className=" w-full px-10 hidden md:flex gap-10 py-4 my-6  ">
-            {aboutIdeas.map((v, i) => (
-              <div className="  flex lg:w-[25%] w-[32%]  justify-center items-center   mx-auto  ">
+          <div className="flex justify-center w-full items-center">
+            <div className=" w-full px-10 hidden justify-center items-center max-w-screen-lg md:flex gap-8 py-4 my-6  ">
+              {aboutIdeas.map((v, i) => (
+                <div className="  flex lg:w-[25%] w-[32%]  justify-center items-center     ">
+                  <Link
+                    to={v.href}
+                    className="home-aboutcards w-full mt-4  py-8 px-2  "
+                    style={{ textDecoration: "none" }}
+                  >
+                    <img src={v.image} className="sm:w-20 w-12" /> 
+                    <div className="mt-2 text-center">
+                      <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black mt-4">
+                        {v.name}
+                      </h5>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+
+          {/* animated icons */}
+          {/* <div className="flex justify-center w-full items-center">
+            <div className=" w-full px-10 hidden justify-center items-center max-w-screen-lg md:flex gap-8 py-4 my-6  ">
+              <div className="  flex  lg:w-[25%] w-[32%]  justify-center items-center     ">
                 <Link
-                  to={v.href}
-                  className="home-aboutcards w-full mt-4  py-6 px-2  "
+                  to={'/kitchen-visualizer'}
+                  className="home-aboutcards w-full mt-4 flex-grow h-full  py-3 px-2  "
                   style={{ textDecoration: "none" }}
                 >
-                  <img src={v.image} className="sm:w-20 w-12" />
-                  <div className="mt-4 text-center">
+                  <img src={v.image} className="sm:w-20 w-12" /> 
+                  <Lottie color="#ee2a2e" className="sm:w-32 w-12 " animationData={location} size={10} />
+                  <div className="mt-2 text-center">
                     <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black mt-4">
-                      {v.name}
+                      VISUALIZE YOUR SPACE
                     </h5>
                   </div>
                 </Link>
               </div>
-            ))}
-          </div>
+              <div className="  flex lg:w-[25%] w-[32%]   justify-center items-center     ">
+                <Link
+                  to={'/quartz-collection'}
+                  className="home-aboutcards w-full h-full flex-grow mt-4  py-6 px-2  "
+                  style={{ textDecoration: "none" }}
+                >
+                  <img src={v.image} className="sm:w-20 w-12" /> 
+                  <Lottie color="#ee2a2e" className="sm:w-32 w-12 " animationData={eye} size={10} />
+                  <div className="mt-2 text-center">
+                    <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black mt-4">
+                      VIEW COLORS CATALOG
+                    </h5>
+                  </div>
+                </Link>
+              </div>
+              <div className="  flex lg:w-[25%] w-[32%]   justify-center items-center     ">
+                <Link
+                  to={'/where-to-buy'}
+                  className="home-aboutcards w-full mt-4  h-full flex-grow  py-3 px-2  "
+                  style={{ textDecoration: "none" }}
+                >
+                  <img src={v.image} className="sm:w-20 w-12" /> 
+                  <Lottie color="#ee2a2e" className="sm:w-32 w-12 " animationData={location} size={10} />
+                  <div className="mt-2 text-center">
+                    <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black mt-4">
+                      WHERE TO BUY
+                    </h5>
+                  </div>
+                </Link>
+              </div>
+
+              {
+                aboutIdeas2.map((item, i) => {
+                  return (
+                    <div className="border-[1px] flex-grow justify-center  h-100   items-center border-[#f7dada] rounded-3xl shadow-xl px-4 py-4 h-full ">
+                      <div className="flex justify-center items-center flex-col flex-grow h-full"
+                      >
+                        <div >
+                        <img src={item.image} className="sm:w-20 w-12" /> 
+                          <Lottie color="#ee2a2e" className="sm:w-32 w-12 " animationData={item.image} height={10} />
+                        </div>
+                        <div style={{ flex: 1 }}>
+                          <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black mt-4">{item.name}</h5>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div> */}
         </div>
       </div>
     </MaxWidthWrapper>

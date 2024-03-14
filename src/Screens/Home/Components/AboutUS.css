@@ -1,5 +1,3 @@
-
-
 .home-aboutconatiner {
   width: 100%;
   display: flex;
@@ -7,10 +5,12 @@
   align-items: center;
   /* margin: "100px 0px"; */
 }
+
 .home-aboutinnercontainer {
   width: 100%;
   /* margin-top: 80px;  */
 }
+
 .home-aboutheading {
   font-size: 50px;
   font-family: "Gelasio", serif;
@@ -21,14 +21,18 @@
   display: flex;
   justify-content: flex-start;
 }
+
 .youtube-iframe {
   border-radius: 25px;
 }
+
 .home-about-sections {
   display: flex;
   flex-direction: column;
-  width: 80%; /* Adjust width as needed */
-  margin: 0 auto; /* Center the content horizontally */
+  width: 80%;
+  /* Adjust width as needed */
+  margin: 0 auto;
+  /* Center the content horizontally */
   margin-top: 35px;
   line-height: 30px;
   justify-content: space-around;
@@ -39,18 +43,20 @@
 }
 
 .home-discover-container {
-  margin-top: 0px; 
+  margin-top: 0px;
   align-self: flex-start;
- }
- .home-discover-container-button-container{
+}
+
+.home-discover-container-button-container {
   /* margin-top: 25px; */
   display: flex;
   /* justify-content: center; 
   align-items: center;  */
 }
+
 .home-discovercollection-button {
   margin-top: 0%;
-  align-items:center;
+  align-items: center;
 }
 
 .home-aboutcard {
@@ -60,31 +66,26 @@
   justify-content: center;
   align-items: center;
 }
+
 .home-aboutcard img {
   width: 70px;
 }
+
 .home-aboutcards {
   border: 1px solid #ee2a2e;
   border-radius: 15px;
-  /* width: 325px; */
-  /* height: 200px; */
-  /* margin: 20px; */
   display: flex;
+  flex-grow:  initial;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
   box-shadow: 10px 15px 15px #80808024;
 }
-/* .home-aboutcards div {
-  margin-top: 25px;
-  font-weight: 600;
-  color: black;
-  text-decoration: none;
-} */
-.about-us-video{
- width: 90%;
- height: auto;
+
+.about-us-video {
+  width: 90%;
+  height: auto;
   border-radius: 25px;
   padding: 20px;
 }
@@ -94,38 +95,45 @@
   .home-aboutsubcontainer {
     flex-direction: column;
   }
+
   .specififc-video {
     display: flex;
     justify-content: center;
     margin-top: 30px !important;
   }
+
   .home-about-sections {
     width: 100%;
     margin-top: 0px;
   }
+
   .home-about-sections span {
     font-size: 16px;
   }
+
   .home-discovercollection-button {
     /* padding: 0px 40px; */
   }
+
   .home-aboutcard {
     flex-wrap: wrap;
   }
+
   .home-about-sections.specififc-video {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
-  
+
   .home-about-sections.specififc-video video {
     width: 85%;
     height: auto;
-    max-width: 100%; 
+    max-width: 100%;
   }
-  
+
 }
+
 @media screen and (max-width: 425px) and (min-width: 320px) {
   .home-aboutcards {
     /* width: 155px; */
@@ -135,11 +143,13 @@
     background-color: white;
     box-shadow: 10px 15px 15px #80808024;
   }
+
   .home-discover-container {
     width: 100%;
     justify-content: center;
     align-items: center;
   }
+
   /* .home-aboutcards div {
     font-size: 13px;
   } */
@@ -147,23 +157,28 @@
     /* margin-top: 80px; */
     justify-content: center;
   }
+
   .home-about-sections {
     margin: 0px;
   }
+
   .home-aboutinnercontainer {
     /* margin-top: 30px; */
   }
+
   .home-about-sections.specififc-video {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Set the height of the container if needed */
+    height: 100%;
+    /* Set the height of the container if needed */
   }
-  
+
   .home-about-sections.specififc-video video {
     width: 85%;
     height: auto;
-    max-width: 100%; /* Ensure the video does not exceed its container's width */
+    max-width: 100%;
+    /* Ensure the video does not exceed its container's width */
   }
-  
+
 }

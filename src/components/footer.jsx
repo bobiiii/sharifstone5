@@ -155,12 +155,12 @@ function Footer() {
     //     </div>
     //   </div>
     // </div>
-    <footer className="lg:py-16 md:py-6 py-4 ">
-      <MaxWidthWrapper className='relative bg-white w-full xs:h-full  h-screen  flex flex-col sm:justify-between justify-evenly sm:gap-16 gap-10 md:mt-0 mt-0'>
+    <footer className="lg:py-16 h-screen md:py-6 py-4 border border-red-500">
+      <MaxWidthWrapper className='relative bg-white w-full xs:h-full border border-green-500  h-screen  flex flex-col sm:justify-between justify-evenly sm:gap-16 gap-10 md:mt-0 mt-0'>
         <img className="absolute right-0 bottom-0 " src={BgImage} alt={"alt"} />
 
         <div className="w-full">
-          <img src={Logo} alt="" className=""/>
+          <img src={Logo} alt="" className="" />
         </div>
         <div className="w-full grid lg:grid-cols-4 grid-cols-2 gap-16 lg:justify-between justify-center ">
           <ul className="flex flex-col gap-6  ">
@@ -244,37 +244,46 @@ function Footer() {
           </ul>
         </div>
         <div className="flex lg:flex-row flex-col lg:justify-between justify-center items-center lg:w-[85%] w-full lg:gap-0 gap-6">
-          
-          <div className="flex gap-4 lg:order-2">
-            <img
-              width="30"
-              height="30"
-              src="https://img.icons8.com/ios-glyphs/30/EE2A2E/facebook-new.png"
-              alt="facebook-new"
-            />
-            <a href="https://www.instagram.com/sharifstones/" target="_blank">
-              <img
-                width="30"
-                height="30"
-                src="https://img.icons8.com/ios-glyphs/30/EE2A2E/instagram-new.png"
-                alt="instagram-new"
-              />
-            </a>
 
-            <img
-              width="30"
-              height="30"
-              src="https://img.icons8.com/ios-glyphs/30/EE2A2E/twitterx--v2.png"
-              alt="twitterx--v2"
-            />
-            <a href="https://www.instagram.com/sharifstones/" target="_blank">
+          <div className="lg:hidden">
+            <h3 className="font-albert  font-semibold text-lg"> We are Social</h3>
+          </div>
+
+          <div className="flex  gap-4 lg:order-2">
+            <div className="lg:flex hidden">
+              <h3 className="font-albert  font-semibold text-lg"> We are Social</h3>
+            </div>
+            <div>
               <img
                 width="30"
                 height="30"
-                src="https://img.icons8.com/ios-glyphs/30/EE2A2E/youtube-play.png"
-                alt="youtube-play"
+                src="https://img.icons8.com/ios-glyphs/30/EE2A2E/facebook-new.png"
+                alt="facebook-new"
               />
-            </a>
+              <a href="https://www.instagram.com/sharifstones/" target="_blank">
+                <img
+                  width="30"
+                  height="30"
+                  src="https://img.icons8.com/ios-glyphs/30/EE2A2E/instagram-new.png"
+                  alt="instagram-new"
+                />
+              </a>
+
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ios-glyphs/30/EE2A2E/twitterx--v2.png"
+                alt="twitterx--v2"
+              />
+              <a href="https://www.instagram.com/sharifstones/" target="_blank">
+                <img
+                  width="30"
+                  height="30"
+                  src="https://img.icons8.com/ios-glyphs/30/EE2A2E/youtube-play.png"
+                  alt="youtube-play"
+                />
+              </a>
+            </div>
           </div>
 
           <div className="lg:order-1">
