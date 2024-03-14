@@ -2,70 +2,84 @@ import React, { useState } from "react";
 import "./ContactForm.css";
 import ContactFormBG from "../../../assets/images/contactform_bg.png";
 import Upload from "../../../assets/images/upload.png";
+import Heading from "../../resuable/Heading";
+import MaxWidthWrapper from "../../MaxWidthWrapper";
 
 import Dropzone from "react-dropzone";
 function ContactForm() {
   const [upload, setUpload] = useState();
   return (
-    <div className="contactform-container">
-      <div className="contactform-formcontainer">
-        <div className="contactform-heading">CONTACT US</div>
-        <div className="contactform-inputcontainer">
-          <input type="text" placeholder="Enter Your Location" />
-          <input type="text" placeholder="ZIP Code" />
-        </div>
-        <div className="contactform-inputcontainer">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-        </div>
-        <div className="contactform-inputcontainer">
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="Mobile" />
-        </div>
-        <div className="contactform-inputcontainer">
-          <input
-            style={{ width: "100%" }}
-            type="text"
-            placeholder="Subject: Scope of work"
-          />
-        </div>
-        <div className="contactform-inputcontainer">
-          <textarea
-            className="contactform-textarea"
-            placeholder="Messages"
-            rows="5"
-            cols="50"
-          />
-        </div>
-        <div className="contactform-uploads">
-          <Dropzone onDrop={(acceptedFiles) => setUpload(acceptedFiles)}>
-            {({ getRootProps, getInputProps }) => (
-              <section>
-                <div style={{cursor: 'pointer'}} {...getRootProps()}>
-                  <input {...getInputProps()} />
-                  <img src={Upload} />
-                </div>
-              </section>
-            )}
-          </Dropzone>
-        </div>
-        <div className="contactform-inputcheck">
-          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-          <div>
-            Yes, sign me up to receive email communications from Sharifstone about products, news, and events. I understand I can
-            unsubscribe at any time
+    <MaxWidthWrapper className='px-0'>
+      <div className="contactform-container">
+        <div className="contactform-formcontainer sm:py-18 py-4">
+          {/* <div className="contactform-heading"></div> */}
+          <Heading className='py-4 xs:block hidden'>
+            CONTACT US
+          </Heading>
+          <div className=" text-start  w-full ps-[12px]">
+            <Heading className='py-4 xs:hidden  '>
+              Find A Fabricator
+            </Heading>
           </div>
-        </div>
-        <div className="contactform-review">
-          <div>
-            By providing your details and clicking Submit, you acknowledge and
-            agree to our website <b>Privacy Policy</b> and <b>Terms of Use</b>.
+
+          <div className="contactform-inputcontainer md:w-[80%] w-full flex justify-evenly  px-3">
+            <input type="text" placeholder="Enter Your Location" />
+            <input type="text" placeholder="ZIP Code" />
           </div>
+          <div className="contactform-inputcontainer md:w-[80%] w-full flex justify-evenly px-3">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+          </div>
+          <div className="contactform-inputcontainer md:w-[80%] w-full flex justify-evenly px-3">
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Mobile" />
+          </div>
+          <div className="contactform-inputcontainer md:w-[80%] w-full flex justify-evenly px-3">
+            <input
+              style={{ width: "100%" }}
+              type="text"
+              placeholder="Subject: Scope of work"
+            />
+          </div>
+          <div className="contactform-inputcontainer  md:w-[80%] w-full flex justify-evenly px-3">
+            <textarea
+              className="contactform-textarea "
+              placeholder="Messages"
+              rows="5"
+              cols="60"
+            />
+          </div>
+          {/* contactform-uploads */}
+          {/* md:w-[80%] items-start  text-left flex justify-start w-full z-50 */}
+          <div className="  md:w-[80%] w-full  mt-2 flex justify-start items-start z-50 xs:px-6 px-3  ">
+            <Dropzone onDrop={(acceptedFiles) => setUpload(acceptedFiles)}>
+              {({ getRootProps, getInputProps }) => (
+                <section className="text-sm">
+                  <div style={{ cursor: 'pointer' }} {...getRootProps()}>
+                    <input {...getInputProps()} />
+                    <img src={Upload} className="" />
+                  </div>
+                </section>
+              )}
+            </Dropzone>
+          </div>
+          <div className="contactform-inputcheck  md:w-[80%] w-full flex md:gap-4 gap-2 md:px-6 px-4">
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" className="mt-2 px-4" />
+            <p className="xs:text-lg text-sm font-light font-albert ">
+              Yes, sign me up to receive email communications from Sharifstone about products, news, and events. I understand I can
+              unsubscribe at any time
+
+              <p className="text-[12px] mt-4 font-light font-albert">
+                By providing your details and clicking Submit, you acknowledge and
+                agree to our website <span className="text-[12px] font-bold font-albert ">Privacy Policy</span> and <span className="text-[12px] font-bold font-albert ">Terms of Use</span>.
+              </p>
+            </p>
+          </div>
+          <div className="submit-btn">Submit</div>
+          <img className="contactform-bg" src={ContactFormBG} />
         </div>
-        <div className="submit-btn">Submit</div>
-        <img className="contactform-bg" src={ContactFormBG} />
       </div>
-    </div>
+    </MaxWidthWrapper>
   );
 }
 

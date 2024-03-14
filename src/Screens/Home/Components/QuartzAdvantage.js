@@ -55,7 +55,7 @@ function QuartzAdvantage() {
             for different interior settings.
           </div> */}
           <div className="mt-2 lg:mt-6 ">
-            <Heading className='text-center'>
+            <Heading className='text-center '>
               Quartz  Advantages
             </Heading>
 

@@ -52,10 +52,10 @@ function InsideStore({ data }) {
               }
             </div>
             <div className="flex justify-center items-center mt-6">
-            <Button clickFunc={() => setOpenQuote(true)}>
+            {/* <Button clickFunc={() => setOpenQuote(true)}>
             Get Directions
 
-            </Button>
+            </Button> */}
             </div>
 
             

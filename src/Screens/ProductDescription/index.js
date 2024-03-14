@@ -35,10 +35,12 @@ function ProductDescription() {
         );
         relatedColor = relatedColor.filter(value => value?.color_url !== colorDetails?.color_url)
         setRelatedColors(relatedColor.slice(0, 3));
+        // setShowColor(1);
       });
     }
 
   }, [params?.color]);
+
 
   return (
 
@@ -55,12 +57,12 @@ function ProductDescription() {
               {/* {showColor === 1 ? <img src={colorDetails?.display_image} alt={"product-im"} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" />  : <img src={colorDetails?.color_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />} */}
 
               {showColor === 1 ? (
-  <img src={colorDetails?.display_image} alt={"product-im"} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" />
-) : showColor === 2 ? (
-  <img src={colorDetails?.color_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />
-) : (
-  <img src={colorDetails?.display_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />
-)}
+                <img src={colorDetails?.display_image} alt={"product-im"} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" />
+              ) : showColor === 2 ? (
+                <img src={colorDetails?.color_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />
+              ) : (
+                <img src={colorDetails?.display_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />
+              )}
 
             </div>
 
@@ -69,14 +71,14 @@ function ProductDescription() {
               <Switch className="px-2" onHandleColor={"#fff"} offColor={"#D6D6D6"} onColor={"#EE2A2E"} checkedIcon={false} uncheckedIcon={true} onChange={() => setShowColor(!showColor)} checked={!showColor} />
               <span style={{ fontWeight: !showColor ? 600 : 400 }} className="
               text-sm">Color</span> */}
-              <Button className={`${showColor === 1 ? "bg-[#221F1F]": ""}  sm:text-base text-[12px]   whitespace-nowrap`}  clickFunc={()=>{setShowColor(1)}} >
+              <Button className={`${showColor === 1 ? "bg-[#221F1F]" : ""}  sm:text-base text-[12px]   whitespace-nowrap`} clickFunc={() => { setShowColor(1) }} >
                 Full Slab
               </Button>
-              <Button className={`${showColor === 2 ? "bg-[#221F1F]": ""}  sm:text-base text-[12px]   whitespace-nowrap`} clickFunc={()=>{setShowColor(2)}} >
+              <Button className={`${showColor === 2 ? "bg-[#221F1F]" : ""}  sm:text-base text-[12px]   whitespace-nowrap`} clickFunc={() => { setShowColor(2) }} >
                 Close Look Up
               </Button>
-              <Button className={`${showColor === 3 ? "bg-[#221F1F]": ""}  sm:text-base text-[12px]   whitespace-nowrap`}
-              clickFunc={()=>{setShowColor(3)}}
+              <Button className={`${showColor === 3 ? "bg-[#221F1F]" : ""}  sm:text-base text-[12px]   whitespace-nowrap`}
+                clickFunc={() => { setShowColor(3) }}
               >
                 Installed Look
               </Button>
@@ -101,17 +103,17 @@ function ProductDescription() {
                 <div className="font-bold sm:text-2xl text-sm   lg:py-2  ">Matte</div>
                 <span className=" sm:text-lg text-sm lg:py-2 ">{colorDetails?.matte}</span>
               </div>
-            
-            
+
+
               <div className="basis-2/6 lg:basis-2/6  " >
                 <div className="font-bold  sm:text-2xl text-sm  lg:py-2  ">Thicknesses</div>
                 <span className=" sm:text-lg text-sm lg:py-2 ">
-                {colorDetails?.thicknesses}
+                  {colorDetails?.thicknesses}
                 </span>
               </div>
             </div>
 
-            
+
 
 
             {/* <div className="font-bold lg:basis-0  sm:text-2xl text-sm sm:py-4 py-2">Thicknesses</div>
