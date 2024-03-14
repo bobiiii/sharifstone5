@@ -5,6 +5,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { MdArrowDropDown } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import MaxWidthWrapper from "../Screens/MaxWidthWrapper";
 
 function NavMenu({ navState }) {
   const [openMenu, setOpenMenu] = useState(false);
@@ -82,9 +83,10 @@ function NavMenu({ navState }) {
 
   return (
     <>
-      <div onClick={() => setOpenMenu(true)} className="bg-black w-12 h-12 rounded-full flex justify-center items-center lg:hidden">
+      <div onClick={() => setOpenMenu(true)} className="bg-black w-12 h-12 rounded-full flex justify-center items-center lg:hidden ">
         <RiMenu3Fill size={30} color={"white"} />
       </div>
+
       {openMenu && (
         <div className="mobile-menu-container h-dvh px-2 z-50">
           <div className="mobile-remove-menu">
@@ -164,52 +166,52 @@ function NavMenu({ navState }) {
           </div>
         </div>
       )}
-{/* desktop-navbar */}
-      <div className=" lg:flex items-center ml-auto hidden ">
-        {window.location.pathname.includes("/admin-dashboard") ? (
-          <div className="nav-container">
-            {dashboard.map((v, i) => (
-              <Link to={v.route} className="nav-item">
-                <div
-                  className="active-dott"
-                  style={{
-                    visibility:
-                      window.location.pathname === v.route ? "" : "hidden",
-                  }}
-                />
-                {v.name}
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <div className="nav-container">
-            {nav.map((v, i) => (
-              <Link
-                to={v.route}
-                className="nav-item"
-                onMouseOver={
-                  v.name === "Quartz Collection"
-                    ? () => navState.setShowDropdown(!navState.showDropdown)
-                    : () => console.log("")
-                }
-              >
-                <div
-                  className="active-dott"
-                  style={{
-                    visibility:
-                      window.location.pathname === v.route ? "" : "hidden",
-                  }}
-                />
-                {v.name === "Kitchen Visualizer" ? (
-                  <span className="new-text">
-                    {showNewTextKitchenVisualizer && "NEW "}
-                  </span>
-                ) : null}
-                {v.name}
-              </Link>
-            ))}
+      {/* desktop-navbar */}
+        <div className=" lg:flex items-center ml-auto hidden ">
+          {window.location.pathname.includes("/admin-dashboard") ? (
+            <div className="nav-container">
+              {dashboard.map((v, i) => (
+                <Link to={v.route} className="nav-item">
+                  <div
+                    className="active-dott"
+                    style={{
+                      visibility:
+                        window.location.pathname === v.route ? "" : "hidden",
+                    }}
+                  />
+                  {v.name}
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div className="nav-container">
+              {nav.map((v, i) => (
+                <Link
+                  to={v.route}
+                  className="nav-item"
+                  onMouseOver={
+                    v.name === "Quartz Collection"
+                      ? () => navState.setShowDropdown(!navState.showDropdown)
+                      : () => console.log("")
+                  }
+                >
+                  <div
+                    className="active-dott"
+                    style={{
+                      visibility:
+                        window.location.pathname === v.route ? "" : "hidden",
+                    }}
+                  />
+                  {v.name === "Kitchen Visualizer" ? (
+                    <span className="new-text">
+                      {showNewTextKitchenVisualizer && "NEW "}
+                    </span>
+                  ) : null}
+                  {v.name}
+                </Link>
+              ))}
 
-            {/* <Link
+              {/* <Link
               to={"https://4power.stoneprofitsweb.com/"}
               target="_blank"
               className="nav-item"
@@ -224,9 +226,9 @@ function NavMenu({ navState }) {
               {showNewText && <span className="new-text">NEW </span>}
               {"Live Inventory"}
             </Link> */}
-          </div>
-        )}
-      </div>
+            </div>
+          )}
+        </div>
     </>
   );
 }

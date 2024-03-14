@@ -509,57 +509,57 @@ const DiscoverCollection = () => {
     }
   };
 
-  
 
-  const collectionJSX = (v, i,inner, islable = false  ) => {
+
+  const collectionJSX = (v, i, inner, islable = false) => {
     return (
       <div
-        className={`flex-grow flex-shrink basis-2/4 px-1 max-w-[70%] lg:flex-none lg:w-[32%] mb-2   ${inner ? " ": ""}   text-center  ` }
-        
+        className={`flex-grow flex-shrink basis-2/4 px-1 max-w-[70%] lg:flex-none lg:w-[32%] mb-2   ${inner ? " " : ""}   text-center  `}
+
       >
         <div className="flex flex-col   ">
-        <div
-          onMouseOver={() => setOnMouseOver(i)}
-          
-          className="   "
-          
-        >
-          <div className="relative ">
-          
-          
-          
-          <img src={`${v?.color_image}`} className="h-40 cursor-pointer w-full lg:w-full lg:h-64 rounded-lg  " alt="tile-images"/>
-          
-          <div className="absolute bottom-0 left-[50%] translate-x-[-50%] font-medium  lg:font-semibold text-xs lg:text-xl font-gelasio text-[#221F1F]  lg:text-nowrap w-full">
-<div className="w-full lg:w-min mx-auto bg-white/50 rounded-lg py-1 lg:py-1 lg:px-3 ">
+          <div
+            onMouseOver={() => setOnMouseOver(i)}
 
+            className="   "
 
-          {v.color_name}
-</div>
-</div>
-          
-          {i === onMouseOver && (
-
-<>
+          >
+            <div className="relative ">
 
 
 
+              <img src={`${v?.color_image}`} className="h-40 cursor-pointer w-full lg:w-full lg:h-64   " alt="tile-images" />
 
-<div
-              onClick={() => gotoNextScreen(v)}
-              className=" bg-black/50 text-white w-min  px-4 lg:px-8 py-4 lg:py-8 rounded-full absolute  top-[20%] lg:top-[35%]  left-[50%]  cursor-pointer translate-x-[-50%] "
-            >
-              <GoArrowUpRight size={35} color="white" className="cursor-pointer" />
+              <div className="absolute bottom-0 left-[50%] translate-x-[-50%] font-medium  lg:font-semibold text-xs lg:text-xl font-gelasio text-[#221F1F]  lg:text-nowrap w-full">
+                <div className="w-full lg:w-min mx-auto bg-white/50  py-1 lg:py-1 lg:px-3 ">
+
+
+                  {v.color_name}
+                </div>
+              </div>
+
+              {i === onMouseOver && (
+
+                <>
+
+
+
+
+                  <div
+                    onClick={() => gotoNextScreen(v)}
+                    className=" bg-black/50 text-white w-min  px-4 lg:px-8 py-4 lg:py-8 rounded-full absolute  top-[20%] lg:top-[35%]  left-[50%]  cursor-pointer translate-x-[-50%] "
+                  >
+                    <GoArrowUpRight size={35} color="white" className="cursor-pointer" />
+                  </div>
+
+
+
+                </>
+              )}
             </div>
-
-
-
-</>
-          )}
           </div>
-        </div>
 
-{/* 
+          {/* 
         {islable ? (
           <div className="text-center ">
             <div className="text-center">{v.color_name}</div>
@@ -567,9 +567,9 @@ const DiscoverCollection = () => {
         ) : (
           <div className="bg-red-400  text-center text-wrap    mx-auto pt-1   ">{v.color_name}</div>
         )} */}
-        
-</div>
-      
+
+        </div>
+
       </div>
     );
   };
@@ -609,15 +609,15 @@ const DiscoverCollection = () => {
     }
   }, []);
   return (
-    <MaxWidthWrapper  className={" max-w-screen-2xl lg:px-0 md:px-0 sm:px-0 px-0"}>
-      
-        <div className="font-extrabold text-3xl text-center font-gelasio lg:w-1/2 lg:mx-auto">
-          {flag ? content[collection][0] : innerCollection[0]?.collection_name}
-        </div>
-        <div className="text-center py-4 lg:w-1/2 lg:mx-auto">{content[collection][1]}</div>
-        
-{/* FOR Dynamic Data */}
-{/* <div className=" lg:w-2/3 lg:mx-auto flex gap-4 lg:gap-8 justify-center  flex-wrap    ">
+    <MaxWidthWrapper className={" max-w-screen-2xl lg:px-0 md:px-0 sm:px-0 px-0"}>
+
+      <div className="font-extrabold text-3xl text-center font-gelasio lg:w-1/2 lg:mx-auto">
+        {flag ? content[collection][0] : innerCollection[0]?.collection_name}
+      </div>
+      <div className="text-center py-4 lg:w-1/2 lg:mx-auto">{content[collection][1]}</div>
+
+      {/* FOR Dynamic Data */}
+      {/* <div className=" lg:w-2/3 lg:mx-auto flex gap-4 lg:gap-8 justify-center  flex-wrap    ">
             {flag
               ? collections.length > 0
                 ? <><div className=" flex-grow flex-shrink basis-2/5 lg:basis-[30%]      text-center   "><div className=" bg-pink-300 ">a</div>
@@ -631,8 +631,8 @@ const DiscoverCollection = () => {
           </div> */}
 
 
-          {/* Dynamic cards  */}
-          {/* <div className={`  ${flag ? "lg:w-2/3":""}  lg:w-5/6 lg:mx-auto flex gap-4 lg:gap-8 justify-center  flex-wrap     `}>
+      {/* Dynamic cards  */}
+      {/* <div className={`  ${flag ? "lg:w-2/3":""}  lg:w-5/6 lg:mx-auto flex gap-4 lg:gap-8 justify-center  flex-wrap     `}>
             {flag
               ? collections.length > 0
                 ? collections.map((v, i) => collectionJSX(v, i))
@@ -648,20 +648,20 @@ const DiscoverCollection = () => {
                 : loader()}
           </div> */}
 
-          <div className={`border   ${flag ? "lg:w-full":""}   lg:mx-auto flex  justify-center lg:gap-4   flex-wrap     `}>
-            {flag
-              ? collections.length > 0
-                ? collections.map((v, i) => collectionJSX(v, i))
-                : loader()
-              : innerCollection.length > 0
-                ?<>
-                 {innerCollection?.map((v, i) => collectionJSX(v, i, true, true))}
-                 
-                </>
-                : loader()}
-          </div>
-       
-     
+      <div className={` ${flag ? "lg:w-full" : ""}   lg:mx-auto flex  justify-center lg:gap-4   flex-wrap     `}>
+        {flag
+          ? collections.length > 0
+            ? collections.map((v, i) => collectionJSX(v, i))
+            : loader()
+          : innerCollection.length > 0
+            ? <>
+              {innerCollection?.map((v, i) => collectionJSX(v, i, true, true))}
+
+            </>
+            : loader()}
+      </div>
+
+
     </MaxWidthWrapper>
   );
 };

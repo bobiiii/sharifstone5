@@ -44,15 +44,15 @@ const CustomerReview = ({ label }) => {
     },
     {
       name: "Jacob M",
-      desc: "Amazing service. Shirley and Juliana were  very welcoming and knowledgeable with the products . We entered thinking we are going to a showroom but it is warehouse with so much variety. Excellent experience. Definitely going back for the bathroom",
+      desc: "Great experience with Shirley. She was very friendly and answered any questions we had. They had a bunch to choose from and I think we found what we are going to go with. I just wish they had their granite options on the website.",
       designation: "Customer",
       image: Customer2,
     },
     {
       name: "Sharon White",
-      desc: "Amazing service. Shirley and Juliana were  very welcoming and knowledgeable with the products . We entered thinking we are going to a showroom but it is warehouse with so much variety. Excellent experience. Definitely going back for the bathroom",
-      designation: "Customer",
+      desc: "Shelley was extremely amazing. She was so kind helped me find exactly what I was looking for right in time for birthday. I can’t wait to come back! She was truly amazing",
       image: Customer3,
+      designation: "Customer",
     },
   ];
   const responsive = {
@@ -80,26 +80,46 @@ const CustomerReview = ({ label }) => {
           {label}
         </Heading>
         {/* home-customerreview-cardcontainer */}
-        <div className=" overflow-scroll cards-scroll w-full">
-          <div className="flex justify-between gap-3 w-full min-w-[1024px]  ">
+        <div className=" overflow-scroll cards-scroll w-full mt-6">
+          <div className="flex justify-between gap-6 w-full min-w-[1024px]  ">
             {customerArray.map((v, i) => (
-              <div className="home-customerreview-card">
-                <div className="testimonials-desc">
-                  <div className="container-center sm::text-base text-center">{v.desc}</div>
+              // <div className="home-customerreview-card">
+              //   <div className="testimonials-desc">
+              //     <div className="container-center sm::text-base text-center">{v.desc}</div>
+              //   </div>
+              //   <div className="home-customerreview-talentcontainer">
+              //     <div style={{ display: "flex", margin: "0px 10px" }}>
+              //       <img className="profile-image" src={v.image} />
+              //       <div style={{ margin: "0px 10px" }}>
+              //         <div className="home-customerreview-customername">
+              //           {v.name}
+              //         </div>
+              //         <div className="home-customerreview-customer">
+              //           {v.designation}
+              //         </div>
+              //       </div>
+              //     </div>
+              //     <img style={{ marginRight: 10 }} src={OrganizationLogo} />
+              //   </div>
+              // </div>
+              <div className="flex flex-col gap-4 flex-grow  w-full">
+                <div className="bg-[#fef6f7] sm:px-8 px-6 sm:py-8 py-6  h-full flex-grow">
+                  <p className="md:text-lg text-sm font-medium font-albert text-black ">{v.desc}</p>
                 </div>
-                <div className="home-customerreview-talentcontainer">
-                  <div style={{ display: "flex", margin: "0px 10px" }}>
-                    <img className="profile-image" src={v.image} />
-                    <div style={{ margin: "0px 10px" }}>
-                      <div className="home-customerreview-customername">
-                        {v.name}
-                      </div>
-                      <div className="home-customerreview-customer">
-                        {v.designation}
-                      </div>
+
+                <div className="flex justify-between gap-4 items-center">
+                  <span className="flex gap-2 items-center">
+                    <div>
+                      <img src={v.image} alt="Customer-Image" className="lg:w-16 w-12 lg:h-16 h-12 " />
                     </div>
-                  </div>
-                  <img style={{ marginRight: 10 }} src={OrganizationLogo} />
+                    <div>
+                      <h4 className="lg:text-base text-sm  font-semibold font-albert text-black">{v.name}</h4>
+                      <p className="text-sm">{v.designation}</p>
+                    </div>
+                  </span>
+                  <span>
+                    <img src={OrganizationLogo} alt="google-logo" className="lg:w-22 w-16 " />
+                  </span>
                 </div>
               </div>
             ))}
