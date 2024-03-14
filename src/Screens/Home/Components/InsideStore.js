@@ -31,10 +31,10 @@ function InsideStore({ data }) {
     },
   ]
   return (
-    <MaxWidthWrapper className='px-0'>
-      <div className="home-advantagecontainer home-advantagecontainer-center">
-        <div className="home-advantageinnercontainer">
-          <img className="home-back-s" src={BackS} alt="" />
+    <MaxWidthWrapper className='px-0 '>
+      <div className="home-advantagecontainer home-advantagecontainer-center  ">
+        <div className="home-advantageinnercontainer border ">
+          <img className="home-back-s " src={BackS} alt="" />
           {/* home-section */}
           <div className="w-full md:px-6 px-2">
             <div className="home-insidestore-container">

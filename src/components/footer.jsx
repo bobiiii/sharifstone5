@@ -244,10 +244,8 @@ function Footer() {
           </ul>
         </div>
         <div className="flex lg:flex-row flex-col lg:justify-between justify-center items-center lg:w-[85%] w-full lg:gap-0 gap-6">
-          <div>
-            <h4>Copyright @2023 Sharifstone</h4>
-          </div>
-          <div className="flex gap-4">
+          
+          <div className="flex gap-4 lg:order-2">
             <img
               width="30"
               height="30"
@@ -277,6 +275,10 @@ function Footer() {
                 alt="youtube-play"
               />
             </a>
+          </div>
+
+          <div className="lg:order-1">
+            <h4>Copyright @2023 Sharifstone</h4>
           </div>
         </div>
       </MaxWidthWrapper>
