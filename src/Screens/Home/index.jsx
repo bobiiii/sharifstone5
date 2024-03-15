@@ -72,8 +72,8 @@ function HomeScreen() {
 
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
-      <div className="w-full h-dvh lg:min-h-screen ">
-        <div className="w-full flex flex-col h-[65vh] lg:h-[100vh]">
+      <div className="w-full h-svh lg:min-h-screen ">
+        <div className="w-full flex flex-col h-[65%] lg:h-[100vh]">
           <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
              <video className="lg:hidden w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
               <source src={home_video2} type="video/mp4" />
@@ -86,7 +86,7 @@ function HomeScreen() {
             </video>
           </div>
         </div>
-        <div className=" bg-gradient-hero  h-[35vh] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
+        <div className=" lg:hidden bg-gradient-hero  h-[35%] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
           <div className="bg-bg-img-hero lg:bg-none bg-auto bg-no-repeat bg-right h-full    justify-center flex items-center">
             <div className="w-1/2 lg:w-3/5 h-full ">
               <div className="h-full  flex justify-center  items-center 
@@ -111,6 +111,36 @@ function HomeScreen() {
           </div>
         </div>
       </div>
+
+
+
+      <div className=" bg-gradient-hero  h-[35vh] justify-center hidden lg:flex items-center bg-cover  bg-center bg-no-repeat  text-white">
+          <div className="bg-bg-img-hero lg:bg-none bg-auto bg-no-repeat bg-right h-full    justify-center flex items-center">
+            <div className="w-1/2 lg:w-3/5 h-full ">
+              <div className="h-full  flex justify-center  items-center 
+ ">
+                <h3 className="lg:w-4/5 lg:text-5xl md:text-3xl text-3xl   font-medium font-gelasio    leading-relaxed   ps-6 md:px-8 ">
+                  BUILDING MEMORIES, ONE STONE AT A TIME</h3>
+              </div>
+            </div>
+            <div className=" w-1/2 lg:w-2/5 h-full flex  gap-4 justify-center  lg:bg-bg-img-hero bg-auto bg-no-repeat bg-right">
+              <div className="flex justify-center  flex-col  gap-4 w-full  items-end lg:items-start px-4">
+                <p className=" lg:text-2xl sm:text-base  text-right lg:text-left  font-normal ">
+                  Beauty and quality beyond imagination. Service beyond what's expected.
+                </p>
+
+                <Link to='/quartz-collection'>
+                  <Button className={"bg-white text-red-500 font-medium text-sm  py-2 "}>
+                    View Collection
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
       <MaxWidthWrapper >
         <DiscoverCollection />
       </MaxWidthWrapper>
