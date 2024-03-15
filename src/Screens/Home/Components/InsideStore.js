@@ -51,14 +51,14 @@ function InsideStore({ data }) {
                 imageArray.map((v, i) => <img src={v} className="rounded-[20px]  w-full h-full flex flex-grow" />)
               }
             </div>
-            <div className="flex justify-center items-center mt-6">
-            {/* <Button clickFunc={() => setOpenQuote(true)}>
-            Get Directions
+            <div className="md:hidden  flex justify-center items-center mt-6">
+              <Button clickFunc={() => setOpenQuote(true)}>
+                Get Directions
 
-            </Button> */}
+              </Button>
             </div>
 
-            
+
 
             {/* <div className="home-insidestore-container">
             <div className="home-insidestore-subheading">DISCOVER OUR TOP-QUALITY STONE OPTIONS TO PERFECTLY MATCH YOUR DESIRED SPACE!</div>

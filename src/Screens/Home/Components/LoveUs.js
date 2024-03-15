@@ -38,11 +38,11 @@ const LoveUS = () => {
               for designers seeking both style and substance.
             </p>
             <div className=" mt-3 w-full flex lg:justify-start lg:items-start justify-center items-center">
-              
 
-<Button >
-Download the 2024 Digital Catalog
-  </Button>              
+
+              <Button >
+                Download the 2024 Digital Catalog
+              </Button>
             </div>
           </div>
 
