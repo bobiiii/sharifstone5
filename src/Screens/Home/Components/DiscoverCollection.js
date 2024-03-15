@@ -9,6 +9,7 @@ import MaxWidthWrapper from "../../MaxWidthWrapper";
 import ScrollAnimation from '@nathanyoung/react-animate-on-scroll';
 import 'animate.css';
 import Heading from "../../resuable/Heading";
+import Button from "../../resuable/Button";
 function DiscoverCollection() {
 
   const [imageArr, setImagesArr] = useState([
@@ -90,13 +91,15 @@ function DiscoverCollection() {
 
         </div>
       </div>
-      <div className="sm:text-lg text-sm home-discovercollection-container hidden">
-        <Link
-          to={"/quartz-collection"}
-          className=" "
-        >
-          See More
-        </Link>
+      <div className="w-full justify-center text-center items-center md:mt-16 mt-10">
+        <Button>
+          <Link
+            to={"/quartz-collection"}
+            className=" "
+          >
+            See More
+          </Link>
+        </Button>
       </div>
     </div>
 
