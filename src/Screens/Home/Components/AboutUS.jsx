@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import VideoImage from "../../../assets/images/homeImage/video_image.png";
 import "./AboutUS.css";
-import InspireIdeas from "../../../assets/images/homeImage/inspire_ideas.gif";
-import VisualizeSpace from "../../../assets/images/homeImage/visualize_space.gif";
-import ViewColor from "../../../assets/images/homeImage/view_color.gif";
-import WhereToBuy from "../../../assets/images/homeImage/wheretobuy.gif";
+import InspireIdeas from "../../../assets/images/homeImage/location.gif";
+import VisualizeSpace from "../../../assets/images/homeImage/visualize_space1.gif";
+import ViewColor from "../../../assets/images/homeImage/catalog.gif";
+import WhereToBuy from "../../../assets/images/homeImage/location.gif";
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
 import about_us_video from "../../../assets/videos/about_us.mp4"
@@ -176,15 +176,15 @@ function AboutUS({ data }) {
           {/* home-aboutcard */}
           <div className=" w-full  md:hidden flex flex-wrap py-4    items-center justify-center">
             {aboutIdeas.map((v, i) => (
-              <div className="  flex w-[45%]  justify-center items-center text-center   mx-auto  ">
+              <div className="  flex w-[45%]  justify-center items-center text-center   mx-auto ">
                 <Link
                   to={v.href}
-                  className="home-aboutcards w-full mt-4   py-6 px-2  "
+                  className=" flex flex-col justify-center items-center border   border-red-500 w-full mt-4   py-6 px-2   rounded-lg"
                   style={{ textDecoration: "none" }}
                 >
-                  <img src={v.image} className="sm:w-20 w-12 " />
-                  <div className="mt-4 text-center">
-                    <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black   mt-4">
+                  <img src={v.image} className="w-24  lg:w-12  " />
+                  <div className="mt-4 text-center ">
+                    <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black   lg:mt-4">
                       {v.name}
                     </h5>
                   </div>
@@ -199,12 +199,12 @@ function AboutUS({ data }) {
                 <div className="  flex lg:w-[25%] w-[32%]  justify-center items-center     ">
                   <Link
                     to={v.href}
-                    className="home-aboutcards w-full mt-4  py-8 px-2  "
+                    className=" flex flex-col justify-center items-center  w-full mt-4   py-6 px-2   rounded-lg border   border-red-500 shadow-2xl"
                     style={{ textDecoration: "none" }}
                   >
-                    <img src={v.image} className="sm:w-20 w-12" /> 
+                    <img src={v.image} className="w-24   " /> 
                     <div className="mt-2 text-center">
-                      <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black mt-4">
+                      <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black   lg:mt-4">
                         {v.name}
                       </h5>
                     </div>

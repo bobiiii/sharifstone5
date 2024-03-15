@@ -75,7 +75,7 @@ function Footer() {
                 {/* <TbMailFilled className="text-[#EE2A2E] " size={20} />  */}
                 <img src={mail} alt="" className="w-4 h-4" />
                 <span className="py-0">
-                  <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">orlando@sharifston e.com</p>
+                  <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">orlando@sharifstone.com</p>
                 </span>
 
 
@@ -106,7 +106,7 @@ function Footer() {
                 {/* <IoMail className="text-[#EE2A2E] " size={20} />  */}
                 <img src={mail} alt="" className="w-4 h-4" /> 
                 <span className="py-0">
-                  <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">orlando@sharifston e.com</p>
+                  <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">tempa@sharifstone.com</p>
                 </span>
               </li>
 
@@ -114,19 +114,19 @@ function Footer() {
             <ul className="flex flex-col gap-6">
               <h4 className="text-[#2D2E2E] text-xl  font-semibold ">Company</h4>
               <li className="flex gap-3 ">
-                <Link to='#' className="font-albert font-normal sm:text-base text-[12px]  text-black">About Us</Link>
+                <Link to="/about" className="font-albert font-normal sm:text-base text-[12px]  text-black">About Us</Link>
               </li>
               <li className="flex gap-3 ">
-                <Link to='#' className="font-albert font-normal sm:text-base text-[12px] text-black">Contact</Link>
+                <Link to="/contact" className="font-albert font-normal sm:text-base text-[12px] text-black">Contact</Link>
               </li>
               <li className="flex gap-3 ">
-                <Link to='#' className="font-albert font-normal text-[12px] sm:text-base  text-black">Warranty & Support</Link>
+                <Link to="/warranty-n-support" className="font-albert font-normal text-[12px] sm:text-base  text-black">Warranty & Support</Link>
               </li>
             </ul>
             <ul className="flex flex-col gap-6">
               <h4 className="text-[#2D2E2E] text-xl  font-semibold ">Products</h4>
               <li className="flex gap-3 ">
-                <Link to='#' className="font-albert font-normal sm:text-base text-[12px] text-black">Kitchen</Link>
+                <Link to='/kitchen-visualizer' className="font-albert font-normal sm:text-base text-[12px] text-black">Kitchen</Link>
               </li>
               <li className="flex gap-3 ">
                 <Link to='#' className="font-albert font-normal sm:text-base text-[12px] text-black">Bathroom</Link>

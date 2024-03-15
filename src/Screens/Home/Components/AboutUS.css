@@ -72,14 +72,14 @@
 }
 
 .home-aboutcards {
-  border: 1px solid #ee2a2e;
+  /* border: 1px solid #ee2a2e;
   border-radius: 15px;
   display: flex;
   flex-grow:  initial;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: white; */
   box-shadow: 10px 15px 15px #80808024;
 }
 
@@ -139,7 +139,7 @@
     /* width: 155px; */
     /* height: 160px; */
     /* margin: 5px; */
-    align-items: center;
+    /* align-items: center; */
     background-color: white;
     box-shadow: 10px 15px 15px #80808024;
   }

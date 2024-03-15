@@ -23,11 +23,11 @@ const SubscriptionNewsLetter = () => {
             PRODUCTS
           </Heading>
           <div className=" lg:w-2/3 md:w-[70%] sm:w-[90%] w-full flex justify-center items-center ">
-            <form style={{ zIndex: 100, marginBottom: 30 }} className="lg:w-[70%] md:w-[80%]
-             w-full sm:px-2 px-4 flex" onSubmit={submitForm}>
+            <form style={{  marginBottom: 30 }} className="lg:w-[70%] md:w-[80%]
+             w-full sm:px-2 px-4 flex " onSubmit={submitForm}>
               {/* home-subscript-input */}
               <input
-                className=" rounded-l-[30px] sm:w-[90%] w-full bg-white sm:py-4 py-2 px-4 text-base"
+                className=" rounded-l-[30px] sm:w-[90%] w-full bg-white sm:py-4 py-2 px-4 text-base -z-50"
                 placeholder="Enter Your Email"
                 value={mailto}
                 onChange={(e) => setMailto(e.target.value)}
