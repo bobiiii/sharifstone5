@@ -17,6 +17,7 @@ import GetAQuote from "./Components/GetAQuote";
 import bg from "../Home/images/dis-bg.png";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import Button from "../resuable/Button";
+import redbg from "./images/red-bg.png";
 
 function HomeScreen() {
   const [activeColor, setActiveColor] = useState(0);
@@ -69,9 +70,10 @@ function HomeScreen() {
 
   return (
 
+
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
-      <div className="w-full lg:min-h-screen h-full ">
+      <div className="w-full min-h-screen ">
         <div className="w-full flex flex-col h-[60vh] lg:h-[100vh]">
           <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
             {/* <video className="lg:hidden w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
@@ -85,36 +87,30 @@ function HomeScreen() {
             </video> */}
           </div>
         </div>
-      </div>
-
-      <div className=" bg-gradient-hero  h-full sm:py-10 pb-6 justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
-        <MaxWidthWrapper>
-          <div className="h-full bg-bg-img-hero   bg-no-repeat bg-right justify-between lg:gap-0 gap-4 flex items-start">
-
+        <div className=" bg-gradient-hero  h-[40vh] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
+          <div className="h-full bg-bg-img-hero  bg-auto bg-no-repeat bg-right justify-center flex items-center">
             <div className="w-1/2 lg:w-3/5 h-full ">
-              <div className="h-full flex justify-start  items-start">
-                <h3 className=" sm:hidden lg:text-5xl md:text-4xl text-[21px]   font-medium font-gelasio    leading-relaxed     ">
-                  BUILDING MEMORIES, <br className="sm:hidden" /> ONE STONE AT <br className="sm:hidden" /> A TIME</h3>
-                <h3 className=" sm:flex hidden lg:text-5xl md:text-3xl xs:text-2xl text-[21px]   font-medium font-gelasio    leading-relaxed     ">
-                  BUILDING MEMORIES, <br /> ONE STONE AT  A TIME</h3>
+              <div className="h-full flex justify-center  items-center
+ ">
+                <h3 className="lg:text-5xl md:text-3xl text-3xl   font-medium font-gelasio    leading-relaxed   ps-6 md:px-8 ">
+                  BUILDING MEMORIES, ONE STONE AT A TIME</h3>
               </div>
             </div>
-
             <div className="w-1/2 lg:w-2/5 h-full flex  gap-4 justify-center  ">
-              <div className="flex justify-center  flex-col  gap-4 w-full  items-start ">
-                <p className=" lg:text-2xl sm:text-base text-sm  text-left  font-normal ">
+              <div className="flex justify-center  flex-col  gap-4 w-full  items-end px-4">
+                <p className=" lg:text-2xl sm:text-base  text-right  font-normal ">
                   Beauty and quality beyond imagination. Service beyond what's expected.
                 </p>
 
                 <Link to='/quartz-collection'>
-                  <Button className={"bg-white  text-red-500 font-medium text-sm  py-2 "}>
+                  <Button className={"bg-white text-red-500 font-medium text-sm  py-2 "}>
                     View Collection
                   </Button>
                 </Link>
               </div>
             </div>
           </div>
-        </MaxWidthWrapper>
+        </div>
       </div>
       <MaxWidthWrapper >
         <DiscoverCollection />

@@ -41,7 +41,6 @@ function Footer() {
   ];
 
   return (
-
     <footer className="lg:py-16  md:py-6 py-4   ">
       <MaxWidthWrapper className=' md:mt-0 mt-0'>
         <div className="relative bg-white w-full xs:h-full   h-screen   flex flex-col sm:justify-between  justify-evenly sm:gap-16 gap-4">
