@@ -72,8 +72,8 @@ function HomeScreen() {
 
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
-      <div className="w-full min-h-screen ">
-        <div className="w-full flex flex-col h-[70vh] lg:h-[100vh]">
+      <div className="w-full h-dvh lg:min-h-screen ">
+        <div className="w-full flex flex-col h-[65vh] lg:h-[100vh]">
           <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
              <video className="lg:hidden w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
               <source src={home_video2} type="video/mp4" />
@@ -86,7 +86,7 @@ function HomeScreen() {
             </video>
           </div>
         </div>
-        <div className=" bg-gradient-hero  h-[30vh] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
+        <div className=" bg-gradient-hero  h-[35vh] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
           <div className="bg-bg-img-hero lg:bg-none bg-auto bg-no-repeat bg-right h-full    justify-center flex items-center">
             <div className="w-1/2 lg:w-3/5 h-full ">
               <div className="h-full  flex justify-center  items-center 
