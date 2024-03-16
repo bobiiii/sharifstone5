@@ -39,7 +39,7 @@ function RelatedProduct({ relatedImages }) {
 
   const responsive = {
     ' mobile': {
-      breakpoint: { max: 480, min: 0 },
+      breakpoint: { max: 640, min: 0 },
       items: 1
     }
   };
@@ -50,11 +50,11 @@ function RelatedProduct({ relatedImages }) {
       items: 3
     },
     tablet: {
-      breakpoint: { max: 1024, min: 480 },
+      breakpoint: { max: 1024, min: 641 },
       items: 2
     },
     mobile: {
-      breakpoint: { max: 480, min: 0 },
+      breakpoint: { max: 640, min: 0 },
       items: 1
     }
   };
@@ -119,18 +119,23 @@ function RelatedProduct({ relatedImages }) {
 
             >
               {relatedImages?.map((item, i) => (
-                <Link key={i} to={`/product-description/${item?.color_url}`}>
-                  <img src={item.color_image} alt="" className=" h-full rounded-lg w-full cursor-pointer " />
-                </Link>
+                // 
+                <div key={i} className="flex flex-col gap-2  h-full">
+                  <Link to={`/product-description/${item?.color_url}`} className="h-full">
+                    <img src={item.color_image} alt="" className="h-full rounded-lg w-full cursor-pointer " />
+                  </Link>
+                  <h4 className="lg:text-2xl text-lg font-semibold font-albert bg-white text-start py-2">{item.color_name}</h4>
+                </div>
               ))}
             </Carousel>
-            <span className=" absolute top-0 bottom-0 items-center  flex justify-center">
+            <span className=" absolute top-0 bottom-0 mb-8   items-center  flex justify-center">
 
               <button className="bg-[#D4262A]  rounded-full  p-4 lg:-ml-5 -ml-3" onClick={handlePrevious2}>
                 <FaArrowLeft size={20} className="text-white" />
               </button>
             </span>
-            <span className="absolute top-0 bottom-0  right-0 items-center flex justify-center">
+            {/* mb-8  */}
+            <span className="absolute top-0 bottom-0  mb-8  right-0 items-center flex justify-center">
               <button className="bg-[#D4262A] rounded-full  p-4 lg:-mr-5 -mr-3" onClick={handleNext2}>
                 <FaArrowRight size={20} className="text-white" />
               </button>

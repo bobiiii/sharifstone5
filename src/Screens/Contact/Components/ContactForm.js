@@ -64,8 +64,8 @@ function ContactForm() {
               )}
             </Dropzone>
           </div>
-          <div className="contactform-inputcheck  md:w-[80%] w-full flex md:gap-4 gap-2 md:px-6 px-4">
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" className="mt-2 px-4 w-8 " />
+          <div className="contactform-inputcheck  md:w-[80%] w-full flex md:gap-4 gap-1 md:px-6 px-4">
+            <input type="checkbox"  name="agreeCheckbox" className="mt-1.5  "/>
             <p className="xs:text-base text-sm font-light font-albert ">
               Yes, sign me up to receive email communications from Sharifstone about products, news, and events. I understand I can
               unsubscribe at any time
