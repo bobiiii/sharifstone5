@@ -10,7 +10,7 @@ function AboutUs() {
   return (
     
     <div>
-      <CoverComponent image={'url(images/cover/about_us.png)'} label={['ABOUT', 'SHARIFSTONE']}/>
+      <CoverComponent image={'images/cover/about_us.png'} label={['ABOUT', 'SHARIFSTONE']}/>
       {/* <ReorganizeIndustry />  */}
       <OurMission />
       <OurLocation /> 

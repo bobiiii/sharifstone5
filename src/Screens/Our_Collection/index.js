@@ -6,7 +6,7 @@ import CollectionCover from '../../assets/images/cover/our_collection.png'
 const OurCollection = () => {
     return(
         <div>
-            <CoverComponent image={`url(${CollectionCover})`} label={['OUR', 'COLLECTION']}/>
+            <CoverComponent image={`${CollectionCover}`} label={['OUR', 'COLLECTION']}/>
        
             <DiscoverCollection />
         </div>

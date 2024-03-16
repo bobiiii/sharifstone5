@@ -110,7 +110,7 @@ function GetAQuote({ data }) {
             onClick={() => setOpenQuote(false)}
             className="   text-xl  place-self-end w-full flex justify-end ms-4 -mb-2"
           >
-            <div className="bg-white rounded-full p-2 lg:p-4 lg:mr-3 z-50 ">
+            <div className="bg-white rounded-full p-2 lg:p-4 lg:mr-3 z-30 ">
               <ImCross className="text-black  " size={14} />
             </div>
           </button>

@@ -9,7 +9,7 @@ function ContactScreen() {
   return (
     <div>
       <CoverComponent
-        image={"url(images/cover/contact_us.png)"}
+        image={"images/cover/contact_us.png"}
         label={["SPEAK", "WITH US"]}
       />
       {/* contact-maindesc */}

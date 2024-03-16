@@ -12,7 +12,7 @@ import MaxWidthWrapper from '../MaxWidthWrapper.jsx'
 function WarrantyAndSupport() {
   return (
     <div>
-      <CoverComponent image={'url(images/cover/warranty.png)'} label={['WARRANTY', 'AND SUPPORT']} />
+      <CoverComponent image={'images/cover/warranty.png'} label={['WARRANTY', 'AND SUPPORT']} />
       <ReorganizeIndustry />
       <OurMission />
       <NoWarrantyCover />
