@@ -14,7 +14,7 @@ function Layout({ children }) {
   return (
     <div>
       <ScrollToTop />
-      <div className="lgpx-10 lgpy-4  flex w-full justify-between absolute z-50">
+      <div className="lg:px-10 px-4 py-4  flex w-full justify-between absolute z-50">
         <Link to='/'>
           {
             location.pathname === '/where-to-buy' ? <img src={LogoFooter} alt="LogoFooter" /> : <img src={Logo} alt="Logo" className="h-12" />
