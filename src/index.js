@@ -16,7 +16,7 @@ import { router } from "./Navigation";
 import Context from "./Store/contextStore";
 import APIContext from "./Store/apiContext";
 import { getCollection, getVisualizer } from "./apiCall/apiCall";
-
+import AuthContextProvider from './hooks/AuthContext';
 
 
 const RunFuncion = () => {
@@ -36,13 +36,14 @@ const RunFuncion = () => {
   return (
     <APIContext.Provider value={{ apiStore, setAPIStore }}>
       <Context.Provider value={{ store, setStore }}>
+<AuthContextProvider>
         <React.StrictMode>
           
 
           <RouterProvider router={router} />
 
         </React.StrictMode>
-      </Context.Provider>
+        </AuthContextProvider>      </Context.Provider>
     </APIContext.Provider>
   );
 };

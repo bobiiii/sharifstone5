@@ -18,8 +18,16 @@ import GetAQuote from "./Components/GetAQuote";
 import bg from "../Home/images/dis-bg.png";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import Button from "../resuable/Button";
+import useAuth from "../../hooks/useAuth"
+
+
+
+
 
 function HomeScreen() {
+  const {showDropdown, setShowDropdown} = useAuth()
+  
+  
   const [activeColor, setActiveColor] = useState(0);
   const [openQuote, setOpenQuote] = useState(false);
   const [index, setIndex] = useState(1);
@@ -72,8 +80,8 @@ function HomeScreen() {
 
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
-      <div className="w-full h-svh lg:min-h-screen ">
-        <div className="w-full flex flex-col h-[65%] lg:h-[100vh]">
+      <div className="w-full h-svh lg:min-h-screen " >
+        <div className="w-full flex flex-col h-[65%] lg:h-[100vh]" onMouseOver={()=>setShowDropdown(false)}>
           <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
              <video className="lg:hidden w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
               <source src={home_video2} type="video/mp4" />

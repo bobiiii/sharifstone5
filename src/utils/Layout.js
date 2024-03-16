@@ -9,22 +9,27 @@ import QuartzDropdown from "../components/quatzDropdown";
 import {Link, useLocation} from 'react-router-dom'
 import ScrollToTop from "../Navigation/scrollToTop";
 function Layout({ children }) {
-  const [showDropdown, setShowDropdown] = useState(false);
+  // const [showDropdown, setShowDropdown] = useState(false);
   const location = useLocation()
   return (
     <div>
       <ScrollToTop />
-      <div className="layout-container">
+      <div className="px-10 py-4  flex w-full justify-between absolute z-50">
         <Link to='/'>
           {
             location.pathname === '/where-to-buy' ? <img src={LogoFooter} alt="LogoFooter" /> : <img src={Logo} alt="Logo" className="h-12" />
           }
         </Link>
-        <NavMenu navState={{showDropdown, setShowDropdown}} />
+        <NavMenu  />
       </div>
-      {showDropdown && <QuartzDropdown navState={{showDropdown, setShowDropdown}} />}
+      {/* {showDropdown && <QuartzDropdown navState={{showDropdown, setShowDropdown}} />} */}
 
-      {children}
+
+{children}
+
+      {/* {React.Children.map(children, (child) =>
+        React.cloneElement(child, { setShowDropdown })
+      )} */}
       <SubscriptionNewsLetter />
       <Footer />
     </div>
