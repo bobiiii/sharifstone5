@@ -10,6 +10,7 @@ import { Audio } from "react-loader-spinner";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 
 const DiscoverCollection = () => {
+  // const [clickedItem, setClickedItem] = useState(null);
   const [collection, setCollection] = useState("none");
   const [onMouseOver, setOnMouseOver] = useState("");
   const [innerCollection, setInnerCollection] = useState([]);
@@ -507,6 +508,8 @@ const DiscoverCollection = () => {
         { replace: false }
       );
     }
+    setOnMouseOver('')
+
   };
 
 
@@ -520,7 +523,8 @@ const DiscoverCollection = () => {
         <div className="flex flex-col   ">
           <div
             onMouseOver={() => setOnMouseOver(i)}
-
+            onMouseLeave={() => setOnMouseOver("")} 
+            // onClick={() => setClickedItem(i)} 
             className="   "
 
           >
@@ -538,7 +542,7 @@ const DiscoverCollection = () => {
                 </div>
               </div>
 
-              {i === onMouseOver && (
+              {i === onMouseOver &&  (
 
                 <>
 

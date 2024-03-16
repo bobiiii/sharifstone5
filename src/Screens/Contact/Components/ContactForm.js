@@ -44,7 +44,7 @@ function ContactForm() {
           </div>
           <div className="contactform-inputcontainer  md:w-[80%] w-full flex justify-evenly px-3">
             <textarea
-              className="contactform-textarea "
+              className="contactform-textarea"
               placeholder="Messages"
               rows="5"
               cols="60"
@@ -58,14 +58,14 @@ function ContactForm() {
                 <section className="text-sm">
                   <div style={{ cursor: 'pointer' }} {...getRootProps()}>
                     <input {...getInputProps()} />
-                    <img src={Upload} className="" />
+                    <img src={Upload} className="xs:w-20 w-16" />
                   </div>
                 </section>
               )}
             </Dropzone>
           </div>
           <div className="contactform-inputcheck  md:w-[80%] w-full flex md:gap-4 gap-2 md:px-6 px-4">
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" className="mt-2 px-4" />
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" className="mt-2 px-4 w-8 " />
             <p className="xs:text-base text-sm font-light font-albert ">
               Yes, sign me up to receive email communications from Sharifstone about products, news, and events. I understand I can
               unsubscribe at any time

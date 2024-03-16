@@ -120,7 +120,7 @@
   }
   
   .contactform-inputcontainer input {
-    font-size: 17px;
+    /* font-size: 17px;  */
   }
   /* .contactform-inputcontainer {
     width: 100%;
@@ -148,3 +148,4 @@
     }
     
 }
+

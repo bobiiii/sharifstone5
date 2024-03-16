@@ -122,7 +122,7 @@ function AboutUS({ data }) {
 
   const { openQuote, setOpenQuote } = data;
   return (
-    <MaxWidthWrapper className='md:mt-20 mt-16' >
+    <MaxWidthWrapper className='md:mt-20 mt-11' >
       <div className="home-aboutconatiner w-full">
         <div className="home-aboutinnercontainer">
           <Heading className='text-center'>
