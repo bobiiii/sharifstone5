@@ -1,44 +1,14 @@
 import React from "react";
 import Logo from "../assets/images/logo_footer.png";
-import { ImLocation } from "react-icons/im";
-import { TiLocation } from "react-icons/ti";
-import { TbPhoneFilled, TbMailFilled } from "react-icons/tb";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import BgImage from "../assets/images/bg_S.png";
 import MaxWidthWrapper from "../Screens/MaxWidthWrapper";
-import Heading from "../Screens/resuable/Heading";
-import mail from "./mail.png";
-import { IoMail } from "react-icons/io5";
+import newmail from "./newmail.png";
 import "./footer.css";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  const company = [
-    {
-      name: "About Us",
-      route: "/about",
-    },
-    {
-      name: "Contact",
-      route: "/contact",
-    },
-    {
-      name: "Warranty & Support",
-      route: "/warranty-n-support",
-    },
-  ];
-
-  const product = [
-    {
-      name: "Kitchen",
-      route: "/kitchen-visualizer/Stylish-Kitchen",
-    },
-    {
-      name: "Bathroom",
-      route: "/kitchen-visualizer/Stylish-Bathroom-Vanity",
-    },
-  ];
 
   return (
     <footer className="lg:py-16  md:py-6 py-4   ">
@@ -71,13 +41,13 @@ function Footer() {
 
 
               </li>
-              
-              <li className="flex  ">
 
-              {/* <FaPhone className="text-[#EE2A2E] " size={20} /> */}
+              <li className="flex gap-1.5 ">
 
-                <IoMail className="text-[#EE2A2E] w-[40px] border" size={25} /> 
-                {/* <img src={mail} alt="" className="w-4 h-4" />  */}
+                {/* <FaPhone className="text-[#EE2A2E] " size={20} /> */}
+
+                {/* <IoMdMail className="text-[#EE2A2E]  "  />  */}
+                <img src={newmail} alt="" className="w-5 h-5  " />
                 <span className="py-0">
                   <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">orlando@sharifstone.com</p>
                 </span>
@@ -95,7 +65,7 @@ function Footer() {
                 </span>
               </li>
 
-              <li className="flex gap-2 ">
+              <li className="flex gap-1.5 ">
                 <FaPhone className="text-[#EE2A2E] " size={20} />
                 <span className="py-0">
                   <p className="font-albert font-normal sm:text-base text-[12px] text-black">(813) 533-4553</p>
@@ -104,12 +74,12 @@ function Footer() {
 
               </li>
 
-              <li className="flex  ">
+              <li className="flex  gap-2">
 
-              {/* <FaPhone className="text-[#EE2A2E] " size={20} /> */}
+                {/* <FaPhone className="text-[#EE2A2E] " size={20} /> */}
 
-                <IoMail className="text-[#EE2A2E] w-[40px]" size={25} /> 
-                {/* <img src={mail} alt="" className="w-4 h-4" />  */}
+                {/* <IoMdMail className="text-[#EE2A2E] " size={25} />  */}
+                <img src={newmail} alt="" className="w-5 h-5  " />
                 <span className="py-0">
                   <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">tampa@sharifstone.com</p>
                 </span>
@@ -128,13 +98,13 @@ function Footer() {
                 <Link to="/warranty-n-support" className="font-albert font-normal text-[12px] sm:text-base  text-black">Warranty & Support</Link>
               </li>
             </ul>
-            <ul className="flex flex-col gap-6">
+            <ul className="flex flex-col gap-6 ">
               <h4 className="text-[#2D2E2E] text-xl  font-semibold ">Products</h4>
-              <li className="flex gap-3 ">
-                <Link to='/kitchen-visualizer' className="font-albert font-normal sm:text-base text-[12px] text-black">Kitchen</Link>
+              <li className="flex gap-3 z-20">
+                <Link to='/kitchen-visualizer' className="font-albert font-normal text-[12px] sm:text-base  text-black">Kitchen</Link>
               </li>
-              <li className="flex gap-3 ">
-                <Link to='#' className="font-albert font-normal sm:text-base text-[12px] text-black">Bathroom</Link>
+              <li className="flex gap-3 z-20 ">
+                <Link to='#' className="font-albert font-normal text-[12px] sm:text-base  text-black">Bathroom</Link>
               </li>
             </ul>
           </div>

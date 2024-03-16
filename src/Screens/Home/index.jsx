@@ -83,7 +83,7 @@ function HomeScreen() {
       <div className="w-full h-svh lg:min-h-screen " >
         <div className="w-full flex flex-col h-[65%] lg:h-[100vh]" onMouseOver={()=>setShowDropdown(false)}>
           <div className=" h-full  bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
-             <video className="lg:hidden w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
+             {/* <video className="lg:hidden w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
               <source src={home_video2} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -91,7 +91,7 @@ function HomeScreen() {
             <video className="hidden lg:block w-full h-full  sm:object-cover object-fill" autoPlay loop muted>
               <source src={home_video} type="video/mp4" />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
           </div>
         </div>
         <div className=" lg:hidden bg-gradient-hero  h-[35%] justify-center flex items-center bg-cover  bg-center bg-no-repeat  text-white">
