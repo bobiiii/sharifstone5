@@ -542,7 +542,7 @@ const DiscoverCollection = () => {
 
               <div
                 onClick={() => gotoNextScreen(v)}
-                className={`sbg-black/50 text-white w-min  px-4 lg:px-8 py-4 lg:py-8 rounded-full absolute  top-[20%] lg:top-[35%]  left-[50%]  cursor-pointer translate-x-[-50%]    opacity-0 group-hover:opacity-100 transition-opacity`}
+                className={`bg-black/50 text-white w-min  px-4 lg:px-8 py-4 lg:py-8 rounded-full absolute  top-[20%] lg:top-[35%]  left-[50%]  cursor-pointer translate-x-[-50%]    opacity-0 group-hover:opacity-100 transition-opacity`}
               >
                 <GoArrowUpRight size={35} color="white" className="cursor-pointer" />
               </div>
