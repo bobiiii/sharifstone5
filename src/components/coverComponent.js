@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import './coverComponent.css';
+import useAuth from "../hooks/useAuth"
 
 const CoverComponent = ({ image, label }) => {
+  const {showDropdown, setShowDropdown} = useAuth()
+
+
   
   useEffect(() => {
     const zoomImages = document.querySelectorAll('.zoomedImage');
@@ -29,8 +33,8 @@ const CoverComponent = ({ image, label }) => {
   
 
   return (
-    <div className='coverComponent overflow-hidden'>
-  <div className='w-full h-full grid place-items-center '>
+    <div className='coverComponent overflow-hidden ' onMouseOver={()=>{setShowDropdown(false)}}>
+  <div className='w-full h-full grid place-items-center ' >
     <div className=' relative h-full'>
       <img src={`${image}`} alt='cover' className='bg-no-repeat bg-center bg-cover zoomedImage h-full w-full'/>
 

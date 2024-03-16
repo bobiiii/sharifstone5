@@ -27,7 +27,7 @@ const SubscriptionNewsLetter = () => {
              w-full sm:px-2 px-4 flex " onSubmit={submitForm}>
               {/* home-subscript-input */}
               <input
-                className=" rounded-l-[30px] sm:w-[90%] w-full bg-white sm:py-4 py-2 px-4 text-base z-20"
+                className=" rounded-l-[30px] sm:w-[90%] w-full bg-white sm:py-4 py-2 px-4 text-base z-20 outline-none"
                 placeholder="Enter Your Email"
                 value={mailto}
                 onChange={(e) => setMailto(e.target.value)}
@@ -35,7 +35,7 @@ const SubscriptionNewsLetter = () => {
                 required
               />
               {/* home-subscription-btn */}
-              <button type="submit" className=" bg-[#ee2a2e]  text-center items-center px-10 py-2 -ml-6 rounded-[30px] md:flex hidden whitespace-nowrap text-white font-semibold sm:text-base text-sm  font-gelasio">
+              <button type="submit" className=" bg-[#ee2a2e]  text-center items-center px-10 py-2 -ml-6 rounded-[30px] md:flex hidden whitespace-nowrap text-white font-semibold sm:text-base text-sm  font-gelasio z-30">
                 Subcribe
               </button >
               <button type="submit" className=" bg-[#ee2a2e]  text-center items-center px-6 py-2.5 -ml-6 rounded-[30px] whitespace-nowrap md:hidden flex text-white font-semibold  font-gelasio">

@@ -104,13 +104,13 @@ function GetAQuote({ data }) {
         </main>
       </section> */}
 
-      <div className=" fixed h-dvh z-50 flex justify-center items-center w-screen bg-black bg-opacity-55">
+      <div className=" fixed h-dvh z-40 flex justify-center items-center w-screen bg-black bg-opacity-55">
         <div className="flex h-max py-4 w-11/12  rounded-3xl flex-col justify-center items-center bg-[#c9c8c8]">
           <button
             onClick={() => setOpenQuote(false)}
             className="   text-xl  place-self-end w-full flex justify-end ms-4 -mb-2"
           >
-            <div className="bg-white rounded-full p-2 lg:p-4 lg:mr-3 z-30 ">
+            <div className="bg-white rounded-full p-2 lg:p-4 lg:mr-3 z-50 ">
               <ImCross className="text-black  " size={14} />
             </div>
           </button>

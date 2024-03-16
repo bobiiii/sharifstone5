@@ -6,8 +6,12 @@ import { RxCross2 } from "react-icons/rx";
 import { MdArrowDropDown } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import MaxWidthWrapper from "../Screens/MaxWidthWrapper";
+import QuartzDropdown from "./quatzDropdown";
+import useAuth from "../hooks/useAuth"
 
-function NavMenu({ navState }) {
+function NavMenu() {
+  const {showDropdown, setShowDropdown} = useAuth()
+
   const [openMenu, setOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showNewText, setShowNewText] = useState(true);
@@ -83,7 +87,7 @@ function NavMenu({ navState }) {
 
   return (
     <>
-      <div onClick={() => setOpenMenu(true)} className="bg-black w-12 h-12 rounded-full flex justify-center items-center lg:hidden ">
+      <div onClick={() => setOpenMenu(true)} className=" bg-black w-12 h-12 rounded-full flex justify-center items-center lg:hidden ">
         <RiMenu3Fill size={30} color={"white"} />
       </div>
 
@@ -167,7 +171,7 @@ function NavMenu({ navState }) {
         </div>
       )}
       {/* desktop-navbar */}
-        <div className=" lg:flex items-center ml-auto hidden ">
+        <div className="relatiive  py-2 lg:flex items-center justify-between hidden ">
           {window.location.pathname.includes("/admin-dashboard") ? (
             <div className="nav-container">
               {dashboard.map((v, i) => (
@@ -184,15 +188,15 @@ function NavMenu({ navState }) {
               ))}
             </div>
           ) : (
-            <div className="nav-container">
+            <div className="nav-container ">
               {nav.map((v, i) => (
                 <Link
                   to={v.route}
                   className="nav-item"
                   onMouseOver={
                     v.name === "Quartz Collection"
-                      ? () => navState.setShowDropdown(!navState.showDropdown)
-                      : () => console.log("")
+                      ? () => setShowDropdown(true)
+                      : () => setShowDropdown(false)
                   }
                 >
                   <div
@@ -229,6 +233,9 @@ function NavMenu({ navState }) {
             </div>
           )}
         </div>
+
+
+        {showDropdown &&<QuartzDropdown  />}
     </>
   );
 }
