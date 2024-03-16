@@ -76,7 +76,7 @@ function FAQ() {
                       </h3>
                     </div>
                     <div>
-                      {faq === i ? <FiMinus size={25} /> : <FiPlus size={25} />}
+                      {faq === i ? <FiMinus size={25} className="cursor-pointer" /> : <FiPlus size={25} className="cursor-pointer"/>}
                     </div>
                   </div>
                   {/* faq-answer */}

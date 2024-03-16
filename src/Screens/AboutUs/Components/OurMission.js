@@ -19,23 +19,25 @@ function OurMission() {
             <div className="lg:w-1/2 w-full">
               <img className=" xl:h-full   rounded-[24px] h-full" src={OurMissionImage} />
             </div>
-            <div className="ourmission-innercontainer lg:w-1/2 w-full">
-              <div className="ourmission-details">
+            {/* ourmission-innercontainer */}
+            <div className=" lg:w-1/2 w-full">
+            {/* ourmission-details */}
+              <div className="">
                 <b>I. Mission:</b>
-                <br />
-                "Our mission is to provide superior quality stone slabs  that enhance the transformation of living spaces,  ensuring utmost client satisfaction through  dependable service and premium product offerings."
-                <br />
+                <p className="sm:text-base text-sm font-light font-albert mt-2 ">
+                  "Our mission is to provide superior quality stone slabs  that enhance the transformation of living spaces,  ensuring utmost client satisfaction through  dependable service and premium product offerings."
+                </p>
                 <br />
                 <b>II. Vision:</b>
-                <br />
-                "We aspire to be one of the globally leading  companies in the stone industry, renowned for our  commitment to excellence and unparalleled service."
-                <br />
+                <p className="sm:text-base text-sm font-light font-albert mt-2 ">
+                  "We aspire to be one of the globally leading  companies in the stone industry, renowned for our  commitment to excellence and unparalleled service."
+                </p>
                 <br />
                 <b>III. Goal</b>
-                <br />
-                Our goal is to establish ourselves as the premier stone  supplier across Florida, driving market expansion by  strategically reaching new regions and customer  segments.
-                Over the next 18 months, we aim to achieve a  significant increase in market share, solidifying our  position as the go-to provider for superior quality  stone slabs. This involves not only meeting but  exceeding customer expectations through continuous  innovation, impeccable service, and the introduction  of new, trend-setting designs to ensure our sustained  growth and dominance in the industry.
-
+                <p className="sm:text-base text-sm font-light font-albert mt-2 ">
+                  Our goal is to establish ourselves as the premier stone  supplier across Florida, driving market expansion by  strategically reaching new regions and customer  segments.
+                  Over the next 18 months, we aim to achieve a  significant increase in market share, solidifying our  position as the go-to provider for superior quality  stone slabs. This involves not only meeting but  exceeding customer expectations through continuous  innovation, impeccable service, and the introduction  of new, trend-setting designs to ensure our sustained  growth and dominance in the industry.
+                </p>
               </div>
             </div>
           </div>
