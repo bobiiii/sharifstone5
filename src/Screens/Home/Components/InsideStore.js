@@ -12,6 +12,7 @@ import Button from "../../resuable/Button";
 
 function InsideStore({ data }) {
   const { openQuote, setOpenQuote } = data
+
   const imageArray = [InsideStoreImage1, InsideStoreImage2, InsideStoreImage3, InsideStoreImage4]
   const catalog = [
     {
@@ -43,7 +44,7 @@ function InsideStore({ data }) {
                 STEP INSIDE OUR STORE
               </Heading>
               {/* <div className="homebrand-button">View Full Catalogue</div> */}
-              <div className="bg-[#ee2a2e] text-center items-center px-6 py-2.5 rounded-3xl whitespace-nowrap text-white font-semibold font-gelasio md:flex hidden" onClick={() => setOpenQuote(true)}>Get Directions</div>
+              <button className="bg-[#ee2a2e] text-center items-center px-6 py-2.5 rounded-3xl whitespace-nowrap text-white font-semibold z-40 cursor-pointer font-gelasio md:flex hidden "  onClick={() => setOpenQuote(true)} >Get Directions</button>
             </div>
             {/* home-insidestore-imagecontainer */}
             <div className="grid md:grid-cols-4 grid-cols-2 justify-between gap-4  px-2 mt-8 full">

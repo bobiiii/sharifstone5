@@ -10,6 +10,7 @@ import Button from "../../resuable/Button";
 function GetAQuote({ data }) {
   const { openQuote, setOpenQuote } = data;
 
+
   // const iconId = document?.getElementById('icon-id');
   // const selectId = document?.getElementById('select-id')
   // iconId.addEventListener("mousedown",function(){
@@ -104,7 +105,7 @@ function GetAQuote({ data }) {
         </main>
       </section> */}
 
-      <div className=" fixed h-dvh z-40 flex justify-center items-center w-screen bg-black bg-opacity-55">
+      <div className=" fixed h-dvh z-50 flex justify-center items-center w-screen bg-black bg-opacity-55">
         <div className="flex h-max py-4 w-11/12  rounded-3xl flex-col justify-center items-center bg-[#c9c8c8]">
           <button
             onClick={() => setOpenQuote(false)}
@@ -172,7 +173,7 @@ function GetAQuote({ data }) {
                   <input
                     type="file"
                     className="hidden"
-                    // You can add additional attributes or event handlers as needed
+                  // You can add additional attributes or event handlers as needed
                   />
                 </label>
               </div>
