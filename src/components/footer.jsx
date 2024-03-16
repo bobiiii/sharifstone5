@@ -71,14 +71,16 @@ function Footer() {
 
 
               </li>
-              <li className="flex gap-2 ">
-                <TbMailFilled className="text-[#EE2A2E] " size={20} /> 
-                {/* <img src={mail} alt="" className="w-4 h-4" /> */}
+              
+              <li className="flex  ">
+
+              {/* <FaPhone className="text-[#EE2A2E] " size={20} /> */}
+
+                <IoMail className="text-[#EE2A2E] w-[40px] border" size={25} /> 
+                {/* <img src={mail} alt="" className="w-4 h-4" />  */}
                 <span className="py-0">
                   <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">orlando@sharifstone.com</p>
                 </span>
-
-
               </li>
 
             </ul>
@@ -102,8 +104,11 @@ function Footer() {
 
               </li>
 
-              <li className="flex gap-1.5 ">
-                <IoMail className="text-[#EE2A2E] " size={20} /> 
+              <li className="flex  ">
+
+              {/* <FaPhone className="text-[#EE2A2E] " size={20} /> */}
+
+                <IoMail className="text-[#EE2A2E] w-[40px]" size={25} /> 
                 {/* <img src={mail} alt="" className="w-4 h-4" />  */}
                 <span className="py-0">
                   <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">tampa@sharifstone.com</p>
