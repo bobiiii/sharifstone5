@@ -44,9 +44,7 @@ function Footer() {
 
               <li className="flex gap-1.5 ">
 
-                {/* <FaPhone className="text-[#EE2A2E] " size={20} /> */}
-
-                {/* <IoMdMail className="text-[#EE2A2E]  "  />  */}
+               
                 <img src={newmail} alt="" className="w-5 h-5  " />
                 <span className="py-0">
                   <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">orlando@sharifstone.com</p>
@@ -76,9 +74,7 @@ function Footer() {
 
               <li className="flex  gap-2">
 
-                {/* <FaPhone className="text-[#EE2A2E] " size={20} /> */}
-
-                {/* <IoMdMail className="text-[#EE2A2E] " size={25} />  */}
+                
                 <img src={newmail} alt="" className="w-5 h-5  " />
                 <span className="py-0">
                   <p className="font-albert font-normal sm:text-base text-[12px] text-black whitespace-nowrap">tampa@sharifstone.com</p>
