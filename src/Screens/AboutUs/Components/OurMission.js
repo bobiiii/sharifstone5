@@ -4,23 +4,18 @@ import MaxWidthWrapper from '../../MaxWidthWrapper'
 import Heading from "../../resuable/Heading";
 function OurMission() {
   return (
-    <MaxWidthWrapper className=''>
-      {/* reorganize_container  */}
+    <MaxWidthWrapper >
       <div className=" w-full flex justify-center items-center">
         <div className="ourmission-container">
           <Heading className='md:text-start text-center'>
             OUR COMPANY'S COMMITMENT
           </Heading>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
-          {/* ourmission-cover ourmission-subcontainer */}
-          <div className="flex justify-between mt-4 xl:gap-16 gap-9 lg:flex-row flex-col w-full">
-            {/* ourmission-innercontainer-update  */}
+          <div className="flex justify-between mt-4 xl:gap-10 gap-6 lg:flex-row flex-col w-full">
             <div className="lg:w-1/2 w-full ">
-              <img className="max-h-[40vh]  lg:h-full   rounded-[24px] h-full" src={OurMissionImage} />
+              <img className="sm:max-h-full max-h-[40vh]   lg:h-full  w-full  rounded-[24px] h-full" src={OurMissionImage} />
             </div>
-            {/* ourmission-innercontainer */}
             <div className=" lg:w-1/2 w-full">
-            {/* ourmission-details */}
               <div className="">
                 <b>I. Mission:</b>
                 <p className="sm:text-base text-sm font-light font-albert mt-2 ">

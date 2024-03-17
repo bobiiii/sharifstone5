@@ -53,8 +53,9 @@ const QuartzDropdown = () => {
 
 
   return (
-    <div className="lg:block bg-white rounded-2xl left-1/2 transform -translate-x-1/2    absolute top-10  mx-auto mt-10">
-     
+    <div className="lg:block z-50 bg-white rounded-2xl left-1/2 transform -translate-x-1/2    absolute top-10  mx-auto mt-10">
+      {/* <div id="drop-down" className="end-dropdown" onMouseOver={() => navState.setShowDropdown(false)}></div> */}
+
       <div className="">
       <div className=" w-full  px-4 flex justify-center z-20 ">
         {dropdown.map((v, i) => {

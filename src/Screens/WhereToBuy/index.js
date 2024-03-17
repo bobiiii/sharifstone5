@@ -1,8 +1,13 @@
-import  { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./wheretobuy.css";
 import { IoLocationSharp } from "react-icons/io5";
 import GoogleMapReact from "google-map-react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
+import Heading from "../resuable/Heading";
+import GooglePlacesAutocomplete, {
+  geocodeByAddress,
+  getLatLng,
+} from "react-google-places-autocomplete";
 
 const WhereToBuy = () => {
   const [mapState, setMapState] = useState({
@@ -80,23 +85,34 @@ const WhereToBuy = () => {
 
   return (
     <MaxWidthWrapper>
-      <div className="where-container">
+      {/* where-container */}
+      <div className="flex lg:flex-row flex-col gap-3 w-full ">
         <div className="lg:w-1/2 w-full flex flex-col items-center">
           <div
             style={{ backgroundImage: "url(/images/cover/wheretobuy.png)" }}
-            className="where-innercontainer"
+            // where-innercontainer  "
+            className="w-full h-[300px] rounded-[20px] text-white font-semibold bg-center object-fill bg-no-repeat  flex justify-center items-center font-serif"
           >
-            WHERE
-            <br />
-            TO BUY
+            <div className="flex flex-col gap-2">
+              <Heading className='text-white'>
+                WHERE
+              </Heading>
+              <Heading className='text-white'>
+                TO BUY
+              </Heading>
+            </div>
           </div>
-          <div className="where-container-new">
+          {/* where-container-new */}
+          <div className="flex flex-row-reverse">
             <div className="where-seperator"></div>
             <div className="where-seperator2">
-              {/* ENTER YOUR LOCATION */}
-              <div className="where-heading">Select Branch</div>
+              {/* <div className="where-heading"></div> */}
+              <Heading>
+                Select Branch
+              </Heading>
               <select
-                className="where-search-field"
+              // where-search-field
+                className="w-full rounded-[30px] my-4 py-4 border-2 px-4"
                 onChange={handleLocationChange}
                 components={{
                   dropdownindicator: () => null,
@@ -112,11 +128,12 @@ const WhereToBuy = () => {
                   </option>
                 ))}
               </select>
-              <div className="current-location" onClick={getLocation}>
-                <IoLocationSharp color="#EE2A2" size={20} />
+              <div className="current-location " onClick={getLocation}>
+                <IoLocationSharp color="#EE2A2" size={20} className="" />
                 Use my current location
               </div>
-              <div className="current-desc">
+              {/* current-desc */}
+              <div className="sm:text-lg text-sm font-medium font-albert mt-2" >
                 Explore our extensive collection of top-quality stones in person!
                 Enter your location now to uncover the nearest Sharifstone
                 warehouse, where our top-quality stones await your personal
@@ -128,7 +145,7 @@ const WhereToBuy = () => {
         <div className="lg:w-1/2 w-full flex flex-col items-center  mt-4">
           {mapState.center.lat !== undefined && (
             <div
-              className="map-div"
+              className="map-div "
               style={{ height: "600px", width: "97%", borderRadius: 20 }}
             >
               <GoogleMapReact

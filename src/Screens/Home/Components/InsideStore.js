@@ -27,7 +27,7 @@ function InsideStore({ data }) {
             </div>
             <div className="grid md:grid-cols-4 grid-cols-2 justify-between gap-4  px-2 mt-8 full">
               {
-                imageArray.map((v, i) => <img key={i} src={v} className="rounded-[20px]  w-full h-full flex flex-grow" />)
+                imageArray.map((v, i) => <img key={i} src={v} className="rounded-[20px]  w-full h-full flex flex-grow sm:max-h-full max-h-[25vh] " />)
               }
             </div>
             <div className="md:hidden  flex justify-center items-center mt-6">

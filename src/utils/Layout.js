@@ -11,10 +11,10 @@ function Layout({ children }) {
   return (
     <div>
       <ScrollToTop />
-      <div className="lg:px-10 px-4 py-4  flex w-full justify-between absolute z-50">
+      <div className={`lg:px-10 px-4 py-4 items-center flex w-full justify-between ${location.pathname === '/where-to-buy' ? '' : 'absolute'} z-50`}>
         <Link to='/'>
           {
-            location.pathname === '/where-to-buy' ? <img src={LogoFooter} alt="LogoFooter" /> : <img src={Logo} alt="Logo" className="h-12" />
+            location.pathname === '/where-to-buy' ? <img className="h-12" src={LogoFooter} alt="LogoFooter" /> : <img src={Logo} alt="Logo" className="h-12" />
           }
         </Link>
         <NavMenu />
