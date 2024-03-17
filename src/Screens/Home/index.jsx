@@ -31,7 +31,7 @@ function HomeScreen() {
       <div className="w-full h-svh lg:min-h-screen " >
         <div className="w-full flex flex-col h-[65%] lg:h-[100vh]" >
           <div className=" h-full lg:w-full w-screen bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
-            <video className="lg:hidden w-screen h-full object-cover min-w-[100vw] " autoPlay loop muted>
+            <video className="lg:hidden w-screen h-full object-fill min-w-[100vw] " autoPlay loop muted>
               <source src={home_video2} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
