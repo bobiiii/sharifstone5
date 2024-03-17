@@ -1,7 +1,10 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import "./wheretobuy.css";
 import { IoLocationSharp } from "react-icons/io5";
 import GoogleMapReact from "google-map-react";
+import MaxWidthWrapper from "../MaxWidthWrapper";
 import GooglePlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
@@ -18,12 +21,13 @@ const WhereToBuy = () => {
 
   useEffect(() => {
     getLocation();
-  }, []); // Call getLocation() once when component mounts
+  }, []);
 
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
+      // eslint-disable-next-line no-console
       console.log("Geolocation is not supported by this browser.");
     }
   };
@@ -81,68 +85,69 @@ const WhereToBuy = () => {
   };
 
   return (
-    <div className="where-container">
-      <div className="where-innercontainer1">
-        <div
-          style={{ backgroundImage: "url(/images/cover/wheretobuy.png)" }}
-          className="where-innercontainer"
-        >
-          WHERE
-          <br />
-          TO BUY
-        </div>
-        <div className="where-container-new">
-          <div className="where-seperator"></div>
-          <div className="where-seperator2">
-            {/* ENTER YOUR LOCATION */}
-            <div className="where-heading">Select Branch</div>
-            <select
-              className="where-search-field"
-              onChange={handleLocationChange}
-              components={{
-                dropdownindicator: () => null,
-                indicatorseparator: () => null,
-              }}
-            >
-              <option className="text" value="">
-                Select Location
-              </option>
-              {points.map((point) => (
-                <option className="text" key={point.id} value={point.title}>
-                  {point.title}
+    <MaxWidthWrapper>
+      <div className="where-container">
+        <div className="lg:w-1/2 w-full flex flex-col items-center">
+          <div
+            style={{ backgroundImage: "url(/images/cover/wheretobuy.png)" }}
+            className="where-innercontainer"
+          >
+            WHERE
+            <br />
+            TO BUY
+          </div>
+          <div className="where-container-new">
+            <div className="where-seperator"></div>
+            <div className="where-seperator2">
+              {/* ENTER YOUR LOCATION */}
+              <div className="where-heading">Select Branch</div>
+              <select
+                className="where-search-field"
+                onChange={handleLocationChange}
+                components={{
+                  dropdownindicator: () => null,
+                  indicatorseparator: () => null,
+                }}
+              >
+                <option className="text" value="">
+                  Select Location
                 </option>
-              ))}
-            </select>
-            <div className="current-location" onClick={getLocation}>
-              <IoLocationSharp color="#EE2A2" size={20} />
-              Use my current location
-            </div>
-            <div className="current-desc">
-              Explore our extensive collection of top-quality stones in person!
-              Enter your location now to uncover the nearest Sharifstone
-              warehouse, where our top-quality stones await your personal
-              exploration.
+                {points.map((point) => (
+                  <option className="text" key={point.id} value={point.title}>
+                    {point.title}
+                  </option>
+                ))}
+              </select>
+              <div className="current-location" onClick={getLocation}>
+                <IoLocationSharp color="#EE2A2" size={20} />
+                Use my current location
+              </div>
+              <div className="current-desc">
+                Explore our extensive collection of top-quality stones in person!
+                Enter your location now to uncover the nearest Sharifstone
+                warehouse, where our top-quality stones await your personal
+                exploration.
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="where-innercontainer2">
-        {mapState.center.lat !== undefined && (
-          <div
-            className="map-div"
-            style={{ height: "600px", width: "97%", borderRadius: 20 }}
-          >
-            <GoogleMapReact
-              bootstrapURLKeys={{
-                key: "AIzaSyBMGnG8DmtiCc7yCgwTyS35iRyLV89qrtY",
-              }}
-              defaultCenter={defaultCenter}
-              center={mapState.center}
-              zoom={mapState.zoom}
-              yesIWantToUseGoogleMapApiInternals // Add this line if you're using GoogleMapReact v2.1+
-              onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
-            />
-            {/* <GoogleMapReact
+        <div className="lg:w-1/2 w-full flex flex-col items-center  mt-4">
+          {mapState.center.lat !== undefined && (
+            <div
+              className="map-div"
+              style={{ height: "600px", width: "97%", borderRadius: 20 }}
+            >
+              <GoogleMapReact
+                bootstrapURLKeys={{
+                  key: "AIzaSyBMGnG8DmtiCc7yCgwTyS35iRyLV89qrtY",
+                }}
+                defaultCenter={defaultCenter}
+                center={mapState.center}
+                zoom={mapState.zoom}
+                yesIWantToUseGoogleMapApiInternals // Add this line if you're using GoogleMapReact v2.1+
+                onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
+              />
+              {/* <GoogleMapReact
               bootstrapURLKeys={{
                 key: "AIzaSyBMGnG8DmtiCc7yCgwTyS35iRyLV89qrtY",
               }}
@@ -177,10 +182,11 @@ const WhereToBuy = () => {
                 text="Marker 2"
               />
             </GoogleMapReact> */}
-          </div>
-        )}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </MaxWidthWrapper>
   );
 };
 

@@ -1,30 +1,17 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./DiscoverCollection.css";
-import { MdOutlineArrowBackIos, MdOutlineArrowRight } from "react-icons/md";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
-import MaxWidthWrapper from "../../MaxWidthWrapper";
 import ScrollAnimation from '@nathanyoung/react-animate-on-scroll';
 import 'animate.css';
 import Heading from "../../resuable/Heading";
 import Button from "../../resuable/Button";
 function DiscoverCollection() {
 
-  const [imageArr, setImagesArr] = useState([
-    "url(images/scroller_images/scroller_1.png)",
-    "url(images/scroller_images/scroller_2.png)",
-    "url(images/scroller_images/scroller_3.png)",
-  ])
+
   const [index, setIndex] = useState(1)
-  const images = [
-    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
-    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
-    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
-    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
-    "url(images/collection_color/ESSENTIAL/ES_Bianco_Puro.jpg)",
-  ]
+
   const changeFunction = (isNext) => {
     const totalImages = 7;
 
