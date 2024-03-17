@@ -15,8 +15,8 @@ function OurMission() {
           {/* ourmission-cover ourmission-subcontainer */}
           <div className="flex justify-between mt-4 xl:gap-16 gap-9 lg:flex-row flex-col w-full">
             {/* ourmission-innercontainer-update  */}
-            <div className="lg:w-1/2 w-full">
-              <img className=" xl:h-full   rounded-[24px] h-full" src={OurMissionImage} />
+            <div className="lg:w-1/2 w-full ">
+              <img className="max-h-[40vh]  lg:h-full   rounded-[24px] h-full" src={OurMissionImage} />
             </div>
             {/* ourmission-innercontainer */}
             <div className=" lg:w-1/2 w-full">
