@@ -5,11 +5,9 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaCheck } from "react-icons/fa6";
 import APIContext from "../../../Store/apiContext";
 import FloorColor from "../../../assets/images/lime_delight.jpg";
-import { IoMdArrowBack } from "react-icons/io";
-import { Audio } from "react-loader-spinner";
-import Button from "../../resuable/Button";
 
-const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
+import { Audio } from "react-loader-spinner";
+const ChooseColor = ({ colorArray, layoutData, ambient }) => {
   const [selectedColor, setSelectedColor] = useState(colorArray[0]);
   const [oldImage, setOldImage] = useState(null);
   const [inputText, setInputText] = useState("");
@@ -25,28 +23,9 @@ const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
   const navigate = useNavigate();
   const params = useParams();
   const { currentAmbient, setCurrentAmbient } = ambient;
-  // const { currentScreen, setCurrentScreen } = currentScreen;
   var src = document.getElementById("test")?.style?.backgroundImage;
   var url = src?.match(/\((.*?)\)/)[1]?.replace(/('|")/g, "");
 
-  
-  
-  
-  useEffect(() => {
-    const handleBackButton = () => {
-      console.log("back btn clkd")
-      // Handle state change when the back button is clicked
-      setCurrentScreen("start"); // Change the state as needed
-      navigate("/kitchen-visualizer")
-    };
-
-    window.addEventListener("popstate", handleBackButton);
-
-    return () => {
-      window.removeEventListener("popstate", handleBackButton);
-    };
-  }, []);
-  
   var img = new Image();
   img.onload = function () {
     console.log("image loaded");
@@ -60,28 +39,28 @@ const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
     setLoader(true);
     const newImage = new Image();
     newImage.src = value.ambient_image_url;
-
+  
     newImage.onload = () => {
 
       if (selectedPicker === "Floor") {
         setActiveFloor(value.ambient_image_url);
-        setActiveFloor(value);
+        setActiveFloor(value); 
       } else {
         setActiveCounterTop(value.color_image);
         setActiveCounterTop(value);
       }
-
+  
       setSelectedColor(value);
       setOldImage(`url(${value.ambient_image_url})`);
 
       navigate(`/kitchen-visualizer/${params?.color}?color=${value.color_name.replace(" ", "-")}`, { replace: false });
-
+ 
       setTimeout(() => setLoader(false), 1000);
     };
   };
+  
 
-
-  const selectAmbient = ({ value, url, }) => {
+  const selectAmbient = ({ value, url }) => {
     const currentVisualizer =
       apiStore?.visualizers[value?.replaceAll(" ", "-")];
     console.log("New...", currentVisualizer[0]?.ambient_image_url);
@@ -120,7 +99,7 @@ const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
       setSelectedAPIStore(newArray);
     }
   }, [inputText]);
-
+  
 
   useEffect(() => {
     if (apiStore?.visualizers) {
@@ -148,7 +127,8 @@ const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
     if (apiStore?.visualizers) {
       if (params?.color === "kitchen-visualizer") {
         navigate(
-          `/kitchen-visualizer/${apiStore?.visualizers[params?.color][0]?.ambient_url
+          `/kitchen-visualizer/${
+            apiStore?.visualizers[params?.color][0]?.ambient_url
           }`,
           {
             replace: true,
@@ -158,31 +138,15 @@ const ChooseColor = ({ colorArray, layoutData, ambient, setCurrentScreen }) => {
     }
   }, []);
 
-  
-  
-  console.log("choose color")
-
   return (
     <div className="choosecolor-container">
       {loader && <div className="choosecolor-loader">{loaderJSX()}</div>}
       <div className="choosecolor-innercontainer">
-        <span className="choosecolor-cover ">
-          <div className="mb-2 flex justify-start w-full ">
-            <Button className='w-12 rounded-lg  text-center flex justify-center items-center'>
-              <Link to={"/kitchen-visualizer"} onClick={() => setCurrentScreen('Visualizer Form')}  >
-                <IoMdArrowBack size={25} />
-              </Link>
-            </Button>
-          </div>
-          <Link to="/kitchen-visualizer" >
+        <span className="choosecolor-cover">
+          <Link to="/">
             <img src={Logo} />
           </Link>
-
-          {/* <button onClick={() => setCurrentScreen('Visualizer Form')}>
-            back
-          </button> */}
           <div className="choosecolor-bgncontainer">
-
             <div
               onClick={() => setCurrentSide(false)}
               className={

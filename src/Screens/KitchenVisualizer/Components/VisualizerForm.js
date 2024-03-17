@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./VisualizerForm.css";
 import Logo from "../../../assets/images/logo_footer.png";
 import { GoArrowUpRight } from "react-icons/go";
@@ -6,27 +6,18 @@ import Carousel from "react-multi-carousel";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-const CustomLeftArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    carouselState: { currentSlide, deviceType },
-  } = rest;
-  // onMove means if dragging or swiping in progress.
+
+const CustomLeftArrow = ({ onClick }) => {
   return (
-    <button className="carousel-btn" onClick={() => onClick()}>
+    <button className="carousel-btn z-20" onClick={onClick}>
       <FaChevronLeft size={15} color={"#fff"} />
     </button>
   );
 };
 
-const CustomRightArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    carouselState: { currentSlide, deviceType },
-  } = rest;
-  // onMove means if dragging or swiping in progress.
+const CustomRightArrow = ({ onClick }) => {
   return (
-    <button className="carousel-btn" onClick={() => onClick()}>
+    <button className="carousel-btn mt-20 z-20" onClick={onClick}>
       <FaChevronRight size={15} color={"#fff"} />
     </button>
   );
@@ -38,8 +29,6 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
   const [changeImageLayout, setChangeImageLayout] = useState("Kitchen");
   const { currentScreen, setCurrentScreen, currentAmbient, setCurrentAmbient } =
     data;
-
-  console.log(currentScreen, "from visualizer form");
   const navigate = useNavigate();
 
   const responsive = {
@@ -59,6 +48,7 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
+
   const selectLayout = (layout, { value }) => {
     if (layout === "Kitchen") {
       setCurrentScreen("Pick Kitchen");
@@ -72,35 +62,31 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
       console.log("i guess not today");
     }
   };
-  const LayoutJSX = (imageLayout = "Kitchen", layoutArray = kitchenLayout) => {
-    return (
-      layout === imageLayout &&
-      layoutArray.map((v, i) => (
-        <div
-          className="visualizerform-image"
-          onMouseOver={() => setHoverContainer(i)}
-          style={{ backgroundImage: v.image }}
-        >
-          {/* <img src={"/images/layout/kitchen_1.png"}/> */}
 
-          {v?.value === "" ? (
-            <h3 style={{ color: "#fff" }}>Coming Soon</h3>
-          ) : (
-            <>
-              {i === hoverContainer && (
-                <div
-                  onClick={() => selectLayout(layout, v)}
-                  className="discover-collectionexpand"
-                >
-                  <GoArrowUpRight size={35} color="white" />
-                </div>
-              )}
-            </>
-          )}
-        </div>
-      ))
-    );
-  };
+  const LayoutJSX = (imageLayout = "Kitchen", layoutArray = kitchenLayout) =>
+    layout === imageLayout &&
+    layoutArray.map((v, i) => (
+      <div
+        className="visualizerform-image"
+        onMouseOver={() => setHoverContainer(i)}
+        style={{ backgroundImage: v.image }}
+      >
+        {v?.value === "" ? (
+          <h3 style={{ color: "#fff" }}>Coming Soon</h3>
+        ) : (
+          <>
+            {i === hoverContainer && (
+              <div
+                onClick={() => selectLayout(layout, v)}
+                className="discover-collectionexpand"
+              >
+                <GoArrowUpRight size={35} color="white" />
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    ));
 
   const LayoutMobileJSX = (
     imageLayout = "Kitchen",
@@ -108,25 +94,30 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
   ) =>
     layout === imageLayout && (
       <Carousel
-        containerClass="carousel-container"
+        containerClass="carousel-container brb  "
         draggable={true}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
-        customLeftArrow={<CustomLeftArrow />}
-        customRightArrow={<CustomRightArrow />}
+        // customLeftArrow={<CustomLeftArrow />}
+        // customRightArrow={<CustomRightArrow />}
+        customButtonGroup={<CustomButtonGroupAsArrows />}
         responsive={responsive}
       >
         {layoutArray.map((v, i) => (
           <div
-            className="visualizerform-image"
+            className="visualizerform-image "
             style={{ backgroundImage: v.image }}
-            onClick={() => {
-              i <= 1 && selectLayout(layout, v);
-            }}
           >
-            {!(i <= 1) && (
-              <div>
-                <h3 style={{ color: "#fff" }}>Coming Soon</h3>
+            {i === 0 && (
+              <div
+                onClick={
+                  v?.value !== "" && layout === "Kitchen"
+                    ? () => setCurrentScreen("Pick Kitchen")
+                    : () => setCurrentScreen("Pick Bathroom")
+                }
+                className="discover-collectionexpand"
+              >
+                <GoArrowUpRight size={35} color="white" />
               </div>
             )}
           </div>
@@ -140,10 +131,9 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
       style={{ backgroundImage: "url(images/cover/visualizer_form_bg.png)" }}
     >
       <Link to="/">
-        <img src={Logo} />
+        <img src={Logo} alt="Logo" />
       </Link>
       <div className="visualizerform-heading">SELECT BATHROOM LAYOUT</div>
-      <img src="" />
       <div className="visualizerform-form">
         <div className="visualizerform-itembtn">
           <div
@@ -174,6 +164,10 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
           {window.outerWidth <= 425
             ? LayoutMobileJSX("Bathroom", bathroomLayout)
             : LayoutJSX("Bathroom", bathroomLayout)}
+        </div>
+        <div className="carousel-arrows">
+          <CustomLeftArrow />
+          <CustomRightArrow />
         </div>
       </div>
     </div>
