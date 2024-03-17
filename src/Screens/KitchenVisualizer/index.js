@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./KitchenVisualizer.css";
 import Logo from "../../assets/images/logo_footer.png";
 import VisualizerForm from "./Components/VisualizerForm";
@@ -294,6 +294,7 @@ const KitchenVisualizer = () => {
         "url(images/color_collections/bathroom_visualizer/victorian_silver.png)",
     },
   ];
+  const image = window.location.origin + "/images/color_3.png";
   const kitchenLayout = [
     {
       image: "url(images/layout/kitchen_1.png)",
@@ -420,51 +421,45 @@ const KitchenVisualizer = () => {
     <>
       {currentScreen === "start" && (
         <div
-          className="kitchen-visualizer-container min-h-screen  flex md:justify-between justify-start"
+          className="kitchen-visualizer-container"
           style={{ backgroundImage: "url(images/cover/Visualizer_img.png)" }}
         >
-          <div className="kitchen-visualizer-logo  flex sm:justify-start sm:items-start justify-center items-center w-full mt-[50px] mx-14 flex-col">
+          <div className="kitchen-visualizer-logo">
             <Link to="/">
               <img src={Logo} />
             </Link>
 
-            <div className="release-wrapper px-4 py-3">
+            <div className="release-wrapper">
               <p className="release-text">2024 RELEASE</p>
             </div>
           </div>
-          <main className=" max-w-screen-2xl  mx-auto md:px-6 flex flex-grow justify-center items-center px-2 lg:mt-2">
-            <div className=" kitchen-visualizer-startform   w-full  flex justify-between md:gap-16 lg:gap-4 lg:w-[70vw] xl:w-[70vw] lg:h-max    md:text-start text-center px-2 lg:px-8 mt-8  pt-6 ">
-              <div className="overflow-hidden kitchen-visualizer-section px-2  md:py-6 py-4  flex justify-center md:items-start items-center w-full flex-col text-white gap-1 md:text-start text-center ">
-                <span className="lg:text-4xl text-2xl">
-                  SHARIFSTONE ONLINE VISUALIZER
-                </span>
-                <div>
-                  Our Kitchen and Bathroom Visualizer allows you to explore
-                  different colors, materials, and design options, helping you
-                  envision the perfect look for your space. With just a few
-                  clicks, you can select from a wide range of cabinets,
-                  countertops, and backsplashes. Experiment with various color
-                  schemes, textures, and finishes to create a personalized
-                  kitchen that reflects your style and taste.
-                </div>
-              </div>
-
-              <div
-                className="md:w-[30%] mb-8 w-[80%] mt-3 flex justify-center items-center text-white md:mt-0 "
-                onClick={() => {
-                  setCurrentScreen("Visualizer Form");
-                }}
-              >
-                <div className="kitchen-visualizer-startbtn px-14 ">Start</div>
+          <div className="kitchen-visualizer-startform">
+            <div className="kitchen-visualizer-section">
+              <span>SHARIFSTONE ONLINE VISUALIZER</span>
+              <div>
+                Our Kitchen and Bathroom Visualizer allows you to explore
+                different colors, materials, and design options, helping you
+                envision the perfect look for your space. With just a few
+                clicks, you can select from a wide range of cabinets,
+                countertops, and backsplashes. Experiment with various color
+                schemes, textures, and finishes to create a personalized kitchen
+                that reflects your style and taste.
               </div>
             </div>
-          </main>
+            <div className="kitchen-visualizer-section">
+              <div
+                onClick={() => setCurrentScreen("Visualizer Form")}
+                className="kitchen-visualizer-startbtn"
+              >
+                Start
+              </div>
+            </div>
+          </div>
         </div>
       )}
 
       {currentScreen === "Visualizer Form" && (
         <VisualizerForm
-          setCurrentScreen={setCurrentScreen}
           kitchenLayout={kitchenLayout}
           bathroomLayout={bathroomLayout}
           data={{
@@ -477,7 +472,6 @@ const KitchenVisualizer = () => {
       )}
       {currentScreen === "Pick Kitchen" && (
         <ChooseColor
-          setCurrentScreen={setCurrentScreen}
           layoutData={kitchenChangeLayout}
           currentScreen={"Kitchen"}
           ambient={{ currentAmbient, setCurrentAmbient }}
@@ -488,7 +482,6 @@ const KitchenVisualizer = () => {
       )}
       {currentScreen === "Pick Bathroom" && (
         <ChooseColor
-          setCurrentScreen={setCurrentScreen}
           layoutData={bathroomChangeLayout}
           currentScreen={"Bathroom"}
           ambient={{ currentAmbient, setCurrentAmbient }}
