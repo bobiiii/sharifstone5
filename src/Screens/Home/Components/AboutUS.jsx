@@ -89,7 +89,7 @@ function AboutUS({ data }) {
                 <Link
 
                   to={v.href}
-                  className="h-44 flex flex-col justify-center items-center border   border-red-500 w-full mt-4   py-6 px-2   rounded-lg"
+                  className="h-44 flex flex-col justify-center items-center  w-full mt-4   py-6 px-2   rounded-lg"
                   style={{ textDecoration: "none" }}
                 >
                   {
