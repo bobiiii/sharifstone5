@@ -3,7 +3,6 @@ import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
 import Button from "../../resuable/Button";
 import "./loveus.css";
-// import
 
 const LoveUS = () => {
   return (
@@ -18,10 +17,9 @@ const LoveUS = () => {
               <img src={LoveUSCover} className="h-full bg-[#f3f5f5]  " />
             </div>          </div>
         </div>
-        {/* home-loveus-innercontainer2 */}
         <div className=" xl:w-1/2 md:w-[60%] w-full flex justify-center items-center flex-col ">
           <div className=" w-full  h-full lg:mb-6 mb-3 ">
-            <Heading className='text-center'>
+            <Heading className='lg:text-start text-center'>
               WHY DESIGNERS  LOVE US
             </Heading>
           </div>
