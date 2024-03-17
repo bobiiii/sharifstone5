@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import {  useState } from "react";
 import "./quatzDropdown.css";
 import EssentialCollectionImage from "../assets/images/essential_dropdown_image.png";
 import IndulgeCollectionImage from "../assets/images/indulge_dropdown_image.png";
@@ -17,7 +17,6 @@ import useAuth from "../hooks/useAuth"
 const QuartzDropdown = () => {
   const {showDropdown, setShowDropdown} = useAuth()
   
-  // const { setShowDropdown}= navState2;
   const [hover, setHover] = useState("");
   const dropdown = [
     {
@@ -63,26 +62,19 @@ const QuartzDropdown = () => {
           
           return(
           <Link
+          key={i}
             to={v.url}
             onMouseEnter={() => setHover(v.title)}
             onMouseLeave={() => setHover("")}
             onClick={() => setShowDropdown(false)}
             className="dropdown-item"
-            // style={{ backgroundImage: hover === v.title ? v.backURL : "" }}
           >
 
 
-{/* <div
-              className="dropdown-item-text "
-              style={{ color: hover === v.title ? "#fff" : "" }}
-            >
-              {v.title}
-            </div> */}
 
  <div className=" relative h-[200px] w-[230px] px-2  ">
 {hover === v.title  
 ?
-// when i hover this card appear, but it is going out of box
 
 <div className=" w-[100%] h-[100%]  " >
 <img src={v.backURL} className=" w-[100%] h-[100%]  " alt="a"/>
@@ -97,13 +89,6 @@ const QuartzDropdown = () => {
   </div>}
 </div> 
             
-            {/* <div className="items-center flex justify-center ">
-              {hover === v.title ? (
-                <img className="dropdown-img   " src={DropdownIcon} alt="" />
-              ) : (
-                <img className="dropdown-img rounded-xl border border-red-600" src={v.image} alt="" />
-              )}
-            </div> */}
           </Link>
         )})}
       </div>

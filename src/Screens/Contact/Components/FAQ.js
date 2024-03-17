@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./FAQ.css";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import Heading from "../../resuable/Heading";
@@ -62,6 +62,7 @@ function FAQ() {
             {faqArray.map((v, i) => {
               return (
                 <div
+                key={i}
                   className={
                     faq === i
                       ? "faq-questioncontaier-active duration-300 "

@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react'
+import {useCallback} from 'react'
 import Dropzone from 'react-dropzone'
 import './dropzone.css'
 

@@ -3,36 +3,10 @@ import Customer1 from "../assets/images/homeImage/customer_batool.png";
 import Customer2 from "../assets/images/homeImage/customer_jacob.png";
 import Customer3 from "../assets/images/homeImage/customer_sharon.png";
 import OrganizationLogo from "../assets/images/homeImage/org_logo.png";
-import Carousel from "react-multi-carousel";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import MaxWidthWrapper from "../Screens/MaxWidthWrapper";
 import Heading from "../Screens/resuable/Heading";
 
-const CustomLeftArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    carouselState: { currentSlide, deviceType },
-  } = rest;
-  // onMove means if dragging or swiping in progress.
-  return (
-    <button className="carousel-btn" onClick={() => onClick()}>
-      <FaChevronLeft size={15} color={"#fff"} />
-    </button>
-  );
-};
 
-const CustomRightArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    carouselState: { currentSlide, deviceType },
-  } = rest;
-  // onMove means if dragging or swiping in progress.
-  return (
-    <button className="carousel-btn" onClick={() => onClick()}>
-      <FaChevronRight size={15} color={"#fff"} />
-    </button>
-  );
-};
 
 const CustomerReview = ({ label }) => {
   const customerArray = [
@@ -83,26 +57,7 @@ const CustomerReview = ({ label }) => {
         <div className=" overflow-scroll cards-scroll w-full mt-6">
           <div className="flex justify-between gap-6 w-full min-w-[1024px]  ">
             {customerArray.map((v, i) => (
-              // <div className="home-customerreview-card">
-              //   <div className="testimonials-desc">
-              //     <div className="container-center sm::text-base text-center">{v.desc}</div>
-              //   </div>
-              //   <div className="home-customerreview-talentcontainer">
-              //     <div style={{ display: "flex", margin: "0px 10px" }}>
-              //       <img className="profile-image" src={v.image} />
-              //       <div style={{ margin: "0px 10px" }}>
-              //         <div className="home-customerreview-customername">
-              //           {v.name}
-              //         </div>
-              //         <div className="home-customerreview-customer">
-              //           {v.designation}
-              //         </div>
-              //       </div>
-              //     </div>
-              //     <img style={{ marginRight: 10 }} src={OrganizationLogo} />
-              //   </div>
-              // </div>
-              <div className="flex flex-col gap-4 flex-grow  w-full">
+              <div key={i} className="flex flex-col gap-4 flex-grow  w-full">
                 <div className="bg-[#fef6f7] sm:px-8 px-6 sm:py-8 py-6  h-full flex-grow">
                   <p className="md:text-lg text-sm font-medium font-albert text-black ">{v.desc}</p>
                 </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import "./InsideStore.css";
 import InsideStoreImage1 from '../../../assets/images/homeImage/insidestore1.jpg'
 import InsideStoreImage2 from '../../../assets/images/homeImage/insidestore2.jpg'

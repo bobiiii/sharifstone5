@@ -12,9 +12,9 @@ const LoveUS = () => {
           <div className="lg:w-[120%]  lg:block hidden ">
             <img src={LoveUSCover} className="lg:h-full  lg:ml-[-18%] " />
           </div>
-          <div className="w-[100vw] overflow-hidden  lg:hidden  ">
+          <div className="w-[100vw] max-h-[70vh] overflow-hidden  lg:hidden  ">
             <div className="w-[500px] ml-[-15%]">
-              <img src={LoveUSCover} className="h-full bg-[#f3f5f5]  " />
+              <img src={LoveUSCover} className="h-full max-h-[70vh] bg-[#f3f5f5]  " />
             </div>          </div>
         </div>
         <div className=" xl:w-1/2 md:w-[60%] w-full flex justify-center items-center flex-col ">

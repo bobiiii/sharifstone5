@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import  {useState} from 'react'
 import DropImage from '../../components/dropzone'
 import './createCollection.css'
 import axios from 'axios';

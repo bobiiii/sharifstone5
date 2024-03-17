@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import DropImage from "../../components/dropzone";
 import { IoIosArrowDown } from "react-icons/io";
 import './createVisualizer.css';

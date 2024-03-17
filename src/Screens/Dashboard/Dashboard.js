@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import Logo from '../../assets/images/logo_footer.png'
 import './dashboard.css'
 

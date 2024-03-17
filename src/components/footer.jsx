@@ -1,4 +1,4 @@
-import React from "react";
+
 import Logo from "../assets/images/logo_footer.png";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";

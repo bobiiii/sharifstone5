@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./home.css";
 import home_video from "../../assets/videos/home_video.mp4"
 import home_video2 from "../../assets/videos/home_video2.mp4"
@@ -31,7 +31,7 @@ function HomeScreen() {
       <div className="w-full h-svh lg:min-h-screen " >
         <div className="w-full flex flex-col h-[65%] lg:h-[100vh]" >
           <div className=" h-full w-full bg-red-600  flex justify-center items-center overflow-hidden z-10 ">
-            <video className="lg:hidden w-full h-full   object-fill" autoPlay loop muted>
+            <video className="lg:hidden w-full h-full min-w-[100vw]  object-fill" autoPlay loop muted>
               <source src={home_video2} type="video/mp4" />
               Your browser does not support the video tag.
             </video>

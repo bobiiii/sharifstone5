@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import "./viewVisualizer.css";
 import axios from "axios";
 import APIContext from "../../Store/apiContext";

@@ -1,9 +1,5 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import "./RelatedProduct.css";
-import Product1 from "../../../assets/images/product/gk07cepp0-1.png";
-import Product2 from "../../../assets/images/product/gk07cepp0-2.png";
-import Product3 from "../../../assets/images/product/gk07cepp0-3.png";
-import ExpandImage from '../../../assets/images/product/gk07cepp0-expand.png';
 import { Link, useNavigate } from "react-router-dom";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
@@ -15,27 +11,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 function RelatedProduct({ relatedImages }) {
-  console.log(relatedImages);
-
-  const navigate = useNavigate()
-  const relatedProductObj = [
-    {
-      name: "MAORI",
-      image: Product1,
-    },
-    {
-      name: "MAORI",
-      image: Product2,
-    },
-    {
-      name: "MAORI",
-      image: Product3,
-    },
-  ];
-  const showProducts = (item) => {
-    console.log(item);
-    // navigate(`/product-description/${item?.color_url}`, { replace: false });
-  }
 
   const responsive = {
     ' mobile': {
@@ -82,30 +57,9 @@ function RelatedProduct({ relatedImages }) {
     <MaxWidthWrapper>
       {/* related-container */}
       <div className=" related-container">
-        {/* <div className="productrelated-heading"></div> */}
-        {/* <div className="productrelated-container ">
-          <div className="productrelated-innercontainer">
-            {relatedImages?.map((v, i) => (
-              <div onClick={() => showProducts(v)} className="productrelated-colorcontainer">
-                <div className="productrelated-colorcontainer_img" style={{ backgroundImage: `url(${v?.color_image})` }} />
-                <div className="productrelated-name">{v?.color_name}</div>
-              </div>
-            ))}
-          </div>
-        </div> */}
-        <Heading className='sm:flex hidden'>
+         <Heading className='sm:flex hidden'>
           RELATED PRODUCTS
         </Heading>
-
-
-        {/* <div className="w-full xs:grid hidden md:grid-cols-3 grid-cols-2 gap-8 sm:pt-10 pt-4 px-4">
-          {relatedProductObj?.map((v, i) => (
-            <div key={i} onClick={() => showProducts(v)} className="flex flex-grow w-full flex-col gap-4">
-              <img src={v.image} alt="" />
-              <h3 className="xl:text-3xl md:text-2xl text-xl font-semibold font-albert">{v.name}</h3>
-            </div>
-          ))}
-        </div> */}
 
         {/* Desktop Carousel */}
         <div className="w-full sm:block hidden sm:pt-10 pt-4  px-2">
@@ -134,7 +88,6 @@ function RelatedProduct({ relatedImages }) {
                 <FaArrowLeft size={20} className="text-white" />
               </button>
             </span>
-            {/* mb-8  */}
             <span className="absolute top-0 bottom-0  mb-8  right-0 items-center flex justify-center">
               <button className="bg-[#D4262A] rounded-full  p-4 lg:-mr-5 -mr-3" onClick={handleNext2}>
                 <FaArrowRight size={20} className="text-white" />

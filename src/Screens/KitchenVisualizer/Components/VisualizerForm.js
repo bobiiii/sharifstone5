@@ -39,7 +39,7 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
   const { currentScreen, setCurrentScreen, currentAmbient, setCurrentAmbient } =
     data;
 
-    console.log(currentScreen, "from visualizer form")
+  console.log(currentScreen, "from visualizer form");
   const navigate = useNavigate();
 
   const responsive = {
@@ -72,35 +72,35 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
       console.log("i guess not today");
     }
   };
-  const LayoutJSX = (imageLayout = "Kitchen", layoutArray = kitchenLayout) =>
-    {
-      
-      return(layout === imageLayout &&
-    layoutArray.map((v, i) => (
-      <div
-        className="visualizerform-image"
-        onMouseOver={() => setHoverContainer(i)}
-        style={{ backgroundImage: v.image }}
-      >
-{/* <img src={"/images/layout/kitchen_1.png"}/> */}
+  const LayoutJSX = (imageLayout = "Kitchen", layoutArray = kitchenLayout) => {
+    return (
+      layout === imageLayout &&
+      layoutArray.map((v, i) => (
+        <div
+          className="visualizerform-image"
+          onMouseOver={() => setHoverContainer(i)}
+          style={{ backgroundImage: v.image }}
+        >
+          {/* <img src={"/images/layout/kitchen_1.png"}/> */}
 
-        {v?.value === "" ? (
-          <h3 style={{ color: "#fff" }}>Coming Soon</h3>
-        ) : (
-          <>
-            {i === hoverContainer && (
-              <div
-                onClick={() => selectLayout(layout, v)}
-                className="discover-collectionexpand"
-              >
-                <GoArrowUpRight size={35} color="white" />
-              </div>
-            )}
-          </>
-        )}
-      </div>
-    )))}
-
+          {v?.value === "" ? (
+            <h3 style={{ color: "#fff" }}>Coming Soon</h3>
+          ) : (
+            <>
+              {i === hoverContainer && (
+                <div
+                  onClick={() => selectLayout(layout, v)}
+                  className="discover-collectionexpand"
+                >
+                  <GoArrowUpRight size={35} color="white" />
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      ))
+    );
+  };
 
   const LayoutMobileJSX = (
     imageLayout = "Kitchen",
@@ -120,24 +120,19 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
           <div
             className="visualizerform-image"
             style={{ backgroundImage: v.image }}
+            onClick={() => {
+              i <= 1 && selectLayout(layout, v);
+            }}
           >
-            {i === 0 && (
-              <div
-                onClick={
-                  v?.value !== "" && layout === "Kitchen"
-                    ? () => setCurrentScreen("Pick Kitchen")
-                    : () => setCurrentScreen("Pick Bathroom")
-                }
-                className="discover-collectionexpand"
-              >
-                <GoArrowUpRight size={35} color="white" />
+            {!(i <= 1) && (
+              <div>
+                <h3 style={{ color: "#fff" }}>Coming Soon</h3>
               </div>
             )}
           </div>
         ))}
       </Carousel>
     );
-
 
   return (
     <div
@@ -148,7 +143,7 @@ const VisualizerForm = ({ data, kitchenLayout, bathroomLayout }) => {
         <img src={Logo} />
       </Link>
       <div className="visualizerform-heading">SELECT BATHROOM LAYOUT</div>
-      <img src=""/>
+      <img src="" />
       <div className="visualizerform-form">
         <div className="visualizerform-itembtn">
           <div
