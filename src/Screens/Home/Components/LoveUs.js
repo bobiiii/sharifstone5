@@ -12,7 +12,7 @@ const LoveUS = () => {
           <div className="lg:w-[120%]  lg:block hidden ">
             <img src={LoveUSCover} className="lg:h-full  lg:ml-[-18%] " />
           </div>
-          <div className="w-[100vw] overflow-hidden  lg:hidden  ">
+          <div className="w-[100vw] max-h-[40vh] overflow-hidden  lg:hidden  ">
             <div className="w-[500px] ml-[-15%]">
               <img src={LoveUSCover} className="h-full bg-[#f3f5f5]  " />
             </div>          </div>
