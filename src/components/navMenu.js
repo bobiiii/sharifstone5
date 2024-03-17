@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import "./navMenu.css";
 import { Link } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
-import { MdArrowDropDown } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
-import MaxWidthWrapper from "../Screens/MaxWidthWrapper";
 import QuartzDropdown from "./quatzDropdown";
 import useAuth from "../hooks/useAuth"
 
@@ -13,9 +10,9 @@ function NavMenu() {
   const {showDropdown, setShowDropdown} = useAuth()
 
   const [openMenu, setOpenMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [showNewText, setShowNewText] = useState(true);
-  const [showNewTextKitchenVisualizer, setShowNewTextKitchenVisualizer] = useState(true);
+  const [ setIsMobile] = useState(false);
+  const [showNewText] = useState(true);
+  const [showNewTextKitchenVisualizer] = useState(true);
 
   const nav = [
     {
@@ -74,7 +71,6 @@ function NavMenu() {
 
   useEffect(() => {
     if (window.outerWidth <= 768) {
-      console.log("TRUE IS WOR<ING");
       setIsMobile(true);
     }
 
@@ -175,7 +171,7 @@ function NavMenu() {
           {window.location.pathname.includes("/admin-dashboard") ? (
             <div className="nav-container">
               {dashboard.map((v, i) => (
-                <Link to={v.route} className="nav-item">
+                <Link to={v.route} className="nav-item" key={i}>
                   <div
                     className="active-dott"
                     style={{
@@ -191,6 +187,7 @@ function NavMenu() {
             <div className="nav-container ">
               {nav.map((v, i) => (
                 <Link
+                key={i}
                   to={v.route}
                   className="nav-item"
                   onMouseOver={
@@ -215,21 +212,7 @@ function NavMenu() {
                 </Link>
               ))}
 
-              {/* <Link
-              to={"https://4power.stoneprofitsweb.com/"}
-              target="_blank"
-              className="nav-item"
-            >
-              <div
-                className="active-dott"
-                style={{
-                  visibility: "hidden",
-                  backgroundColor: "red",
-                }}
-              />
-              {showNewText && <span className="new-text">NEW </span>}
-              {"Live Inventory"}
-            </Link> */}
+              
             </div>
           )}
         </div>
