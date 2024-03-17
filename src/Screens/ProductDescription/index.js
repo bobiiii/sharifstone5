@@ -1,32 +1,25 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import CoverComponent from "../../components/coverComponent";
 import "./productDescription.css";
-import ProductImage from "../../assets/images/product/gk07cepp0.png";
 import RelatedProduct from "./Components/RelatedProduct";
-import Context from "../../Store/contextStore";
 import { getCollectionByParam, getColorByParam } from "../../apiCall/apiCall";
 import { useParams } from "react-router-dom";
 import CoverImage from "../../assets/images/product_description.png";
-import Switch from "react-switch";
 import MaxWidthWrapper from "../../Screens/MaxWidthWrapper";
 import Heading from "../resuable/Heading";
 import Button from "../resuable/Button";
-
-
 
 function ProductDescription() {
   const [colorDetails, setColorDetails] = useState({});
   const [relatedColors, setRelatedColors] = useState([]);
   const [showColor, setShowColor] = useState(1)
-  const { store } = useContext(Context);
   const params = useParams();
 
   useEffect(() => {
-    console.log('PARA<S....', params);
     if (params?.color !== undefined) {
-      new Promise(async (resolve, reject) => {
+      // eslint-disable-next-line no-async-promise-executor
+      new Promise(async (resolve) => {
         const data = await getColorByParam(params?.color);
-        // console.log("data", data)
         resolve(data[0]);
       }).then(async (result) => {
         setColorDetails(result);
@@ -35,7 +28,6 @@ function ProductDescription() {
         );
         relatedColor = relatedColor.filter(value => value?.color_url !== colorDetails?.color_url)
         setRelatedColors(relatedColor.slice(0, 3));
-        // setShowColor(1);
       });
     }
 
@@ -43,10 +35,9 @@ function ProductDescription() {
 
 
   return (
-
-    <div>
+ <div>
       <CoverComponent
-        image={`url(${CoverImage})`}
+        image={`${CoverImage}`}
         label={["PRODUCT", "DESCRIPTION"]}
       />
       <MaxWidthWrapper>
@@ -67,10 +58,6 @@ function ProductDescription() {
             </div>
 
             <div className=" flex pt-6 items-center  justify-center gap-4 ">
-              {/* <span className="font-bold text-sm" >Space</span>
-              <Switch className="px-2" onHandleColor={"#fff"} offColor={"#D6D6D6"} onColor={"#EE2A2E"} checkedIcon={false} uncheckedIcon={true} onChange={() => setShowColor(!showColor)} checked={!showColor} />
-              <span style={{ fontWeight: !showColor ? 600 : 400 }} className="
-              text-sm">Color</span> */}
               <Button className={`${showColor === 1 ? "bg-[#221F1F]" : ""}  sm:text-base text-[12px]   whitespace-nowrap`} clickFunc={() => { setShowColor(1) }} >
                 Full Slab
               </Button>
@@ -112,17 +99,7 @@ function ProductDescription() {
                 </span>
               </div>
             </div>
-
-
-
-
-            {/* <div className="font-bold lg:basis-0  sm:text-2xl text-sm sm:py-4 py-2">Thicknesses</div>
-            <span className="sm:text-lg text-sm lg:py-4">
-              {colorDetails?.thicknesses}
-            </span> */}
-
-
-          </div>
+ </div>
         </div>
       </MaxWidthWrapper>
       <RelatedProduct relatedImages={relatedColors} />

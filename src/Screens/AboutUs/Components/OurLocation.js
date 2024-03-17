@@ -9,75 +9,54 @@ import Heading from "../../resuable/Heading";
 function OurLocation() {
   return (
     <MaxWidthWrapper>
-      {/* reorganize_container  */}
       <div className="w-full flex justify-center items-center">
         <div className="ourmission-container">
-          {/* <div className="ourmission-heading"></div> */}
           <Heading className='sm:text-start text-center'>
             OUR LOCATIONS
           </Heading>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
-          {/* ourmission-subcontainer */}
-          <div className="w-full flex justify-between lg:flex-row flex-col lg:gap-10 gap-6 items-center mt-4">
-            <div className="flex flex-grow flex-col gap-6  w-full">
+          <div className="w-full flex justify-between lg:flex-row flex-col lg:gap-10 gap-6  mt-4 ">
+
+            <div className="w-full">
               <div>
                 <img className="rounded-3xl w-full" src={OrlandoMap} />
               </div>
-              <div>
+              <div className="pt-2">
                 <Heading className='lg:text-4xl  sm:text-3xl  text-xl'>
                   ORlANDO
                 </Heading>
                 <p className="sm:text-base text-sm font-light font-albert">
-                  2440 Dinneed Ave. Orlando, FL 32804
-                </p>
+                  2440 Dinneed Ave. Orlando, FL 32804</p>
               </div>
 
             </div>
-            <div className="flex flex-grow flex-col gap-6  w-full">
+            <div className="w-full">
               <div>
                 <img className="rounded-3xl w-full" src={TampaMap} />
               </div>
-              <div>
+              <div className="pt-2">
                 <Heading className='lg:text-4xl  sm:text-3xl  text-xl'>
-                  Tempa
+                  TAMPA
                 </Heading>
                 <p className="sm:text-base text-sm font-light font-albert">
-                  2440 Dinneed Ave. Orlando, FL 32804
-                </p>
+                  Dinneen* in Orlando Address.
+                  Here is Full TAMPA Address
+                  8524 E. Adamo Dr. Tampa, FL 33619</p>
               </div>
 
             </div>
-            <div className="flex flex-grow flex-col gap-6  w-full">
+            <div className="w-full">
               <div>
                 <img className="rounded-3xl w-full" src={ComingSoon} />
               </div>
-              <div>
+              <div className="pt-2">
                 <Heading className='lg:text-4xl  sm:text-3xl  text-xl'>
                   Coming soon
                 </Heading>
+
               </div>
+
             </div>
-
-
-
-
-            {/* <div className="ourmission-innercontainer">
-              <img className="ourmission-image" src={OrlandoMap} />
-              <div className="location-name">ORLANDO</div>
-              <div className="location-desc">2440 Dinneed Ave. Orlando, FL 32804</div>
-            </div>
-
-            <div className="ourmission-innercontainer">
-              <img className="ourmission-image" src={TampaMap} />
-              <div className="location-name">TAMPA</div>
-              <div>8524 E. Adamo Dr. Tampa, FL 33619</div>
-            </div>
-
-            <div className="ourmission-innercontainer">
-              <img className="ourmission-image" src={ComingSoon} />
-              <div className="location-name">Coming Soon</div>
-
-            </div> */}
           </div>
         </div>
       </div>

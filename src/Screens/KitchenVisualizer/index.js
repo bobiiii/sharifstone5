@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import "./KitchenVisualizer.css";
 import Logo from "../../assets/images/logo_footer.png";
 import VisualizerForm from "./Components/VisualizerForm";
 import ChooseColor from "./Components/ChooseColor";
 import { Link, useParams } from "react-router-dom";
-import Button from "../resuable/Button";
 
 const KitchenVisualizer = () => {
   const [currentScreen, setCurrentScreen] = useState("start");
@@ -295,7 +294,6 @@ const KitchenVisualizer = () => {
         "url(images/color_collections/bathroom_visualizer/victorian_silver.png)",
     },
   ];
-  const image = window.location.origin + "/images/color_3.png";
   const kitchenLayout = [
     {
       image: "url(images/layout/kitchen_1.png)",
@@ -421,7 +419,6 @@ const KitchenVisualizer = () => {
   return (
     <>
       {currentScreen === "start" && (
-
         <div
           className="kitchen-visualizer-container min-h-screen  flex md:justify-between justify-start"
           style={{ backgroundImage: "url(images/cover/Visualizer_img.png)" }}
@@ -436,41 +433,36 @@ const KitchenVisualizer = () => {
             </div>
           </div>
           <main className=" max-w-screen-2xl  mx-auto md:px-6 flex flex-grow justify-center items-center px-2 lg:mt-2">
-            <div className=" kitchen-visualizer-startform   w-full  flex justify-between md:gap-16 lg:gap-4 lg:w-[70vw] xl:w-[70vw] lg:h-max    md:text-start text-center px-2 lg:px-8 mt-8  pt-6 " >
+            <div className=" kitchen-visualizer-startform   w-full  flex justify-between md:gap-16 lg:gap-4 lg:w-[70vw] xl:w-[70vw] lg:h-max    md:text-start text-center px-2 lg:px-8 mt-8  pt-6 ">
               <div className="overflow-hidden kitchen-visualizer-section px-2  md:py-6 py-4  flex justify-center md:items-start items-center w-full flex-col text-white gap-1 md:text-start text-center ">
-                <span className="lg:text-4xl text-2xl">SHARIFSTONE ONLINE VISUALIZER</span>
+                <span className="lg:text-4xl text-2xl">
+                  SHARIFSTONE ONLINE VISUALIZER
+                </span>
                 <div>
                   Our Kitchen and Bathroom Visualizer allows you to explore
                   different colors, materials, and design options, helping you
                   envision the perfect look for your space. With just a few
                   clicks, you can select from a wide range of cabinets,
                   countertops, and backsplashes. Experiment with various color
-                  schemes, textures, and finishes to create a personalized kitchen
-                  that reflects your style and taste.
+                  schemes, textures, and finishes to create a personalized
+                  kitchen that reflects your style and taste.
                 </div>
               </div>
-              {/* kitchen-visualizer-section */}
-{/*              
-              <Button clickFunc={()=>{setCurrentScreen("Visualizer Form")}}>
-                start old 
-               </Button> */}
-              <div className="md:w-[30%] mb-8 w-[80%] mt-3 flex justify-center items-center text-white md:mt-0 ">
-               
-               
-              <Link to={"/kitchen-visualizer/select-category"} clickFunc={()=>{setCurrentScreen("Visualizer Form")}}>
-                <div className="kitchen-visualizer-startbtn px-14 "
-                >
-                  Start 
-                </div>
-                  </Link>
+
+              <div
+                className="md:w-[30%] mb-8 w-[80%] mt-3 flex justify-center items-center text-white md:mt-0 "
+                onClick={() => {
+                  setCurrentScreen("Visualizer Form");
+                }}
+              >
+                <div className="kitchen-visualizer-startbtn px-14 ">Start</div>
               </div>
             </div>
           </main>
         </div>
-
       )}
 
-       {currentScreen === "Visualizer Form" && (
+      {currentScreen === "Visualizer Form" && (
         <VisualizerForm
           setCurrentScreen={setCurrentScreen}
           kitchenLayout={kitchenLayout}

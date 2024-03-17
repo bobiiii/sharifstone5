@@ -3,20 +3,17 @@ import './coverComponent.css';
 import useAuth from "../hooks/useAuth"
 
 const CoverComponent = ({ image, label }) => {
-  const {showDropdown, setShowDropdown} = useAuth()
+  const {setShowDropdown} = useAuth()
 
 
   
   useEffect(() => {
     const zoomImages = document.querySelectorAll('.zoomedImage');
-    
-  
     zoomImages.forEach(image => {
       image.classList.remove('zoomed');
     });
   
     setTimeout(() => {
-      
       zoomImages.forEach(image => {
         image.classList.add('zoomed');
       });
@@ -29,7 +26,6 @@ const CoverComponent = ({ image, label }) => {
     };
   }, []);
 
-  console.log(image)
   
 
   return (
@@ -44,15 +40,6 @@ const CoverComponent = ({ image, label }) => {
     </div>
   </div>
 </div>
-
-    
-    // <div className='coverComponent overflow-hidden'>
-    //   <div className='w-full h-full grid place-items-center bg-no-repeat bg-center bg-cover zoomedImage' style={{ backgroundImage: image }}>
-        
-        
-    //     {label[0]}<br />{label[1]}
-    //   </div>
-    // </div>
   );
 };
 

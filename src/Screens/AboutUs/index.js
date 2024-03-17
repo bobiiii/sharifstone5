@@ -1,7 +1,6 @@
 import React from 'react'
 import CoverComponent from '../../components/coverComponent'
 import OurMission from './Components/OurMission'
-import ReorganizeIndustry from './Components/ReorganizeIndustry'
 import OurLocation from './Components/OurLocation'
 import BusinessHours from './Components/BusinessHours'
 import CustomerReview from "../../components/CustomerReviews";

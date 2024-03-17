@@ -5,10 +5,9 @@ import ReorganizeIndustry from './Components/ReorganizeIndustry'
 import NoWarrantyCover from './Components/NoWarrantyCover copy'
 import MaintainanceCare from './Components/MaintainanceCare.js'
 import WarrantyImage from '../../assets/images/warranty.jpg'
-import WarrantyCover from './Components/NoWarrantyCover copy'
-
 import './WarrantyAndSupport.css'
 import MaxWidthWrapper from '../MaxWidthWrapper.jsx'
+
 function WarrantyAndSupport() {
   return (
     <div>
@@ -17,7 +16,6 @@ function WarrantyAndSupport() {
       <OurMission />
       <NoWarrantyCover />
       <MaxWidthWrapper className=' md:mt-0 mt-0' >
-        {/* warranty-n-support-image */}
         <div className=''>
           <img src={WarrantyImage} className='rounded-[30px]' />
         </div>
