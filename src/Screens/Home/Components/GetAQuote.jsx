@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./GetAQuote.css";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";

@@ -10,7 +10,7 @@ function NavMenu() {
   const {showDropdown, setShowDropdown} = useAuth()
 
   const [openMenu, setOpenMenu] = useState(false);
-  const [ setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [showNewText] = useState(true);
   const [showNewTextKitchenVisualizer] = useState(true);
 
@@ -70,7 +70,9 @@ function NavMenu() {
   ];
 
   useEffect(() => {
-    if (window.outerWidth <= 768) {
+    if (window.outerWidth <= 768 && isMobile === false) {
+      
+      
       setIsMobile(true);
     }
 

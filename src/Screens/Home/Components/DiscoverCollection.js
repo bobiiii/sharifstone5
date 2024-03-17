@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./DiscoverCollection.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";

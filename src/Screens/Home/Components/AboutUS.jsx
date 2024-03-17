@@ -1,4 +1,3 @@
-import React from "react";
 import "./AboutUS.css";
 import VisualizeSpace from "../../../assets/images/homeImage/visualize_space1.gif";
 import ViewColor from "../../../assets/images/homeImage/catalog.gif";
@@ -9,23 +8,24 @@ import MaxWidthWrapper from "../../MaxWidthWrapper";
 import 'animate.css';
 import Heading from "../../resuable/Heading";
 import Button from "../../resuable/Button";
+import Lottie from "lottie-react";
 
 function AboutUS({ data }) {
 
   const aboutIdeas = [
     {
       name: "VISUALIZE YOUR SPACE",
-      image: VisualizeSpace,
+      image:'../eye.json',
       href: "/kitchen-visualizer",
     },
     {
       name: "VIEW COLORS CATALOG",
-      image: ViewColor,
+      image:'../eye.json',
       href: "/quartz-collection",
     },
     {
       name: "WHERE TO BUY",
-      image: WhereToBuy,
+      image:'../eye.json',
       href: "/where-to-buy",
     },
   ];
@@ -82,16 +82,24 @@ function AboutUS({ data }) {
           </div>
 
           <div className=" w-full  md:hidden flex flex-wrap py-4    items-center justify-center">
-            {aboutIdeas.map((v, i) => (
+            {aboutIdeas.map((v, i) => (  
+              
+              
               <div key={i} className="  flex w-[45%]  justify-center items-center text-center   mx-auto ">
                 <Link
 
                   to={v.href}
-                  className=" flex flex-col justify-center items-center border   border-red-500 w-full mt-4   py-6 px-2   rounded-lg"
+                  className="h-44 flex flex-col justify-center items-center border   border-red-500 w-full mt-4   py-6 px-2   rounded-lg"
                   style={{ textDecoration: "none" }}
                 >
-                  <img src={v.image} className="w-24  lg:w-12  " />
-                  <div className="mt-4 text-center ">
+                  {
+  i === 0 ? <Lottie animationData={require("../eye.json")}  className="h-5/6 "/> :
+  i === 1 ? <Lottie animationData={require("../color.json")}  className="h-5/6 "/> :
+  i === 2 ? <Lottie animationData={require("../buy.json")} className="h-5/6 "/>:
+  null
+}
+                    
+                   <div className="mt-4 text-center ">
                     <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black   lg:mt-4">
                       {v.name}
                     </h5>
@@ -104,15 +112,22 @@ function AboutUS({ data }) {
           <div className="flex justify-center w-full items-center">
             <div className=" w-full px-10 hidden justify-center items-center max-w-screen-lg md:flex gap-8 py-4 my-6  ">
               {aboutIdeas.map((v, i) => (
-                <div key={i} className="  flex lg:w-[25%] w-[32%]  justify-center items-center     ">
+                <div key={i} className="  flex lg:w-[25%] w-[32%] h-full  justify-center items-center     ">
                   <Link
                     to={v.href}
-                    className=" flex flex-col justify-center items-center  w-full mt-4   py-6 px-2   rounded-lg border   border-red-500 shadow-2xl"
+                    className=" flex flex-col justify-center items-center  w-full mt-4    px-2   rounded-lg  shadow-2xl"
                     style={{ textDecoration: "none" }}
                   >
-                    <img src={v.image} className="w-24   " />
-                    <div className="mt-2 text-center">
-                      <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black   lg:mt-4">
+                  {
+  i === 0 ? <Lottie animationData={require("../eye.json")}  className=" "/> :
+  i === 1 ? <Lottie animationData={require("../color.json")} /> :
+  i === 2 ? <Lottie animationData={require("../buy.json")} />:
+  null
+}
+                  
+                  
+                     <div className="text-center">
+                      <h5 className="sm:text-base text-[12px] whitespace-nowrap font-semibold text-black   lg:mb-2">
                         {v.name}
                       </h5>
                     </div>

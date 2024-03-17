@@ -1,4 +1,3 @@
-import React from "react";
 import './MaintainanceCare.css'
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";

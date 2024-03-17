@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./home.css";
 import home_video from "../../assets/videos/home_video.mp4"
 import home_video2 from "../../assets/videos/home_video2.mp4"

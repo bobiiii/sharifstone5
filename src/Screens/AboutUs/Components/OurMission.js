@@ -1,4 +1,3 @@
-import React from "react";
 import "./OurMission.css";
 import OurMissionImage from "../../../assets/images/ourmission.jpg";
 import MaxWidthWrapper from '../../MaxWidthWrapper'

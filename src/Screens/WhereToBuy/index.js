@@ -1,14 +1,8 @@
-/* eslint-disable react/no-unknown-property */
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import "./wheretobuy.css";
 import { IoLocationSharp } from "react-icons/io5";
 import GoogleMapReact from "google-map-react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
-import GooglePlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng,
-} from "react-google-places-autocomplete";
 
 const WhereToBuy = () => {
   const [mapState, setMapState] = useState({

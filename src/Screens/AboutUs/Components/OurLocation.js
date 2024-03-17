@@ -1,4 +1,3 @@
-import React from "react";
 import "./OurLocation.css";
 import OrlandoMap from '../../../assets/images/orlando_map.png'
 import TampaMap from '../../../assets/images/orlando_map2.png'

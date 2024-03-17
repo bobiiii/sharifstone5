@@ -1,6 +1,4 @@
-import React from "react";
 import CoverComponent from "../../components/coverComponent";
-import ContactDetails from "./Components/ContactDetails";
 import ContactForm from "./Components/ContactForm";
 import FAQ from "./Components/FAQ";
 import "./Contact.css";

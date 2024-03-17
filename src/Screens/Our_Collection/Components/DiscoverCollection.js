@@ -10,7 +10,7 @@ import MaxWidthWrapper from "../../MaxWidthWrapper";
 const DiscoverCollection = () => {
   
   const [collection] = useState("none");
-  const [ setOnMouseOver] = useState("");
+  const [, setOnMouseOver] = useState("");
   const [innerCollection, setInnerCollection] = useState([]);
   const [flag, setFlag] = useState(true);
   const { apiStore } = useContext(APIContext);

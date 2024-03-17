@@ -1,4 +1,3 @@
-import React from "react";
 import "./NoWarrantyCover.css";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";

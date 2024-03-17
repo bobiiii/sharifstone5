@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import  {useState} from "react";
 import "./Gallery.css";
 import Bathroom from '../../../assets/images/homeImage/bathroom.png'
 import Kitchen from '../../../assets/images/homeImage/kitchen.png'

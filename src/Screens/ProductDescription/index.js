@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import CoverComponent from "../../components/coverComponent";
 import "./productDescription.css";
 import RelatedProduct from "./Components/RelatedProduct";
@@ -45,7 +45,7 @@ function ProductDescription() {
 
           <div className="w-full ">
             <div className="w-full  bg-cover bg-no-repeat  rounded-3xl">
-              {/* {showColor === 1 ? <img src={colorDetails?.display_image} alt={"product-im"} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" />  : <img src={colorDetails?.color_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />} */}
+              
 
               {showColor === 1 ? (
                 <img src={colorDetails?.display_image} alt={"product-im"} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" />

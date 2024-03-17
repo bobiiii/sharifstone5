@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./ContactForm.css";
 import ContactFormBG from "../../../assets/images/contactform_bg.png";
 import Upload from "../../../assets/images/upload.png";
@@ -51,7 +51,6 @@ function ContactForm() {
             />
           </div>
           {/* contactform-uploads */}
-          {/* md:w-[80%] items-start  text-left flex justify-start w-full z-50 */}
           <div className="  md:w-[80%] w-full  mt-2 flex justify-start items-start z-50 xs:px-6 px-3  ">
             <Dropzone onDrop={(acceptedFiles) => setUpload(acceptedFiles)}>
               {({ getRootProps, getInputProps }) => (
@@ -70,10 +69,10 @@ function ContactForm() {
               Yes, sign me up to receive email communications from Sharifstone about products, news, and events. I understand I can
               unsubscribe at any time
 
-              <p className="text-[12px] mt-4 font-light font-albert">
+              <span className="text-[12px] mt-4 font-light font-albert">
                 By providing your details and clicking Submit, you acknowledge and
                 agree to our website <span className="text-[12px] font-bold font-albert ">Privacy Policy</span> and <span className="text-[12px] font-bold font-albert ">Terms of Use</span>.
-              </p>
+              </span>
             </p>
           </div>
           {/* <div className="submit-btn"></div> */}

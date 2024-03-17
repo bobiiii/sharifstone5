@@ -1,4 +1,3 @@
-import React from "react";
 import "./OurMission.css";
 import WarrantyImage from "../../../assets/images/warranty1.png";
 import ws from './images/ws.png'

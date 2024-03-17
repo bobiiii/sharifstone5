@@ -1,4 +1,3 @@
-import React from "react";
 import "./BusinessHours.css";
 import Reception from "../../../assets/images/reception.png";
 import { TbClockHour5 } from "react-icons/tb";
@@ -48,7 +47,7 @@ function BusinessHours() {
             {/* ourmission-innercontainer */}
             <div className="lg:w-1/2 w-full">
               {hours.map((v, i) => (
-                <div className="businesshour-row">
+                <div className="businesshour-row" key={i}>
                   <div className="business-time">
                     <TbClockHour5 size={30} className="sm:text-[#EE2A2E] text-[#000000]" />
                     <div>{v.day}</div>

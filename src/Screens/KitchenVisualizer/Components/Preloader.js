@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 
 const Preloader = ({ imageUrls }) => {
   const [imagesLoaded, setImagesLoaded] = useState(false);

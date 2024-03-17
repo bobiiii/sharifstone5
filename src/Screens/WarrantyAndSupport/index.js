@@ -1,4 +1,3 @@
-import React from 'react'
 import CoverComponent from '../../components/coverComponent'
 import OurMission from './Components/OurMission'
 import ReorganizeIndustry from './Components/ReorganizeIndustry'

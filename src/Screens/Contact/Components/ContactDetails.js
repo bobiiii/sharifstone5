@@ -1,4 +1,3 @@
-import React from 'react'
 import './ContactDetails.css'
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
