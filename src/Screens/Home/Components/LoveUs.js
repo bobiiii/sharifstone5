@@ -7,15 +7,16 @@ import "./loveus.css";
 const LoveUS = () => {
   return (
     <MaxWidthWrapper >
-      <div className="w-full  lg:overflow-hidden   flex flex-col-reverse lg:flex-row justify-center items-center ">
+      <div className="w-full  lg:overflow-hidden lg:gap-6 gap-4   flex flex-col-reverse lg:flex-row justify-center items-center ">
         <div className="lg:w-1/2   lg:mt-0  mt-8 overflow-hidden  ">
-          <div className="lg:w-[120%]  lg:block hidden ">
-            <img src={LoveUSCover} className="lg:h-full  lg:ml-[-18%] " />
+          <div className="lg:w-full h-full  lg:block hidden ">
+            <img src={LoveUSCover} className="lg:h-full   bg-[#f3f5f5]" />
           </div>
           <div className="w-[100vw] max-h-[70vh] overflow-hidden  lg:hidden  ">
             <div className="w-[500px] ml-[-15%]">
-              <img src={LoveUSCover} className="h-full max-h-[70vh] bg-[#f3f5f5]  " />
-            </div>          </div>
+              <img src={LoveUSCover} className="h-full max-h-[40vh] bg-[#f3f5f5]  " />
+            </div>
+          </div>
         </div>
         <div className=" xl:w-1/2 md:w-[60%] w-full flex justify-center items-center flex-col ">
           <div className=" w-full  h-full lg:mb-6 mb-3 ">
