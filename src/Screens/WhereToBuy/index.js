@@ -4,10 +4,8 @@ import { IoLocationSharp } from "react-icons/io5";
 import GoogleMapReact from "google-map-react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import Heading from "../resuable/Heading";
-import GooglePlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng,
-} from "react-google-places-autocomplete";
+import where from "./images/where.png";
+
 
 const WhereToBuy = () => {
   const [mapState, setMapState] = useState({
@@ -26,7 +24,6 @@ const WhereToBuy = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-      // eslint-disable-next-line no-console
       console.log("Geolocation is not supported by this browser.");
     }
   };
@@ -64,10 +61,9 @@ const WhereToBuy = () => {
         title: point.title,
       });
 
-      // Add click event listener to the marker
       marker.addListener("click", () => {
-        map.setZoom(8); // Adjust the zoom level as desired
-        map.setCenter(marker.getPosition()); // Center the map on the clicked marker
+        map.setZoom(8);
+        map.setCenter(marker.getPosition());
       });
     });
   };
@@ -84,56 +80,52 @@ const WhereToBuy = () => {
   };
 
   return (
-    <MaxWidthWrapper>
-      {/* where-container */}
+    <MaxWidthWrapper className='md:mt-10 mt-8'>
       <div className="flex lg:flex-row flex-col gap-3 w-full ">
-        <div className="lg:w-1/2 w-full flex flex-col items-center">
+        <div className="lg:w-1/2 w-full h-full flex flex-col items-center">
           <div
-            style={{ backgroundImage: "url(/images/cover/wheretobuy.png)" }}
-            // where-innercontainer  "
-            className="w-full h-[300px] rounded-[20px] text-white font-semibold bg-center object-fill bg-no-repeat  flex justify-center items-center font-serif"
+            className="w-full  h-[310px] rounded-[10px] bg-cover bg-center     bg-no-repeat  flex justify-center items-center  font-serif"
+            style={{ backgroundImage: `url(${where})` }}
           >
             <div className="flex flex-col gap-2">
-              <Heading className='text-white'>
+              <Heading className='sm:text-3xl text-3xl text-white font-semibold' >
                 WHERE
               </Heading>
-              <Heading className='text-white'>
+              <Heading className=' sm:text-3xl text-3xl text-white font-semibold'>
                 TO BUY
               </Heading>
             </div>
           </div>
-          {/* where-container-new */}
           <div className="flex flex-row-reverse">
-            <div className="where-seperator"></div>
-            <div className="where-seperator2">
-              {/* <div className="where-heading"></div> */}
-              <Heading>
+            <div className=" lg:w-[85%] w-full lg:items-center items-start  flex lg:justify-center justify-start text-start flex-col my-10 mx-auto">
+              <Heading className='text-start w-full'>
                 Select Branch
               </Heading>
               <select
-              // where-search-field
-                className="w-full rounded-[30px] my-4 py-4 border-2 px-4"
+                className="w-full rounded-[30px] my-4 py-4 h-14 border-2 px-2"
                 onChange={handleLocationChange}
                 components={{
                   dropdownindicator: () => null,
                   indicatorseparator: () => null,
                 }}
               >
-                <option className="text" value="">
+                <option className="text" value="" >
                   Select Location
                 </option>
                 {points.map((point) => (
-                  <option className="text" key={point.id} value={point.title}>
+                  <option className="text-base" key={point.id} value={point.title}>
                     {point.title}
                   </option>
                 ))}
               </select>
-              <div className="current-location " onClick={getLocation}>
-                <IoLocationSharp color="#EE2A2" size={20} className="" />
-                Use my current location
+              <div className="w-full flex items-center  justify-start gap-1  cursor-pointer  " onClick={getLocation}>
+                <IoLocationSharp color="#EE2A2" size={20} className="text-[#EE2A2E]" />
+                <p className="font-semibold text-[13px]  text-[#EE2A2E]">
+                  Use my current location
+                </p>
               </div>
               {/* current-desc */}
-              <div className="sm:text-lg text-sm font-medium font-albert mt-2" >
+              <div className="sm:text-base text-sm font-medium font-albert mt-2" >
                 Explore our extensive collection of top-quality stones in person!
                 Enter your location now to uncover the nearest Sharifstone
                 warehouse, where our top-quality stones await your personal
@@ -142,11 +134,11 @@ const WhereToBuy = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/2 w-full flex flex-col items-center  mt-4">
+        <div className="lg:w-1/2 w-full flex flex-col items-center  md:mt-4 mt-2">
           {mapState.center.lat !== undefined && (
             <div
-              className="map-div "
-              style={{ height: "600px", width: "97%", borderRadius: 20 }}
+              className="map-div sm:h-[600px] h-[400px] "
+              style={{ width: "100%" }}
             >
               <GoogleMapReact
                 bootstrapURLKeys={{
@@ -155,44 +147,10 @@ const WhereToBuy = () => {
                 defaultCenter={defaultCenter}
                 center={mapState.center}
                 zoom={mapState.zoom}
-                yesIWantToUseGoogleMapApiInternals // Add this line if you're using GoogleMapReact v2.1+
+                yesIWantToUseGoogleMapApiInternals
                 onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
               />
-              {/* <GoogleMapReact
-              bootstrapURLKeys={{
-                key: "AIzaSyBMGnG8DmtiCc7yCgwTyS35iRyLV89qrtY",
-              }}
-              defaultCenter={defaultCenter}
-              defaultZoom={1}
-              center={center}
-              onGoogleApiLoaded={() => {
-                return (
-                  <>
-                    <Marker
-                      lat={28.57636777558448}
-                      lng={-81.41119743863068}
-                      text="Marker 1"
-                    />
-                    <Marker
-                      lat={27.951137735514855}
-                      lng={-82.36121631928435}
-                      text="Marker 2"
-                    />
-                  </>
-                );
-              }}
-            >
-              <Marker
-                lat={28.57636777558448}
-                lng={-81.41119743863068}
-                text="Marker 1"
-              />
-              <Marker
-                lat={27.951137735514855}
-                lng={-82.36121631928435}
-                text="Marker 2"
-              />
-            </GoogleMapReact> */}
+
             </div>
           )}
         </div>

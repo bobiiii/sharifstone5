@@ -14,7 +14,7 @@ const SubscriptionNewsLetter = () => {
   }
   return (
     <MaxWidthWrapper className='px-0'>
-      <div className="home-subscribe">
+      <div className="w-full">
         <div className="bg-[#F3F5F5] flex justify-center items-center flex-col sm:gap-8 gap-4 lg:py-16 sm:py-10 py-6 relative px-2 ">
           <Heading className=' lg:w-2/3 md:w-[70%] w-full text-center px-1 lg:text-3xl sm:text-3xl text-base'>
             SUBSCRIBE TO OUR NEWSLETTER TO GET UPDATES ON NEW PROMOTIONS AND

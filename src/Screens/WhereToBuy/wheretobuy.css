@@ -60,14 +60,12 @@
     width: 50%;
 }
 
-.where-seperator{
-    width: 15%;
-}
-.where-seperator2 {
+
+/* .where-seperator2 {
     margin: 40px 0px;
-}
+} */
 .map-div div {
-    border-radius: 25px;
+    border-radius: 10px;
 }
 .map-div {
     margin-top: -20px !important; 
