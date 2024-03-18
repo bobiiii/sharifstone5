@@ -1,6 +1,6 @@
 
 .coverComponent .zoomedImage {
-    transition: transform 8s linear;
+    transition: transform 12s linear;
   }
 
   .zoomed {
