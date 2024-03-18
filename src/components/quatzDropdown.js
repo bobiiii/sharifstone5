@@ -53,7 +53,7 @@ const QuartzDropdown = () => {
 
 
   return (
-    <div className="lg:block hidden z-50 bg-white rounded-2xl left-1/2 transform -translate-x-1/2   absolute top-10  mx-auto mt-10">
+    <div className="xl:block hidden z-50 bg-white rounded-2xl left-1/2 transform -translate-x-1/2   absolute top-10  mx-auto mt-10">
 
       <div className="">
         <div className=" w-full  px-4 flex justify-center z-20 ">
@@ -71,7 +71,7 @@ const QuartzDropdown = () => {
 
 
 
-                <div className=" relative h-[200px] w-[230px] px-2  ">
+                <div className=" relative  h-[200px] w-[230px] px-2  ">
                   {hover === v.title
                     ?
 

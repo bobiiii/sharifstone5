@@ -85,7 +85,7 @@ function NavMenu() {
 
   return (
     <>
-      <div onClick={() => setOpenMenu(true)} className=" bg-black w-12 h-12 rounded-full flex justify-center items-center lg:hidden ">
+      <div onClick={() => setOpenMenu(true)} className=" bg-black w-12 h-12 rounded-full flex justify-center items-center xl:hidden ">
         <RiMenu3Fill size={30} color={"white"} />
       </div>
 
@@ -169,7 +169,7 @@ function NavMenu() {
         </div>
       )}
       {/* desktop-navbar */}
-        <div className="relatiive  py-2 lg:flex items-center justify-between hidden ">
+        <div className="relatiive  py-2 xl:flex items-center justify-between hidden ">
           {window.location.pathname.includes("/admin-dashboard") ? (
             <div className="nav-container">
               {dashboard.map((v, i) => (
