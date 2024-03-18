@@ -421,7 +421,7 @@ const KitchenVisualizer = () => {
     <>
       {currentScreen === "start" && (
         <div
-          className="kitchen-visualizer-container"
+          className="kitchen-visualizer-container overflow-scroll"
           style={{ backgroundImage: "url(images/cover/Visualizer_img.png)" }}
         >
           <div className="kitchen-visualizer-logo">
