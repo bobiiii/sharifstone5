@@ -9,7 +9,6 @@ function AboutUs() {
     
     <div>
       <CoverComponent image={'images/cover/about_us.png'} label={['ABOUT', 'SHARIFSTONE']}/>
-      {/* <ReorganizeIndustry />  */}
       <OurMission />
       <OurLocation /> 
       <BusinessHours />

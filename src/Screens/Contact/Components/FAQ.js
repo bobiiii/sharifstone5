@@ -81,7 +81,7 @@ function FAQ() {
                     </div>
                   </div>
                   {/* faq-answer */}
-                  {faq === i && <div className=" sm:text-lg text-sm mt-4 text-[#221F1F] font-light font-albert">{v.message}dd</div>}
+                  {faq === i && <div className=" sm:text-lg text-sm mt-4 text-[#221F1F] font-light font-albert">{v.message}</div>}
                 </div>
               );
             })}

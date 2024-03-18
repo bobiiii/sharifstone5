@@ -19,7 +19,6 @@ function ContactScreen() {
         </div>
       </div>
       <ContactForm />
-      {/* <ContactDetails /> */}
       <FAQ />
     </div>
   );
