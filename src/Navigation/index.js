@@ -16,6 +16,7 @@ import ViewCollection from "../Screens/ViewCollection/ViewCollection";
 import CreateVisualizer from "../Screens/CreateVisualizer/createVisualizer";
 import ViewVisualizer from "../Screens/ViewVisualizer/viewVisualizer";
 import WhereToBuy from "../Screens/WhereToBuy";
+import BlogScreen from "../Screens/Blog";
 
 createBrowserRouter([
   {
@@ -94,6 +95,14 @@ const router = createBrowserRouter(
         element: (
           <Layout>
             <ContactScreen />
+          </Layout>
+        ),
+      },
+      {
+        path: "/blog",
+        element: (
+          <Layout>
+            <BlogScreen />
           </Layout>
         ),
       },

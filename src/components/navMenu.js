@@ -41,7 +41,7 @@ function NavMenu() {
     },
     {
       name: "Blog",
-      route: "/about",
+      route: "/blog",
     },
 
     {
@@ -148,7 +148,7 @@ function NavMenu() {
               Contact Us
             </Link>
             <Link
-              to={"/about"}
+              to={"/blog"}
               onClick={() => setOpenMenu(false)}
               className=""
             >
