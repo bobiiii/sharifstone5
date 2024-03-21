@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import './coverComponent.css';
 import useAuth from "../hooks/useAuth"
 
-const CoverComponent = ({ imageMobile,imageDesktop,  label }) => {
+const CoverComponent = ({ imageMobile, imageDesktop, label }) => {
   const { setShowDropdown } = useAuth()
 
 
@@ -30,8 +30,8 @@ const CoverComponent = ({ imageMobile,imageDesktop,  label }) => {
 
   return (
     <div className='coverComponent overflow-hidden ' onMouseOver={() => { setShowDropdown(false) }}>
-      <div className='w-full brg  2xl:h-[80vh]  h-[530px] grid place-items-center ' >
-        <div className='brg relative border-4  h-full w-screen'>
+      <div className='w-full   2xl:h-[80vh]  h-[530px] grid place-items-center ' >
+        <div className=' relative  h-full w-screen'>
           <img src={`${imageMobile}`} alt='cover' className='lg:hidden bg-no-repeat bg-center bg-cover  h-full w-full  zoomedImage' />
           <img src={`${imageDesktop}`} alt='cover' className='hidden lg:block bg-no-repeat bg-center bg-cover  h-full w-full  zoomedImage' />
 
