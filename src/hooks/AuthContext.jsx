@@ -4,12 +4,17 @@ export const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [KitchenData, setKitchenData] = useState([]);
+  const [bathroomData, setBathroomData] = useState([]);
+
+
+  
 
     return(
 
         <AuthContext.Provider
         value={{
-          showDropdown, setShowDropdown
+          showDropdown, setShowDropdown, KitchenData, setKitchenData, bathroomData, setBathroomData
         }}
       >
         {children}

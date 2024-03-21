@@ -4,12 +4,14 @@ import Logo from "../../assets/images/logo_footer.png";
 import VisualizerForm from "./Components/VisualizerForm";
 import ChooseColor from "./Components/ChooseColor";
 import { Link, useParams } from "react-router-dom";
+import Button from "../resuable/Button";
 
 const KitchenVisualizer = () => {
   const [currentScreen, setCurrentScreen] = useState("start");
   const [kitchenData, setKitchData] = useState();
   const [currentAmbient, setCurrentAmbient] = useState("one");
   const params = useParams();
+  
   const kitchenArray = [
     {
       name: "Bohemian Flam",
@@ -453,6 +455,9 @@ const KitchenVisualizer = () => {
               >
                 Start
               </div>
+
+<Button ><Link to={"/kitchen/select-category"}>New Start</Link></Button>
+
             </div>
           </div>
         </div>

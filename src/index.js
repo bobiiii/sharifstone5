@@ -23,6 +23,7 @@ const RunFuncion = () => {
       visualizers,
     };
     setAPIStore(newObj);
+    
   }, []);
   return (
     <APIContext.Provider value={{ apiStore, setAPIStore }}>

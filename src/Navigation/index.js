@@ -16,6 +16,9 @@ import ViewCollection from "../Screens/ViewCollection/ViewCollection";
 import CreateVisualizer from "../Screens/CreateVisualizer/createVisualizer";
 import ViewVisualizer from "../Screens/ViewVisualizer/viewVisualizer";
 import WhereToBuy from "../Screens/WhereToBuy";
+import SelectCategory from "../Screens/NewVisualizer/SelectCategory";
+import Visualizer from "../Screens/NewVisualizer/NewVisualizer";
+import NewVisualizer from "../Screens/NewVisualizer/NewVisualizer";
 
 createBrowserRouter([
   {
@@ -48,6 +51,23 @@ const router = createBrowserRouter(
           <KitchenVisualizer />
       ),
     },
+{
+      path: "/kitchen/select-category",
+      element: (
+        <SelectCategory/>
+      ),
+
+      },
+
+      {
+        path: "/visualizer/:categoryName",
+        element: (
+          <NewVisualizer/>
+        ),
+  
+        },
+      
+
     {
       path: "/quartz-collection",
       element: (

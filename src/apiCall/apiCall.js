@@ -9,7 +9,6 @@ const getCollection = async () => {
   return await axios
     .get(`${apiEndpoint}collection`)
     .then((response) => {
-      // console.log('RESPONSE .... ',response?.data?.result)
       return response?.data?.result;
     })
     .catch((err) => alert(err.response.data.message));
@@ -20,7 +19,6 @@ const getVisualizer = async () => {
   return await axios
     .get(`${apiEndpoint}visualizer`)
     .then((response) => {
-      // console.log('RESPONSE .... ',response?.data?.result)
       return response?.data?.result;
     })
     .catch((err) => alert(err.response.data.message));

@@ -36,8 +36,11 @@ function ProductDescription() {
 
   return (
  <div>
+
+
+  
       <CoverComponent
-        image={`${CoverImage}`}
+        imageDesktop={'/images/cover_images/desktop/product_description.png'} imageMobile={'/images/cover_images/mobile/OurCollection.png'}
         label={["PRODUCT", "DESCRIPTION"]}
       />
       <MaxWidthWrapper>
