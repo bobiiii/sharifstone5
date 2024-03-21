@@ -30,20 +30,25 @@ function HomeScreen() {
 
   }, [openQuote]);
 
+
+  window.onload = function(){
+       document.getElementById("autoplay").play();
+  }
+
   return (
 
     <div >
       {openQuote && <GetAQuote data={{ openQuote, setOpenQuote }} />}
       <div className="w-full h-svh lg:min-h-screen " >
         <div className="w-full flex flex-col h-[65%] lg:h-[100vh]" >
-          <div className=" h-full lg:w-full w-screen bg-red-600  flex justify-center items-center overflow-hidden z-10 " onMouseOver={()=>{setShowDropdown(false)}}>
-            <video className="lg:hidden w-screen h-full object-cover min-w-[100vw] " preload="yes"  autoPlay loop muted playsinline>
+          <div className=" h-full lg:w-full w-screen bg-red-600  flex justify-center items-center overflow-hidden z-10 " onMouseOver={() => { setShowDropdown(false) }}>
+            <video className="lg:hidden w-screen h-full object-cover min-w-[100vw] "playsinline  autoPlay loop muted id="autoplay" >
               <source src={home_video2} type="video/mp4" />
               <source src={home_video2_webm} type="video/webm" />
               <source src={home_video2_mov} type="video/mov" />
             </video>
-            
-            <video className="hidden lg:block w-full h-full   object-fill" preload="yes"  autoPlay loop muted playsinline>
+
+            <video className="hidden lg:block w-full h-full   object-fill" playsinline autoPlay loop muted id="autoplay">
               <source src={home_video} type="video/mp4" />
               <source src={home_video_webm} type="video/webm" />
               <source src={home_video_mov} type="video/mov" />
