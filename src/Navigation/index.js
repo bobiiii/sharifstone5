@@ -19,6 +19,7 @@ import WhereToBuy from "../Screens/WhereToBuy";
 import SelectCategory from "../Screens/NewVisualizer/SelectCategory";
 import Visualizer from "../Screens/NewVisualizer/NewVisualizer";
 import NewVisualizer from "../Screens/NewVisualizer/NewVisualizer";
+import BlogScreen from "../Screens/Blog";
 
 createBrowserRouter([
   {
@@ -114,6 +115,14 @@ const router = createBrowserRouter(
         element: (
           <Layout>
             <ContactScreen />
+          </Layout>
+        ),
+      },
+      {
+        path: "/blog",
+        element: (
+          <Layout>
+            <BlogScreen />
           </Layout>
         ),
       },

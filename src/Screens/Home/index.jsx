@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from "react";
 import "./home.css";
-import home_video from "../../assets/videos/home_video.mp4"
-import home_video2 from "../../assets/videos/home_video2.mp4"
+import home_video from "../../assets/videos/desktop.mp4"
+import home_video2 from "../../assets/videos/mob.mp4"
 import "animate.css/animate.min.css";
 import DiscoverCollection from "./Components/DiscoverCollection";
 import AboutUS from "./Components/AboutUS";
@@ -16,7 +16,7 @@ import Button from "../resuable/Button";
 import useAuth from "../../hooks/useAuth";
 
 function HomeScreen() {
-  const {showDropdown, setShowDropdown} = useAuth()
+  const { showDropdown, setShowDropdown } = useAuth()
 
   const [openQuote, setOpenQuote] = useState(false);
 
