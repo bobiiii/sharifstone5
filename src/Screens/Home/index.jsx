@@ -2,7 +2,9 @@
 import { useState, useEffect } from "react";
 import "./home.css";
 import home_video from "../../assets/videos/desktop.mp4"
+import home_video_webm from "../../assets/videos/desktop2.webm"
 import home_video2 from "../../assets/videos/mob.mp4"
+import home_video2_webm from "../../assets/videos/mob2.webm"
 import "animate.css/animate.min.css";
 import DiscoverCollection from "./Components/DiscoverCollection";
 import AboutUS from "./Components/AboutUS";
@@ -35,11 +37,13 @@ function HomeScreen() {
           <div className=" h-full lg:w-full w-screen bg-red-600  flex justify-center items-center overflow-hidden z-10 " onMouseOver={()=>{setShowDropdown(false)}}>
             <video className="lg:hidden w-screen h-full object-cover min-w-[100vw] " preload="yes"  autoPlay loop muted playsinline>
               <source src={home_video2} type="video/mp4" />
+              <source src={home_video_webm} type="video/webm" />
               Your browser does not support the video tag.
             </video>
             
             <video className="hidden lg:block w-full h-full   object-fill" preload="yes"  autoPlay loop muted playsinline>
               <source src={home_video} type="video/mp4" />
+              <source src={home_video_webm} type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>
