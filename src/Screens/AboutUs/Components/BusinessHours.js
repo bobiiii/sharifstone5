@@ -44,15 +44,17 @@ function BusinessHours() {
           </Heading>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
           <div className="flex justify-between xl:gap-16 gap-9 lg:flex-row flex-col-reverse items-center ">
-            {/* ourmission-innercontainer */}
             <div className="lg:w-1/2 w-full">
               {hours.map((v, i) => (
                 <div className="businesshour-row" key={i}>
                   <div className="business-time">
                     <TbClockHour5 size={30} className="sm:text-[#EE2A2E] text-[#000000]" />
-                    <div>{v.day}</div>
+                    <div>
+                      <h5>
+                        {v.day}
+                      </h5>
+                    </div>
                   </div>
-                  {/* businesshour-row */}
                   <div className="business-timing  ">
                     <h6 className="sm:w-80 w-full">
                       {v.time}
@@ -63,7 +65,6 @@ function BusinessHours() {
               ))}
             </div>
             <div className="lg:w-1/2 w-full">
-              {/* businesshours-img */}
               <img className="w-full rounded-[24px]" src={Reception} />
             </div>
 

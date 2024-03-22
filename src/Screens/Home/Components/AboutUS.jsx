@@ -55,25 +55,31 @@ function AboutUS({ data }) {
               </video>
             </div>
             <div className=" w1/2 flex flex-col xl:gap-6 gap-3" >
-              <span className=" sm:text-base text-sm">
-                Welcome to Sharifstone, a distinguished company in the United
-                States specializing in premium stones, including marble, granite,
-                and quartz. We take pride in delivering top-quality stones at
-                unbeatable prices. Our extensive selection and unwavering
-                commitment to surpassing customer expectations set us apart in the
-                industry.
+              <span >
+                <p className=" sm:text-base text-sm">
+                  Welcome to Sharifstone, a distinguished company in the United
+                  States specializing in premium stones, including marble, granite,
+                  and quartz. We take pride in delivering top-quality stones at
+                  unbeatable prices. Our extensive selection and unwavering
+                  commitment to surpassing customer expectations set us apart in the
+                  industry.
+                </p>
               </span>
               <span className="sm:text-base text-sm">
-                At Sharifstone, our dedicated team is here to guide you through
-                the entire process, offering wide range of stones perfect for
-                residential, commercial, and architectural projects. With our
-                steadfast commitment to professionalism and customer satisfaction,
-                Sharifstone has built strong relationships with clients
-                nationwide.
+                <p className="sm:text-base text-sm">
+                  At Sharifstone, our dedicated team is here to guide you through
+                  the entire process, offering wide range of stones perfect for
+                  residential, commercial, and architectural projects. With our
+                  steadfast commitment to professionalism and customer satisfaction,
+                  Sharifstone has built strong relationships with clients
+                  nationwide.
+                </p>
               </span>
-              <span className="sm:text-base text-sm">
-                Explore the perfect stones for your project and elevate your space
-                with Sharifstone!
+              <span >
+                <p className="sm:text-base text-sm">
+                  Explore the perfect stones for your project and elevate your space
+                  with Sharifstone!
+                </p>
               </span>
               <span className="flex lg:justify-start  justify-center ">
                 <Button clickFunc={() => setOpenQuote(true)}>Stone Inquiry</Button>

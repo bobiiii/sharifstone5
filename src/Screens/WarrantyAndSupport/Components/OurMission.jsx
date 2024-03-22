@@ -13,13 +13,10 @@ function OurMission() {
             MORE ABOUT WARRANTY
           </Heading>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
-          {/* ourmission-subcontaine */}
           <div className="flex justify-between gap-8 w-full lg:flex-row flex-col items-center ">
-            {/* ourmission-innercontainer */}
             <div className="lg:w-1/2 w-full">
               <img className="w-full rounded-[24px]  xl:h-full  lg:h-[50vh] h-full" src={WarrantyImage} />
             </div>
-            {/* ourmission-innercontainer-warranty */}
             <div className="lg:w-1/2 w-full">
               <b>I. WARRANTY COVERS</b>
               <br />
@@ -41,12 +38,7 @@ function OurMission() {
               </p>
             </div>
           </div>
-
-          {/* Oppsite */}
-
           <div className="flex justify-between gap-8 w-full lg:flex-row flex-col-reverse items-center   mt-10">
-
-            {/* ourmission-innercontainer-warranty */}
             <div className="lg:w-1/2 w-full">
               <b>IV. AUTHORIZED SOURCES</b>
               <br />
@@ -66,11 +58,9 @@ function OurMission() {
                 For any inquiries or to initiate a warranty claim, reach out to the point of purchase or the Authorized Installer. They should be able to guide you through the process and provide any necessary assistance.
               </p>
             </div>
-            {/* ourmission-innercontainer */}
             <div className="lg:w-1/2 w-full  ">
               <img className="w-full rounded-[24px] xl:h-[80%]   lg:h-[50vh] h-full" src={ws} />
             </div>
-
           </div>
         </div>
       </div>

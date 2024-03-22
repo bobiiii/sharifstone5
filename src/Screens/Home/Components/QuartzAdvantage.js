@@ -41,9 +41,11 @@ function QuartzAdvantage() {
             </Heading>
 
           </div>
-          <div className="sm:w-[80%]  w-[95%] md:mt-4 mt-2 sm:text-base text-sm text-center">
-            Quartz  Advantages
-            Quartz surfaces are created through a blend of various components, with the use of advanced technology to guarantee both durability and sustainability, while also boasting an appealing aesthetic. This cutting-edge solution caters to a wide range of surface requirements for different interior settings.
+          <div className="sm:w-[80%]  w-[95%] md:mt-4 mt-2 ">
+            <p className="sm:text-base text-sm text-center">
+              Quartz  Advantages
+              Quartz surfaces are created through a blend of various components, with the use of advanced technology to guarantee both durability and sustainability, while also boasting an appealing aesthetic. This cutting-edge solution caters to a wide range of surface requirements for different interior settings.
+            </p>
           </div>
           <div
             className="home-advantagebg h-[500px] my-4"
@@ -59,7 +61,7 @@ function QuartzAdvantage() {
                         backgroundImage: "url(images/helen1.png)",
                       }}
                     />
-                    <div className="text-white ps-2 font-medium md:text-base text-[13px] w-[90px]">MT <br /> HELEN</div>
+                    <h4 className="text-white ps-2 font-medium md:text-base text-[13px] w-[90px]">MT <br /> HELEN</h4>
                   </div>
                 </div>
 
@@ -72,7 +74,7 @@ function QuartzAdvantage() {
                         backgroundImage: "url(images/helen1.png)",
                       }}
                     />
-                    <div className="text-white font-medium md:text-base text-[13px] w-[90px]">MT <br /> HELEN</div>
+                    <h4 className="text-white font-medium md:text-base text-[13px] w-[90px]">MT <br /> HELEN</h4>
                   </div>
 
 
@@ -85,7 +87,7 @@ function QuartzAdvantage() {
                           backgroundImage: v.url,
                         }}
                       />
-                      <div className="text-white font-medium md:text-base text-[13px] w-[100px]">{v.name}</div>
+                      <h4 className="text-white font-medium md:text-base text-[13px] w-[100px]">{v.name}</h4>
                     </div>
                   ))}
                 </div>

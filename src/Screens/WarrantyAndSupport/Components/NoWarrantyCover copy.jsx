@@ -24,7 +24,6 @@ function NoWarrantyCover() {
     <MaxWidthWrapper>
       <div className="reorganize_container">
         <div className="ourmission-container">
-          {/* <div className="ourmission-heading "></div> */}
           <Heading>
             WHAT THIS WARRANTY WILL NOT COVER:
           </Heading>
@@ -55,7 +54,6 @@ function NoWarrantyCover() {
               </div>
             </div>
           </div>
-          {/* nowarranty-button */}
           <div className="w-full  justify-center items-center text-center mt-4" >
             <Button  className="bg-[#ee2a2e] max-w-none px-8 py-2.5 text-white  font-medium font-albert rounded-[41px]" clickFunc={handleDownloadPDF}>
               Download PDF

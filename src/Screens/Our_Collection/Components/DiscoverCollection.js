@@ -8,7 +8,7 @@ import { Audio } from "react-loader-spinner";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 
 const DiscoverCollection = () => {
-  
+
   const [collection] = useState("none");
   const [, setOnMouseOver] = useState("");
   const [innerCollection, setInnerCollection] = useState([]);
@@ -82,7 +82,7 @@ const DiscoverCollection = () => {
           <div
             onMouseOver={() => setOnMouseOver(i)}
             onMouseLeave={() => setOnMouseOver("")}
-            
+
             className="   "
 
           >
@@ -92,9 +92,11 @@ const DiscoverCollection = () => {
 
               <img src={`${v?.color_image}`} className="h-40 cursor-pointer w-full lg:w-full lg:h-64   " alt="tile-images" />
 
-              <div className="absolute bottom-0 left-[50%] translate-x-[-50%] font-medium  lg:font-semibold text-xs lg:text-xl font-gelasio text-[#221F1F]  lg:text-nowrap w-full ">
+              <div className="absolute bottom-0 left-[50%] translate-x-[-50%]  w-full ">
                 <div className="w-full lg:w-min mx-auto bg-white/50  py-1 lg:py-1 lg:px-3 ">
-                  {v.color_name}
+                  <h4 className="font-medium  lg:font-semibold text-xs lg:text-xl font-gelasio text-[#221F1F]  lg:text-nowrap">
+                    {v.color_name}
+                  </h4>
                 </div>
               </div>
 
@@ -108,7 +110,7 @@ const DiscoverCollection = () => {
             </div>
           </div>
 
-          
+
         </div>
 
       </div >
@@ -152,10 +154,16 @@ const DiscoverCollection = () => {
   return (
     <MaxWidthWrapper className={" max-w-screen-2xl lg:px-0 md:px-0 sm:px-0 px-0"}>
 
-      <div className="font-extrabold text-3xl text-center font-gelasio lg:w-1/2 lg:mx-auto">
-        {flag ? content[collection][0] : innerCollection[0]?.collection_name}
+      <div className=" lg:w-1/2 lg:mx-auto">
+        <h4 className="font-extrabold text-3xl text-center font-gelasio">
+          {flag ? content[collection][0] : innerCollection[0]?.collection_name}
+        </h4>
       </div>
-      <div className="text-center py-4 lg:w-1/2 lg:mx-auto">{content[collection][1]}</div>
+      <div className="text-center py-4 lg:w-1/2 lg:mx-auto">
+        <p>
+          {content[collection][1]}
+        </p>
+      </div>
 
       <div className={` ${flag ? "lg:w-full" : ""}   lg:mx-auto flex  justify-center lg:gap-4   flex-wrap     `}>
         {flag

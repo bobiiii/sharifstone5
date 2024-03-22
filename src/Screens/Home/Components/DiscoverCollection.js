@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./DiscoverCollection.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
@@ -43,8 +43,10 @@ function DiscoverCollection() {
           </Heading>
         </ScrollAnimation>
       </div>
-      <div className="sm:w-[60%]  w-[95%] md:mt-4 sm:text-base text-sm text-center">
-        Check out our latest arrivals,  showcasing a vibrant mix of colors from different stone  selections. Each piece is a blend of style and quality,  giving you a range of options to spice up your space.
+      <div className="sm:w-[60%]  w-[95%] md:mt-4 ">
+        <p className="sm:text-base text-sm text-center">
+          Check out our latest arrivals,  showcasing a vibrant mix of colors from different stone  selections. Each piece is a blend of style and quality,  giving you a range of options to spice up your space.
+        </p>
       </div>
       <div className="sm:w-full w-screen flex justify-center items-center relative px-6 mt-6 lg:mt-16">
         <div

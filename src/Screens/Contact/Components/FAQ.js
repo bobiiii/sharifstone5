@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./FAQ.css";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import Heading from "../../resuable/Heading";
@@ -62,7 +62,7 @@ function FAQ() {
             {faqArray.map((v, i) => {
               return (
                 <div
-                key={i}
+                  key={i}
                   className={
                     faq === i
                       ? "faq-questioncontaier-active duration-300 "
@@ -77,11 +77,14 @@ function FAQ() {
                       </h3>
                     </div>
                     <div>
-                      {faq === i ? <FiMinus size={25} className="cursor-pointer" /> : <FiPlus size={25} className="cursor-pointer"/>}
+                      {faq === i ? <FiMinus size={25} className="cursor-pointer" /> : <FiPlus size={25} className="cursor-pointer" />}
                     </div>
                   </div>
-                  {/* faq-answer */}
-                  {faq === i && <div className=" sm:text-lg text-sm mt-4 text-[#221F1F] font-light font-albert">{v.message}</div>}
+                  {faq === i && <div className="  mt-4 ">
+                    <p className="sm:text-lg text-sm  text-[#221F1F] font-light font-albert">
+                      {v.message}
+                    </p>
+                  </div>}
                 </div>
               );
             })}
