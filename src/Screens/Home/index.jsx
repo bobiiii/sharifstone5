@@ -46,20 +46,16 @@ function HomeScreen() {
           >
             <video
               className="lg:hidden w-screen h-full object-cover min-w-[100vw] "
-              playsinline
-              autoPlay
-              loop
+              autoplay
               muted
+              playsinline
+              loop
+              preload="auto"
               id="autoplay"
             >
-              <source
-                src={
-                  'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
-                }
-                type="video/mp4"
-              />
-              {/* <source src={home_video2_webm} type="video/webm" />
-              <source src={home_video2_mov} type="video/mov" /> */}
+              <source src={home_video2} type="video/mp4" />
+              <source src={home_video2_webm} type="video/webm" />
+              <source src={home_video2_mov} type="video/mov" />
             </video>
 
             <video
