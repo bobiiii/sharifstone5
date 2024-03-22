@@ -46,9 +46,9 @@ function HomeScreen() {
           >
             <video
               className="lg:hidden w-screen h-full object-cover min-w-[100vw] "
-              autoplay
+              autoPlay
               muted
-              playsinline
+              playsInline
               loop
               preload="auto"
               id="autoplay"
