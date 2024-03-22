@@ -60,10 +60,11 @@ function HomeScreen() {
 
             <video
               className="hidden lg:block w-full h-full   object-fill"
-              playsinline
               autoPlay
-              loop
               muted
+              playsInline
+              loop
+              preload="auto"
               id="autoplay"
             >
               <source src={home_video} type="video/mp4" />
