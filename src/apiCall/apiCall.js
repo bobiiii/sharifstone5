@@ -2,7 +2,20 @@ import axios from "axios";
 import { useContext } from "react";
 import APIContext from "../Store/contextStore";
 const apiEndpoint = "https://sharifstone-server.vercel.app/api/";
+const apiEndpoint2 = "https://sharifstone-backend.vercel.app/api";
 // const apiEndpoint = "http://localhost:3005/api/";
+
+
+
+const getCollection2 = async () => {
+  return await axios
+    .get(`${apiEndpoint2}/collection`)
+    .then((response) => {
+      return response?.data?.data
+    })
+    .catch((err) => alert(err.response));
+};
+
 
 const getCollection = async () => {
   // const {store, setStore} = useContext(APIContext)
@@ -43,4 +56,4 @@ const getColorByParam = async (color) => {
     .catch((err) => alert(err.response.data.message));
 };
 
-export { getCollection, getCollectionByParam, getColorByParam, getVisualizer };
+export {getCollection2, getCollection, getCollectionByParam, getColorByParam, getVisualizer };
