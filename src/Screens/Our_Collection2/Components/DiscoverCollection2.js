@@ -8,11 +8,20 @@ import { Audio } from "react-loader-spinner";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import useAuth from "../../../hooks/useAuth";
 
-const DiscoverCollection = () => {
-
-  const {collections } = useAuth();
+const DiscoverCollection2 = () => {
+const {variety} = useParams()
+  const {collections, varieties,setVarieties } = useAuth();
+  
   
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const filteredVarieties = collections.filter(collection => collection.collectionName === variety);
+      setVarieties(filteredVarieties[0].variety)
+    };
+    fetchData();
+  });
+  
 
 
   const collectionJSX = (obj, i) => {
@@ -23,7 +32,7 @@ const DiscoverCollection = () => {
         className={`flex-grow flex-shrink basis-2/4 px-1 max-w-[70%] lg:flex-none lg:w-[32%] mb-2     text-center  `}
 
       >
-        <Link to={obj.collectionName}>
+        <Link to={`/product-description/${obj.varietyName}`}>
 
         <div className="flex flex-col   ">
           <div
@@ -37,13 +46,13 @@ const DiscoverCollection = () => {
 
 
 
-              <img   src={`https://drive.google.com/thumbnail?id=${obj.collectionImage}&sz=w1000`}  className="h-40 cursor-pointer w-full lg:w-full lg:h-64"    alt="tile-images" />
+              <img   src={`https://drive.google.com/thumbnail?id=${obj.varietyCardImage}&sz=w1000`}  className="h-40 cursor-pointer w-full lg:w-full lg:h-64"    alt="tile-images" />
 
               <div className="absolute bottom-0 left-[50%] translate-x-[-50%]  w-full ">
                 <div className="w-full lg:w-min mx-auto bg-white/50  py-1 lg:py-1 lg:px-3 ">
                   <h4 className="font-medium  lg:font-semibold text-xs lg:text-xl font-gelasio text-[#221F1F]  lg:text-nowrap">
                     {/* {v.color_name} */}
-                    {obj.collectionName}
+                    {obj.varietyName}
                   </h4>
                 </div>
               </div>
@@ -72,18 +81,16 @@ const DiscoverCollection = () => {
 
       <div className=" lg:w-full lg:mx-auto">
         <h4 className="font-extrabold text-5xl text-center font-gelasio">
-        DISCOVER OUR NEW COLLECTION        </h4>
+        {variety}      </h4>
       </div>
       <div className="text-center py-4 lg:w-1/2 lg:mx-auto">
         <p>
-        Discover the perfect quartz design in our collection, featuring both timeless classics and modern styles. Find the ideal match for your space and elevate your surroundings effortlessly with SharifStone. 
-    
-        </p>
+        Discover the perfect quartz design in our collection, featuring both timeless classics and modern styles. Find the ideal match for your space and elevate your surroundings effortlessly with SharifStone. </p>
       </div>
 
       <div className={` lg:w-full   lg:mx-auto flex  justify-center lg:gap-4   flex-wrap     `}>
         
-            { collections ?  collections.map((obj, i) => collectionJSX(obj, i)): "loading"}
+            { varieties.length > 0 ?  varieties.map((obj, i) => collectionJSX(obj, i)): "loading"}
             
             </div>
 
@@ -92,4 +99,4 @@ const DiscoverCollection = () => {
   );
 };
 
-export default DiscoverCollection;
+export default DiscoverCollection2;

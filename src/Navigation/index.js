@@ -20,6 +20,7 @@ import SelectCategory from "../Screens/NewVisualizer/SelectCategory";
 import Visualizer from "../Screens/NewVisualizer/NewVisualizer";
 import NewVisualizer from "../Screens/NewVisualizer/NewVisualizer";
 import BlogScreen from "../Screens/Blog";
+import OurCollection2 from "../Screens/Our_Collection2";
 
 createBrowserRouter([
   {
@@ -78,6 +79,14 @@ const router = createBrowserRouter(
       ),
     },
     {
+      path: "/quartz-collection/:variety",
+      element: (
+        <Layout>
+          <OurCollection2 />
+        </Layout>
+      ),
+    },
+    {
       path: "/collection?/:collection",
       element: (
         <Layout>
@@ -86,7 +95,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/product-description?/:collection?/:color",
+      path: "/product-description/:variety",
       element: (
         <Layout>
           <ProductDescription />

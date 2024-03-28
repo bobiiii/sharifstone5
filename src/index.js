@@ -8,11 +8,16 @@ import Context from "./Store/contextStore";
 import APIContext from "./Store/apiContext";
 import { getCollection, getVisualizer } from "./apiCall/apiCall";
 import AuthContextProvider from './hooks/AuthContext';
+import useAuth from "./hooks/useAuth";
 
 
 const RunFuncion = () => {
+
+  console.log("run function")
+
   const [store, setStore] = useState({});
   const [apiStore, setAPIStore] = useState({});
+  
 
   useEffect(async () => {
     const collections = await getCollection();

@@ -8,14 +8,35 @@ import CoverImage from "../../assets/images/product_description.png";
 import MaxWidthWrapper from "../../Screens/MaxWidthWrapper";
 import Heading from "../resuable/Heading";
 import Button from "../resuable/Button";
+import useAuth from "../../hooks/useAuth";
 
 function ProductDescription() {
+  const {collections} = useAuth()
+  const {variety} = useParams();
+  const [currentVariety, setCurrentVariety] = useState(null)
+  const [loading, setLoading] = useState(true)
+  
   const [colorDetails, setColorDetails] = useState({});
   const [relatedColors, setRelatedColors] = useState([]);
   const [showColor, setShowColor] = useState(1)
   const params = useParams();
 
+  const matchedCollection = collections.find(collection =>
+    collection.variety.some(varietyObj => varietyObj.varietyName === variety)
+  );
+
+  let matchedVariety;
+  if (matchedCollection) {
+    matchedVariety = matchedCollection.variety.find(varietyObj => varietyObj.varietyName === variety);
+  }
+
+
+  
   useEffect(() => {
+
+    setCurrentVariety(matchedVariety)
+   
+    
     if (params?.color !== undefined) {
       // eslint-disable-next-line no-async-promise-executor
       new Promise(async (resolve) => {
@@ -31,8 +52,7 @@ function ProductDescription() {
       });
     }
 
-  }, [params?.color]);
-
+  },[currentVariety]);
 
   return (
  <div>
@@ -44,21 +64,25 @@ function ProductDescription() {
         label={["PRODUCT", "DESCRIPTION"]}
       />
       <MaxWidthWrapper>
+       
+       {currentVariety  === null ?  "loading": 
+       
         <div className="flex flex-col justify-center gap-10 ">
 
           <div className="w-full ">
+            
             <div className="w-full  bg-cover bg-no-repeat  rounded-3xl">
-              
 
               {showColor === 1 ? (
-                <img src={colorDetails?.display_image} alt={"product-im"} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" />
+                <img src={`https://drive.google.com/thumbnail?id=${matchedVariety?.fullSlabImage}&sz=w1000`} alt={"product-im"} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" />
               ) : showColor === 2 ? (
-                <img src={colorDetails?.color_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />
+                <img src={`https://drive.google.com/thumbnail?id=${matchedVariety?.closeLookUp}&sz=w1000`} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />
               ) : (
-                <img src={colorDetails?.display_image} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />
+                <img src={`https://drive.google.com/thumbnail?id=${matchedVariety?.instalLook}&sz=w1000`} className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]" alt={"product-im"} />
               )}
 
             </div>
+
 
             <div className=" flex pt-6 items-center  justify-center gap-4 ">
               <Button className={`${showColor === 1 ? "bg-[#221F1F]" : ""}  sm:text-base text-[12px]   whitespace-nowrap`} clickFunc={() => { setShowColor(1) }} >
@@ -75,35 +99,35 @@ function ProductDescription() {
             </div>
           </div>
           <div className="w-full ">
-            <Heading >{colorDetails?.color_name}</Heading>
+            <Heading >{matchedVariety?.varietyName}</Heading>
 
             <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2   ">Description</div>
             <p className="sm:text-lg text-sm lg:py-4 py-2">
-              {colorDetails?.description}
+              {matchedVariety?.description}
             </p>
             <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2  ">Finishes Available</div>
             <div className="lg:py-0 flex flex-col lg:flex-row lg:gap-4   ">
               <div className="basis-2/6 lg:basis-2/6  " >
                 <div className="font-bold  sm:text-2xl text-sm  lg:py-2  ">Grip +</div>
                 <span className=" sm:text-lg text-sm lg:py-2 ">
-                  {colorDetails?.grip}
+                  {matchedVariety?.grip}
                 </span>
               </div>
               <div className="basis-2/6 lg:basis-2/6   py-2 lg:py-0">
                 <div className="font-bold sm:text-2xl text-sm   lg:py-2  ">Matte</div>
-                <span className=" sm:text-lg text-sm lg:py-2 ">{colorDetails?.matte}</span>
+                <span className=" sm:text-lg text-sm lg:py-2 ">{matchedVariety?.mate}</span>
               </div>
 
 
               <div className="basis-2/6 lg:basis-2/6  " >
                 <div className="font-bold  sm:text-2xl text-sm  lg:py-2  ">Thicknesses</div>
                 <span className=" sm:text-lg text-sm lg:py-2 ">
-                  {colorDetails?.thicknesses}
+                  {matchedVariety?.thickness}
                 </span>
               </div>
             </div>
  </div>
-        </div>
+        </div>}
       </MaxWidthWrapper>
       <RelatedProduct relatedImages={relatedColors} />
     </div>
