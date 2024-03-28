@@ -35,30 +35,19 @@ const {variety} = useParams()
         <Link to={`/product-description/${obj.varietyName}`}>
 
         <div className="flex flex-col   ">
-          <div
-            // onMouseOver={() => setOnMouseOver(i)}
-            // onMouseLeave={() => setOnMouseOver("")}
-
-            className="   "
-
-          >
+          <div>
             <div className="relative group">
-
-
-
-              <img   src={`https://drive.google.com/thumbnail?id=${obj.varietyCardImage}&sz=w1000`}  className="h-40 cursor-pointer w-full lg:w-full lg:h-64"    alt="tile-images" />
+<img   src={`https://drive.google.com/thumbnail?id=${obj.varietyCardImage}&sz=w1000`}  className="h-40 cursor-pointer w-full lg:w-full lg:h-64"    alt="tile-images" />
 
               <div className="absolute bottom-0 left-[50%] translate-x-[-50%]  w-full ">
                 <div className="w-full lg:w-min mx-auto bg-white/50  py-1 lg:py-1 lg:px-3 ">
                   <h4 className="font-medium  lg:font-semibold text-xs lg:text-xl font-gelasio text-[#221F1F]  lg:text-nowrap">
-                    {/* {v.color_name} */}
                     {obj.varietyName}
                   </h4>
                 </div>
               </div>
 
               <div
-                // onClick={() => gotoNextScreen(v)}
                 className={`bg-black/50 text-white w-min  px-4 lg:px-8 py-4 lg:py-8 rounded-full absolute  top-[20%] lg:top-[35%]  left-[50%]  cursor-pointer translate-x-[-50%]    opacity-0 group-hover:opacity-100 transition-opacity`}
               >
                 <GoArrowUpRight size={35} color="white" className="cursor-pointer" />
