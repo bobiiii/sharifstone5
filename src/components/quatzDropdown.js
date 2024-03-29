@@ -18,11 +18,12 @@ const [hover, setHover] = useState("");
       <div className="">
         <div className=" w-full  px-4 flex justify-center z-20 ">
           {collections?.map((v, i) => {
+            let link = v?.collectionName.replace(/\s+/g, "-");
 
             return (
               <Link
                 key={i}
-                to={`/quartz-collection/${v.collectionName}`}
+                to={`/${link}`}
                 onMouseEnter={() => setHover(v.collectionName)}
                 onMouseLeave={() => setHover("")}
                 onClick={() => setShowDropdown(false)}
