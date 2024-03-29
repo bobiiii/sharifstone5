@@ -9,6 +9,7 @@ const AuthContextProvider = ({ children }) => {
   const [bathroomData, setBathroomData] = useState([]);
   const [collections, setCollections] = useState([]);
   const [varieties, setVarieties] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,6 +32,8 @@ const AuthContextProvider = ({ children }) => {
         setCollections,
         varieties,
         setVarieties,
+        blogs,
+        setBlogs
       }}
     >
       {children}
