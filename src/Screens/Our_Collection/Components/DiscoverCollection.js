@@ -1,10 +1,10 @@
-import { useState, useEffect, useContext } from "react";
+// import { useState, useEffect, useContext } from "react";
 import "./DiscoverCollection.css";
 import { GoArrowUpRight } from "react-icons/go";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import APIContext from "../../../Store/apiContext";
-import { getCollection2, getCollectionByParam } from "../../../apiCall/apiCall";
-import { Audio } from "react-loader-spinner";
+// import APIContext from "../../../Store/apiContext";
+// import { getCollection2, getCollectionByParam } from "../../../apiCall/apiCall";
+// import { Audio } from "react-loader-spinner";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import useAuth from "../../../hooks/useAuth";
 
@@ -16,6 +16,10 @@ const DiscoverCollection = () => {
 
 
   const collectionJSX = (obj, i) => {
+    // Assuming obj.collectionName contains the value "INDULGE COLLECTION"
+let link = obj.collectionName.replace(/\s+/g, "-");
+
+
     
     return (
 
@@ -23,7 +27,7 @@ const DiscoverCollection = () => {
         className={`flex-grow flex-shrink basis-2/4 px-1 max-w-[70%] lg:flex-none lg:w-[32%] mb-2     text-center  `}
 
       >
-        <Link to={obj.collectionName}>
+        <Link to={link}>
 
         <div className="flex flex-col   ">
           <div
@@ -83,7 +87,7 @@ const DiscoverCollection = () => {
 
       <div className={` lg:w-full   lg:mx-auto flex  justify-center lg:gap-4   flex-wrap     `}>
         
-            { collections ?  collections.map((obj, i) => collectionJSX(obj, i)): "loading"}
+            { collections.length > 0 ?  collections.map((obj, i) => collectionJSX(obj, i)): "loading"}
             
             </div>
 

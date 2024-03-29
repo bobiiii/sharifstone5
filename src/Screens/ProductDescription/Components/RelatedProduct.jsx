@@ -1,37 +1,40 @@
-import  { useRef } from "react";
-import "./RelatedProduct.css";
-import { Link, useNavigate } from "react-router-dom";
-import MaxWidthWrapper from "../../MaxWidthWrapper";
-import Heading from "../../resuable/Heading";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-import { FaArrowLeft } from "react-icons/fa6";
-import { FaArrowRight } from "react-icons/fa6";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { useRef } from 'react';
+import './RelatedProduct.css';
+import { Link, useNavigate } from 'react-router-dom';
+import MaxWidthWrapper from '../../MaxWidthWrapper';
+import Heading from '../../resuable/Heading';
+import { IoIosArrowBack } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
+import { FaArrowLeft } from 'react-icons/fa6';
+import { FaArrowRight } from 'react-icons/fa6';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
-function RelatedProduct({ relatedImages }) {
+function RelatedProduct({ variety, collections }) {
+  const matchedCollection = collections.find((collection) =>
+    collection.variety.some((varietyObj) => varietyObj.varietyName === variety)
+  );
 
   const responsive = {
     ' mobile': {
       breakpoint: { max: 640, min: 0 },
-      items: 1
-    }
+      items: 1,
+    },
   };
 
   const responsive2 = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 641 },
-      items: 2
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 640, min: 0 },
-      items: 1
-    }
+      items: 1,
+    },
   };
 
   const carouselRef = useRef(null);
@@ -52,44 +55,56 @@ function RelatedProduct({ relatedImages }) {
     carouselRef2.current.next();
   };
 
-
   return (
     <MaxWidthWrapper>
       {/* related-container */}
       <div className=" related-container">
-         <Heading className='sm:flex hidden'>
-          RELATED PRODUCTS
-        </Heading>
+        <Heading className="sm:flex hidden">RELATED PRODUCTS</Heading>
 
         {/* Desktop Carousel */}
         <div className="w-full sm:block hidden sm:pt-10 pt-4  px-2">
           <div className="relative">
-            <Carousel
-              responsive={responsive2}
-              infinite
-              arrows={false}
-              itemClass="px-2 "
-              ref={carouselRef2}
-
-            >
-              {relatedImages?.map((item, i) => (
-                // 
-                <div key={i} className="flex flex-col gap-2  h-full">
-                  <Link to={`/product-description/${item?.color_url}`} className="h-full">
-                    <img src={item.color_image} alt="" className="h-full rounded-lg w-full cursor-pointer " />
-                  </Link>
-                  <h4 className="lg:text-2xl text-lg font-semibold font-albert bg-white text-start py-2">{item.color_name}</h4>
-                </div>
-              ))}
-            </Carousel>
+            {matchedCollection?.variety && (
+              <Carousel
+                responsive={responsive2}
+                infinite
+                arrows={false}
+                itemClass="px-2 "
+                ref={carouselRef2}
+              >
+                {matchedCollection?.variety?.map((item, i) => (
+                  //
+                  <div key={i} className="flex flex-col gap-2  h-full">
+                    <Link
+                      to={`/product-description/${item?.varietyName}`}
+                      className="h-full"
+                    >
+                      <img
+                        src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
+                        alt=""
+                        className="h-full rounded-lg w-full cursor-pointer "
+                      />
+                    </Link>
+                    <h4 className="lg:text-2xl  text-lg font-semibold font-albert bg-white text-start py-2">
+                      {item.varietyName}
+                    </h4>
+                  </div>
+                ))}
+              </Carousel>
+            )}
             <span className=" absolute top-0 bottom-0 mb-8   items-center  flex justify-center">
-
-              <button className="bg-[#D4262A]  rounded-full  p-4 lg:-ml-5 -ml-3" onClick={handlePrevious2}>
+              <button
+                className="bg-[#D4262A]  rounded-full  p-4 lg:-ml-5 -ml-3"
+                onClick={handlePrevious2}
+              >
                 <FaArrowLeft size={20} className="text-white" />
               </button>
             </span>
             <span className="absolute top-0 bottom-0  mb-8  right-0 items-center flex justify-center">
-              <button className="bg-[#D4262A] rounded-full  p-4 lg:-mr-5 -mr-3" onClick={handleNext2}>
+              <button
+                className="bg-[#D4262A] rounded-full  p-4 lg:-mr-5 -mr-3"
+                onClick={handleNext2}
+              >
                 <FaArrowRight size={20} className="text-white" />
               </button>
             </span>
@@ -99,36 +114,45 @@ function RelatedProduct({ relatedImages }) {
         {/* Mobile Carousel */}
         <div className="flex sm:hidden justify-between w-full items-center">
           <div>
-            <Heading className=' text-base'>
-              RELATED PRODUCTS
-            </Heading>
+            <Heading className=" text-base">RELATED PRODUCTS</Heading>
           </div>
           <div className="flex gap-2 text-white">
-            <button className="bg-[#D5262A] rounded-full p-2" onClick={handlePrevious}>
-              < IoIosArrowBack className="text-center" />
+            <button
+              className="bg-[#D5262A] rounded-full p-2"
+              onClick={handlePrevious}
+            >
+              <IoIosArrowBack className="text-center" />
             </button>
-            <button className="bg-[#D5262A] rounded-full p-2" onClick={handleNext}>
-              < IoIosArrowForward className="text-center" />
+            <button
+              className="bg-[#D5262A] rounded-full p-2"
+              onClick={handleNext}
+            >
+              <IoIosArrowForward className="text-center" />
             </button>
           </div>
         </div>
 
         <div className="w-full sm:hidden block mt-6 ">
-          <Carousel
-            responsive={responsive}
-            infinite
-            arrows={false}
-            itemClass="px-2 "
-            ref={carouselRef}
-          >
-            {relatedImages?.map((item, i) => (
-              <Link key={i} to={`/product-description/${item?.color_url}`}>
-                <img src={item.color_image} alt="" className=" h-[300px]  rounded-lg w-full cursor-pointer " />
-              </Link>
-            ))}
-          </Carousel>
+          {matchedCollection?.variety && (
+            <Carousel
+              responsive={responsive}
+              infinite
+              arrows={false}
+              itemClass="px-2 "
+              ref={carouselRef}
+            >
+              {matchedCollection?.variety?.map((item, i) => (
+                <Link key={i} to={`/product-description/${item?.varietyName}`}>
+                  <img
+                    src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
+                    alt=""
+                    className=" h-[300px]  rounded-lg w-full cursor-pointer "
+                  />
+                </Link>
+              ))}
+            </Carousel>
+          )}
         </div>
-
 
         {/* productexpand-container */}
         {/* <div className="  lg:mt-12 sm:mt-6 mt-4">
@@ -149,7 +173,7 @@ function RelatedProduct({ relatedImages }) {
 
         </div> */}
       </div>
-    </MaxWidthWrapper >
+    </MaxWidthWrapper>
   );
 }
 
