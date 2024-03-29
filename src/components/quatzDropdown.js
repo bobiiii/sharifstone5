@@ -15,7 +15,9 @@ import useAuth from "../hooks/useAuth"
 
 
 const QuartzDropdown = () => {
-  const { showDropdown, setShowDropdown } = useAuth()
+  const { setShowDropdown, collections } = useAuth()
+  console.log(collections);
+  console.log(collections[0].collectionImage);
 
   const [hover, setHover] = useState("");
   const dropdown = [
@@ -57,13 +59,13 @@ const QuartzDropdown = () => {
 
       <div className="">
         <div className=" w-full  px-4 flex justify-center z-20 ">
-          {dropdown.map((v, i) => {
+          {collections.map((v, i) => {
 
             return (
               <Link
                 key={i}
-                to={v.url}
-                onMouseEnter={() => setHover(v.title)}
+                to={`/quartz-collection/${v.collectionName}`}
+                onMouseEnter={() => setHover(v.collectionName)}
                 onMouseLeave={() => setHover("")}
                 onClick={() => setShowDropdown(false)}
                 className="dropdown-item"
@@ -72,17 +74,17 @@ const QuartzDropdown = () => {
 
 
                 <div className=" relative  h-[200px] w-[230px] px-2  ">
-                  {hover === v.title
+                  {hover === v.collectionName
                     ?
 
                     <div className=" w-[100%] h-[100%]  " >
-                      <img src={v.backURL} className=" w-[100%] h-[100%]  " alt="a" />
-                      <p className="text-white  w-[210px] pt-2  font-semibold font-albert text-[17px] text-center absolute top-0 ">{v.title}</p>
+                      <img src={`https://drive.google.com/thumbnail?id=${v.dropDownImage}&sz=w1000`} className=" w-[100%] h-[100%]  " alt="a" />
+                      <p className="text-white  w-[210px] pt-2  font-semibold font-albert text-[17px] text-center absolute top-0 ">{v.collectionName}</p>
                       <img className=" absolute bottom-0  left-1/2 transform -translate-x-1/2 -translate-y-1/2  " src={DropdownIcon} alt="" />
                     </div>
                     : <div className=" w-full  h-full py-2">
-                      <p className="h-1/5 text-black font-medium text-base text-center text-nowrap truncate px-2">{v.title}</p>
-                      <img className="w-full h-3/5 rounded-lg " src={v.image} alt="" />
+                      <p className="h-1/5 text-black font-medium text-base text-center text-nowrap truncate px-2">{v.collectionName}</p>
+                      <img className="w-full h-3/5 rounded-lg " src={`https://drive.google.com/thumbnail?id=${v.dropDownImage}&sz=w1000`} alt="" />
 
 
                     </div>}
