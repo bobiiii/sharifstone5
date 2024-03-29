@@ -9,57 +9,15 @@ import DropdownIcon from "../assets/images/dropdown-icon.png";
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth"
 
-
-
-
-
-
 const QuartzDropdown = () => {
   const { setShowDropdown, collections } = useAuth()
-  console.log(collections);
-  console.log(collections[0].collectionImage);
-
-  const [hover, setHover] = useState("");
-  const dropdown = [
-    {
-      title: "Essentials Collection (ES)",
-      image: EssentialCollectionImage,
-      backURL: `${EssentialCollectionImage}`,
-      url: '/collection/ESSENTIAL-COLLECTION',
-    },
-    {
-      title: "Indulge Collection(ID)",
-      image: IndulgeCollectionImage,
-      backURL: `${IndulgeCollectionImage}`,
-      url: '/collection/INDULGE-COLLECTION',
-    },
-    {
-      title: "Mythology Collection(MT)",
-      image: MythologyCollectionImage,
-      backURL: `${MythologyCollectionImage}`,
-      url: '/collection/MYTHOLOGY-COLLECTION',
-    },
-    {
-      title: "International Collection(INT)",
-      image: InternationalCollectionImage,
-      backURL: `${InternationalCollectionImage}`,
-      url: '/collection/INTERNATIONAL-COLLECTION',
-    },
-    {
-      title: "Super Jumbo Collection(SJ)",
-      image: SuperJumboCollectionImage,
-      backURL: `${SuperJumboCollectionImage}`,
-      url: '/collection/SUPER-JUMBO%20COLLECTION',
-    },
-  ];
-
-
+const [hover, setHover] = useState("");
+  
   return (
     <div className="xl:block hidden z-50 bg-white rounded-2xl left-1/2 transform -translate-x-1/2   absolute top-10  mx-auto mt-10">
-
       <div className="">
         <div className=" w-full  px-4 flex justify-center z-20 ">
-          {collections.map((v, i) => {
+          {collections?.map((v, i) => {
 
             return (
               <Link
