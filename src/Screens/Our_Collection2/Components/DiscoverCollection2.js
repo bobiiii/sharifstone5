@@ -10,29 +10,32 @@ import useAuth from '../../../hooks/useAuth';
 
 const DiscoverCollection2 = () => {
   const { variety } = useParams();
+  let varietyWithSpaces = variety.replace(/-/g, " ");
   const { collections, varieties, setVarieties } = useAuth();
   const navigate = useNavigate();
   useEffect(() => {
     const fetchData = async () => {
       const filteredVarieties = collections.filter(
-        (collection) => collection.collectionName === variety
+        (collection) => collection.collectionName === varietyWithSpaces
       );
 
-      if (!filteredVarieties.length) {
-        return navigate('/');
-      }
+      // if (!filteredVarieties.length) {
+      //   return navigate('/');
+      // }
       setVarieties(filteredVarieties[0]?.variety);
     };
     fetchData();
   });
 
   const collectionJSX = (obj, i) => {
+    let link = obj.varietyName.replace(/\s+/g, "-");
+
     return (
       <div
         key={i}
         className={`flex-grow flex-shrink basis-2/4 px-1 max-w-[70%] lg:flex-none lg:w-[32%] mb-2     text-center  `}
       >
-        <Link to={`/product-description/${obj.varietyName}`}>
+        <Link to={`/product-description/${link}`}>
           <div className="flex flex-col   ">
             <div>
               <div className="relative group">

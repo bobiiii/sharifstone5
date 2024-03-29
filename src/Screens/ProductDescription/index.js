@@ -13,20 +13,21 @@ import useAuth from '../../hooks/useAuth';
 function ProductDescription() {
   const { collections } = useAuth();
   const { variety } = useParams();
+  let varietyWithSpaces = variety.replace(/-/g, " ");
+
   const [currentVariety, setCurrentVariety] = useState(null);
   const [showColor, setShowColor] = useState(1);
-  const navigate = useNavigate();
   const matchedCollection = collections.find((collection) =>
-    collection.variety.some((varietyObj) => varietyObj.varietyName === variety)
+    collection.variety.some((varietyObj) => varietyObj.varietyName === varietyWithSpaces)
   );
 
   let matchedVariety;
   if (matchedCollection) {
     matchedVariety = matchedCollection.variety.find(
-      (varietyObj) => varietyObj.varietyName === variety
+      (varietyObj) => varietyObj.varietyName === varietyWithSpaces
     );
   } else {
-    navigate('/');
+    // navigate('/');
   }
   useEffect(() => {
     setCurrentVariety(matchedVariety);
@@ -143,7 +144,7 @@ function ProductDescription() {
           </div>
         )}
       </MaxWidthWrapper>
-      <RelatedProduct variety={variety} collections={collections} />
+      <RelatedProduct variety={varietyWithSpaces} collections={collections} />
     </div>
   );
 }
