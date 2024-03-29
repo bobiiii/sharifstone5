@@ -12,8 +12,9 @@ import useAuth from '../../hooks/useAuth';
 
 function ProductDescription() {
   const { collections } = useAuth();
-  const { variety } = useParams();
-  let varietyWithSpaces = variety.replace(/-/g, " ");
+  const { varietyName } = useParams();
+  console.log(varietyName)
+  let varietyWithSpaces = varietyName.replace(/-/g, " ");
 
   const [currentVariety, setCurrentVariety] = useState(null);
   const [showColor, setShowColor] = useState(1);

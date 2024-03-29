@@ -47,19 +47,19 @@ const router = createBrowserRouter(
         </Layout>
       ),
     },
-    {
-      path: "/kitchen-visualizer?/:color",
-      element: (
-          <KitchenVisualizer />
-      ),
-    },
-{
-      path: "/kitchen/select-category",
-      element: (
-        <SelectCategory/>
-      ),
+    // {
+    //   path: "/kitchen-visualizer?/:color",
+    //   element: (
+    //       <KitchenVisualizer />
+    //   ),
+    // },
+// {
+//       path: "/kitchen/select-category",
+//       element: (
+//         <SelectCategory/>
+//       ),
 
-      },
+//       },
 
       {
         path: "/visualizer/:categoryName",
@@ -79,7 +79,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/quartz-collection/:variety",
+      path: "/:variety2",
       element: (
         <Layout>
           <OurCollection2 />
@@ -95,7 +95,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/product-description/:variety",
+      path: "/:collectionName/:varietyName",
       element: (
         <Layout>
           <ProductDescription />
