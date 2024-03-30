@@ -72,24 +72,31 @@ function RelatedProduct({ variety, collections }) {
                 itemClass="px-2 "
                 ref={carouselRef2}
               >
-                {matchedCollection?.variety?.map((item, i) => (
+                {matchedCollection?.variety?.map((item, i) => {
+                  let link = item?.varietyName.replace(/\s+/g, '-');
+
                   //
-                  <div key={i} className="flex flex-col gap-2  h-full">
-                    <Link
-                      to={`/product-description/${item?.varietyName}`}
-                      className="h-full"
-                    >
-                      <img
-                        src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
-                        alt=""
-                        className="h-full rounded-lg w-full cursor-pointer "
-                      />
-                    </Link>
-                    <h4 className="lg:text-2xl  text-lg font-semibold font-albert bg-white text-start py-2">
-                      {item.varietyName}
-                    </h4>
-                  </div>
-                ))}
+                  return (
+                    <div key={i} className="flex flex-col gap-2  h-full">
+                      <Link
+                        to={`/${matchedCollection.collectionName.replace(
+                          /\s+/g,
+                          '-'
+                        )}/${link}`}
+                        className="h-full"
+                      >
+                        <img
+                          src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
+                          alt=""
+                          className="h-full rounded-lg w-full cursor-pointer "
+                        />
+                      </Link>
+                      <h4 className="lg:text-2xl  text-lg font-semibold font-albert bg-white text-start py-2">
+                        {item.varietyName}
+                      </h4>
+                    </div>
+                  );
+                })}
               </Carousel>
             )}
             <span className=" absolute top-0 bottom-0 mb-8   items-center  flex justify-center">
@@ -141,15 +148,25 @@ function RelatedProduct({ variety, collections }) {
               itemClass="px-2 "
               ref={carouselRef}
             >
-              {matchedCollection?.variety?.map((item, i) => (
-                <Link key={i} to={`/product-description/${item?.varietyName}`}>
-                  <img
-                    src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
-                    alt=""
-                    className=" h-[300px]  rounded-lg w-full cursor-pointer "
-                  />
-                </Link>
-              ))}
+              {matchedCollection?.variety?.map((item, i) => {
+                let link = item?.varietyName.replace(/\s+/g, '-');
+
+                return (
+                  <Link
+                    key={i}
+                    to={`/${matchedCollection.collectionName.replace(
+                      /\s+/g,
+                      '-'
+                    )}/${link}`}
+                  >
+                    <img
+                      src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
+                      alt=""
+                      className=" h-[300px]  rounded-lg w-full cursor-pointer "
+                    />
+                  </Link>
+                );
+              })}
             </Carousel>
           )}
         </div>

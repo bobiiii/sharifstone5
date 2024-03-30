@@ -9,15 +9,18 @@ import MaxWidthWrapper from '../../MaxWidthWrapper';
 import useAuth from '../../../hooks/useAuth';
 
 const DiscoverCollection2 = () => {
-  const { variety } = useParams();
-  let varietyWithSpaces = variety.replace(/-/g, " ");
+  const { variety2 } = useParams();
+  
+  let varietyWithSpaces = variety2.replace(/-/g, " ");
   const { collections, varieties, setVarieties } = useAuth();
+  const [filteredVarietiesState, setFilteredVarietiesState] = useState([]) 
   const navigate = useNavigate();
   useEffect(() => {
     const fetchData = async () => {
       const filteredVarieties = collections.filter(
         (collection) => collection.collectionName === varietyWithSpaces
       );
+      setFilteredVarietiesState(filteredVarieties)
 
       // if (!filteredVarieties.length) {
       //   return navigate('/');
@@ -27,15 +30,16 @@ const DiscoverCollection2 = () => {
     fetchData();
   });
 
-  const collectionJSX = (obj, i) => {
+  const collectionJSX = (obj, i, filteredVarieties) => {
     let link = obj.varietyName.replace(/\s+/g, "-");
+    let link2 = filteredVarieties[0]?.collectionName.replace(/\s+/g, "-");
 
     return (
       <div
         key={i}
         className={`flex-grow flex-shrink basis-2/4 px-1 max-w-[70%] lg:flex-none lg:w-[32%] mb-2     text-center  `}
       >
-        <Link to={`/product-description/${link}`}>
+        <Link to={`/${link2}/${link}`}>
           <div className="flex flex-col   ">
             <div>
               <div className="relative group">
@@ -78,7 +82,7 @@ const DiscoverCollection2 = () => {
         >
           <div className=" lg:w-full lg:mx-auto">
             <h4 className="font-extrabold text-5xl text-center font-gelasio">
-              {variety}{' '}
+              {varietyWithSpaces}
             </h4>
           </div>
           <div className="text-center py-4 lg:w-1/2 lg:mx-auto">
@@ -94,7 +98,7 @@ const DiscoverCollection2 = () => {
             className={` lg:w-full   lg:mx-auto flex  justify-center lg:gap-4   flex-wrap     `}
           >
             {varieties.length > 0
-              ? varieties.map((obj, i) => collectionJSX(obj, i))
+              ? varieties.map((obj, i) => collectionJSX(obj, i, filteredVarietiesState))
               : 'loading'}
           </div>
         </MaxWidthWrapper>
