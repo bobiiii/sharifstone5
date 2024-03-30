@@ -52,7 +52,7 @@ function ProductDescription() {
                   <img
                     src={`https://drive.google.com/thumbnail?id=${matchedVariety?.fullSlabImage}&sz=w1000`}
                     alt={'product-im'}
-                    className=" w-full lg:w-4/5 h-[28vh] lg:h-[650px] bg-cover bg-no-repeat "
+                    className=" w-full lg:w-4/5 h-[31vh] lg:h-[650px] bg-cover bg-no-repeat "
                   />
                 ) : showColor === 2 ? (
                   <img
