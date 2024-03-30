@@ -82,48 +82,47 @@ function BlogCards() {
                                         </h6>
                                     </div>
                                 </div>
-                                {
-                                    visibleCards > 6 && (
-                                        <>
-                                            <div className='sm:hidden w-full'>
-                                                <button className='border-[2px] w-full rounded-3xl border-[#EE2A2E] py-2 sm:px-6 px-6 text-[#EE2A2E] font-albert font-bold sm:text-base text-sm '>
-                                                    Read More
-                                                </button>
-                                            </div>
-                                            <div className=' sm:flex hidden '>
-                                                <button className='border-[2px]  rounded-3xl border-[#EE2A2E] py-2 sm:px-6 px-6 text-[#EE2A2E] font-albert font-bold sm:text-base text-sm '>
-                                                    Read More
-                                                </button>
-                                            </div>
-                                        </>
-                                    )
-                                }
+
+                                <div className='sm:hidden w-full'>
+                                    <button className='border-[2px] w-full rounded-3xl border-[#EE2A2E] py-2 sm:px-6 px-6 text-[#EE2A2E] font-albert font-bold sm:text-base text-sm '>
+                                        Read More
+                                    </button>
+                                </div>
+                                <div className=' sm:flex hidden '>
+                                    <button className='border-[2px]  rounded-3xl border-[#EE2A2E] py-2 sm:px-6 px-6 text-[#EE2A2E] font-albert font-bold sm:text-base text-sm '>
+                                        Read More
+                                    </button>
+                                </div>
+
                             </div>
                         </Transition>
                     ))}
                 </div>
-            )}
-            {blogs.length > 6 && (
-                showButton ? (
-                    <div className='w-full flex justify-center items-center sm:mt-16 mt-10'>
-                        <button
-                            className='bg-[#EE2A2E] rounded-3xl py-2 px-6 text-white font-albert font-bold text-sm duration-300'
-                            onClick={LoadMoreProducts}
-                        >
-                            Load More
-                        </button>
-                    </div>
-                ) : (
-                    <div className='w-full flex justify-center items-center mt-10'>
-                        <button
-                            className='bg-[#EE2A2E] rounded-3xl py-2 px-6 text-white font-albert font-bold text-sm duration-300'
-                            onClick={ShowLessProducts}
-                        >
-                            Show Less
-                        </button>
-                    </div>
+            )
+            }
+            {
+                blogs.length > 6 && (
+                    showButton ? (
+                        <div className='w-full flex justify-center items-center sm:mt-16 mt-10'>
+                            <button
+                                className='bg-[#EE2A2E] rounded-3xl py-2 px-6 text-white font-albert font-bold text-sm duration-300'
+                                onClick={LoadMoreProducts}
+                            >
+                                Load More
+                            </button>
+                        </div>
+                    ) : (
+                        <div className='w-full flex justify-center items-center mt-10'>
+                            <button
+                                className='bg-[#EE2A2E] rounded-3xl py-2 px-6 text-white font-albert font-bold text-sm duration-300'
+                                onClick={ShowLessProducts}
+                            >
+                                Show Less
+                            </button>
+                        </div>
+                    )
                 )
-            )}
+            }
         </MaxWidthWrapper >
     );
 }
