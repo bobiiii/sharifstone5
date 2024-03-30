@@ -47,19 +47,19 @@ const router = createBrowserRouter(
         </Layout>
       ),
     },
-    // {
-    //   path: "/kitchen-visualizer?/:color",
-    //   element: (
-    //       <KitchenVisualizer />
-    //   ),
-    // },
-// {
-//       path: "/kitchen/select-category",
-//       element: (
-//         <SelectCategory/>
-//       ),
+    {
+      path: "/kitchen-visualizer",
+      element: (
+          <KitchenVisualizer />
+      ),
+    },
+{
+      path: "/kitchen/select-category",
+      element: (
+        <SelectCategory/>
+      ),
 
-//       },
+      },
 
       {
         path: "/visualizer/:categoryName",

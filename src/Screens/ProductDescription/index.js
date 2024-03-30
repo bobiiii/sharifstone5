@@ -47,23 +47,23 @@ function ProductDescription() {
         ) : (
           <div className="flex flex-col justify-center gap-10 ">
             <div className="w-full ">
-              <div className="w-full  bg-cover bg-no-repeat  rounded-3xl">
+              <div className="w-full  bg-cover bg-no-repeat grid place-items-center rounded-3xl">
                 {showColor === 1 ? (
                   <img
                     src={`https://drive.google.com/thumbnail?id=${matchedVariety?.fullSlabImage}&sz=w1000`}
                     alt={'product-im'}
-                    className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]"
+                    className=" w-full lg:w-4/5 h-[200px] lg:h-[650px] bg-cover bg-no-repeat "
                   />
                 ) : showColor === 2 ? (
                   <img
                     src={`https://drive.google.com/thumbnail?id=${matchedVariety?.closeLookUp}&sz=w1000`}
-                    className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]"
+                    className="w-full lg:w-4/5 h-[200px] lg:h-[650px] bg-cover bg-no-repeat"
                     alt={'product-im'}
                   />
                 ) : (
                   <img
                     src={`https://drive.google.com/thumbnail?id=${matchedVariety?.instalLook}&sz=w1000`}
-                    className="w-full lg:h-[650px] bg-cover bg-no-repeat h-[50vh]"
+                    className="w-full lg:w-4/5 h-[200px] lg:h-[650px] bg-cover bg-no-repeat"
                     alt={'product-im'}
                   />
                 )}
@@ -102,7 +102,8 @@ function ProductDescription() {
                 </Button>
               </div>
             </div>
-            <div className="w-full ">
+            <div className='grid place-items-center'>
+            <div className="w-4/5  ">
               <Heading>{matchedVariety?.varietyName}</Heading>
 
               <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2   ">
@@ -141,6 +142,7 @@ function ProductDescription() {
                   </span>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         )}
