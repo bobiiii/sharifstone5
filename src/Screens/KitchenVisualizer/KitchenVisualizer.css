@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
 }
-.kitchen-visualizer-startform {
+/* .kitchen-visualizer-startform {
   width: 70%;
   height: 400px;
   margin-bottom: 40px;
@@ -23,8 +23,8 @@
   display: flex;
   border-radius: 20px;
   background-color: #00000080;
-}
-.kitchen-visualizer-section {
+} */
+/* .kitchen-visualizer-section {
   width: 50%;
   margin: 0px 20px;
   color: white;
@@ -32,16 +32,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.kitchen-visualizer-section span {
+} */
+
+/* .kitchen-visualizer-section span {
   font-weight: 600;
   font-size: 37px;
-}
-.kitchen-visualizer-section div {
+} */
+/* .kitchen-visualizer-section div {
   font-size: 17px;
   margin-top: 25px;
   line-height: 25px;
-}
+} */
 .kitchen-visualizer-startbtn {
   background-color: #ee2a2e;
   cursor: pointer;
@@ -71,21 +72,21 @@
 }
 
 @media screen and (max-width: 1440px) and (min-width: 1024px) {
-  .kitchen-visualizer-section div {
+  /* .kitchen-visualizer-section div {
     font-size: 16px;
     margin-top: 25px;
     line-height: 25px;
-  }
+  } */
 }
 @media screen and (max-width: 1024px) and (min-width: 768px) {
-  .kitchen-visualizer-startform {
+  /* .kitchen-visualizer-startform {
     width: 85%;
     height: auto;
     padding: 100px 30px;
-  }
+  } */
 }
 @media screen and (max-width: 768px) and (min-width: 320px) {
-  .kitchen-visualizer-startform {
+  /* .kitchen-visualizer-startform {
     flex-direction: column;
     align-items: center;
   }
@@ -93,19 +94,19 @@
     width: 90%;
     height: auto;
     padding: 100px 0px;
-  }
+  } */
   .kitchen-visualizer-section {
-    width: 80%;
+    /* width: 80%; */
   }
-  .kitchen-visualizer-section span {
+  /* .kitchen-visualizer-section span {
     font-size: 25px;
-  }
+  } */
   .release-text {
     font-size: 14px;
     color: #ffffff;
     /* font-weight: bold; */
     /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, */
-      /* 1px 1px 0 #000; */
+    /* 1px 1px 0 #000; */
   }
   .kitchen-visualizer-container {
     width: 100%;
@@ -120,15 +121,15 @@
   }
 }
 @media screen and (max-width: 375px) and (min-width: 320px) {
-  .kitchen-visualizer-startform {
+  /* .kitchen-visualizer-startform {
     padding: 50px 0px;
-  }
-  .kitchen-visualizer-section span {
+  } */
+  /* .kitchen-visualizer-section span {
     font-size: 18px;
   }
   .kitchen-visualizer-section div {
     font-size: 14px;
     margin-top: 20px;
     line-height: 22px;
-  }
+  } */
 }

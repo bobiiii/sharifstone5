@@ -10,25 +10,24 @@ import useAuth from '../../../hooks/useAuth';
 
 const DiscoverCollection2 = () => {
   const { variety2 } = useParams();
+  const [varieties, setVarieties] = useState([]);
+
   
   let varietyWithSpaces = variety2.replace(/-/g, " ");
-  const { collections, varieties, setVarieties } = useAuth();
+  const { collections,  } = useAuth();
   const [filteredVarietiesState, setFilteredVarietiesState] = useState([]) 
-  const navigate = useNavigate();
   useEffect(() => {
+    console.log("use efct dis 2")
     const fetchData = async () => {
       const filteredVarieties = collections.filter(
         (collection) => collection.collectionName === varietyWithSpaces
       );
       setFilteredVarietiesState(filteredVarieties)
 
-      // if (!filteredVarieties.length) {
-      //   return navigate('/');
-      // }
       setVarieties(filteredVarieties[0]?.variety);
     };
     fetchData();
-  });
+  },[collections]);
 
   const collectionJSX = (obj, i, filteredVarieties) => {
     let link = obj.varietyName.replace(/\s+/g, "-");
@@ -76,7 +75,7 @@ const DiscoverCollection2 = () => {
 
   return (
     <>
-      {varieties && (
+      {varieties?.length > 0 ? (
         <MaxWidthWrapper
           className={' max-w-screen-2xl lg:px-0 md:px-0 sm:px-0 px-0'}
         >
@@ -97,12 +96,12 @@ const DiscoverCollection2 = () => {
           <div
             className={` lg:w-full   lg:mx-auto flex  justify-center lg:gap-4   flex-wrap     `}
           >
-            {varieties.length > 0
-              ? varieties.map((obj, i) => collectionJSX(obj, i, filteredVarietiesState))
+            {varieties?.length > 0
+              ? varieties?.map((obj, i) => collectionJSX(obj, i, filteredVarietiesState))
               : 'loading'}
           </div>
-        </MaxWidthWrapper>
-      )}
+        </MaxWidthWrapper>) :"loading"
+      }
     </>
   );
 };

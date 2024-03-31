@@ -57,13 +57,13 @@ function ProductDescription() {
                 ) : showColor === 2 ? (
                   <img
                     src={`https://drive.google.com/thumbnail?id=${matchedVariety?.closeLookUp}&sz=w1000`}
-                    className="w-full lg:w-4/5 h-[200px] lg:h-[650px] bg-cover bg-no-repeat"
+                    className="w-full lg:w-4/5 h-[31vh] lg:h-[650px] bg-cover bg-no-repeat"
                     alt={'product-im'}
                   />
                 ) : (
                   <img
                     src={`https://drive.google.com/thumbnail?id=${matchedVariety?.instalLook}&sz=w1000`}
-                    className="w-full lg:w-4/5 h-[200px] lg:h-[650px] bg-cover bg-no-repeat"
+                    className="w-full lg:w-4/5 h-[31vh] lg:h-[650px] bg-cover bg-no-repeat"
                     alt={'product-im'}
                   />
                 )}

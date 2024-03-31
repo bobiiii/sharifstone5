@@ -18,7 +18,6 @@ const AuthContextProvider = ({ children }) => {
     };
     fetchData();
   }, []);
-  console.log('useauth');
   return (
     <AuthContext.Provider
       value={{
@@ -33,7 +32,7 @@ const AuthContextProvider = ({ children }) => {
         varieties,
         setVarieties,
         blogs,
-        setBlogs
+        setBlogs,
       }}
     >
       {children}

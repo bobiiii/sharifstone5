@@ -6,30 +6,29 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./Navigation";
 import Context from "./Store/contextStore";
 import APIContext from "./Store/apiContext";
-import { getCollection, getVisualizer } from "./apiCall/apiCall";
+// import { getCollection, getVisualizer } from "./apiCall/apiCall";
 import AuthContextProvider from './hooks/AuthContext';
-import useAuth from "./hooks/useAuth";
+// import useAuth from "./hooks/useAuth";
 
 
 const RunFuncion = () => {
 
-  console.log("run function")
-
+  
   const [store, setStore] = useState({});
   const [apiStore, setAPIStore] = useState({});
   
 
-  useEffect(async () => {
-    const collections = await getCollection();
-    const visualizers = await getVisualizer();
-    const newObj = {
-      ...apiStore,
-      collections,
-      visualizers,
-    };
-    setAPIStore(newObj);
+  // useEffect(async () => {
+  //   const collections = await getCollection();
+  //   const visualizers = await getVisualizer();
+  //   const newObj = {
+  //     ...apiStore,
+  //     collections,
+  //     visualizers,
+  //   };
+  //   setAPIStore(newObj);
     
-  }, []);
+  // }, []);
   return (
     <APIContext.Provider value={{ apiStore, setAPIStore }}>
       <Context.Provider value={{ store, setStore }}>

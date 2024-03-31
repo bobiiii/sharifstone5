@@ -48,7 +48,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/kitchen-visualizer",
+      path: "/visualizer",
       element: (
           <KitchenVisualizer />
       ),
@@ -61,13 +61,13 @@ const router = createBrowserRouter(
 
       },
 
-      {
-        path: "/visualizer/:categoryName",
-        element: (
-          <NewVisualizer/>
-        ),
+      // {
+      //   path: "/visualizer/:categoryName",
+      //   element: (
+      //     <NewVisualizer/>
+      //   ),
   
-        },
+      //   },
       
 
     {
@@ -86,14 +86,14 @@ const router = createBrowserRouter(
         </Layout>
       ),
     },
-    {
-      path: "/collection?/:collection",
-      element: (
-        <Layout>
-          <OurCollection />
-        </Layout>
-      ),
-    },
+    // {
+    //   path: "/collection?/:collection",
+    //   element: (
+    //     <Layout>
+    //       <OurCollection />
+    //     </Layout>
+    //   ),
+    // },
     {
       path: "/:collectionName/:varietyName",
       element: (
@@ -135,54 +135,54 @@ const router = createBrowserRouter(
           </Layout>
         ),
       },
-      {
-        path: "/login",
-        element: (
-          <Layout>
-            <Login />
-          </Layout>
-        ),
-      },
-      {
-        path: "/admin-dashboard",
-        element: (
-          <Layout>
-            <Dashboard />
-          </Layout>
-        ),
-      },
-      {
-        path: "/admin-dashboard/create-collection",
-        element: (
-          <Layout>
-            <CreateCollection />
-          </Layout>
-        ),
-      },
-      {
-        path: "/admin-dashboard/create-visualizer",
-        element: (
-          <Layout>
-            <CreateVisualizer />
-          </Layout>
-        ),
-      },
-      {
-        path: "/admin-dashboard/collections",
-        element: (
-          <Layout>
-            <ViewCollection />
-          </Layout>
-        ),
-      },
-      {
-        path: "/admin-dashboard/visualizer",
-        element: (
-          <Layout>
-            <ViewVisualizer />
-          </Layout>
-        ),
-      },
+      // {
+      //   path: "/login",
+      //   element: (
+      //     <Layout>
+      //       <Login />
+      //     </Layout>
+      //   ),
+      // },
+      // {
+      //   path: "/admin-dashboard",
+      //   element: (
+      //     <Layout>
+      //       <Dashboard />
+      //     </Layout>
+      //   ),
+      // },
+      // {
+      //   path: "/admin-dashboard/create-collection",
+      //   element: (
+      //     <Layout>
+      //       <CreateCollection />
+      //     </Layout>
+      //   ),
+      // },
+      // {
+      //   path: "/admin-dashboard/create-visualizer",
+      //   element: (
+      //     <Layout>
+      //       <CreateVisualizer />
+      //     </Layout>
+      //   ),
+      // },
+      // {
+      //   path: "/admin-dashboard/collections",
+      //   element: (
+      //     <Layout>
+      //       <ViewCollection />
+      //     </Layout>
+      //   ),
+      // },
+      // {
+      //   path: "/admin-dashboard/visualizer",
+      //   element: (
+      //     <Layout>
+      //       <ViewVisualizer />
+      //     </Layout>
+      //   ),
+      // },
   ]
 );
 

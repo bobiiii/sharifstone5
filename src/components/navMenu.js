@@ -25,7 +25,7 @@ function NavMenu() {
     },
     {
       name: "Kitchen Visualizer",
-      route: "/kitchen-visualizer",
+      route: "/visualizer",
     },
     {
       name: "About the company",
@@ -116,7 +116,7 @@ function NavMenu() {
             </Link>
 
             <Link
-              to={"/kitchen-visualizer"}
+              to={"/visualizer"}
               onClick={() => setOpenMenu(false)}
               className=""
             >
