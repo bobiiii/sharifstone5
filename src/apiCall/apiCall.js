@@ -12,7 +12,7 @@ const getCollection2 = async () => {
     .then((response) => {
       return response?.data?.data
     })
-    .catch((err) => alert(err.response));
+    .catch((err) => alert("Something went wrong"));
 };
 
 const getKitchens = async () => {
@@ -22,7 +22,7 @@ const getKitchens = async () => {
       
       return response?.data?.data
     })
-    .catch((err) => alert(err.response));
+    .catch((err) => alert("Something went wrong"));
 };
 const getBathrooms = async () => {
   return await axios
@@ -31,7 +31,7 @@ const getBathrooms = async () => {
       
       return response?.data?.data
     })
-    .catch((err) => alert(err.response));
+    .catch((err) => alert("Something went wrong"));
 };
 
 

@@ -44,7 +44,7 @@ function HomeScreen() {
               setShowDropdown(false);
             }}
           >
-            {/* <video
+            <video
               className="lg:hidden w-screen h-full object-cover min-w-[100vw] "
               autoPlay
               muted
@@ -70,7 +70,7 @@ function HomeScreen() {
               <source src={home_video} type="video/mp4" />
               <source src={home_video_webm} type="video/webm" />
               <source src={home_video_mov} type="video/mov" />
-            </video> */}
+            </video>
           </div>
         </div>
         <div className=" lg:hidden w-full bg-gradient-hero  h-[35%] justify-center flex items-center   bg-center bg-cover bg-no-repeat  text-white">

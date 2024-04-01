@@ -63,7 +63,7 @@ const router = createBrowserRouter(
 
       },
       {
-        path: "/kitchen/dummy",
+        path: "/visualizer/:product",
         element: (
           <VisualizerMain/>
         ),
