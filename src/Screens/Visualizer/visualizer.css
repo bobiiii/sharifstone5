@@ -5,3 +5,14 @@
 .cards-scroll::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+
+
+.cards-scroll2::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cards-scroll2::-webkit-scrollbar-thumb {
+  background-color: #515151;
+  border-radius: 5px;
+  /* Adjust the radius value as needed */
+}

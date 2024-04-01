@@ -25,7 +25,7 @@ function OurLocation() {
                   ORlANDO
                 </Heading>
                 <p className="sm:text-base text-sm font-light font-albert">
-                  2440 Dinneed Ave. Orlando, FL 32804</p>
+                  2440 Dinneen Ave, Orlando, FL 32804, USA</p>
               </div>
 
             </div>
@@ -38,9 +38,7 @@ function OurLocation() {
                   TAMPA
                 </Heading>
                 <p className="sm:text-base text-sm font-light font-albert">
-                  Dinneen* in Orlando Address.
-                  Here is Full TAMPA Address
-                  8524 E. Adamo Dr. Tampa, FL 33619</p>
+                  8524 E Adamo Dr, Tampa, FL 33619, USA</p>
               </div>
 
             </div>

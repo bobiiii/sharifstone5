@@ -18,7 +18,8 @@ module.exports = {
         'bg-img-hero': "url('/public/images/bg_S_white.png')",
       },
       screens: {
-        'xs': '480px', // Small screens and up
+        'xs': '480px', 
+        '3xl': '3000px', 
       },
     },
   },
