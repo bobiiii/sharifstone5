@@ -34,11 +34,11 @@ function DiscoverCollection() {
 
   return (
 
-    <div className="w-full  flex justify-center items-center flex-col  border-4 border-green-600">
+    <div className="w-full  flex justify-center items-center flex-col  ">
       <div className="">
         <ScrollAnimation animateIn='animate__backInLeft'
           animateOut='animate__backInRight'>
-          <Heading className=" whitespace-nowrap py-2 text-center border-4 border-green-600">
+          <Heading className=" whitespace-nowrap py-2 text-center ">
             DISCOVER OUR NEW ARRIVALS!
           </Heading>
         </ScrollAnimation>
