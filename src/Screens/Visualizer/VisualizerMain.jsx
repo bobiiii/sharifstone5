@@ -11,7 +11,13 @@ function VisualizerMain() {
   const [ActiveColor, setActiveColor] = useState({});
   const [colors, setColors] = useState([]);
   const [ambient, setAmbient] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+
   const { product } = useParams();
+
+  const filteredColors = colors.filter((item) =>
+    item.colorName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,13 +44,13 @@ function VisualizerMain() {
   return (
     <div className="h-screen flex ">
       <div className="w-[30%] xl:w-[25%] h-full p-4 flex flex-col  gap-y-2">
-        <div className="  xl:h-[20%] brb flex flex-col justify-between  ">
-          <div className="    xl:h-[50%]">
+        <div className="  xl:h-[20vh]  flex flex-col justify-between  ">
+          <div className="    xl:h-[50%] 2xl:h-[45%]">
             <img src={Logo} alt="" className="h-full  w-3/5" />
           </div>
           <div className=" flex  gap-x-4  pb-2">
             <Button
-              className={`px-6 py-2 
+              className={`px-6 py-2 2xl:px-8
                                  bg-red-600 text-white
                                  `}
               clickFunc={() => setActiveTab('colors')}
@@ -52,7 +58,7 @@ function VisualizerMain() {
               Colors
             </Button>
             <Button
-              className={`px-6 py-2
+              className={`px-6 py-2 2xl:px-8
                                  bg-white text-black border border-black
                                  `}
               clickFunc={() => setActiveTab('ambient')}
@@ -63,8 +69,8 @@ function VisualizerMain() {
         </div>
 
         {activeTab === 'colors' ? (
-          <div className="brr xl:h-[75%]">
-            <div className=" brg  xl:h-[30%]">
+          <div className=" xl:h-[75vh]">
+            <div className="   xl:h-[30%]">
               <div className=" h-full flex justify-center items-center flex-col">
                 <h5 className="xl:h-[15%] text-base font-light font-albert ">
                   Countertop
@@ -72,48 +78,35 @@ function VisualizerMain() {
                 <img
                   src={`https://drive.google.com/thumbnail?id=${ActiveColor?.colorCardImage}&sz=w1000`}
                   alt=""
-                  className=" brr w-[50%] xl:h-[60%] my-1 "
+                  className="  w-[50%] xl:h-[60%] my-1 "
                 />
                 <h5 className="xl:h-[15%]">{ActiveColor?.colorName}</h5>
               </div>
             </div>
-            <div className="brb xl:h-[70%] overflow-y-scroll cards-scroll">
+            <div className=" xl:h-[70%] overflow-y-scroll cards-scroll">
               <div className="flex justify-between">
                 <div>Select Color</div>
-                <div>Input Box</div>
+                <input
+                  type="text"
+                  placeholder="Search color"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="p-2 border border-gray-300 rounded-lg"
+                />
               </div>
-              <div className="text-black grid grid-cols-3 gap-2 brg ">
-                {colors?.map((item, i) => {
+              <div className="text-black grid grid-cols-3 gap-2  ">
+                {filteredColors?.map((item, i) => {
                   return (
                     <div
                       key={i}
-                      className="brr flex flex-col h-[85px]"
+                      className=" flex flex-col xl:h-[85px]  2xl:h-[150px]"
                       onClick={() => {
                         setActiveColor(item);
                       }}
                     >
                       <img
                         src={`https://drive.google.com/thumbnail?id=${item?.colorCardImage}&sz=w1000`}
-                        className="rounded-xl cursor-pointer w-full lg:w-full lg:h-64"
-                        alt="tile-images"
-                      />
-
-                      <h3 className="text-center">{item?.colorName}</h3>
-                    </div>
-                  );
-                })}
-                {colors?.map((item, i) => {
-                  return (
-                    <div
-                      key={i}
-                      className="brr flex flex-col h-[85px]"
-                      onClick={() => {
-                        setActiveColor(item);
-                      }}
-                    >
-                      <img
-                        src={`https://drive.google.com/thumbnail?id=${item?.colorCardImage}&sz=w1000`}
-                        className="rounded-xl cursor-pointer w-full lg:w-full lg:h-64"
+                        className="rounded-lg cursor-pointer w-full lg:w-full lg:h-64"
                         alt="tile-images"
                       />
 
@@ -125,9 +118,9 @@ function VisualizerMain() {
             </div>
           </div>
         ) : (
-          <div className="brr py-2 overflow-y-scroll cards-scroll">
+          <div className=" py-2 overflow-y-scroll cards-scroll">
             {ambient?.map((item, i) => {
-              console.log(item);
+              //   console.log(item);
               return (
                 <div
                   key={i}
