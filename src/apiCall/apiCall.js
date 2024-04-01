@@ -24,6 +24,17 @@ const getKitchens = async () => {
     })
     .catch((err) => alert(err.response));
 };
+const getBathrooms = async () => {
+  return await axios
+    .get(`${apiEndpoint}/visualizer/bathrooms`)
+    .then((response) => {
+      
+      return response?.data?.data
+    })
+    .catch((err) => alert(err.response));
+};
+
+
 
 
 // const getCollection = async () => {
@@ -65,5 +76,5 @@ const getKitchens = async () => {
 //     .catch((err) => alert(err.response.data.message));
 // };
 
-export {getKitchens,getCollection2 };
+export {getKitchens,getCollection2, getBathrooms };
 // export {getKitchens,getCollection2, getCollection, getCollectionByParam, getColorByParam, getVisualizer };

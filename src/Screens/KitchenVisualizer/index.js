@@ -11,7 +11,7 @@ const KitchenVisualizer = () => {
   const [kitchenData, setKitchData] = useState();
   const [currentAmbient, setCurrentAmbient] = useState("one");
   // const params = useParams();
-  
+
   const kitchenArray = [
     {
       name: "Bohemian Flam",
@@ -421,23 +421,23 @@ const KitchenVisualizer = () => {
   // }, []);
   return (
     <>
-      
-        <div
-          className="kitchen-visualizer-container overflow-scroll"
-          style={{ backgroundImage: "url(/images/cover/visualizerMain.png)" }}
-        >
-          <div className="kitchen-visualizer-logo flex-1">
-            <Link to="/">
-              <img src={Logo} />
-            </Link>
 
-            <div className="release-wrapper">
-              <p className="release-text">2024 RELEASE</p>
-            </div>
+      <div
+        className="kitchen-visualizer-container overflow-scroll"
+        style={{ backgroundImage: "url(/images/cover/visualizerMain.png)" }}
+      >
+        <div className="kitchen-visualizer-logo flex-1">
+          <Link to="/">
+            <img src={Logo} />
+          </Link>
+
+          <div className="release-wrapper">
+            <p className="release-text">2024 RELEASE</p>
           </div>
-          <div className="flex-1   p-4 text-white flex items-center w-3/5">
-            <div className="flex items-center rounded-3xl px-4 bg-black bg-opacity-50 h-5/6 brb">
-            
+        </div>
+        <div className="flex-1   p-4 text-white flex items-center w-3/5">
+          <div className="flex items-center rounded-3xl px-4 bg-black bg-opacity-50 h-5/6 brb">
+
             <div className="  w-2/3">
               <h3 className="text-4xl font-semibold font-albert pb-2">SHARIFSTONE ONLINE VISUALIZER</h3>
               <div className="leading-6 font-albert">
@@ -453,17 +453,17 @@ const KitchenVisualizer = () => {
             <div className="  w-1/3">
               <div
                 // onClick={() => setCurrentScreen("Visualizer Form")}
-                className="cursor-pointer rounded-xl w-full mx-auto flex justify-center " 
+                className="cursor-pointer rounded-xl w-full mx-auto flex justify-center "
               >
-<Button className={"p-0 py-2 w-2/3 font-semibold"}><Link to={"/kitchen/select-category"} className={"font-semibold text-[25px]"}>Start</Link></Button>
+                <Button className={"p-0 py-2 w-2/3 font-semibold"}><Link to={"/kitchen/select-category"} className={"font-semibold text-[25px]"}>Start</Link></Button>
               </div>
 
 
             </div>
-            </div>
           </div>
         </div>
-      
+      </div>
+
 
       {/* {currentScreen === "Visualizer Form" && (
         <VisualizerForm

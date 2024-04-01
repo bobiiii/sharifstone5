@@ -21,6 +21,8 @@ import Visualizer from "../Screens/NewVisualizer/NewVisualizer";
 import NewVisualizer from "../Screens/NewVisualizer/NewVisualizer";
 import BlogScreen from "../Screens/Blog";
 import OurCollection2 from "../Screens/Our_Collection2";
+import VisualizerModel from "../Screens/NewVisualizer/VisualizerModel";
+import VisualizerMain from "../Screens/Visualizer/VisualizerMain";
 
 createBrowserRouter([
   {
@@ -60,6 +62,13 @@ const router = createBrowserRouter(
       ),
 
       },
+      {
+        path: "/kitchen/dummy",
+        element: (
+          <VisualizerMain/>
+        ),
+  
+        },
 
       // {
       //   path: "/visualizer/:categoryName",
@@ -135,6 +144,14 @@ const router = createBrowserRouter(
           </Layout>
         ),
       },
+      // {
+      //   path: "/kitchen-new",
+      //   element: (
+      //     <Layout>
+      //       <VisualizerModel/>
+      //     </Layout>
+      //   ),
+      // },
       // {
       //   path: "/login",
       //   element: (
