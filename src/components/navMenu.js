@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./navMenu.css";
 import { Link } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -7,7 +7,7 @@ import QuartzDropdown from "./quatzDropdown";
 import useAuth from "../hooks/useAuth"
 
 function NavMenu() {
-  const {showDropdown, setShowDropdown} = useAuth()
+  const { showDropdown, setShowDropdown } = useAuth()
 
   const [openMenu, setOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -71,8 +71,8 @@ function NavMenu() {
 
   useEffect(() => {
     if (window.outerWidth <= 768 && isMobile === false) {
-      
-      
+
+
       setIsMobile(true);
     }
 
@@ -169,58 +169,58 @@ function NavMenu() {
         </div>
       )}
       {/* desktop-navbar */}
-        <div className="relatiive  py-2 xl:flex items-center justify-between hidden ">
-          {window.location.pathname.includes("/admin-dashboard") ? (
-            <div className="nav-container">
-              {dashboard.map((v, i) => (
-                <Link to={v.route} className="nav-item" key={i}>
-                  <div
-                    className="active-dott"
-                    style={{
-                      visibility:
-                        window.location.pathname === v.route ? "" : "hidden",
-                    }}
-                  />
-                  {v.name}
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <div className="nav-container ">
-              {nav.map((v, i) => (
-                <Link
+      <div className="relatiive  py-2 xl:flex items-center justify-between hidden ">
+        {window.location.pathname.includes("/admin-dashboard") ? (
+          <div className="nav-container">
+            {dashboard.map((v, i) => (
+              <Link to={v.route} className="nav-item" key={i}>
+                <div
+                  className="active-dott"
+                  style={{
+                    visibility:
+                      window.location.pathname === v.route ? "" : "hidden",
+                  }}
+                />
+                {v.name}
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="nav-container ">
+            {nav.map((v, i) => (
+              <Link
                 key={i}
-                  to={v.route}
-                  className="nav-item"
-                  onMouseOver={
-                    v.name === "Quartz Collection"
-                      ? () => setShowDropdown(true)
-                      : () => setShowDropdown(false)
-                  }
-                >
-                  <div
-                    className="active-dott"
-                    style={{
-                      visibility:
-                        window.location.pathname === v.route ? "" : "hidden",
-                    }}
-                  />
-                  {v.name === "Kitchen Visualizer" ? (
-                    <span className="new-text">
-                      {showNewTextKitchenVisualizer && "NEW "}
-                    </span>
-                  ) : null}
-                  {v.name}
-                </Link>
-              ))}
-
-              
-            </div>
-          )}
-        </div>
+                to={v.route}
+                className="nav-item"
+                onMouseOver={
+                  v.name === "Quartz Collection"
+                    ? () => setShowDropdown(true)
+                    : () => setShowDropdown(false)
+                }
+              >
+                <div
+                  className="active-dott"
+                  style={{
+                    visibility:
+                      window.location.pathname === v.route ? "" : "hidden",
+                  }}
+                />
+                {v.name === "Kitchen Visualizer" || v.name === "Live Inventory" ? (
+                  <span className="new-text">
+                    {showNewTextKitchenVisualizer && "NEW "}
+                  </span>
+                ) : null}
+                {v.name}
+              </Link>
+            ))}
 
 
-        {showDropdown &&<QuartzDropdown  />}
+          </div>
+        )}
+      </div>
+
+
+      {showDropdown && <QuartzDropdown />}
     </>
   );
 }

@@ -110,7 +110,7 @@
   }
   .kitchen-visualizer-container {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
