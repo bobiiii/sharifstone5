@@ -45,7 +45,7 @@ function VisualizerMain() {
         <>
             <div className="h-screen lg:flex hidden ">
                 <div className="w-[30%]  xl:w-[25%] overflow-hidden  h-full p-4 flex flex-col  gap-y-10">
-                    <div className="  xl:h-[20vh]  flex flex-col gap-y-10  ">
+                    <div className="  xl:h-[20vh]  flex flex-col gap-y-8  ">
                         <div className="    xl:h-[50%] 2xl:h-[45%]">
                             <img src={Logo} alt="" className="h-full  w-3/5" />
                         </div>
@@ -84,7 +84,7 @@ function VisualizerMain() {
                                     <h5 className="xl:h-[15%] text-base font-semibold font-albert ">{ActiveColor?.colorName}</h5>
                                 </div>
                             </div>
-                            <div className=" xl:h-[70%] overflow-y-scroll cards-scroll2 pr-2">
+                            <div className=" xl:h-[70%] overflow-y-scroll cards-scroll2 pr-2 pb-6">
                                 <div className="flex justify-between items-center">
                                     <div>
                                         <h4 className='text-base font-albert font-medium'>Select color</h4>
@@ -157,7 +157,7 @@ function VisualizerMain() {
                             </div>
                         </div>
                     ) : (
-                        <div className=" py-2 overflow-y-scroll flex flex-col gap-y-4 cards-scroll2">
+                        <div className=" mb-4 overflow-y-scroll flex flex-col  gap-y-4 cards-scroll2">
                             {ambient?.map((item, i) => {
                                 return (
                                     <div
@@ -189,11 +189,11 @@ function VisualizerMain() {
                     />
                 </div>
             </div>
-            <div className='lg:hidden flex flex-col  '>
-                <div className='bg-white sm:py-6 py-4  flex justify-center items-center'>
-                    <img src={Logo} alt="" className="h-16  " />
+            <div className='lg:hidden flex flex-col h-full max-h-screen'>
+                <div className='bg-white  py-4  flex justify-center items-center'>
+                    <img src={Logo} alt="" className="h-12  " />
                 </div>
-                <div className='flex flex-col sm:gap-y-8 gap-y-4 '>
+                <div className='flex flex-col sm:gap-y-6 gap-y-2.5 '>
                     <div className="h-[40vh]">
                         <img
                             src={`https://drive.google.com/thumbnail?id=${ActiveColor?.mainImage}&sz=w1000`}
@@ -219,7 +219,7 @@ function VisualizerMain() {
                             Ambients
                         </Button>
                     </div>
-                    <div className='overflow-y-scroll cards-scroll2 max-h-[40vh] pr-2'>
+                    <div className='overflow-y-scroll cards-scroll2  max-h-[42vh] pr-2'>
                         {activeTab === 'colors' ? (
 
                             <>
