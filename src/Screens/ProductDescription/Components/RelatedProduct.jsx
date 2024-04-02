@@ -83,7 +83,7 @@ function RelatedProduct({ variety, collections }) {
                           /\s+/g,
                           '-'
                         )}/${link}`}
-                        className="h-full relative brr"
+                        className="h-full relative "
                       >
                         <img
                           src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
