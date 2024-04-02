@@ -83,7 +83,7 @@ function RelatedProduct({ variety, collections }) {
                           /\s+/g,
                           '-'
                         )}/${link}`}
-                        className="h-full"
+                        className="h-full relative brr"
                       >
                         <img
                           src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
@@ -91,7 +91,7 @@ function RelatedProduct({ variety, collections }) {
                           className="h-full rounded-lg w-full cursor-pointer "
                         />
                       </Link>
-                      <h4 className="lg:text-2xl  text-lg font-semibold font-albert bg-white text-start py-2">
+                      <h4 className="absolute bottom-0 left-[50%] translate-x-[-50%] bg-white/50 w-full text-center lg:text-2xl  text-lg font-semibold font-albert bg-white  py-2">
                         {item.varietyName}
                       </h4>
                     </div>
@@ -158,12 +158,16 @@ function RelatedProduct({ variety, collections }) {
                       /\s+/g,
                       '-'
                     )}/${link}`}
+                    className="relative"
                   >
                     <img
                       src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
                       alt=""
                       className=" h-[300px]  rounded-lg w-full cursor-pointer "
                     />
+                    <h3 className="absolute text-center text-lg font-bold bottom-0 left-[50%] translate-x-[-50%] bg-white/50 w-full">
+                      {item.varietyName}
+                    </h3>
                   </Link>
                 );
               })}
