@@ -80,7 +80,7 @@ const DiscoverCollection2 = () => {
           className={' max-w-screen-2xl lg:px-0 md:px-0 sm:px-0 px-0'}
         >
           <div className=" lg:w-full lg:mx-auto">
-            <h4 className="font-extrabold text-5xl text-center font-gelasio">
+            <h4 className="font-extrabold lg:text-5xl text-3xl text-center font-gelasio">
               {varietyWithSpaces}
             </h4>
           </div>
