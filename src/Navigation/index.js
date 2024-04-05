@@ -63,7 +63,7 @@ const router = createBrowserRouter(
 
       },
       {
-        path: "/visualizer/:product",
+        path: "/visualizer/:product/:color",
         element: (
           <VisualizerMain/>
         ),

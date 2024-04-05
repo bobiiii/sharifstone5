@@ -8,8 +8,8 @@ import Logo from '../../assets/images/logo.png';
 import { getKitchens, getBathrooms } from '../../apiCall/apiCall';
 import './visualizer.css';
 import { GoArrowUpRight } from 'react-icons/go';
-import { MdKeyboardArrowRight } from "react-icons/md";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from 'react-icons/md';
+import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import Carousel from 'react-multi-carousel';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { FaArrowRight } from 'react-icons/fa6';
@@ -57,28 +57,34 @@ function SelectCategory() {
 
         <div className="md:mt-0 mt-6">
           {selectedCategory === 'Kitchen' ? (
-            <h4 className="pb-4 lg:text-4xl md:text-3xl text-2xl font-albert font-medium text-white">Select Kitchen Layout</h4>
+            <h4 className="pb-4 lg:text-4xl md:text-3xl text-2xl font-albert font-medium text-white">
+              Select Kitchen Layout
+            </h4>
           ) : (
-            <h4 className="pb-4 lg:text-4xl md:text-3xl text-2xl text-white font-albert font-medium">Select Bathroom Layout</h4>
+            <h4 className="pb-4 lg:text-4xl md:text-3xl text-2xl text-white font-albert font-medium">
+              Select Bathroom Layout
+            </h4>
           )}
         </div>
 
         <div className=" h-auto  bg-white md:overflow-y-scroll md:py-4 py-6 rounded-2xl text-center cards-scroll   font-bold text-2xl xl:w-4/5  w-[90%] lg:px-10 ">
           <div className=" flex justify-center items-center gap-4">
             <Button
-              className={`px-8   md:font-semibold font-medium   ${selectedCategory === 'Kitchen'
-                ? ' bg-red-600 text-white py-2.5 '
-                : 'bg-white border border-slate-950 text-black py-2'
-                } `}
+              className={`px-8   md:font-semibold font-medium   ${
+                selectedCategory === 'Kitchen'
+                  ? ' bg-red-600 text-white py-2.5 '
+                  : 'bg-white border border-slate-950 text-black py-2'
+              } `}
               clickFunc={() => handleCategorySelect('Kitchen')}
             >
               Kitchen
             </Button>
             <Button
-              className={` px-8    md:font-semibold font-medium  ${selectedCategory === 'Bathroom'
-                ? ' bg-red-600 text-white py-2.5 '
-                : 'bg-white border border-slate-950 text-black py-2'
-                } `}
+              className={` px-8    md:font-semibold font-medium  ${
+                selectedCategory === 'Bathroom'
+                  ? ' bg-red-600 text-white py-2.5 '
+                  : 'bg-white border border-slate-950 text-black py-2'
+              } `}
               clickFunc={() => handleCategorySelect('Bathroom')}
             >
               Bathroom
@@ -114,14 +120,11 @@ export function KitchenCategoryData({ kitchenData }) {
   };
 
   return (
-
-
-
-
     <>
       <div className="  hidden md:grid grid-cols-3 gap-y-4 gap-x-4 place-items-center  items-center mx-auto  p-4 ">
         {kitchenData?.map((card, i) => {
           let link = card.name.replace(/\s+/g, '-');
+          let link2 = card?.colors[0]?.colorName.replace(/\s+/g, '-');
 
           return (
             <div className="  mx-auto w-full  items-center flex  justify-center">
@@ -129,7 +132,10 @@ export function KitchenCategoryData({ kitchenData }) {
                 key={i}
                 className=" flex justify-center items-center   w-full "
               >
-                <Link to={`/visualizer/${link}`} className="lg:w-[90%] w-full relative group">
+                <Link
+                  to={`/visualizer/${link}/${link2}`}
+                  className="lg:w-[90%] w-full relative group"
+                >
                   <div className="relative">
                     {/* Image */}
                     <img
@@ -138,48 +144,57 @@ export function KitchenCategoryData({ kitchenData }) {
                     />
                     {/* Icon Circle */}
                     <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <GoArrowUpRight size={25} color="white" className="cursor-pointer" />
+                      <GoArrowUpRight
+                        size={25}
+                        color="white"
+                        className="cursor-pointer"
+                      />
                     </div>
                   </div>
                 </Link>
               </div>
-
             </div>
           );
         })}
       </div>
 
-      <div className='md:hidden   h-full  mt-6 '>
+      <div className="md:hidden   h-full  mt-6 ">
         <Carousel
           infinite
           ref={carouselRef}
           arrows={false}
           responsive={responsive}
-          className='h-full'>
-          {
-            kitchenData?.map((item, i) => {
-              let link = item.name.replace(/\s+/g, '-');
-              return (
-                <Link key={i} to={`/visualizer/${link}`} className=" w-full relative group ">
-                  <div className="relative mx-4  ">
-                    {/* Image */}
-                    <img
-                      src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
-                      className="w-full rounded-[31px]"
+          className="h-full"
+        >
+          {kitchenData?.map((item, i) => {
+            let link = item?.name.replace(/\s+/g, '-');
+            let link2 = item?.colors[0]?.colorName.replace(/\s+/g, '-');
+            return (
+              <Link
+                key={i}
+                to={`/visualizer/${link}/${link2}`}
+                className=" w-full relative group "
+              >
+                <div className="relative mx-4  ">
+                  {/* Image */}
+                  <img
+                    src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
+                    className="w-full rounded-[31px]"
+                  />
+                  {/* Icon Circle */}
+                  <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <GoArrowUpRight
+                      size={25}
+                      color="white"
+                      className="cursor-pointer"
                     />
-                    {/* Icon Circle */}
-                    <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <GoArrowUpRight size={25} color="white" className="cursor-pointer" />
-                    </div>
                   </div>
-                </Link>
-              )
-            })
-          }
-
-
+                </div>
+              </Link>
+            );
+          })}
         </Carousel>
-        <div className='relative w-full flex gap-2 py-4 justify-center items-center mt-2  '>
+        <div className="relative w-full flex gap-2 py-4 justify-center items-center mt-2  ">
           <button
             className="bg-[#D4262A] rounded-full  p-2 "
             onClick={handlePrevious}
@@ -192,16 +207,13 @@ export function KitchenCategoryData({ kitchenData }) {
           >
             <MdKeyboardArrowRight size={20} className="text-white" />
           </button>
-
         </div>
       </div>
     </>
-
   );
 }
 
 export function BathroomCategoryData({ bathroomData }) {
-
   const responsive = {
     ' mobile': {
       breakpoint: { max: 768, min: 0 },
@@ -225,11 +237,18 @@ export function BathroomCategoryData({ bathroomData }) {
     <>
       <div className="  hidden md:grid grid-cols-3 gap-y-4 gap-x-4 place-items-center  items-center mx-auto  p-4 ">
         {bathroomData?.map((card, i) => {
+          let link = item?.name.replace(/\s+/g, '-');
+
+          let link2 = item?.colors[0]?.colorName.replace(/\s+/g, '-');
+
           return (
             <div className=" mx-auto w-full  items-center flex  justify-center">
-              <div key={i} className="flex justify-center items-center   w-full   relative group">
+              <div
+                key={i}
+                className="flex justify-center items-center   w-full   relative group"
+              >
                 <Link
-                  to={`/visualizer/${card?.name.trim()}`}
+                  to={`/visualizer/${link}/${link2}`}
                   className=" lg:w-[90%] w-full "
                 >
                   {/* <img src={card?.cardImage} className="" /> */}
@@ -239,7 +258,11 @@ export function BathroomCategoryData({ bathroomData }) {
                   />
 
                   <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <GoArrowUpRight size={25} color="white" className="cursor-pointer" />
+                    <GoArrowUpRight
+                      size={25}
+                      color="white"
+                      className="cursor-pointer"
+                    />
                   </div>
                 </Link>
               </div>
@@ -248,38 +271,44 @@ export function BathroomCategoryData({ bathroomData }) {
         })}
       </div>
 
-
-      <div className='md:hidden   h-full  mt-6 '>
+      <div className="md:hidden   h-full  mt-6 ">
         <Carousel
           infinite
           ref={carouselRef}
           arrows={false}
           responsive={responsive}
-          className='h-full'>
-          {
-            bathroomData?.map((item, i) => {
-              let link = item.name.replace(/\s+/g, '-');
-              return (
-                <Link key={i} to={`/visualizer/${link}`} className=" w-full relative group ">
-                  <div className="relative mx-4  ">
-                    {/* Image */}
-                    <img
-                      src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
-                      className="w-full rounded-[31px]"
+          className="h-full"
+        >
+          {bathroomData?.map((item, i) => {
+            let link = item?.name.replace(/\s+/g, '-');
+            let link2 = item?.colors[0]?.colorName.replace(/\s+/g, '-');
+
+            return (
+              <Link
+                key={i}
+                to={`/visualizer/${link}/${link2}`}
+                className=" w-full relative group "
+              >
+                <div className="relative mx-4  ">
+                  {/* Image */}
+                  <img
+                    src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
+                    className="w-full rounded-[31px]"
+                  />
+                  {/* Icon Circle */}
+                  <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <GoArrowUpRight
+                      size={25}
+                      color="white"
+                      className="cursor-pointer"
                     />
-                    {/* Icon Circle */}
-                    <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <GoArrowUpRight size={25} color="white" className="cursor-pointer" />
-                    </div>
                   </div>
-                </Link>
-              )
-            })
-          }
-
-
+                </div>
+              </Link>
+            );
+          })}
         </Carousel>
-        <div className='relative w-full flex gap-2 py-4 justify-center items-center mt-2  '>
+        <div className="relative w-full flex gap-2 py-4 justify-center items-center mt-2  ">
           <button
             className="bg-[#D4262A] rounded-full  p-2 "
             onClick={handlePrevious}
@@ -292,62 +321,8 @@ export function BathroomCategoryData({ bathroomData }) {
           >
             <MdKeyboardArrowRight size={20} className="text-white" />
           </button>
-
         </div>
       </div>
     </>
   );
 }
-// const bathroomLayout = [
-//   {
-//     image: '/images/layout/bathroom_1.png',
-//     value: 'Stylish-Bathroom-Vanity',
-//   },
-//   {
-//     image: '/images/layout/bathroom_2.png',
-//     value: 'Modern-Bathroom-Vanity',
-//   },
-//   {
-//     image: '/images/layout/bathroom_3.png',
-//     value: '',
-//   },
-//   {
-//     image: '/images/layout/bathroom_4.png',
-//     value: '',
-//   },
-//   {
-//     image: '/images/layout/bathroom_5.png',
-//     value: '',
-//   },
-//   {
-//     image: '/images/layout/bathroom_6.png',
-//     value: '',
-//   },
-// ];
-
-const kitchenLayout = [
-  {
-    image: '/images/layout/kitchen_1.png',
-    value: 'Stylish-Kitchen',
-  },
-  {
-    image: '/images/layout/kitchen_2.png',
-    value: 'Modern-Kitchen',
-  },
-  {
-    image: '/images/layout/kitchen_3.png',
-    value: '',
-  },
-  {
-    image: '/images/layout/kitchen_4.png',
-    value: '',
-  },
-  {
-    image: '/images/layout/kitchen_5.png',
-    value: '',
-  },
-  {
-    image: '/images/layout/kitchen_6.png',
-    value: '',
-  },
-];
