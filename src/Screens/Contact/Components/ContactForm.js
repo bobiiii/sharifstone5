@@ -52,14 +52,13 @@ function ContactForm() {
         console.error("Failed to submit form");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
-      // setMessage(error.response.data.message); 
+      setMessage(error.response.data.message); 
     } finally {
       setLoader(false);
     }
   };
 
-  const handleFileDrop = (acceptedFiles) => {
+  const handleFileDrop = (acceptedFiles) => { 
     setUpload(acceptedFiles[0]);
   };
   return (
@@ -113,9 +112,9 @@ function ContactForm() {
             />
             <input
               style={{ width: "100%" }}
-              type="text"
+              type="number"
               placeholder="mobile"
-              value={formData.email}
+              value={formData.mobile}
               onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
             />
 
