@@ -5,12 +5,17 @@ import { IoIosSend } from "react-icons/io";
 import { useState } from "react";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
+import {addNewsletter} from "../../../apiCall/apiCall";
 
 const SubscriptionNewsLetter = () => {
-  const [mailto, setMailto] = useState("");
-  const submitForm = (e) => {
-    window.location.href = `mailto: ${mailto}`;
+  const [emailAdress, setEmailAdress] = useState("");
+  const [emailSuccess, setEmailSuccess] = useState(false);
+  const submitEmail = async(e) => {
     e.preventDefault();
+    const res = await addNewsletter(emailAdress)
+    if (res.status == 200) {
+      setEmailSuccess(true)
+    }
   }
   return (
     <MaxWidthWrapper className='px-0'>
@@ -22,23 +27,24 @@ const SubscriptionNewsLetter = () => {
           </Heading>
           <div className=" lg:w-2/3 md:w-[70%] sm:w-[90%] w-full flex justify-center items-center ">
             <form style={{ marginBottom: 30 }} className="lg:w-[70%] md:w-[80%]
-             w-full sm:px-2 px-4 flex " onSubmit={submitForm}>
+             w-full sm:px-2 px-4 flex " >
               <input
                 className=" rounded-l-[30px] sm:w-[90%] w-full bg-white sm:py-4 py-2 px-4 text-base z-20 outline-none"
                 placeholder="Enter Your Email"
-                value={mailto}
-                onChange={(e) => setMailto(e.target.value)}
+                value={emailAdress}
+                onChange={(e) => setEmailAdress(e.target.value)}
                 type="text"
                 required
               />
-              <button type="submit" className=" bg-[#ee2a2e]  text-center items-center px-10 py-2 -ml-6 rounded-[30px] md:flex hidden whitespace-nowrap text-white font-semibold sm:text-base text-sm  font-gelasio z-30">
+              <button  onClick={(e)=>{submitEmail(e)}} className=" bg-[#ee2a2e]  text-center items-center px-10 py-2 -ml-6 rounded-[30px] md:flex hidden whitespace-nowrap text-white font-semibold sm:text-base text-sm  font-gelasio z-30">
                 Subcribe
               </button >
-              <button type="submit" className=" bg-[#ee2a2e] z-30 text-center items-center px-6 py-2.5 -ml-6 rounded-[30px] whitespace-nowrap md:hidden flex text-white font-semibold  font-gelasio">
+              <button  onClick={(e)=>{submitEmail(e)}} className=" bg-[#ee2a2e] z-30 text-center items-center px-6 py-2.5 -ml-6 rounded-[30px] whitespace-nowrap md:hidden flex text-white font-semibold  font-gelasio">
                 <IoIosSend size={25} color={"white"} />
               </button>
             </form>
           </div>
+         {emailSuccess && <h3 className="text-red-500 text-center text-lg lg:text-3xl font-bold">Thank You For Being a Part of SharifStone! </h3>}
           <img className="home-subscrion-bg" src={BG} />
         </div>
       </div>

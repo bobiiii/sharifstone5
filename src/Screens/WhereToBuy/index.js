@@ -83,7 +83,7 @@ function WhereToBuy() {
 
 
   const findNearestStore = () => {
-    console.log("find btn clkcd")
+    
     const userAddress = address.toLowerCase();
 
     let matchingStores = stores.filter(store =>
