@@ -17,7 +17,6 @@ const DiscoverCollection2 = () => {
   const { collections,  } = useAuth();
   const [filteredVarietiesState, setFilteredVarietiesState] = useState([]) 
   useEffect(() => {
-    console.log("use efct dis 2")
     const fetchData = async () => {
       const filteredVarieties = collections.filter(
         (collection) => collection.collectionName === varietyWithSpaces
