@@ -23,6 +23,7 @@ import BlogScreen from "../Screens/Blog";
 import OurCollection2 from "../Screens/Our_Collection2";
 import VisualizerModel from "../Screens/NewVisualizer/VisualizerModel";
 import VisualizerMain from "../Screens/Visualizer/VisualizerMain";
+import BlogDetails from "../Screens/Blog/Components/BlogDetails";
 
 createBrowserRouter([
   {
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
       path: "/",
       element: (
         <Layout>
+          
           <HomeScreen />
         </Layout>
       ),
@@ -144,62 +146,15 @@ const router = createBrowserRouter(
           </Layout>
         ),
       },
-      // {
-      //   path: "/kitchen-new",
-      //   element: (
-      //     <Layout>
-      //       <VisualizerModel/>
-      //     </Layout>
-      //   ),
-      // },
-      // {
-      //   path: "/login",
-      //   element: (
-      //     <Layout>
-      //       <Login />
-      //     </Layout>
-      //   ),
-      // },
-      // {
-      //   path: "/admin-dashboard",
-      //   element: (
-      //     <Layout>
-      //       <Dashboard />
-      //     </Layout>
-      //   ),
-      // },
-      // {
-      //   path: "/admin-dashboard/create-collection",
-      //   element: (
-      //     <Layout>
-      //       <CreateCollection />
-      //     </Layout>
-      //   ),
-      // },
-      // {
-      //   path: "/admin-dashboard/create-visualizer",
-      //   element: (
-      //     <Layout>
-      //       <CreateVisualizer />
-      //     </Layout>
-      //   ),
-      // },
-      // {
-      //   path: "/admin-dashboard/collections",
-      //   element: (
-      //     <Layout>
-      //       <ViewCollection />
-      //     </Layout>
-      //   ),
-      // },
-      // {
-      //   path: "/admin-dashboard/visualizer",
-      //   element: (
-      //     <Layout>
-      //       <ViewVisualizer />
-      //     </Layout>
-      //   ),
-      // },
+      {
+        path: "/blog/:blogName",
+        element: (
+          <Layout>
+            <BlogDetails />
+          </Layout>
+        ),
+      },
+    
   ]
 );
 

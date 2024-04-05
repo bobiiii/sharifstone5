@@ -11,25 +11,21 @@ import AuthContextProvider from './hooks/AuthContext';
 
 const RunFuncion = () => {
 
-  
+
   const [store, setStore] = useState({});
   const [apiStore, setAPIStore] = useState({});
-  
 
   return (
     <APIContext.Provider value={{ apiStore, setAPIStore }}>
       <Context.Provider value={{ store, setStore }}>
-<AuthContextProvider>
-        <React.StrictMode>
-          <RouterProvider router={router} />
-        </React.StrictMode>
+        <AuthContextProvider>
+          <React.StrictMode>
+            <RouterProvider router={router} />
+          </React.StrictMode>
         </AuthContextProvider>      </Context.Provider>
     </APIContext.Provider>
   );
 };
 ReactDOM.createRoot(document.getElementById("root")).render(<RunFuncion />);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
