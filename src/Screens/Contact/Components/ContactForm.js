@@ -123,7 +123,7 @@ function ContactForm() {
             <input
               style={{ width: "100%" }}
               type="text"
-              placeholder="Subject: Scope of work"
+              placeholder="Subject"
               value={formData.subject}
               onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
             />

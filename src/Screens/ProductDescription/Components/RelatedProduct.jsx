@@ -62,7 +62,7 @@ function RelatedProduct({ variety, collections }) {
         <Heading className="sm:flex hidden">RELATED PRODUCTS</Heading>
 
         {/* Desktop Carousel */}
-        <div className="w-full sm:block hidden sm:pt-10 pt-4  px-2">
+        <div className="w-11/12 sm:block hidden sm:pt-10 pt-4  px-2">
           <div className="relative">
             {matchedCollection?.variety && (
               <Carousel
@@ -91,7 +91,7 @@ function RelatedProduct({ variety, collections }) {
                           className="h-full rounded-lg w-full cursor-pointer "
                         />
                       </Link>
-                      <h4 className="absolute bottom-0 left-[50%] translate-x-[-50%] bg-white/50 w-full text-center lg:text-2xl  text-lg font-semibold font-albert bg-white  py-2">
+                      <h4 className="absolute bottom-0 left-[50%] translate-x-[-50%] bg-white/50 w-max px-4 text-center lg:text-2xl  text-lg font-semibold font-albert bg-white  py-2">
                         {item.varietyName}
                       </h4>
                     </div>
@@ -101,7 +101,7 @@ function RelatedProduct({ variety, collections }) {
             )}
             <span className=" absolute top-0 bottom-0 mb-8   items-center  flex justify-center">
               <button
-                className="bg-[#D4262A]  rounded-full  p-4 lg:-ml-5 -ml-3"
+                className="bg-[#D4262A]  rounded-full  p-4 lg:-ml-14 -ml-3"
                 onClick={handlePrevious2}
               >
                 <FaArrowLeft size={20} className="text-white" />
@@ -109,7 +109,7 @@ function RelatedProduct({ variety, collections }) {
             </span>
             <span className="absolute top-0 bottom-0  mb-8  right-0 items-center flex justify-center">
               <button
-                className="bg-[#D4262A] rounded-full  p-4 lg:-mr-5 -mr-3"
+                className="bg-[#D4262A] rounded-full  p-4 lg:-mr-14 -mr-3"
                 onClick={handleNext2}
               >
                 <FaArrowRight size={20} className="text-white" />

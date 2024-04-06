@@ -28,20 +28,18 @@ function Footer() {
                 <h4 className="text-[#2D2E2E] text-xl  font-semibold ">
                   Orlando
                 </h4>
-                <li className="flex gap-2 ">
+                <Link to={'https://g.co/kgs/LFBQ6D9'} className="flex gap-2 ">
                   <FaLocationDot className="text-[#EE2A2E] mt-1" size={20} />
                   <span className="py-0">
                     <p className="font-albert font-normal sm:text-base text-[12px] text-black">
-                      2440 Dinneen
+                      2440 Dinneen Ave,
                     </p>
                     <p className="font-albert font-normal sm:text-base text-[12px] text-black">
-                      Ave, Orlando, FL
+                      Orlando, FL 32804
                     </p>
-                    <p className="font-albert font-normal sm:text-base text-[12px] text-black">
-                      32804
-                    </p>
+                    <p className="font-albert font-normal sm:text-base text-[12px] text-black"></p>
                   </span>
-                </li>
+                </Link>
                 <li className="flex gap-2 ">
                   <FaPhone className="text-[#EE2A2E] " size={20} />
                   <span className="py-0">
@@ -64,20 +62,18 @@ function Footer() {
                 <h4 className="text-[#2D2E2E] text-xl  font-semibold ">
                   Tampa
                 </h4>
-                <li className="flex gap-2">
+                <Link to={'https://g.co/kgs/eHjaHyx'} className="flex gap-2">
                   <FaLocationDot className="text-[#EE2A2E] mt-1" size={20} />
                   <span className="py-0">
                     <p className="font-albert font-normal sm:text-base text-[12px] text-black">
-                      8524 E. Adamo{' '}
+                      8524 E. Adamo Dr,
                     </p>
                     <p className="font-albert font-normal sm:text-base text-[12px] text-black">
-                      Dr. Tampa, FL
+                      Tampa, FL 33619
                     </p>
-                    <p className="font-albert font-normal sm:text-base text-[12px] text-black">
-                      33619
-                    </p>
+                    <p className="font-albert font-normal sm:text-base text-[12px] text-black"></p>
                   </span>
-                </li>
+                </Link>
 
                 <li className="flex gap-1.5 ">
                   <FaPhone className="text-[#EE2A2E] " size={20} />
