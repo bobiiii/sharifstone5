@@ -118,6 +118,11 @@ function WhereToBuy() {
     }
   };
   const { setShowDropdown} = useAuth()
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      findNearestStore(); // Call your function here when Enter is pressed
+    }
+  };
 
   return (
     <MaxWidthWrapper className='md:mt-10 mt-4'  >
@@ -144,6 +149,7 @@ function WhereToBuy() {
               <div className="w-full relative">
                 <input
                   value={address}
+                  onKeyPress={handleKeyPress}
                   onChange={(e) => setAddress(e.target.value)}
                   placeholder="Search by city or store name"
                   type="text"
