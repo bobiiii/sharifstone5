@@ -1,18 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Button from '../resuable/Button';
 import { Link } from 'react-router-dom';
-import { getVisualizer } from '../../apiCall/apiCall';
-import useAuth from '../../hooks/useAuth';
-// import Logo from '../../assets/images/logo_footer.png';
 import Logo from '../../assets/images/logo.png';
 import { getKitchens, getBathrooms } from '../../apiCall/apiCall';
-import './visualizer.css';
+
 import { GoArrowUpRight } from 'react-icons/go';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import Carousel from 'react-multi-carousel';
-import { FaArrowLeft } from 'react-icons/fa6';
-import { FaArrowRight } from 'react-icons/fa6';
 function SelectCategory() {
   const [selectedCategory, setSelectedCategory] = useState('Kitchen'); // Initialize with 'Kitchen'
   const [bathroomData, setBathroomData] = useState([]); // Initialize with 'Kitchen'

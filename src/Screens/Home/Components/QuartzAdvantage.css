@@ -26,7 +26,7 @@
 }
 .home-advamtageheading {
   font-size: 50px;
-  font-family: "Gelasio", serif;
+  font-family: 'Gelasio', serif;
 }
 .home-advamtagedesc {
   width: 85%;
@@ -40,11 +40,11 @@
   margin-bottom: 40px;
   height: 550px;
   margin-top: 25px;*/
-  display: flex; 
+  display: flex;
   justify-content: center;
   background-size: cover;
   /* background-position: center; */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .homebrand-images {
@@ -96,18 +96,16 @@
   display: flex;
   align-items: center;
   position: absolute;
-  left: 50%; 
+  left: 50%;
   bottom: 50%;
   transform: translate(-50%, 50%);
   color: rgb(255, 255, 255);
   font-size: 18px;
-  font-weight: bold; 
+  font-weight: bold;
   background: rgba(0, 0, 0, 0.383);
   padding: 15px;
   border-radius: 10px;
 }
-
-
 
 @media screen and (max-width: 1440px) and (min-width: 1024px) {
   .homebrand-button {
@@ -181,12 +179,12 @@
     display: flex;
     align-items: center;
     position: absolute;
-    left: 50%; 
+    left: 50%;
     bottom: 40%;
     transform: translate(-50%, 50%);
     color: rgb(255, 255, 255);
     font-size: 16px;
-    font-weight: bold; 
+    font-weight: bold;
     background: rgba(0, 0, 0, 0.383);
     padding: 10px;
     border-radius: 10px;

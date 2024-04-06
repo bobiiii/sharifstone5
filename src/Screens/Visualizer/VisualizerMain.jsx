@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import main from './images/main.jpg';
-import coutertop from './images/coutertop.png';
+
 import Logo from '../../assets/images/logo_footer.png';
 import Button from '../resuable/Button';
 import { Link, useParams } from 'react-router-dom';
@@ -249,7 +248,7 @@ function VisualizerMain() {
                   <img
                     src={`https://drive.google.com/thumbnail?id=${ActiveColor?.colorCardImage}&sz=w1000`}
                     alt=""
-                    className="  sm:w-[40%] w-[30%]   my-2 "
+                    className="  sm:w-[40%] w-[30%] h-[80px]  my-2 "
                   />
                   <h5 className=" text-base font-semibold font-albert ">
                     {ActiveColor?.colorName}
@@ -262,17 +261,20 @@ function VisualizerMain() {
                   {filteredColors?.map((item, i) => {
                     let link2 = item?.colorName.replace(/\s+/g, '-');
                     return (
-                      <Link key={i} to={`/visualizer/${product}/${link2}`}>
+                      <Link
+                        key={i}
+                        to={`/visualizer/${product}/${link2}`}
+                        className="flex flex-col lg:h-[100px] 3xl:h-full  2xl:h-[150px]  "
+                      >
                         <div
-                          key={i}
-                          className=" flex flex-col lg:h-[100px] 3xl:h-full  2xl:h-[150px]"
+                          className="flex flex-col  h-full justify-between"
                           onClick={() => {
                             setActiveColor(item);
                           }}
                         >
                           <img
                             src={`https://drive.google.com/thumbnail?id=${item?.colorCardImage}&sz=w1000`}
-                            className="rounded-lg cursor-pointer w-full lg:w-full lg:h-64"
+                            className="flex-1 rounded-lg cursor-pointer w-full lg:w-full lg:h-64"
                             alt="tile-images"
                           />
 

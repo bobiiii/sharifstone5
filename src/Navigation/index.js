@@ -9,19 +9,10 @@ import AboutUs from "../Screens/AboutUs";
 import WarrantyAndSupport from "../Screens/WarrantyAndSupport";
 import ContactScreen from "../Screens/Contact";
 import KitchenVisualizer from "../Screens/KitchenVisualizer";
-import Login from "../Screens/Login/Login";
-import Dashboard from "../Screens/Dashboard/Dashboard";
-import CreateCollection from "../Screens/CreateCollection/CreateCollection";
-import ViewCollection from "../Screens/ViewCollection/ViewCollection";
-import CreateVisualizer from "../Screens/CreateVisualizer/createVisualizer";
-import ViewVisualizer from "../Screens/ViewVisualizer/viewVisualizer";
 import WhereToBuy from "../Screens/WhereToBuy";
 import SelectCategory from "../Screens/NewVisualizer/SelectCategory";
-import Visualizer from "../Screens/NewVisualizer/NewVisualizer";
-import NewVisualizer from "../Screens/NewVisualizer/NewVisualizer";
 import BlogScreen from "../Screens/Blog";
 import OurCollection2 from "../Screens/Our_Collection2";
-import VisualizerModel from "../Screens/NewVisualizer/VisualizerModel";
 import VisualizerMain from "../Screens/Visualizer/VisualizerMain";
 import BlogDetails from "../Screens/Blog/Components/BlogDetails";
 
@@ -72,14 +63,6 @@ const router = createBrowserRouter(
   
         },
 
-      // {
-      //   path: "/visualizer/:categoryName",
-      //   element: (
-      //     <NewVisualizer/>
-      //   ),
-  
-      //   },
-      
 
     {
       path: "/quartz-collection",
@@ -97,14 +80,6 @@ const router = createBrowserRouter(
         </Layout>
       ),
     },
-    // {
-    //   path: "/collection?/:collection",
-    //   element: (
-    //     <Layout>
-    //       <OurCollection />
-    //     </Layout>
-    //   ),
-    // },
     {
       path: "/:collectionName/:varietyName",
       element: (
