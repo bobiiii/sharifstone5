@@ -112,7 +112,6 @@ function NavMenu() {
               className=""
             >
               Quartz Collection
-              {/* <MdArrowDropDown color={"#fff"} /> */}
             </Link>
 
             <Link
@@ -168,7 +167,6 @@ function NavMenu() {
           </div>
         </div>
       )}
-      {/* desktop-navbar */}
       <div className="relatiive  py-2 xl:flex items-center justify-between hidden ">
         {window.location.pathname.includes("/admin-dashboard") ? (
           <div className="nav-container">

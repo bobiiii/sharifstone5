@@ -191,7 +191,6 @@ function VisualizerMain() {
             </div>
           )}
         </div>
-        {/* image container */}
         <div className="w-[70%] xl:w-[75%]  h-screen">
           <img
             src={`https://drive.google.com/thumbnail?id=${ActiveColor?.mainImage}&sz=w1000`}
@@ -291,7 +290,6 @@ function VisualizerMain() {
               <>
                 <div className="grid grid-cols-2 gap-4 px-4">
                   {ambient?.map((item, i) => {
-                    // let link2 = item?.colorName.replace(/\s+/g, '-');
                     return (
                       <Link key={i} to={`/visualizer/${product}`}>
                         <div

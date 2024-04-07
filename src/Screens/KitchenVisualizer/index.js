@@ -1,6 +1,6 @@
 import Logo from "../../assets/images/logo.png";
 import "./KitchenVisualizer.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../resuable/Button";
 
 const KitchenVisualizer = () => {
@@ -15,7 +15,6 @@ const KitchenVisualizer = () => {
           <Link to="/">
             <img src={Logo} />
           </Link>
-          {/* release-wrapper */}
           <div className="py-2 px-4 bg-[#ee2a2e]   whitespace-nowrap  mt-6 w-max  rounded-lg">
             <p className="release-text">2024 RELEASE</p>
           </div>
@@ -39,7 +38,6 @@ const KitchenVisualizer = () => {
             </div>
             <div className=" w-1/3 " >
               <div
-                // onClick={() => setCurrentScreen("Visualizer Form")}
                 className="cursor-pointer rounded-xl w-full mx-auto flex justify-center "
               >
                 <Button className={"p-0 py-2 px-16 font-albert font-semibold text-xl"}><Link to={"/kitchen/select-category"} className={""}>Start</Link></Button>
@@ -50,13 +48,11 @@ const KitchenVisualizer = () => {
           </div>
         </div>
 
-        {/* Mobile */}
         <div className=" lg:hidden h-screen flex flex-col justify-center items-center  py-8 px-4 gap-y-10">
           <div className="">
             <Link to="/" >
               <img src={Logo} className="w-44" />
             </Link>
-            {/* release-wrapper */}
             <div className="py-2 px-4 bg-[#ee2a2e]   whitespace-nowrap  mt-6 w-max  rounded-lg">
               <p className="release-text text-white">2024 RELEASE</p>
             </div>
@@ -92,9 +88,6 @@ const KitchenVisualizer = () => {
 
 
       </div>
-
-
-
     </>
   );
 };

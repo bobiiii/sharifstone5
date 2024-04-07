@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function BlogCards() {
     const [visibleCards, setVisibleCards] = useState(6);
     const [showButton, setShowButton] = useState(true);
-    const [isLoading, setIsLoading] = useState(true); // State for loading status
+    const [isLoading, setIsLoading] = useState(true); 
     const { blogs, setBlogs } = useAuth();
 
     useEffect(() => {
@@ -18,11 +18,11 @@ function BlogCards() {
         axios.get(url)
             .then((res) => {
                 setBlogs(res.data.data);
-                setIsLoading(false); // Set loading to false when data is received
+                setIsLoading(false); 
             })
             .catch((error) => {
                 console.log(error);
-                setIsLoading(false); // Set loading to false in case of error
+                setIsLoading(false); 
             });
     }, []);
 
@@ -38,7 +38,7 @@ function BlogCards() {
 
     return (
         <MaxWidthWrapper>
-            {isLoading ? ( // Check if data is loading
+            {isLoading ? ( 
                 <div className="flex justify-center items-center h-screen">
                     <p className="text-xl font-bold">Loading...</p>
                 </div>

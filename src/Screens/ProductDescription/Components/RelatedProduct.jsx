@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MaxWidthWrapper from '../../MaxWidthWrapper';
 import Heading from '../../resuable/Heading';
 import { IoIosArrowBack } from 'react-icons/io';
@@ -56,11 +56,8 @@ function RelatedProduct({ variety, collections }) {
 
   return (
     <MaxWidthWrapper>
-      {/* related-container */}
       <div className=" w-full flex flex-col justify-center items-center">
         <Heading className="sm:flex hidden">RELATED PRODUCTS</Heading>
-
-        {/* Desktop Carousel */}
         <div className="w-11/12 sm:block hidden sm:pt-10 pt-4  px-2">
           <div className="relative">
             {matchedCollection?.variety && (
@@ -74,7 +71,6 @@ function RelatedProduct({ variety, collections }) {
                 {matchedCollection?.variety?.map((item, i) => {
                   let link = item?.varietyName.replace(/\s+/g, '-');
 
-                  //
                   return (
                     <div key={i} className="flex flex-col gap-2  h-full">
                       <Link
@@ -117,7 +113,6 @@ function RelatedProduct({ variety, collections }) {
           </div>
         </div>
 
-        {/* Mobile Carousel */}
         <div className="flex sm:hidden justify-between w-full items-center">
           <div>
             <Heading className=" text-base">RELATED PRODUCTS</Heading>

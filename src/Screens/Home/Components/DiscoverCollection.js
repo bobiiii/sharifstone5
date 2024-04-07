@@ -35,12 +35,9 @@ function DiscoverCollection() {
 
     <div className="w-full  flex justify-center items-center flex-col  ">
       <div className="">
-        {/* <ScrollAnimation animateIn='animate__backInLeft'
-          animateOut='animate__backInRight'> */}
           <Heading className=" whitespace-nowrap py-2 text-center ">
             DISCOVER OUR NEW ARRIVALS!
           </Heading>
-        {/* </ScrollAnimation> */}
       </div>
       <div className="sm:w-[60%]  w-[95%] md:mt-4 ">
         <p className="sm:text-base text-sm text-center">

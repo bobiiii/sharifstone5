@@ -36,7 +36,6 @@ function BusinessHours() {
   ];
   return (
     <MaxWidthWrapper >
-      {/* reorganize_container  */}
       <div className="w-full flex justify-center items-center">
         <div className="ourmission-container">
           <Heading>

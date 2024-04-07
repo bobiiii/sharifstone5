@@ -1,11 +1,9 @@
 .nav-container {
     background-color: #221F1F;
     height: 4vh;
-    /* width: 60%; */
     padding: 17px;
     border-radius: 80px;
     display: flex;
-    /* margin-: 30; */
 }
 .nav-item {
     color: white;
@@ -129,7 +127,5 @@
     .mobile-menu-btn {
         display: flex !important;
     }
-    /* .desktop-navbar {
-        display: none;
-    } */
+    
 }

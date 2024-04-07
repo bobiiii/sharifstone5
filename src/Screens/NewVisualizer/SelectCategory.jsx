@@ -9,9 +9,9 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import Carousel from 'react-multi-carousel';
 function SelectCategory() {
-  const [selectedCategory, setSelectedCategory] = useState('Kitchen'); // Initialize with 'Kitchen'
-  const [bathroomData, setBathroomData] = useState([]); // Initialize with 'Kitchen'
-  const [kitchenData, setKitchenData] = useState([]); // Initialize with 'Kitchen'
+  const [selectedCategory, setSelectedCategory] = useState('Kitchen');
+  const [bathroomData, setBathroomData] = useState([]);
+  const [kitchenData, setKitchenData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       const data = await getKitchens();
@@ -65,21 +65,19 @@ function SelectCategory() {
         <div className=" h-auto  bg-white md:overflow-y-scroll md:py-4 py-6 rounded-2xl text-center cards-scroll   font-bold text-2xl xl:w-4/5  w-[90%] lg:px-10 ">
           <div className=" flex justify-center items-center gap-4">
             <Button
-              className={`px-8   md:font-semibold font-medium   ${
-                selectedCategory === 'Kitchen'
+              className={`px-8   md:font-semibold font-medium   ${selectedCategory === 'Kitchen'
                   ? ' bg-red-600 text-white py-2.5 '
                   : 'bg-white border border-slate-950 text-black py-2'
-              } `}
+                } `}
               clickFunc={() => handleCategorySelect('Kitchen')}
             >
               Kitchen
             </Button>
             <Button
-              className={` px-8    md:font-semibold font-medium  ${
-                selectedCategory === 'Bathroom'
+              className={` px-8    md:font-semibold font-medium  ${selectedCategory === 'Bathroom'
                   ? ' bg-red-600 text-white py-2.5 '
                   : 'bg-white border border-slate-950 text-black py-2'
-              } `}
+                } `}
               clickFunc={() => handleCategorySelect('Bathroom')}
             >
               Bathroom
@@ -106,12 +104,10 @@ export function KitchenCategoryData({ kitchenData }) {
 
   const handlePrevious = () => {
     carouselRef.current.previous();
-    // console.log(carouselRef.current);
   };
 
   const handleNext = () => {
     carouselRef.current.next();
-    // console.log(carouselRef.current);
   };
 
   return (
@@ -132,12 +128,10 @@ export function KitchenCategoryData({ kitchenData }) {
                   className="lg:w-[90%] w-full relative group"
                 >
                   <div className="relative">
-                    {/* Image */}
                     <img
                       src={`https://drive.google.com/thumbnail?id=${card?.cardImage}&sz=w1000`}
                       className="w-full  rounded-3xl"
                     />
-                    {/* Icon Circle */}
                     <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
                       <GoArrowUpRight
                         size={25}
@@ -171,12 +165,10 @@ export function KitchenCategoryData({ kitchenData }) {
                 className=" w-full relative group "
               >
                 <div className="relative mx-4  ">
-                  {/* Image */}
                   <img
                     src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
                     className="w-full rounded-[31px]"
                   />
-                  {/* Icon Circle */}
                   <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <GoArrowUpRight
                       size={25}
@@ -220,12 +212,10 @@ export function BathroomCategoryData({ bathroomData }) {
 
   const handlePrevious = () => {
     carouselRef.current.previous();
-    // console.log(carouselRef.current);
   };
 
   const handleNext = () => {
     carouselRef.current.next();
-    // console.log(carouselRef.current);
   };
 
   return (
@@ -246,7 +236,6 @@ export function BathroomCategoryData({ bathroomData }) {
                   to={`/visualizer/${link}/${link2}`}
                   className=" lg:w-[90%] w-full "
                 >
-                  {/* <img src={card?.cardImage} className="" /> */}
                   <img
                     src={`https://drive.google.com/thumbnail?id=${card?.cardImage}&sz=w1000`}
                     className="w-full   rounded-3xl"
@@ -285,12 +274,10 @@ export function BathroomCategoryData({ bathroomData }) {
                 className=" w-full relative group "
               >
                 <div className="relative mx-4  ">
-                  {/* Image */}
                   <img
                     src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
                     className="w-full rounded-[31px]"
                   />
-                  {/* Icon Circle */}
                   <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <GoArrowUpRight
                       size={25}

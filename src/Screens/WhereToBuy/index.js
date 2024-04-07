@@ -97,7 +97,7 @@ function WhereToBuy() {
       matchingStores.forEach(store => {
         if (store.address.toLowerCase().includes(userAddress)) {
           nearestStore = store;
-          minDistance = 0; // User address matches store address, so distance is 0
+          minDistance = 0; 
         }
       });
 
@@ -107,12 +107,12 @@ function WhereToBuy() {
         setShowNearestStore(true);
         setNotFound(false)
       } else {
-        setNearestStore(false); // Setting nearestStore to null when no nearby stores are found
+        setNearestStore(false); 
         setShowNearestStore(false);
         setNotFound(true)
       }
     } else {
-      setNearestStore(false); // Setting nearestStore to null when no nearby stores are found
+      setNearestStore(false); 
       setShowNearestStore(false);
       setNotFound(true)
     }
@@ -120,7 +120,7 @@ function WhereToBuy() {
   const { setShowDropdown} = useAuth()
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
-      findNearestStore(); // Call your function here when Enter is pressed
+      findNearestStore(); 
     }
   };
 
@@ -183,7 +183,6 @@ function WhereToBuy() {
               title="Google Map"
               width="100%"
               className=' sm:h-[600px] h-[400px]'
-              // height="400"
               frameBorder="0"
               scrolling="no"
               marginHeight="0"
@@ -199,7 +198,6 @@ function WhereToBuy() {
               title="Google Map"
               width="100%"
               className=' sm:h-[600px] h-[400px]'
-              // height="400"
               frameBorder="0"
               scrolling="no"
               marginHeight="0"
@@ -215,7 +213,6 @@ function WhereToBuy() {
               title="Google Map"
               width="100%"
               className=' sm:h-[600px] h-[400px]'
-              // height="400"
               frameBorder="0"
               scrolling="no"
               marginHeight="0"
@@ -230,7 +227,6 @@ function WhereToBuy() {
             title="Google Map"
             width="100%"
             className=' sm:h-[600px] h-[400px]'
-            // height="400"
             frameBorder="0"
             scrolling="no"
             marginHeight="0"
@@ -245,7 +241,6 @@ function WhereToBuy() {
               title="Google Map"
               width="100%"
               className=' sm:h-[600px] h-[400px]'
-              // height="400"
               frameBorder="0"
               scrolling="no"
               marginHeight="0"
