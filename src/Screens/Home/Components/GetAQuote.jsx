@@ -1,25 +1,24 @@
-import { useState } from "react";
-import axios from "axios";
-import "./GetAQuote.css";
-import { ImCross } from "react-icons/im";
-import { IoIosArrowDown } from "react-icons/io";
-import MaxWidthWrapper from "../../MaxWidthWrapper";
-import { FaAngleDown } from "react-icons/fa6";
-import Heading from "../../resuable/Heading";
-import Button from "../../resuable/Button";
+import { useState } from 'react';
+import axios from 'axios';
+import './GetAQuote.css';
+import { ImCross } from 'react-icons/im';
+
+import { FaAngleDown } from 'react-icons/fa6';
+import Heading from '../../resuable/Heading';
+import Button from '../../resuable/Button';
 
 function GetAQuote({ data }) {
   const { openQuote, setOpenQuote } = data;
-  const [message, setMessage] = useState('')
-  const [loader, setLoader] = useState(false)
+  const [message, setMessage] = useState('');
+  const [loader, setLoader] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    inquiryType: "",
-    message: "",
-    image: null
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    inquiryType: '',
+    message: '',
+    image: null,
   });
 
   const handleInputChange = (e) => {
@@ -33,28 +32,29 @@ function GetAQuote({ data }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoader(true)
+    setLoader(true);
     const formDataToSend = new FormData();
-    formDataToSend.append("firstname", formData.firstName);
-    formDataToSend.append("lastname", formData.lastName);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("mobile", formData.phoneNumber);
-    formDataToSend.append("options", formData.inquiryType);
-    formDataToSend.append("message", formData.message);
-    formDataToSend.append("image", formData.image);
+    formDataToSend.append('firstname', formData.firstName);
+    formDataToSend.append('lastname', formData.lastName);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('mobile', formData.phoneNumber);
+    formDataToSend.append('options', formData.inquiryType);
+    formDataToSend.append('message', formData.message);
+    formDataToSend.append('image', formData.image);
 
     try {
-      const response = await axios.post('https://sharifstone-backend.vercel.app/api/query/add-query', formDataToSend, {
-
-      });
+      const response = await axios.post(
+        'https://sharifstone-backend.vercel.app/api/query/add-query',
+        formDataToSend,
+        {}
+      );
       if (response.status === 200) {
         setMessage(response.data.message);
-        setLoader(false)
+        setLoader(false);
       }
-
     } catch (error) {
       setMessage(error.response.data.message);
-      setLoader(false)
+      setLoader(false);
     }
   };
 
@@ -119,8 +119,12 @@ function GetAQuote({ data }) {
                   value={formData.inquiryType}
                   onChange={handleInputChange}
                 >
-                  <option value="CHECK MATCHED STONES">CHECK MATCHED STONES</option>
-                  <option value="CHECK STONE AVAILABILITY">CHECK STONE AVAILABILITY</option>
+                  <option value="CHECK MATCHED STONES">
+                    CHECK MATCHED STONES
+                  </option>
+                  <option value="CHECK STONE AVAILABILITY">
+                    CHECK STONE AVAILABILITY
+                  </option>
                 </select>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none input-box">
                   <FaAngleDown />
@@ -131,7 +135,7 @@ function GetAQuote({ data }) {
                 <textarea
                   className="w-full bg-white py-4 px-4 rounded-xl placeholder-black outline-none xl:text-base text-sm font-light font-albert"
                   rows="4"
-                  style={{ maxHeight: "100px" }}
+                  style={{ maxHeight: '100px' }}
                   placeholder="Message"
                   name="message"
                   value={formData.message}
@@ -151,11 +155,9 @@ function GetAQuote({ data }) {
                 </div>
 
                 <div className="w-full flex-col gap-2 flex justify-center items-center mt-4 input-box3">
-                  <p >{message}</p>
-                  <Button className={"px-10 py-3 lg:px-32"} type="submit">
-                    {
-                      loader ? "Loading..." : "Submit"
-                    }
+                  <p>{message}</p>
+                  <Button className={'px-10 py-3 lg:px-32'} type="submit">
+                    {loader ? 'Loading...' : 'Submit'}
                   </Button>
                 </div>
               </div>

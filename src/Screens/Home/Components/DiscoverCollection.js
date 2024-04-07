@@ -3,8 +3,7 @@ import "./DiscoverCollection.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
-// import ScrollAnimation from '@nathanyoung/react-animate-on-scroll';
-// import 'animate.css';
+
 import Heading from "../../resuable/Heading";
 import Button from "../../resuable/Button";
 function DiscoverCollection() {
