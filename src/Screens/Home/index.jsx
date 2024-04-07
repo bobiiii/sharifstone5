@@ -6,7 +6,7 @@ import home_video_mov from '../../assets/videos/desktop3.mov';
 import home_video2 from '../../assets/videos/mob.mp4';
 import home_video2_webm from '../../assets/videos/mob2.webm';
 import home_video2_mov from '../../assets/videos/mob3.mov';
-import 'animate.css/animate.min.css';
+// import 'animate.css/animate.min.css';
 import DiscoverCollection from './Components/DiscoverCollection';
 import AboutUS from './Components/AboutUS';
 import QuartzAdvantage from './Components/QuartzAdvantage';
