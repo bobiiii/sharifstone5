@@ -22,7 +22,7 @@ const DiscoverCollection2 = () => {
       setVarieties(filteredVarieties[0]?.variety);
     };
     fetchData();
-  },[collections]);
+  },[collections, variety2]);
 
   const collectionJSX = (obj, i, filteredVarieties) => {
     let link = obj.varietyName.replace(/\s+/g, "-");
