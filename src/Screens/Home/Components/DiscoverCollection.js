@@ -3,8 +3,8 @@ import "./DiscoverCollection.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
-import ScrollAnimation from '@nathanyoung/react-animate-on-scroll';
-import 'animate.css';
+// import ScrollAnimation from '@nathanyoung/react-animate-on-scroll';
+// import 'animate.css';
 import Heading from "../../resuable/Heading";
 import Button from "../../resuable/Button";
 function DiscoverCollection() {
@@ -36,12 +36,12 @@ function DiscoverCollection() {
 
     <div className="w-full  flex justify-center items-center flex-col  ">
       <div className="">
-        <ScrollAnimation animateIn='animate__backInLeft'
-          animateOut='animate__backInRight'>
+        {/* <ScrollAnimation animateIn='animate__backInLeft'
+          animateOut='animate__backInRight'> */}
           <Heading className=" whitespace-nowrap py-2 text-center ">
             DISCOVER OUR NEW ARRIVALS!
           </Heading>
-        </ScrollAnimation>
+        {/* </ScrollAnimation> */}
       </div>
       <div className="sm:w-[60%]  w-[95%] md:mt-4 ">
         <p className="sm:text-base text-sm text-center">
