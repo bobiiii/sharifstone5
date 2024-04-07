@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
 import CoverComponent from '../../components/coverComponent';
-import './productDescription.css';
 import RelatedProduct from './Components/RelatedProduct';
-import { getCollectionByParam, getColorByParam } from '../../apiCall/apiCall';
-import { useNavigate, useParams } from 'react-router-dom';
-import CoverImage from '../../assets/images/product_description.png';
+import {  useParams } from 'react-router-dom';
 import MaxWidthWrapper from '../../Screens/MaxWidthWrapper';
 import Heading from '../resuable/Heading';
 import Button from '../resuable/Button';
@@ -13,7 +10,6 @@ import useAuth from '../../hooks/useAuth';
 function ProductDescription() {
   const { collections } = useAuth();
   const { varietyName } = useParams();
-  console.log(varietyName)
   let varietyWithSpaces = varietyName.replace(/-/g, " ");
 
   const [currentVariety, setCurrentVariety] = useState(null);
@@ -27,8 +23,6 @@ function ProductDescription() {
     matchedVariety = matchedCollection.variety.find(
       (varietyObj) => varietyObj.varietyName === varietyWithSpaces
     );
-  } else {
-    // navigate('/');
   }
   useEffect(() => {
     setCurrentVariety(matchedVariety);
@@ -43,7 +37,7 @@ function ProductDescription() {
       />
       <MaxWidthWrapper>
         {currentVariety === null ? (
-          'loading'
+          'Please Wait'
         ) : (
           <div className="flex flex-col justify-center gap-10 ">
             <div className="w-full ">

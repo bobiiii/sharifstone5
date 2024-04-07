@@ -1,10 +1,5 @@
-// import { useState, useEffect, useContext } from "react";
-import "./DiscoverCollection.css";
 import { GoArrowUpRight } from "react-icons/go";
 import { Link, useNavigate, useParams } from "react-router-dom";
-// import APIContext from "../../../Store/apiContext";
-// import { getCollection2, getCollectionByParam } from "../../../apiCall/apiCall";
-// import { Audio } from "react-loader-spinner";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import useAuth from "../../../hooks/useAuth";
 
@@ -16,7 +11,6 @@ const DiscoverCollection = () => {
 
 
   const collectionJSX = (obj, i) => {
-    // Assuming obj.collectionName contains the value "INDULGE COLLECTION"
 let link = obj.collectionName.replace(/\s+/g, "-");
 
 
@@ -31,34 +25,23 @@ let link = obj.collectionName.replace(/\s+/g, "-");
 
         <div className="flex flex-col   ">
           <div
-            // onMouseOver={() => setOnMouseOver(i)}
-            // onMouseLeave={() => setOnMouseOver("")}
-
-            className="   "
-
           >
             <div className="relative group">
-
-
-
               <img   src={`https://drive.google.com/thumbnail?id=${obj.collectionImage}&sz=w1000`}  className="h-40 cursor-pointer w-full lg:w-full lg:h-64"    alt="tile-images" />
 
               <div className="absolute bottom-0 left-[50%] translate-x-[-50%]  w-full ">
                 <div className="w-full lg:w-min mx-auto bg-white/50  py-1 lg:py-1 lg:px-3 ">
                   <h4 className="font-medium  lg:font-semibold text-xs lg:text-xl font-gelasio text-[#221F1F]  lg:text-nowrap">
-                    {/* {v.color_name} */}
                     {obj.collectionName}
                   </h4>
                 </div>
               </div>
 
               <div
-                // onClick={() => gotoNextScreen(v)}
                 className={`bg-black/50 text-white w-min  px-4 lg:px-8 py-4 lg:py-8 rounded-full absolute  top-[20%] lg:top-[35%]  left-[50%]  cursor-pointer translate-x-[-50%]    opacity-0 group-hover:opacity-100 transition-opacity`}
               >
                 <GoArrowUpRight size={35} color="white" className="cursor-pointer" />
               </div>
-
             </div>
           </div>
 
@@ -86,12 +69,8 @@ let link = obj.collectionName.replace(/\s+/g, "-");
       </div>
 
       <div className={` lg:w-full   lg:mx-auto flex  justify-center lg:gap-4   flex-wrap     `}>
-        
             { collections.length > 0 ?  collections.map((obj, i) => collectionJSX(obj, i)): "loading"}
-            
             </div>
-
-
     </MaxWidthWrapper>
   );
 };

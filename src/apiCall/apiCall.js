@@ -1,6 +1,4 @@
 import axios from "axios";
-import { useContext } from "react";
-import APIContext from "../Store/contextStore";
 const apiEndpoint = "https://sharifstone-backend.vercel.app/api";
 // const apiEndpoint = "http://localhost:5000/api";
 

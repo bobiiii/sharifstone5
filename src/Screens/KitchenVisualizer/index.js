@@ -1,4 +1,4 @@
-import Logo from "../../assets/images/logo_footer.png";
+import Logo from "../../assets/images/logo.png";
 import "./KitchenVisualizer.css";
 import { Link, useParams } from "react-router-dom";
 import Button from "../resuable/Button";

@@ -1,10 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
-import './DiscoverCollection.css';
 import { GoArrowUpRight } from 'react-icons/go';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-// import APIContext from "../../../Store/apiContext";
-// import { getCollection2, getCollectionByParam } from "../../../apiCall/apiCall";
-// import { Audio } from "react-loader-spinner";
 import MaxWidthWrapper from '../../MaxWidthWrapper';
 import useAuth from '../../../hooks/useAuth';
 

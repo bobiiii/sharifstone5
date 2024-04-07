@@ -1,10 +1,5 @@
 import { useState } from "react";
 import "./quatzDropdown.css";
-import EssentialCollectionImage from "../assets/images/essential_dropdown_image.png";
-import IndulgeCollectionImage from "../assets/images/indulge_dropdown_image.png";
-import MythologyCollectionImage from "../assets/images/mythology_dropdown_image.png";
-import InternationalCollectionImage from "../assets/images/international_dropdown_image.png";
-import SuperJumboCollectionImage from "../assets/images/superjumbo_dropdown_image.png";
 import DropdownIcon from "../assets/images/dropdown-icon.png";
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth"
@@ -12,12 +7,12 @@ import useAuth from "../hooks/useAuth"
 const QuartzDropdown = () => {
   const { setShowDropdown, collections } = useAuth()
 const [hover, setHover] = useState("");
-  
+const limitedCollections = collections.slice(0, 5);
   return (
     <div className="xl:block hidden z-50 bg-white rounded-2xl left-1/2 transform -translate-x-1/2   absolute top-10  mx-auto mt-10">
       <div className="">
         <div className=" w-full  px-4 flex justify-center z-20 ">
-          {collections?.map((v, i) => {
+          {limitedCollections?.map((v, i) => {
             let link = v?.collectionName.replace(/\s+/g, "-");
 
             return (

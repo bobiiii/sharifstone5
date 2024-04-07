@@ -151,7 +151,7 @@ function WhereToBuy() {
                   value={address}
                   onKeyPress={handleKeyPress}
                   onChange={(e) => setAddress(e.target.value)}
-                  placeholder="Search by city or store name"
+                  placeholder="Enter Your Cityname"
                   type="text"
                   className="outline-none my-3 border sm:text-base text-sm  rounded-3xl py-2.5  w-full pl-4 relative h-12"
                 />
