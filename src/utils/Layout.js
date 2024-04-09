@@ -14,7 +14,7 @@ function Layout({ children }) {
       <div className={`fixed lg:px-10  px-4 py-4 items-center flex w-full justify-between ${location.pathname === '/where-to-buy' ? '' : 'absolute'} z-50`}>
         <Link to='/'>
           {
-            location.pathname === '/where-to-buy' ? <img className="h-12 fixed" src={LogoFooter} alt="LogoFooter" /> : <img src={Logo} alt="Logo" className="h-12 fixed" />
+            location.pathname === '/where-to-buy' ? <img className="h-12 fixed top-[16px]" src={LogoFooter} alt="LogoFooter" /> : <img src={Logo} alt="Logo" className="h-12 fixed" />
           }
         </Link>
         <NavMenu />

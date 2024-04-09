@@ -125,7 +125,7 @@ function WhereToBuy() {
   };
 
   return (
-    <MaxWidthWrapper className='md:mt-10 mt-4'  >
+    <MaxWidthWrapper className='md:mt-28 mt-24'  >
       <div className="flex lg:flex-row flex-col gap-3 w-full " onMouseEnter={() => setShowDropdown(false)}>
         <div className="lg:w-1/2 w-full h-full flex flex-col items-center">
           <div
