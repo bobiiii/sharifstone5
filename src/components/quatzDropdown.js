@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect,  useRef } from "react";
 import "./quatzDropdown.css";
 import DropdownIcon from "../assets/images/dropdown-icon.png";
 import { Link } from "react-router-dom";
@@ -9,9 +9,28 @@ const QuartzDropdown = () => {
   const location = useLocation()
   const { setShowDropdown, collections } = useAuth()
   const [hover, setHover] = useState("");
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseLeave = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.relatedTarget)) {
+        setShowDropdown(false);
+      }
+    };
+
+    if (dropdownRef.current) {
+      dropdownRef.current.addEventListener("mouseleave", handleMouseLeave);
+    }
+
+    return () => {
+      if (dropdownRef.current) {
+        dropdownRef.current.removeEventListener("mouseleave", handleMouseLeave);
+      }
+    };
+  }, [setShowDropdown]);
   const limitedCollections = collections.slice(0, 5);
   return (
-    <div className={`xl:block hidden z-50 bg-white rounded-2xl left-1/2 transform -translate-x-1/2   absolute  ${location.pathname === '/where-to-buy' ? 'mt-28' : 'top-10 '}    mx-auto mt-10`}>
+    <div  ref={dropdownRef} className={`xl:block hidden z-50 bg-white rounded-2xl left-[50%] translate-x-[-50%]    absolute  ${location.pathname === '/where-to-buy' ? 'mt-28' : 'top-2 '}    mx-auto mt-10`}>
       <div className="">
         <div className=" w-full  px-4 flex justify-center z-20 ">
           {limitedCollections?.map((v, i) => {

@@ -50,32 +50,12 @@ function NavMenu() {
     },
   ];
 
-  const dashboard = [
-    {
-      name: "Create Collection",
-      route: "/admin-dashboard/create-collection",
-    },
-    {
-      name: "View Collections",
-      route: "/admin-dashboard/collections",
-    },
-    {
-      name: "Create Visualizer",
-      route: "/admin-dashboard/create-visualizer",
-    },
-    {
-      name: "View Visualizer",
-      route: "/admin-dashboard/visualizer",
-    },
-  ];
+  
 
   useEffect(() => {
     if (window.outerWidth <= 768 && isMobile === false) {
-
-
-      setIsMobile(true);
+  setIsMobile(true);
     }
-
   }, []);
 
 
@@ -83,9 +63,33 @@ function NavMenu() {
     openMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'
   }, [openMenu])
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPercentage = (window.scrollY / window.innerHeight) * 100;
+
+      if (scrollPercentage >= 100) {
+        // If scrolled 100% of viewport height or more, set the top position of the element to 0
+        document.getElementById("fixedElement").style.top = "0";
+      } else {
+        // If scrolled less than 100% of viewport height, set the top position of the element to 16px
+        document.getElementById("fixedElement").style.top = "16px";
+      }
+    };
+
+    // Add scroll event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove scroll event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Only run this effect once when the component mounts
+
+
   return (
     <>
-      <div className="fixed right-[16px] top-[16px]">
+      <div id="fixedElement" className=" fixed right-[16px] ">
         <div onClick={() => setOpenMenu(true)} className=" bg-black w-12 h-12 rounded-full flex justify-center items-center xl:hidden ">
           <RiMenu3Fill size={30} color={"white"} />
         </div>
@@ -168,23 +172,8 @@ function NavMenu() {
             </div>
           </div>
         )}
-        <div className="relatiive  py-2 xl:flex items-center justify-between hidden ">
-          {window.location.pathname.includes("/admin-dashboard") ? (
-            <div className="nav-container">
-              {dashboard.map((v, i) => (
-                <Link to={v.route} className="nav-item" key={i}>
-                  <div
-                    className="active-dott"
-                    style={{
-                      visibility:
-                        window.location.pathname === v.route ? "" : "hidden",
-                    }}
-                  />
-                  {v.name}
-                </Link>
-              ))}
-            </div>
-          ) : (
+        <div className="relative   w-screen  py-2 xl:flex items-center justify-end hidden ">
+          
             <div className="nav-container ">
               {nav.map((v, i) => (
                 <Link
@@ -215,11 +204,11 @@ function NavMenu() {
 
 
             </div>
-          )}
+          
+          {showDropdown && <QuartzDropdown />}
         </div>
       </div>
 
-      {showDropdown && <QuartzDropdown />}
     </>
   );
 }
