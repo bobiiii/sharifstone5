@@ -6,11 +6,10 @@ import Button from "../../resuable/Button";
 function MaintainanceCare() {
   const handleDownloadPDF = () => {
 
-    const pdfUrl = 'https://drive.google.com/uc?id=1v9X6gvXkwauWqfow7NbEkr_T5nT0ghMs';
+    const pdfDirectUrl = 'https://drive.google.com/uc?id=1oO9uRlQUWcN3GEJNoCW6O462-8qC74EY';
 
     const link = document.createElement('a');
-    link.href = pdfUrl;
-
+    link.href = pdfDirectUrl;
     link.download = 'MAINTENANCE AND CARE.pdf';
 
     document.body.appendChild(link);
@@ -28,7 +27,7 @@ function MaintainanceCare() {
             MAINTENANCE AND CARE.
           </Heading>
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
-         
+
           <div className="flex justify-between lg:flex-row flex-col gap-10 ">
             <div className="lg:w-[55%] w-full flex-col  ">
               <span >

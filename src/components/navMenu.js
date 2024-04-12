@@ -46,7 +46,7 @@ function NavMenu() {
 
     {
       name: "Live Inventory",
-      route: "https://4power.stoneprofitsweb.com/",
+      route: "https://sharifstone.stoneprofitsweb.com/",
     },
   ];
 
