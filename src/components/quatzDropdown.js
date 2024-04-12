@@ -1,4 +1,4 @@
-import { useState, useEffect,  useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./quatzDropdown.css";
 import DropdownIcon from "../assets/images/dropdown-icon.png";
 import { Link } from "react-router-dom";
@@ -30,7 +30,7 @@ const QuartzDropdown = () => {
   }, [setShowDropdown]);
   const limitedCollections = collections.slice(0, 5);
   return (
-    <div  ref={dropdownRef} className={`xl:block hidden z-50 bg-white rounded-2xl left-[50%] translate-x-[-50%]    absolute  ${location.pathname === '/where-to-buy' ? 'mt-28' : 'top-2 '}    mx-auto mt-10`}>
+    <div ref={dropdownRef} className={`xl:block hidden z-50 bg-white rounded-2xl left-[50%] translate-x-[-50%]    absolute  ${location.pathname === '/where-to-buy' ? 'top-5' : 'top-3 '}    mx-auto mt-10`}>
       <div className="">
         <div className=" w-full  px-4 flex justify-center z-20 ">
           {limitedCollections?.map((v, i) => {

@@ -171,8 +171,8 @@ function ContactForm() {
             </p>
           </div>
           <div className="w-full flex-col gap-2 flex justify-center items-center text-center">
-            <p className="z-50">{message}</p>
-            <Button type="submit" className='z-50 bg-[#EE2A2E] sm:px-10 px-6 sm:text-base text-sm'>
+            <p className="z-40">{message}</p>
+            <Button type="submit" className='z-10 bg-[#EE2A2E] sm:px-10 px-6 sm:text-base text-sm'>
               {
                 loader ? "loading..." : "Submit"
               }

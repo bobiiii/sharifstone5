@@ -128,7 +128,7 @@ function Footer() {
                 </h4>
                 <li className="flex gap-3 z-20">
                   <Link
-                    to="/kitchen-visualizer"
+                    to="/visualizer"
                     className="font-albert font-normal text-[12px] sm:text-base  text-black"
                   >
                     Kitchen
@@ -136,7 +136,7 @@ function Footer() {
                 </li>
                 <li className="flex gap-3 z-20 ">
                   <Link
-                    to="#"
+                    to="/visualizer"
                     className="font-albert font-normal text-[12px] sm:text-base  text-black"
                   >
                     Bathroom
