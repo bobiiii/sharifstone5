@@ -50,11 +50,11 @@ function NavMenu() {
     },
   ];
 
-  
+
 
   useEffect(() => {
     if (window.outerWidth <= 768 && isMobile === false) {
-  setIsMobile(true);
+      setIsMobile(true);
     }
   }, []);
 
@@ -69,27 +69,23 @@ function NavMenu() {
       const scrollPercentage = (window.scrollY / window.innerHeight) * 100;
 
       if (scrollPercentage >= 100) {
-        // If scrolled 100% of viewport height or more, set the top position of the element to 0
         document.getElementById("fixedElement").style.top = "0";
       } else {
-        // If scrolled less than 100% of viewport height, set the top position of the element to 16px
         document.getElementById("fixedElement").style.top = "16px";
       }
     };
-
-    // Add scroll event listener when the component mounts
+    handleScroll()
     window.addEventListener("scroll", handleScroll);
-
-    // Remove scroll event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Only run this effect once when the component mounts
+
+  }, []);
 
 
   return (
     <>
-      <div id="fixedElement" className=" fixed right-[16px] ">
+      <div className=" fixed right-[16px]" id="fixedElement" >
         <div onClick={() => setOpenMenu(true)} className=" bg-black w-12 h-12 rounded-full flex justify-center items-center xl:hidden ">
           <RiMenu3Fill size={30} color={"white"} />
         </div>
@@ -173,38 +169,38 @@ function NavMenu() {
           </div>
         )}
         <div className="relative   w-screen  py-2 xl:flex items-center justify-end hidden ">
-          
-            <div className="nav-container ">
-              {nav.map((v, i) => (
-                <Link
-                  key={i}
-                  to={v.route}
-                  className="nav-item"
-                  onMouseOver={
-                    v.name === "Quartz Collection"
-                      ? () => setShowDropdown(true)
-                      : () => setShowDropdown(false)
-                  }
-                >
-                  <div
-                    className="active-dott"
-                    style={{
-                      visibility:
-                        window.location.pathname === v.route ? "" : "hidden",
-                    }}
-                  />
-                  {v.name === "Kitchen Visualizer" || v.name === "Live Inventory" ? (
-                    <span className="new-text">
-                      {showNewTextKitchenVisualizer && "NEW "}
-                    </span>
-                  ) : null}
-                  {v.name}
-                </Link>
-              ))}
+
+          <div className="nav-container ">
+            {nav.map((v, i) => (
+              <Link
+                key={i}
+                to={v.route}
+                className="nav-item"
+                onMouseOver={
+                  v.name === "Quartz Collection"
+                    ? () => setShowDropdown(true)
+                    : () => setShowDropdown(false)
+                }
+              >
+                <div
+                  className="active-dott"
+                  style={{
+                    visibility:
+                      window.location.pathname === v.route ? "" : "hidden",
+                  }}
+                />
+                {v.name === "Kitchen Visualizer" || v.name === "Live Inventory" ? (
+                  <span className="new-text">
+                    {showNewTextKitchenVisualizer && "NEW "}
+                  </span>
+                ) : null}
+                {v.name}
+              </Link>
+            ))}
 
 
-            </div>
-          
+          </div>
+
           {showDropdown && <QuartzDropdown />}
         </div>
       </div>

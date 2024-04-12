@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react"
 
 import NavMenu from "../components/navMenu";
 import Logo from "../assets/images/logo.png";
@@ -18,23 +18,18 @@ function Layout({ children }) {
       const scrollPercentage = (window.scrollY / window.innerHeight) * 100;
 
       if (scrollPercentage >= 100) {
-        // If scrolled 100% of viewport height or more, set the scroll class to "py-0"
         setScrollClass("py-0");
       } else {
-        // If scrolled less than 100% of viewport height, set the scroll class to "py-4"
         setScrollClass("py-4");
       }
     };
-
-    // Add scroll event listener when the component mounts
+    handleScroll()
     window.addEventListener("scroll", handleScroll);
 
-    // Remove scroll event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Only run this effect once when the component mounts
-
+  }, []);
 
   return (
     <div>
