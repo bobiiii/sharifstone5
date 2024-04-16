@@ -2,15 +2,18 @@ import './MaintainanceCare.css'
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
 import Button from "../../resuable/Button";
+import WARRANTYANDSUPPORT from "../files/WARRANTYANDSUPPORT.pdf";
 
 function MaintainanceCare() {
   const handleDownloadPDF = () => {
 
-    const pdfDirectUrl = 'https://drive.google.com/uc?id=1oO9uRlQUWcN3GEJNoCW6O462-8qC74EY';
+    // const pdfDirectUrl = 'https://drive.google.com/uc?id=1oO9uRlQUWcN3GEJNoCW6O462-8qC74EY';
+    const pdfDirectUrl = WARRANTYANDSUPPORT
 
     const link = document.createElement('a');
     link.href = pdfDirectUrl;
     link.download = 'MAINTENANCE AND CARE.pdf';
+    // link.download = 'MAINTENANCE AND CARE.png';
 
     document.body.appendChild(link);
     link.click();
