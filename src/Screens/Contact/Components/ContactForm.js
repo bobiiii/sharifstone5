@@ -39,7 +39,6 @@ function ContactForm() {
     formDataToSend.append("message", formData.message);
     formDataToSend.append("checked", formData.agreeCheckbox);
     formDataToSend.append("upload", upload);
-    console.log(formData);
     try {
       const response = await axios.post(
         'https://sharifstone-backend.vercel.app/api/contact/add-contact',
@@ -52,13 +51,13 @@ function ContactForm() {
         console.error("Failed to submit form");
       }
     } catch (error) {
-      setMessage(error.response.data.message); 
+      setMessage(error.response.data.message);
     } finally {
       setLoader(false);
     }
   };
 
-  const handleFileDrop = (acceptedFiles) => { 
+  const handleFileDrop = (acceptedFiles) => {
     setUpload(acceptedFiles[0]);
   };
   return (
@@ -111,13 +110,13 @@ function ContactForm() {
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
             <input
+              className="input"
               style={{ width: "100%" }}
               type="number"
-              placeholder="mobile"
+              placeholder="Phone"
               value={formData.mobile}
               onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
             />
-
           </div>
           <div className="contactform-inputcontainer md:w-[80%] w-full flex justify-evenly px-3">
             <input

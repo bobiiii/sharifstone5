@@ -32,9 +32,8 @@ function InsideStore({ data }) {
               }
             </div>
             <div className="md:hidden  flex justify-center items-center mt-6">
-              <Button clickFunc={() => setOpenQuote(true)}>
-                Get Directions
-              </Button>
+
+              <Link to='/where-to-buy' className="bg-[#ee2a2e] text-center items-center px-6 py-2.5 rounded-3xl whitespace-nowrap text-white font-semibold z-40 cursor-pointer font-gelasio  "  >Get Directions</Link>
             </div>
           </div>
         </div>

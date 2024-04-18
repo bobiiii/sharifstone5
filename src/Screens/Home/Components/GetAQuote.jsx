@@ -104,7 +104,7 @@ function GetAQuote({ data }) {
                   onChange={handleInputChange}
                 />
                 <input
-                  className="w-full bg-white py-4 px-4 rounded-xl placeholder-black outline-none xl:text-base text-sm font-light font-albert input-box"
+                  className="w-full input bg-white py-4 px-4 rounded-xl placeholder-black outline-none xl:text-base text-sm font-light font-albert input-box"
                   type="number"
                   placeholder="Phone Number"
                   name="phoneNumber"
