@@ -11,7 +11,7 @@ function AboutUS({ data }) {
     {
       name: 'VISUALIZE YOUR SPACE',
       image: '../eye.json',
-      href: '/kitchen-visualizer',
+      href: '/visualizer',
     },
     {
       name: 'VIEW COLORS CATALOG',
