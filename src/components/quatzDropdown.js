@@ -39,7 +39,7 @@ const QuartzDropdown = () => {
             return (
               <Link
                 key={i}
-                to={`/${link}`}
+                to={`/quartz-collection/${link}`}
                 onMouseEnter={() => setHover(v.collectionName)}
                 onMouseLeave={() => setHover("")}
                 onClick={() => setShowDropdown(false)}

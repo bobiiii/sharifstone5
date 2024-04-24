@@ -1,6 +1,7 @@
 
 import {
-  createBrowserRouter,} from "react-router-dom";
+  createBrowserRouter,
+} from "react-router-dom";
 import HomeScreen from "../Screens/Home";
 import Layout from "../utils/Layout";
 import OurCollection from "../Screens/Our_Collection";
@@ -15,6 +16,8 @@ import BlogScreen from "../Screens/Blog";
 import OurCollection2 from "../Screens/Our_Collection2";
 import VisualizerMain from "../Screens/Visualizer/VisualizerMain";
 import BlogDetails from "../Screens/Blog/Components/BlogDetails";
+import PageNotFound from "../components/PageNotFound";
+
 
 createBrowserRouter([
   {
@@ -29,7 +32,6 @@ const router = createBrowserRouter(
       path: "/",
       element: (
         <Layout>
-          
           <HomeScreen />
         </Layout>
       ),
@@ -45,23 +47,23 @@ const router = createBrowserRouter(
     {
       path: "/visualizer",
       element: (
-          <KitchenVisualizer />
+        <KitchenVisualizer />
       ),
     },
-{
+    {
       path: "/kitchen/select-category",
       element: (
-        <SelectCategory/>
+        <SelectCategory />
       ),
 
-      },
-      {
-        path: "/visualizer/:product/:color",
-        element: (
-          <VisualizerMain/>
-        ),
-  
-        },
+    },
+    {
+      path: "/visualizer/:product/:color",
+      element: (
+        <VisualizerMain />
+      ),
+
+    },
 
 
     {
@@ -73,7 +75,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/:variety2",
+      path: "/quartz-collection/:variety2/",
       element: (
         <Layout>
           <OurCollection2 />
@@ -81,14 +83,14 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/:collectionName/:varietyName",
+      path: "/quartz-collection/:collectionName/:varietyName",
       element: (
         <Layout>
           <ProductDescription />
         </Layout>
       ),
     },
-    
+
     {
       path: "/about",
       element: (
@@ -106,30 +108,37 @@ const router = createBrowserRouter(
       ),
     },
     {
-        path: "/contact",
-        element: (
-          <Layout>
-            <ContactScreen />
-          </Layout>
-        ),
-      },
-      {
-        path: "/blog",
-        element: (
-          <Layout>
-            <BlogScreen />
-          </Layout>
-        ),
-      },
-      {
-        path: "/blog/:blogName",
-        element: (
-          <Layout>
-            <BlogDetails />
-          </Layout>
-        ),
-      },
-    
+      path: "/contact",
+      element: (
+        <Layout>
+          <ContactScreen />
+        </Layout>
+      ),
+    },
+    {
+      path: "/blog",
+      element: (
+        <Layout>
+          <BlogScreen />
+        </Layout>
+      ),
+    },
+    {
+      path: "/blog/:blogName",
+      element: (
+        <Layout>
+          <BlogDetails />
+        </Layout>
+      ),
+    },
+    {
+      path: "*",
+      element: (
+        <Layout>
+          <PageNotFound />
+        </Layout>
+      ),
+    },
   ]
 );
 

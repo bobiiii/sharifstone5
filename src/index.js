@@ -14,11 +14,11 @@ const RunFuncion = () => {
   const [apiStore, setAPIStore] = useState({});
 
   return (
-        <AuthContextProvider>
-          <React.StrictMode>
-            <RouterProvider router={router} />
-          </React.StrictMode>
-        </AuthContextProvider>  );
+    <AuthContextProvider>
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+    </AuthContextProvider>);
 };
 ReactDOM.createRoot(document.getElementById("root")).render(<RunFuncion />);
 

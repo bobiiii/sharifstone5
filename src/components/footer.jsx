@@ -161,7 +161,7 @@ function Footer() {
                   </h3>
                 </div>
                 <div className="flex gap-4">
-                  <Link to={'/a'}>
+                  <Link to={'https://web.facebook.com/4PowerQuartz'}>
                     <img
                       width="30"
                       height="30"
