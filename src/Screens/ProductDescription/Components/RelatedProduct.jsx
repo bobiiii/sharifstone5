@@ -74,7 +74,7 @@ function RelatedProduct({ variety, collections }) {
                   return (
                     <div key={i} className="flex flex-col gap-2  h-full">
                       <Link
-                        to={`/${matchedCollection.collectionName.replace(
+                        to={`/quartz-collection/${matchedCollection.collectionName.replace(
                           /\s+/g,
                           '-'
                         )}/${link}`}
@@ -148,7 +148,7 @@ function RelatedProduct({ variety, collections }) {
                 return (
                   <Link
                     key={i}
-                    to={`/${matchedCollection.collectionName.replace(
+                    to={`/quartz-collection/${matchedCollection.collectionName.replace(
                       /\s+/g,
                       '-'
                     )}/${link}`}
