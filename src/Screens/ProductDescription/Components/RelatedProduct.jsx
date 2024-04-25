@@ -159,7 +159,7 @@ function RelatedProduct({ variety, collections }) {
                       alt=""
                       className=" h-[300px]  rounded-lg w-full cursor-pointer "
                     />
-                    <h3 className="absolute text-center text-lg font-bold bottom-0 left-[50%] translate-x-[-50%] bg-white/50 w-full">
+                    <h3 className="absolute text-center text-lg font-bold bottom-0 left-[50%] translate-x-[-50%] bg-white/50 w-max px-1">
                       {item.varietyName}
                     </h3>
                   </Link>
