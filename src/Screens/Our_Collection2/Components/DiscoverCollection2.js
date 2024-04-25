@@ -44,7 +44,7 @@ const DiscoverCollection2 = () => {
                 />
 
                 <div className="absolute bottom-0 left-[50%] translate-x-[-50%]  w-full ">
-                  <div className="w-full lg:w-min w-max px-2 py-1  mx-auto bg-white/50  py-1 lg:py-1 lg:px-3 ">
+                  <div className=" lg:w-min w-max px-2 py-1  mx-auto bg-white/50   lg:py-1 lg:px-3 ">
                     <h4 className="font-medium  lg:font-semibold text-xs lg:text-xl font-gelasio text-[#221F1F]  lg:text-nowrap">
                       {obj.varietyName}
                     </h4>

@@ -21,7 +21,7 @@ const DiscoverCollection = () => {
         className={`flex-grow flex-shrink basis-2/4 px-1 max-w-[70%] lg:flex-none lg:w-[32%] mb-2     text-center  `}
 
       >
-        <Link to={`/${link}`}>
+        <Link to={`/quartz-collection/${link}`}>
 
           <div className="flex flex-col   ">
             <div
