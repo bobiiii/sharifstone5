@@ -155,7 +155,7 @@ function NavMenu() {
                 Blog
               </Link>
               <Link
-                to={"https://4power.stoneprofitsweb.com/"}
+                to={"https://sharifstone.stoneprofitsweb.com/"}
                 onClick={() => setOpenMenu(false)}
                 className=""
               >
