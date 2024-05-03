@@ -17,7 +17,6 @@ import OurCollection2 from "../Screens/Our_Collection2";
 import VisualizerMain from "../Screens/Visualizer/VisualizerMain";
 import BlogDetails from "../Screens/Blog/Components/BlogDetails";
 import PageNotFound from "../components/PageNotFound";
-import ServerError from "../components/ServerError";
 
 
 createBrowserRouter([
@@ -29,218 +28,119 @@ createBrowserRouter([
 
 const router = createBrowserRouter(
   [
-    // {
-    //   path: "/",
-    //   element: (
-    //     <Layout>
-    //       <HomeScreen />
-    //     </Layout>
-    //   ),
-    // },
-    // {
-    //   path: "/where-to-buy",
-    //   element: (
-    //     <Layout>
-    //       <WhereToBuy />
-    //     </Layout>
-    //   ),
-    // },
-    // {
-    //   path: "/visualizer",
-    //   element: (
-    //     <KitchenVisualizer />
-    //   ),
-    // },
-    // {
-    //   path: "/kitchen/select-category",
-    //   element: (
-    //     <SelectCategory />
-    //   ),
-
-    // },
-    // {
-    //   path: "/visualizer/:product/:color",
-    //   element: (
-    //     <VisualizerMain />
-    //   ),
-
-    // },
-
-
-    // {
-    //   path: "/quartz-collection",
-    //   element: (
-    //     <Layout>
-    //       <OurCollection />
-    //     </Layout>
-    //   ),
-    // },
-    // {
-    //   path: "/quartz-collection/:variety2/",
-    //   element: (
-    //     <Layout>
-    //       <OurCollection2 />
-    //     </Layout>
-    //   ),
-    // },
-    // {
-    //   path: "/quartz-collection/:collectionName/:varietyName",
-    //   element: (
-    //     <Layout>
-    //       <ProductDescription />
-    //     </Layout>
-    //   ),
-    // },
-
-    // {
-    //   path: "/about",
-    //   element: (
-    //     <Layout>
-    //       <AboutUs />
-    //     </Layout>
-    //   ),
-    // },
-    // {
-    //   path: "/warranty-n-support",
-    //   element: (
-    //     <Layout>
-    //       <WarrantyAndSupport />
-    //     </Layout>
-    //   ),
-    // },
-    // {
-    //   path: "/contact",
-    //   element: (
-    //     <Layout>
-    //       <ContactScreen />
-    //     </Layout>
-    //   ),
-    // },
-    // {
-    //   path: "/blog",
-    //   element: (
-    //     <Layout>
-    //       <BlogScreen />
-    //     </Layout>
-    //   ),
-    // },
-    // {
-    //   path: "/blog/:blogName",
-    //   element: (
-    //     <Layout>
-    //       <BlogDetails />
-    //     </Layout>
-    //   ),
-    // },
-    // {
-
-    // },
-    // {
-    //   path: "*",
-    //   element: (
-    //     <Layout>
-    //       <PageNotFound />
-    //     </Layout>
-    //   ),
-    // },
-
     {
       path: "/",
       element: (
-        <ServerError />
+        <Layout>
+          <HomeScreen />
+        </Layout>
       ),
     },
     {
       path: "/where-to-buy",
       element: (
-        <ServerError />
+        <Layout>
+          <WhereToBuy />
+        </Layout>
       ),
     },
     {
       path: "/visualizer",
       element: (
-        <ServerError />
+        <KitchenVisualizer />
       ),
     },
     {
       path: "/kitchen/select-category",
       element: (
-        <ServerError />
+        <SelectCategory />
       ),
 
     },
     {
       path: "/visualizer/:product/:color",
       element: (
-        <ServerError />
+        <VisualizerMain />
       ),
 
     },
 
+
     {
       path: "/quartz-collection",
       element: (
-        <ServerError />
+        <Layout>
+          <OurCollection />
+        </Layout>
       ),
     },
     {
       path: "/quartz-collection/:variety2/",
       element: (
-        <ServerError />
+        <Layout>
+          <OurCollection2 />
+        </Layout>
       ),
     },
     {
       path: "/quartz-collection/:collectionName/:varietyName",
       element: (
-        <ServerError />
+        <Layout>
+          <ProductDescription />
+        </Layout>
       ),
     },
 
     {
       path: "/about",
       element: (
-        <ServerError />
+        <Layout>
+          <AboutUs />
+        </Layout>
       ),
     },
     {
       path: "/warranty-n-support",
       element: (
-        <ServerError />
+        <Layout>
+          <WarrantyAndSupport />
+        </Layout>
       ),
     },
     {
       path: "/contact",
       element: (
-        <ServerError />
+        <Layout>
+          <ContactScreen />
+        </Layout>
       ),
     },
     {
       path: "/blog",
       element: (
-        <ServerError />
+        <Layout>
+          <BlogScreen />
+        </Layout>
       ),
     },
     {
       path: "/blog/:blogName",
       element: (
-        <ServerError />
-      ),
-    },
-    {
-
-    },
-    {
-      path: "/error",
-      element: (
-        <ServerError />
+        <Layout>
+          <BlogDetails />
+        </Layout>
       ),
     },
     {
       path: "*",
       element: (
-        <ServerError />
+        <Layout>
+          <PageNotFound />
+        </Layout>
       ),
     },
+
+
   ]
 );
 
