@@ -17,6 +17,7 @@ import OurCollection2 from "../Screens/Our_Collection2";
 import VisualizerMain from "../Screens/Visualizer/VisualizerMain";
 import BlogDetails from "../Screens/Blog/Components/BlogDetails";
 import PageNotFound from "../components/PageNotFound";
+import ErrorBoundary from "../components/Errorboundary";
 
 
 createBrowserRouter([
@@ -31,36 +32,46 @@ const router = createBrowserRouter(
     {
       path: "/",
       element: (
-        <Layout>
-          <HomeScreen />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <HomeScreen />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
     {
       path: "/where-to-buy",
       element: (
-        <Layout>
-          <WhereToBuy />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <WhereToBuy />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
     {
       path: "/visualizer",
       element: (
-        <KitchenVisualizer />
+        <ErrorBoundary>
+          <KitchenVisualizer />
+        </ErrorBoundary>
       ),
     },
     {
       path: "/kitchen/select-category",
       element: (
-        <SelectCategory />
+        <ErrorBoundary>
+          <SelectCategory />
+        </ErrorBoundary>
       ),
 
     },
     {
       path: "/visualizer/:product/:color",
       element: (
-        <VisualizerMain />
+        <ErrorBoundary>
+          <VisualizerMain />
+        </ErrorBoundary>
       ),
 
     },
@@ -69,74 +80,92 @@ const router = createBrowserRouter(
     {
       path: "/quartz-collection",
       element: (
-        <Layout>
-          <OurCollection />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <OurCollection />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
     {
       path: "/quartz-collection/:variety2/",
       element: (
-        <Layout>
-          <OurCollection2 />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <OurCollection2 />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
     {
       path: "/quartz-collection/:collectionName/:varietyName",
       element: (
-        <Layout>
-          <ProductDescription />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <ProductDescription />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
 
     {
       path: "/about",
       element: (
-        <Layout>
-          <AboutUs />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <AboutUs />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
     {
       path: "/warranty-n-support",
       element: (
-        <Layout>
-          <WarrantyAndSupport />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <WarrantyAndSupport />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
     {
       path: "/contact",
       element: (
-        <Layout>
-          <ContactScreen />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <ContactScreen />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
     {
       path: "/blog",
       element: (
-        <Layout>
-          <BlogScreen />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <BlogScreen />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
     {
       path: "/blog/:blogName",
       element: (
-        <Layout>
-          <BlogDetails />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <BlogDetails />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
     {
       path: "*",
       element: (
-        <Layout>
-          <PageNotFound />
-        </Layout>
+        <ErrorBoundary>
+          <Layout>
+            <PageNotFound />
+          </Layout>
+        </ErrorBoundary>
       ),
     },
 

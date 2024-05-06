@@ -7,9 +7,9 @@ import { Helmet } from 'react-helmet';
 
 function AboutUs() {
   return (
-    
+
     <div>
-  <Helmet>
+      <Helmet>
         <title>My Page Title</title>
         <meta name="description" content="This is a description of my page" />
         <meta name="keywords" content="react, meta tags, seo" />
@@ -26,11 +26,11 @@ function AboutUs() {
 
 
 
-      <CoverComponent imageDesktop={'images/cover_images/desktop/about_us.png'} imageMobile={'images/cover_images/mobile/about_us.png'} label={['ABOUT', 'SHARIFSTONE']}/>
+      <CoverComponent imageDesktop={'images/cover_images/desktop/about_us.png'} imageMobile={'images/cover_images/mobile/about_us.png'} label={['ABOUT', 'SHARIFSTONE']} />
       <OurMission />
-      <OurLocation /> 
+      <OurLocation />
       <BusinessHours />
-      <CustomerReview label={"WHAT OUR CLIENT SAY"}/>  
+      <CustomerReview label={"WHAT OUR CLIENT SAY"} />
     </div>
   )
 }
