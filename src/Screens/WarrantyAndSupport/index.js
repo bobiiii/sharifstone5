@@ -16,7 +16,7 @@ function WarrantyAndSupport() {
       <NoWarrantyCover />
       <MaxWidthWrapper className=' md:mt-0 mt-0' >
         <div className=''>
-          <img src={WarrantyImage} className='rounded-[30px]' />
+          <img src={WarrantyImage} className='rounded-[30px]' alt='warranty-image' />
         </div>
       </MaxWidthWrapper>
       <MaintainanceCare />

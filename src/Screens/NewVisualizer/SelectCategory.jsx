@@ -46,7 +46,7 @@ function SelectCategory() {
       <div className="h-[95%]    overflow-hidden   flex flex-col md:justify-center items-center">
         <div className="text-center py-4 ">
           <Link to="/">
-            <img src={Logo} className="w-40 h-12" />
+            <img src={Logo} className="w-40 h-12" alt='logo'/>
           </Link>
         </div>
 
@@ -131,6 +131,7 @@ export function KitchenCategoryData({ kitchenData }) {
                     <img
                       src={`https://drive.google.com/thumbnail?id=${card?.cardImage}&sz=w1000`}
                       className="w-full  rounded-3xl"
+                      alt='card-image'
                     />
                     <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
                       <GoArrowUpRight
@@ -168,6 +169,7 @@ export function KitchenCategoryData({ kitchenData }) {
                   <img
                     src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
                     className="w-full rounded-[31px]"
+                    alt='card-image'
                   />
                   <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <GoArrowUpRight
@@ -239,6 +241,7 @@ export function BathroomCategoryData({ bathroomData }) {
                   <img
                     src={`https://drive.google.com/thumbnail?id=${card?.cardImage}&sz=w1000`}
                     className="w-full   rounded-3xl"
+                    alt='card-image'
                   />
 
                   <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -277,6 +280,7 @@ export function BathroomCategoryData({ bathroomData }) {
                   <img
                     src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
                     className="w-full rounded-[31px]"
+                    alt='card-image'
                   />
                   <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <GoArrowUpRight

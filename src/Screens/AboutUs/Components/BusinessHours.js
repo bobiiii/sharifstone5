@@ -64,7 +64,7 @@ function BusinessHours() {
               ))}
             </div>
             <div className="lg:w-1/2 w-full">
-              <img className="w-full rounded-[24px]" src={Reception} />
+              <img className="w-full rounded-[24px]" src={Reception} alt="Reception" />
             </div>
 
           </div>

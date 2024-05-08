@@ -82,7 +82,7 @@ function RelatedProduct({ variety, collections }) {
                       >
                         <img
                           src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
-                          alt=""
+                          alt="varietyCardImage"
                           className="h-full rounded-lg w-full cursor-pointer "
                         />
                       </Link>
@@ -156,7 +156,7 @@ function RelatedProduct({ variety, collections }) {
                   >
                     <img
                       src={`https://drive.google.com/thumbnail?id=${item?.varietyCardImage}&sz=w1000`}
-                      alt=""
+                      alt="varietyCardImage"
                       className=" h-[300px]  rounded-lg w-full cursor-pointer "
                     />
                     <h3 className="absolute text-center text-lg font-bold bottom-0 left-[50%] translate-x-[-50%] bg-white/50 w-max px-1">

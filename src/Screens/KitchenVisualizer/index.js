@@ -13,7 +13,7 @@ const KitchenVisualizer = () => {
       >
         <div className="kitchen-visualizer-logo   flex-1 lg:block  hidden ">
           <Link to="/">
-            <img src={Logo} />
+            <img src={Logo} alt="logo" />
           </Link>
           <div className="py-2 px-4 bg-[#ee2a2e]   whitespace-nowrap  mt-6 w-max  rounded-lg">
             <p className="release-text">2024 RELEASE</p>
@@ -51,7 +51,7 @@ const KitchenVisualizer = () => {
         <div className=" lg:hidden h-screen flex flex-col justify-center items-center  py-8 px-4 gap-y-10">
           <div className="">
             <Link to="/" >
-              <img src={Logo} className="w-44" />
+              <img src={Logo} className="w-44" alt="logo-image"/>
             </Link>
             <div className="py-2 px-4 bg-[#ee2a2e]   whitespace-nowrap  mt-6 w-max  rounded-lg">
               <p className="release-text text-white">2024 RELEASE</p>
@@ -75,7 +75,7 @@ const KitchenVisualizer = () => {
             </div>
             <div className=" w-full lg:w-1/3 " >
               <div
-                
+
                 className="cursor-pointer rounded-xl w-full mx-auto flex justify-center "
               >
                 <Button className={"p-0 py-2 px-16 w-full font-albert lg:font-semibold font-medium lg:text-xl text-base"}><Link to={"/kitchen/select-category"} className={""}>Start</Link></Button>

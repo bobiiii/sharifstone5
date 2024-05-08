@@ -18,7 +18,7 @@ function InsideStore({ data }) {
     <MaxWidthWrapper className='px-0 '>
       <div className="home-advantagecontainer home-advantagecontainer-center  ">
         <div className="home-advantageinnercontainer border ">
-          <img className="home-back-s " src={BackS} alt="" />
+          <img className="home-back-s " src={BackS} alt="INSIDE-OUR-STORE" />
           <div className="w-full md:px-6 px-2">
             <div className="home-insidestore-container">
               <Heading className='md:text-start text-center w-full pr-1'>
@@ -28,7 +28,7 @@ function InsideStore({ data }) {
             </div>
             <div className="grid md:grid-cols-4 grid-cols-2 justify-between gap-4  px-2 mt-8 full">
               {
-                imageArray.map((v, i) => <img key={i} src={v} className="rounded-[20px]  w-full h-full flex flex-grow sm:max-h-full max-h-[25vh] " />)
+                imageArray.map((v, i) => <img key={i} src={v} className="rounded-[20px]  w-full h-full flex flex-grow sm:max-h-full max-h-[25vh] " alt="INSIDE-OUR-STORE" />)
               }
             </div>
             <div className="md:hidden  flex justify-center items-center mt-6">

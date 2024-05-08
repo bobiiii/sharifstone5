@@ -178,7 +178,7 @@ function ContactForm() {
             </Button>
           </div>
 
-          <img className="contactform-bg" src={ContactFormBG} />
+          <img className="contactform-bg" src={ContactFormBG} alt="ContactFormBG" />
         </form>
       </div>
     </MaxWidthWrapper>

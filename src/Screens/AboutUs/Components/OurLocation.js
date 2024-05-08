@@ -18,7 +18,7 @@ function OurLocation() {
 
             <div className="w-full">
               <div>
-                <img className="rounded-3xl w-full" src={OrlandoMap} />
+                <img className="rounded-3xl w-full" src={OrlandoMap} alt="OrlandoMap"/>
               </div>
               <div className="pt-2">
                 <Heading className='lg:text-4xl  sm:text-3xl  text-xl'>
@@ -31,7 +31,7 @@ function OurLocation() {
             </div>
             <div className="w-full">
               <div>
-                <img className="rounded-3xl w-full" src={TampaMap} />
+                <img className="rounded-3xl w-full" src={TampaMap} alt="TampaMap"/>
               </div>
               <div className="pt-2">
                 <Heading className='lg:text-4xl  sm:text-3xl  text-xl'>
@@ -44,7 +44,7 @@ function OurLocation() {
             </div>
             <div className="w-full">
               <div>
-                <img className="rounded-3xl w-full" src={ComingSoon} />
+                <img className="rounded-3xl w-full" src={ComingSoon} alt="ComingSoon" />
               </div>
               <div className="pt-2">
                 <Heading className='lg:text-4xl  sm:text-3xl  text-xl'>

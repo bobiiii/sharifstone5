@@ -58,16 +58,15 @@ function VisualizerMain() {
         <div className="w-[30%]  xl:w-[25%] overflow-hidden  h-full p-4 flex flex-col  gap-y-10">
           <div className="  xl:h-[20vh]  flex flex-col gap-y-8  ">
             <div className="    xl:h-[50%] 2xl:h-[45%]">
-              <img src={Logo} alt="" className="h-full  w-3/5" />
+              <img src={Logo} alt="logo" className="h-full  w-3/5" />
             </div>
             <div className=" flex  gap-x-4  pb-2">
               <Button
                 className={`px-6 py-2 2xl:px-8
-                                 ${
-                                   activeTab === 'colors'
-                                     ? 'bg-red-600 text-white '
-                                     : 'bg-white text-black border border-black'
-                                 }
+                                 ${activeTab === 'colors'
+                    ? 'bg-red-600 text-white '
+                    : 'bg-white text-black border border-black'
+                  }
                                  `}
                 clickFunc={() => setActiveTab('colors')}
               >
@@ -75,11 +74,10 @@ function VisualizerMain() {
               </Button>
               <Button
                 className={`px-6 py-2 2xl:px-8
-                                ${
-                                  activeTab === 'colors'
-                                    ? 'bg-white text-black border border-black'
-                                    : ' bg-red-600 text-white '
-                                }
+                                ${activeTab === 'colors'
+                    ? 'bg-white text-black border border-black'
+                    : ' bg-red-600 text-white '
+                  }
                                  `}
                 clickFunc={() => setActiveTab('ambient')}
               >
@@ -97,7 +95,7 @@ function VisualizerMain() {
                   </h5>
                   <img
                     src={`https://drive.google.com/thumbnail?id=${ActiveColor?.colorCardImage}&sz=w1000`}
-                    alt=""
+                    alt="card-image"
                     className="  w-[50%] xl:h-[70%] my-2 "
                   />
                   <h5 className="xl:h-[15%] text-base font-semibold font-albert ">
@@ -201,7 +199,7 @@ function VisualizerMain() {
       </div>
       <div className="lg:hidden flex flex-col h-full max-h-screen">
         <div className="bg-white  py-4  flex justify-center items-center">
-          <img src={Logo} alt="" className="h-12  " />
+          <img src={Logo}  className="h-12  " alt="logo " />
         </div>
         <div className="flex flex-col sm:gap-y-6 gap-y-2.5 ">
           <div className="h-[40vh]">
@@ -214,11 +212,10 @@ function VisualizerMain() {
           <div className=" flex  gap-x-4  pb-2 px-4">
             <Button
               className={`px-6 py-2 2xl:px-8
-                                 ${
-                                   activeTab === 'colors'
-                                     ? 'bg-red-600 text-white '
-                                     : 'bg-white text-black border border-black'
-                                 }
+                                 ${activeTab === 'colors'
+                  ? 'bg-red-600 text-white '
+                  : 'bg-white text-black border border-black'
+                }
                                  `}
               clickFunc={() => setActiveTab('colors')}
             >
@@ -226,11 +223,10 @@ function VisualizerMain() {
             </Button>
             <Button
               className={`px-6 py-2 2xl:px-8
-                                ${
-                                  activeTab === 'colors'
-                                    ? 'bg-white text-black border border-black'
-                                    : ' bg-red-600 text-white '
-                                }
+                                ${activeTab === 'colors'
+                  ? 'bg-white text-black border border-black'
+                  : ' bg-red-600 text-white '
+                }
                                  `}
               clickFunc={() => setActiveTab('ambient')}
             >
@@ -246,7 +242,7 @@ function VisualizerMain() {
                   </h5>
                   <img
                     src={`https://drive.google.com/thumbnail?id=${ActiveColor?.colorCardImage}&sz=w1000`}
-                    alt=""
+                    alt="main-image"
                     className="  sm:w-[40%] w-[30%] h-[80px]  my-2 "
                   />
                   <h5 className=" text-base font-semibold font-albert ">

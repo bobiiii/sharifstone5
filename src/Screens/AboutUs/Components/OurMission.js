@@ -13,7 +13,7 @@ function OurMission() {
           <hr style={{ margin: "20px 0px", border: '0.5px solid #D9D9D9', opacity: 0.9 }} />
           <div className="flex justify-between mt-4 xl:gap-10 gap-6 lg:flex-row flex-col w-full">
             <div className="lg:w-1/2 w-full ">
-              <img className="sm:max-h-full max-h-[40vh]   lg:h-full  w-full  rounded-[24px] h-full" src={OurMissionImage} />
+              <img className="sm:max-h-full max-h-[40vh]   lg:h-full  w-full  rounded-[24px] h-full" src={OurMissionImage} alt="OurMissionImage"/>
             </div>
             <div className=" lg:w-1/2 w-full">
               <div className="">
