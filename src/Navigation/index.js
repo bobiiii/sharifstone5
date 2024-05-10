@@ -1,23 +1,24 @@
-
+import { Suspense, lazy } from "react";
 import {
   createBrowserRouter,
 } from "react-router-dom";
-import HomeScreen from "../Screens/Home";
-import Layout from "../utils/Layout";
-import OurCollection from "../Screens/Our_Collection";
-import ProductDescription from "../Screens/ProductDescription";
-import AboutUs from "../Screens/AboutUs";
-import WarrantyAndSupport from "../Screens/WarrantyAndSupport";
-import ContactScreen from "../Screens/Contact";
-import KitchenVisualizer from "../Screens/KitchenVisualizer";
-import WhereToBuy from "../Screens/WhereToBuy";
-import SelectCategory from "../Screens/NewVisualizer/SelectCategory";
-import BlogScreen from "../Screens/Blog";
-import OurCollection2 from "../Screens/Our_Collection2";
-import VisualizerMain from "../Screens/Visualizer/VisualizerMain";
-import BlogDetails from "../Screens/Blog/Components/BlogDetails";
-import PageNotFound from "../components/PageNotFound";
-import ErrorBoundary from "../components/Errorboundary";
+
+const HomeScreen = lazy(() => import("../Screens/Home"));
+const Layout = lazy(() => import("../utils/Layout"));
+const OurCollection = lazy(() => import("../Screens/Our_Collection"));
+const ProductDescription = lazy(() => import("../Screens/ProductDescription"));
+const AboutUs = lazy(() => import("../Screens/AboutUs"));
+const WarrantyAndSupport = lazy(() => import("../Screens/WarrantyAndSupport"));
+const ContactScreen = lazy(() => import("../Screens/Contact"));
+const KitchenVisualizer = lazy(() => import("../Screens/KitchenVisualizer"));
+const WhereToBuy = lazy(() => import("../Screens/WhereToBuy"));
+const SelectCategory = lazy(() => import("../Screens/NewVisualizer/SelectCategory"));
+const BlogScreen = lazy(() => import("../Screens/Blog"));
+const OurCollection2 = lazy(() => import("../Screens/Our_Collection2"));
+const VisualizerMain = lazy(() => import("../Screens/Visualizer/VisualizerMain"));
+const BlogDetails = lazy(() => import("../Screens/Blog/Components/BlogDetails"));
+const PageNotFound = lazy(() => import("../components/PageNotFound"));
+const ErrorBoundary = lazy(() => import("../components/Errorboundary"));
 
 
 createBrowserRouter([
@@ -34,7 +35,9 @@ const router = createBrowserRouter(
       element: (
         <ErrorBoundary>
           <Layout>
-            <HomeScreen />
+            <Suspense fallback={<div>Loading...</div>}>
+              <HomeScreen />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
@@ -44,7 +47,9 @@ const router = createBrowserRouter(
       element: (
         <ErrorBoundary>
           <Layout>
-            <WhereToBuy />
+            <Suspense fallback={<div>Loading...</div>}>
+              <WhereToBuy />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
@@ -53,7 +58,9 @@ const router = createBrowserRouter(
       path: "/visualizer",
       element: (
         <ErrorBoundary>
-          <KitchenVisualizer />
+          <Suspense fallback={<div>Loading...</div>}>
+            <KitchenVisualizer />
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -61,28 +68,30 @@ const router = createBrowserRouter(
       path: "/kitchen/select-category",
       element: (
         <ErrorBoundary>
-          <SelectCategory />
+          <Suspense fallback={<div>Loading...</div>}>
+            <SelectCategory />
+          </Suspense>
         </ErrorBoundary>
       ),
-
     },
     {
       path: "/visualizer/:product/:color",
       element: (
         <ErrorBoundary>
-          <VisualizerMain />
+          <Suspense fallback={<div>Loading...</div>}>
+            <VisualizerMain />
+          </Suspense>
         </ErrorBoundary>
       ),
-
     },
-
-
     {
       path: "/quartz-collection",
       element: (
         <ErrorBoundary>
           <Layout>
-            <OurCollection />
+            <Suspense fallback={<div>Loading...</div>}>
+              <OurCollection />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
@@ -92,7 +101,9 @@ const router = createBrowserRouter(
       element: (
         <ErrorBoundary>
           <Layout>
-            <OurCollection2 />
+            <Suspense fallback={<div>Loading...</div>}>
+              <OurCollection2 />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
@@ -102,18 +113,21 @@ const router = createBrowserRouter(
       element: (
         <ErrorBoundary>
           <Layout>
-            <ProductDescription />
+            <Suspense fallback={<div>Loading...</div>}>
+              <ProductDescription />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
     },
-
     {
       path: "/about",
       element: (
         <ErrorBoundary>
           <Layout>
-            <AboutUs />
+            <Suspense fallback={<div>Loading...</div>}>
+              <AboutUs />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
@@ -123,7 +137,9 @@ const router = createBrowserRouter(
       element: (
         <ErrorBoundary>
           <Layout>
-            <WarrantyAndSupport />
+            <Suspense fallback={<div>Loading...</div>}>
+              <WarrantyAndSupport />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
@@ -133,7 +149,9 @@ const router = createBrowserRouter(
       element: (
         <ErrorBoundary>
           <Layout>
-            <ContactScreen />
+            <Suspense fallback={<div>Loading...</div>}>
+              <ContactScreen />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
@@ -143,7 +161,9 @@ const router = createBrowserRouter(
       element: (
         <ErrorBoundary>
           <Layout>
-            <BlogScreen />
+            <Suspense fallback={<div>Loading...</div>}>
+              <BlogScreen />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
@@ -153,7 +173,9 @@ const router = createBrowserRouter(
       element: (
         <ErrorBoundary>
           <Layout>
-            <BlogDetails />
+            <Suspense fallback={<div>Loading...</div>}>
+              <BlogDetails />
+            </Suspense>
           </Layout>
         </ErrorBoundary>
       ),
@@ -163,9 +185,11 @@ const router = createBrowserRouter(
       element: (
         <ErrorBoundary>
           <Layout>
-            <PageNotFound />
+            <Suspense fallback={<div>Loading...</div>}>
+              <PageNotFound />
+            </Suspense>
           </Layout>
-        </ErrorBoundary>
+        </ErrorBoundary >
       ),
     },
 
