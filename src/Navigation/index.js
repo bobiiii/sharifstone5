@@ -34,11 +34,11 @@ const router = createBrowserRouter(
       path: "/",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <HomeScreen />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -46,11 +46,11 @@ const router = createBrowserRouter(
       path: "/where-to-buy",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <WhereToBuy />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -88,11 +88,11 @@ const router = createBrowserRouter(
       path: "/quartz-collection",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <OurCollection />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -100,11 +100,11 @@ const router = createBrowserRouter(
       path: "/quartz-collection/:variety2/",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <OurCollection2 />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -112,11 +112,11 @@ const router = createBrowserRouter(
       path: "/quartz-collection/:collectionName/:varietyName",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <ProductDescription />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -124,11 +124,11 @@ const router = createBrowserRouter(
       path: "/about",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <AboutUs />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -136,11 +136,11 @@ const router = createBrowserRouter(
       path: "/warranty-n-support",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <WarrantyAndSupport />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -148,11 +148,11 @@ const router = createBrowserRouter(
       path: "/contact",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <ContactScreen />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -160,11 +160,11 @@ const router = createBrowserRouter(
       path: "/blog",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <BlogScreen />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -172,11 +172,11 @@ const router = createBrowserRouter(
       path: "/blog/:blogName",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <BlogDetails />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary>
       ),
     },
@@ -184,11 +184,11 @@ const router = createBrowserRouter(
       path: "*",
       element: (
         <ErrorBoundary>
-          <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout>
               <PageNotFound />
-            </Suspense>
-          </Layout>
+            </Layout>
+          </Suspense>
         </ErrorBoundary >
       ),
     },
