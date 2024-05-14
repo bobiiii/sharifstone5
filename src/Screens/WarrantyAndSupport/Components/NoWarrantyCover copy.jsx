@@ -2,15 +2,16 @@ import "./NoWarrantyCover.css";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Heading from "../../resuable/Heading";
 import Button from "../../resuable/Button";
+import WARRANTYANDSUPPORT from "./file2/WARRANTYANDSUPPORT.pdf";
 
 function NoWarrantyCover() {
 
   const handleDownloadPDF = () => {
-    const pdfDirectUrl = 'https://drive.google.com/uc?id=1oO9uRlQUWcN3GEJNoCW6O462-8qC74EY';
+    const pdfDirectUrl = WARRANTYANDSUPPORT
 
     const link = document.createElement('a');
     link.href = pdfDirectUrl;
-    link.download = 'MAINTENANCE AND CARE.pdf';
+    link.download = 'MAINTENANCE AND SUPPORT.pdf';
 
     document.body.appendChild(link);
     link.click();
@@ -55,7 +56,7 @@ function NoWarrantyCover() {
             </div>
           </div>
           <div className="w-full  justify-center items-center text-center mt-4" >
-            <Button  className="bg-[#ee2a2e] max-w-none px-8 py-2.5 text-white  font-medium font-albert rounded-[41px]" clickFunc={handleDownloadPDF}>
+            <Button className="bg-[#ee2a2e] max-w-none px-8 py-2.5 text-white  font-medium font-albert rounded-[41px]" clickFunc={handleDownloadPDF}>
               Download PDF
             </Button>
           </div>
