@@ -140,7 +140,7 @@ function HomeScreen() {
       <MaxWidthWrapper>
         <DiscoverCollection />
       </MaxWidthWrapper>
-      <AboutUS data={{ openQuote, setOpenQuote }} />
+      {/* <AboutUS data={{ openQuote, setOpenQuote }} /> */}
       <QuartzAdvantage />
       <LoveUS />
       <InsideStore data={{ openQuote, setOpenQuote }} />
