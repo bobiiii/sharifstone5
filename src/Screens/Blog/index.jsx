@@ -5,11 +5,11 @@ import BlogCards from "./Components/BlogCards";
 function BlogScreen() {
     return (
         <div>
-            <CoverComponent
+            {/* <CoverComponent
                 imageDesktop={hero}
                 imageMobile={hero}                
                 label={["BLOGS"]}
-            />
+            /> */}
             <BlogCards/>
         </div>
     );

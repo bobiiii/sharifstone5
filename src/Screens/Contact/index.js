@@ -6,10 +6,10 @@ import "./Contact.css";
 function ContactScreen() {
   return (
     <div>
-      <CoverComponent
+      {/* <CoverComponent
         imageDesktop={'images/cover_images/desktop/contact_us.png'} imageMobile={'images/cover_images/mobile/contact_us.png'}
         label={["SPEAK", "WITH US"]}
-      />
+      /> */}
       <div className="contact-maincontainer">
         <div className="lg:w-[60%] max-w-screen-lg w-[80%] ">
           <p className="sm:text-lg text-sm font-light font-albert text-center  ">

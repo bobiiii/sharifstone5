@@ -26,7 +26,7 @@ function AboutUs() {
 
 
 
-      <CoverComponent imageDesktop={'images/cover_images/desktop/about_us.png'} imageMobile={'images/cover_images/mobile/about_us.png'} label={['ABOUT', 'SHARIFSTONE']} />
+      {/* <CoverComponent imageDesktop={'images/cover_images/desktop/about_us.png'} imageMobile={'images/cover_images/mobile/about_us.png'} label={['ABOUT', 'SHARIFSTONE']} /> */}
       <OurMission />
       <OurLocation />
       <BusinessHours />

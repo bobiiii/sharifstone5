@@ -10,8 +10,8 @@ import MaxWidthWrapper from '../MaxWidthWrapper.jsx'
 function WarrantyAndSupport() {
   return (
     <div>
-      <CoverComponent imageDesktop={'images/cover_images/desktop/warranty.png'} imageMobile={'images/cover_images/mobile/warranty.png'} label={['WARRANTY', 'AND SUPPORT']} />
-      <ReorganizeIndustry />
+      {/* <CoverComponent imageDesktop={'images/cover_images/desktop/warranty.png'} imageMobile={'images/cover_images/mobile/warranty.png'} label={['WARRANTY', 'AND SUPPORT']} />
+      <ReorganizeIndustry /> */}
       <OurMission />
       <NoWarrantyCover />
       <MaxWidthWrapper className=' md:mt-0 mt-0' >

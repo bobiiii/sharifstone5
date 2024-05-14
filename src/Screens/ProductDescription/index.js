@@ -30,11 +30,11 @@ function ProductDescription() {
 
   return (
     <div>
-      <CoverComponent
+      {/* <CoverComponent
         imageDesktop={'/images/cover_images/desktop/product_description.png'}
         imageMobile={'/images/cover_images/mobile/OurCollection.png'}
         label={['PRODUCT', 'DESCRIPTION']}
-      />
+      /> */}
       <MaxWidthWrapper>
         {currentVariety === null ? (
           'Please Wait'
