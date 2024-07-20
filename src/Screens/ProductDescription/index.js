@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import CoverComponent from '../../components/coverComponent';
 import RelatedProduct from './Components/RelatedProduct';
-import {  useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import MaxWidthWrapper from '../../Screens/MaxWidthWrapper';
 import Heading from '../resuable/Heading';
 import Button from '../resuable/Button';
@@ -10,12 +10,14 @@ import useAuth from '../../hooks/useAuth';
 function ProductDescription() {
   const { collections } = useAuth();
   const { varietyName } = useParams();
-  let varietyWithSpaces = varietyName.replace(/-/g, " ");
+  let varietyWithSpaces = varietyName.replace(/-/g, ' ');
 
   const [currentVariety, setCurrentVariety] = useState(null);
   const [showColor, setShowColor] = useState(1);
   const matchedCollection = collections.find((collection) =>
-    collection.variety.some((varietyObj) => varietyObj.varietyName === varietyWithSpaces)
+    collection.variety.some(
+      (varietyObj) => varietyObj.varietyName === varietyWithSpaces
+    )
   );
 
   let matchedVariety;
@@ -30,11 +32,11 @@ function ProductDescription() {
 
   return (
     <div>
-      {/* <CoverComponent
+      <CoverComponent
         imageDesktop={'/images/cover_images/desktop/product_description.png'}
         imageMobile={'/images/cover_images/mobile/OurCollection.png'}
         label={['PRODUCT', 'DESCRIPTION']}
-      /> */}
+      />
       <MaxWidthWrapper>
         {currentVariety === null ? (
           'Please Wait'
@@ -96,47 +98,47 @@ function ProductDescription() {
                 </Button>
               </div>
             </div>
-            <div className='grid place-items-center'>
-            <div className="w-4/5  ">
-              <Heading>{matchedVariety?.varietyName}</Heading>
+            <div className="grid place-items-center">
+              <div className="w-4/5  ">
+                <Heading>{matchedVariety?.varietyName}</Heading>
 
-              <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2   ">
-                Description
-              </div>
-              <p className="sm:text-lg text-sm lg:py-4 py-2">
-                {matchedVariety?.description}
-              </p>
-              <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2  ">
-                Finishes Available
-              </div>
-              <div className="lg:py-0 flex flex-col lg:flex-row lg:gap-4   ">
-                <div className="basis-2/6 lg:basis-2/6  ">
-                  <div className="font-bold  sm:text-2xl text-sm  lg:py-2  ">
-                    Grip +
-                  </div>
-                  <span className=" sm:text-lg text-sm lg:py-2 ">
-                    {matchedVariety?.grip}
-                  </span>
+                <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2   ">
+                  Description
                 </div>
-                <div className="basis-2/6 lg:basis-2/6   py-2 lg:py-0">
-                  <div className="font-bold sm:text-2xl text-sm   lg:py-2  ">
-                    Matte
-                  </div>
-                  <span className=" sm:text-lg text-sm lg:py-2 ">
-                    {matchedVariety?.mate}
-                  </span>
+                <p className="sm:text-lg text-sm lg:py-4 py-2">
+                  {matchedVariety?.description}
+                </p>
+                <div className="font-bold  sm:text-2xl text-lg sm:py-4 py-2  ">
+                  Finishes Available
                 </div>
+                <div className="lg:py-0 flex flex-col lg:flex-row lg:gap-4   ">
+                  <div className="basis-2/6 lg:basis-2/6  ">
+                    <div className="font-bold  sm:text-2xl text-sm  lg:py-2  ">
+                      Grip +
+                    </div>
+                    <span className=" sm:text-lg text-sm lg:py-2 ">
+                      {matchedVariety?.grip}
+                    </span>
+                  </div>
+                  <div className="basis-2/6 lg:basis-2/6   py-2 lg:py-0">
+                    <div className="font-bold sm:text-2xl text-sm   lg:py-2  ">
+                      Matte
+                    </div>
+                    <span className=" sm:text-lg text-sm lg:py-2 ">
+                      {matchedVariety?.mate}
+                    </span>
+                  </div>
 
-                <div className="basis-2/6 lg:basis-2/6  ">
-                  <div className="font-bold  sm:text-2xl text-sm  lg:py-2  ">
-                    Thicknesses
+                  <div className="basis-2/6 lg:basis-2/6  ">
+                    <div className="font-bold  sm:text-2xl text-sm  lg:py-2  ">
+                      Thicknesses
+                    </div>
+                    <span className=" sm:text-lg text-sm lg:py-2 ">
+                      {matchedVariety?.thickness}
+                    </span>
                   </div>
-                  <span className=" sm:text-lg text-sm lg:py-2 ">
-                    {matchedVariety?.thickness}
-                  </span>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         )}
