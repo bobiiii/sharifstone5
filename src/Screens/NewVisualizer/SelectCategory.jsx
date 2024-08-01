@@ -3,7 +3,8 @@ import Button from '../resuable/Button';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import { getKitchens, getBathrooms } from '../../apiCall/apiCall';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import { GoArrowUpRight } from 'react-icons/go';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
@@ -46,7 +47,7 @@ function SelectCategory() {
       <div className="h-[95%]    overflow-hidden   flex flex-col md:justify-center items-center">
         <div className="text-center py-4 ">
           <Link to="/">
-            <img src={Logo} className="w-40 h-12" alt='logo'/>
+            <img src={Logo} className="w-40 h-12" alt='logo' />
           </Link>
         </div>
 
@@ -66,8 +67,8 @@ function SelectCategory() {
           <div className=" flex justify-center items-center gap-4">
             <Button
               className={`px-8   md:font-semibold font-medium   ${selectedCategory === 'Kitchen'
-                  ? ' bg-red-600 text-white py-2.5 '
-                  : 'bg-white border border-slate-950 text-black py-2'
+                ? ' bg-red-600 text-white py-2.5 '
+                : 'bg-white border border-slate-950 text-black py-2'
                 } `}
               clickFunc={() => handleCategorySelect('Kitchen')}
             >
@@ -75,8 +76,8 @@ function SelectCategory() {
             </Button>
             <Button
               className={` px-8    md:font-semibold font-medium  ${selectedCategory === 'Bathroom'
-                  ? ' bg-red-600 text-white py-2.5 '
-                  : 'bg-white border border-slate-950 text-black py-2'
+                ? ' bg-red-600 text-white py-2.5 '
+                : 'bg-white border border-slate-950 text-black py-2'
                 } `}
               clickFunc={() => handleCategorySelect('Bathroom')}
             >
@@ -93,23 +94,16 @@ function SelectCategory() {
 export default SelectCategory;
 
 export function KitchenCategoryData({ kitchenData }) {
-  const responsive = {
-    ' mobile': {
-      breakpoint: { max: 768, min: 0 },
-      items: 1,
-    },
-  };
 
-  const carouselRef = useRef(null);
+  const swiperRef = useRef(null);
 
-  const handlePrevious = () => {
-    carouselRef.current.previous();
+  const handlePrev = () => {
+    if (swiperRef.current) swiperRef.current.swiper.slidePrev();
   };
 
   const handleNext = () => {
-    carouselRef.current.next();
+    if (swiperRef.current) swiperRef.current.swiper.slideNext();
   };
-
   return (
     <>
       <div className="  hidden md:grid grid-cols-3 gap-y-4 gap-x-4 place-items-center  items-center mx-auto  p-4 ">
@@ -118,9 +112,11 @@ export function KitchenCategoryData({ kitchenData }) {
           let link2 = card?.colors[0]?.colorName.replace(/\s+/g, '-');
 
           return (
-            <div className="  mx-auto w-full  items-center flex  justify-center">
+            <div
+              key={i}
+              className="  mx-auto w-full  items-center flex  justify-center">
               <div
-                key={i}
+
                 className=" flex justify-center items-center   w-full "
               >
                 <Link
@@ -130,7 +126,7 @@ export function KitchenCategoryData({ kitchenData }) {
                   <div className="relative">
                     <img
                       src={`https://drive.google.com/thumbnail?id=${card?.cardImage}&sz=w1000`}
-                      className="w-full  rounded-3xl"
+                      className="w-full rounded-3xl"
                       alt='card-image'
                     />
                     <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -148,45 +144,42 @@ export function KitchenCategoryData({ kitchenData }) {
         })}
       </div>
 
-      <div className="md:hidden   h-full  mt-6 ">
-        <Carousel
-          infinite
-          ref={carouselRef}
-          arrows={false}
-          responsive={responsive}
-          className="h-full"
+      <div className="md:hidden   h-full  mt-6 mx-auto">
+        <Swiper
+          loop={true}
+          ref={swiperRef}
+          spaceBetween={20}
+          slidesPerView={1}
         >
           {kitchenData?.map((item, i) => {
             let link = item?.name.replace(/\s+/g, '-');
             let link2 = item?.colors[0]?.colorName.replace(/\s+/g, '-');
             return (
-              <Link
-                key={i}
-                to={`/visualizer/${link}/${link2}`}
-                className=" w-full relative group "
-              >
-                <div className="relative mx-4  ">
-                  <img
-                    src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
-                    className="w-full rounded-[31px]"
-                    alt='card-image'
-                  />
-                  <div className="bg-black/50  text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <GoArrowUpRight
-                      size={25}
-                      color="white"
-                      className="cursor-pointer"
+              <SwiperSlide key={i}>
+                <Link
+                  to={`/visualizer/${link}/${link2}`}
+                  className="w-full relative group"
+                >
+                  <div className="relative mx-4">
+                    <img
+                      src={`https://drive.google.com/thumbnail?id=${item?.cardImage}&sz=w1000`}
+                      className="w-full rounded-[31px]"
+                      alt="card-image"
                     />
+                    <div className="bg-black/50 text-white px-4 lg:px-6 py-4 lg:py-6 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <GoArrowUpRight size={25} color="white" className="cursor-pointer" />
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </SwiperSlide>
             );
           })}
-        </Carousel>
+        </Swiper>
+
         <div className="relative w-full flex gap-2 py-4 justify-center items-center mt-2  ">
           <button
             className="bg-[#D4262A] rounded-full  p-2 "
-            onClick={handlePrevious}
+            onClick={handlePrev}
           >
             <MdOutlineKeyboardArrowLeft size={20} className="text-white" />
           </button>
@@ -240,7 +233,7 @@ export function BathroomCategoryData({ bathroomData }) {
                 >
                   <img
                     src={`https://drive.google.com/thumbnail?id=${card?.cardImage}&sz=w1000`}
-                    className="w-full   rounded-3xl"
+                    className="w-full    rounded-3xl"
                     alt='card-image'
                   />
 
