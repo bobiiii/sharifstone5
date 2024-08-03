@@ -27,7 +27,7 @@ const DiscoverCollection = () => {
             <div
             >
               <div className="relative group">
-                <img src={`https://drive.google.com/thumbnail?id=${obj.collectionImage}&sz=w1000`} className="h-40 cursor-pointer w-full lg:w-full lg:h-64" alt="tile-images" />
+                <img src={`https://drive.google.com/thumbnail?id=${obj.collectionImage}&sz=w4000`} className="h-40 cursor-pointer w-full lg:w-full lg:h-64" alt="tile-images" />
 
                 <div className="absolute bottom-0 left-[50%] translate-x-[-50%]  w-full ">
                   <div className=" lg:w-min  w-max px-2   mx-auto bg-white/50  py-1 lg:py-1 lg:px-3 ">

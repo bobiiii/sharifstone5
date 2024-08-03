@@ -191,7 +191,7 @@ function VisualizerMain() {
         </div>
         <div className="w-[70%] xl:w-[75%]  h-screen">
           <img
-            src={`https://drive.google.com/thumbnail?id=${ActiveColor?.mainImage}&sz=w1000`}
+            src={`https://drive.google.com/thumbnail?id=${ActiveColor?.mainImage}&sz=w4000`}
             alt="main-image "
             className="h-screen  w-full "
           />
@@ -204,7 +204,7 @@ function VisualizerMain() {
         <div className="flex flex-col sm:gap-y-6 gap-y-2.5 ">
           <div className="h-[40vh]">
             <img
-              src={`https://drive.google.com/thumbnail?id=${ActiveColor?.mainImage}&sz=w1000`}
+              src={`https://drive.google.com/thumbnail?id=${ActiveColor?.mainImage}&sz=w4000`}
               alt="main-image "
               className="w-full h-full"
             />

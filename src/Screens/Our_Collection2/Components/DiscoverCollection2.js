@@ -38,7 +38,7 @@ const DiscoverCollection2 = () => {
             <div>
               <div className="relative group">
                 <img
-                  src={`https://drive.google.com/thumbnail?id=${obj.varietyCardImage}&sz=w1000`}
+                  src={`https://drive.google.com/thumbnail?id=${obj.varietyCardImage}&sz=w4000`}
                   className="h-40 cursor-pointer w-full lg:w-full lg:h-64"
                   alt="tile-images"
                 />

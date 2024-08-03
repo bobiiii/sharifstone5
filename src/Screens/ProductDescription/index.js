@@ -46,19 +46,19 @@ function ProductDescription() {
               <div className="w-full  bg-cover bg-no-repeat grid place-items-center rounded-3xl">
                 {showColor === 1 ? (
                   <img
-                    src={`https://drive.google.com/thumbnail?id=${matchedVariety?.fullSlabImage}&sz=w1000`}
+                    src={`https://drive.google.com/thumbnail?id=${matchedVariety?.fullSlabImage}&sz=w4000`}
                     alt={'product-im'}
                     className=" w-full lg:w-4/5 h-[31vh] lg:h-[650px] bg-cover bg-no-repeat "
                   />
                 ) : showColor === 2 ? (
                   <img
-                    src={`https://drive.google.com/thumbnail?id=${matchedVariety?.closeLookUp}&sz=w1000`}
+                    src={`https://drive.google.com/thumbnail?id=${matchedVariety?.closeLookUp}&sz=w4000`}
                     className="w-full lg:w-4/5 h-[31vh] lg:h-[650px] bg-cover bg-no-repeat"
                     alt={'product-im'}
                   />
                 ) : (
                   <img
-                    src={`https://drive.google.com/thumbnail?id=${matchedVariety?.instalLook}&sz=w1000`}
+                    src={`https://drive.google.com/thumbnail?id=${matchedVariety?.instalLook}&sz=w4000`}
                     className="w-full lg:w-4/5 h-[31vh] lg:h-[650px] bg-cover bg-no-repeat"
                     alt={'product-im'}
                   />
